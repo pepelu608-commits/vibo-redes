@@ -19,7 +19,7 @@ export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; 
 export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linkedin" | "threads" | "bluesky";
 export const REDES: Red[] = ["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"];
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
-export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky"];
+export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky", "x"];
 
 /**
  * Hashtags (decisión 15 sep 2026): 3-5 por vídeo, siempre la misma

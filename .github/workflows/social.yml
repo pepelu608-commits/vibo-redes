@@ -45,6 +45,7 @@ jobs:
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
           BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
           BUFFER_TOKEN_EN: ${{ secrets.BUFFER_TOKEN_EN }}
+          BUFFER_TOKEN_EXTRA: ${{ secrets.BUFFER_TOKEN_EXTRA }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npx tsx scripts/social/publicar-directo.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }}

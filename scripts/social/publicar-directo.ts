@@ -195,6 +195,20 @@ async function graphqlBuffer(token: string, query: string) {
   return r.data;
 }
 function tokenBuffer(en: boolean) { return en ? process.env.BUFFER_TOKEN_EN : process.env.BUFFER_TOKEN; }
+/**
+ * Tercera cuenta de Buffer (22 sep 2026): Buffer gratis admite 3 canales por
+ * cuenta, y las dos que hay ya llevan TikTok + Instagram. X, Facebook, Threads,
+ * LinkedIn y Bluesky salen por una cuenta extra (BUFFER_TOKEN_EXTRA) si existe;
+ * si no, se buscan en la cuenta del idioma. Sin canal conectado: se salta.
+ */
+const REDES_EXTRA: Red[] = ["x", "facebook", "threads", "linkedin", "bluesky"];
+function tokensBufferPara(red: Red, en: boolean): string[] {
+  const t = [] as string[];
+  if (REDES_EXTRA.includes(red) && process.env.BUFFER_TOKEN_EXTRA) t.push(process.env.BUFFER_TOKEN_EXTRA);
+  const propio = tokenBuffer(en);
+  if (propio) t.push(propio);
+  return t;
+}
 async function canalBuffer(token: string, red: Red): Promise<string> {
   const cuenta = await graphqlBuffer(token, "{ account { organizations { id } } }");
   const org = cuenta.account.organizations[0]?.id;
@@ -233,8 +247,12 @@ function miniaturaMs(mp4: string): number {
 }
 
 async function publicarBuffer(mp4: string, texto: string, red: Red, en: boolean, cuando: Date): Promise<string> {
-  const token = tokenBuffer(en)!;
-  const canal = await canalBuffer(token, red);
+  // Primera cuenta de Buffer que tenga el canal conectado (la extra primero para X/Facebook/Threads…).
+  let token = "", canal = "", ultimo: Error | null = null;
+  for (const t of tokensBufferPara(red, en)) {
+    try { canal = await canalBuffer(t, red); token = t; break; } catch (e: any) { ultimo = e; if (!(e instanceof SinCanal)) throw e; }
+  }
+  if (!token) throw ultimo ?? new SinCanal(`buffer: no hay canal de ${red}`);
   const url = await urlPublica(mp4);
   const thumbnailOffset = miniaturaMs(mp4);
   const dueAt = new Date(Math.max(cuando.getTime(), Date.now() + 3 * 60000)).toISOString();
@@ -248,7 +266,7 @@ async function publicarBuffer(mp4: string, texto: string, red: Red, en: boolean,
 }
 
 function tieneSecrets(red: Red, en = false) {
-  if (REDES_BUFFER.includes(red) && tokenBuffer(en) && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) return true;
+  if (REDES_BUFFER.includes(red) && tokensBufferPara(red, en).length && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) return true;
   const req: Partial<Record<Red, string[]>> = {
     youtube: ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"], x: ["X_CLIENT_ID", "X_CLIENT_SECRET", "X_REFRESH_TOKEN"],
     instagram: ["IG_USER_ID", "IG_ACCESS_TOKEN", "NEXT_PUBLIC_SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"], tiktok: ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"],
@@ -283,7 +301,7 @@ async function main() {
   const adelantoH = Number((process.argv.find((a) => a.startsWith("--adelantar=")) ?? "").split("=")[1] || 0);
   const limite = new Date(ahora.getTime() + adelantoH * 3600000);
   const porAdelantado = adelantoH > 0
-    ? planes.filter((p) => !p.motivo && p.cuando > ahora && p.cuando <= limite && REDES_BUFFER.includes(p.red) && !!tokenBuffer((p.fila.lang ?? langDeVideo(p.fila.video)) === "en"))
+    ? planes.filter((p) => !p.motivo && p.cuando > ahora && p.cuando <= limite && REDES_BUFFER.includes(p.red) && tokensBufferPara(p.red, (p.fila.lang ?? langDeVideo(p.fila.video)) === "en").length > 0)
     : [];
   const ahoraSi = [...toca.filter((p) => !tarde.includes(p)), ...porAdelantado];
   const proximas = planes.filter((p) => !p.motivo && p.cuando > ahora).slice(0, 6);
@@ -308,7 +326,8 @@ async function main() {
     if (!tieneSecrets(p.red, en)) { console.log("  · sin secrets de esta red: se salta (no cuenta como error)"); continue; }
     try {
       let id = "", est: Publicado["estado"] = "ok";
-      const porBuffer = REDES_BUFFER.includes(p.red) && !!tokenBuffer(en);
+      // X: por Buffer si hay cuenta con canal; si no, por la API directa (claves X_*).
+      const porBuffer = REDES_BUFFER.includes(p.red) && tokensBufferPara(p.red, en).length > 0 && !(p.red === "x" && !process.env.BUFFER_TOKEN_EXTRA && process.env.X_REFRESH_TOKEN);
       if (porBuffer) id = await publicarBuffer(mp4, texto, p.red, en, p.cuando);
       else if (p.red === "youtube") id = await publicarYoutube(mp4, titulo, texto, en);
       else if (p.red === "x") id = await publicarX(mp4, texto);
