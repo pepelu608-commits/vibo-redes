@@ -1,0 +1,8 @@
+{
+  "name": "vibo-redes",
+  "private": true,
+  "description": "Publicador automatico de VIBO en redes (repo publico: minutos de Actions gratis).",
+  "scripts": { "calendario": "tsx scripts/social/build-schedule.ts", "publicar": "tsx scripts/social/publicar-directo.ts --apply" },
+  "dependencies": { "dotenv": "^16.4.5", "tsx": "^4.19.2" },
+  "devDependencies": { "@types/node": "^20.14.0", "typescript": "^5.5.0" }
+}

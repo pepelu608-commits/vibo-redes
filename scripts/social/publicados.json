@@ -1,0 +1,223 @@
+{
+  "publicados": [
+    {
+      "clave": "2026-09-18|14:40|tiktok|videos/Vibo Ad 6 - Cliffhanger Desierto.mp4",
+      "red": "tiktok",
+      "video": "videos/Vibo Ad 6 - Cliffhanger Desierto.mp4",
+      "fecha": "2026-09-18T14:11:47.700Z",
+      "estado": "error",
+      "id": "6aad46a35c7c4c6d22fffa0b",
+      "error": "retirado: vídeo antiguo a 360p sin audio (18 sep); borrar en la red"
+    },
+    {
+      "clave": "2026-09-18|14:40|instagram|videos/Vibo Ad 6 - Cliffhanger Desierto.mp4",
+      "red": "instagram",
+      "video": "videos/Vibo Ad 6 - Cliffhanger Desierto.mp4",
+      "fecha": "2026-09-18T14:11:49.988Z",
+      "estado": "error",
+      "id": "6aad46a5defd00b616c3fdac",
+      "error": "retirado: vídeo antiguo a 360p sin audio (18 sep); borrar en la red"
+    },
+    {
+      "clave": "2026-09-18|14:40|tiktok|videos/Fab f30a - De que color es.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f30a - De que color es.mp4",
+      "fecha": "2026-09-18T14:25:58.271Z",
+      "estado": "ok",
+      "id": "6aad49f6af6af53ceac3bf22",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-18|14:40|instagram|videos/Fab f30a - De que color es.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f30a - De que color es.mp4",
+      "fecha": "2026-09-18T14:26:00.966Z",
+      "estado": "ok",
+      "id": "6aad49f85c7c4c6d22005c9c",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-18|15:00|tiktok|videos/Fab f30a EN - What colour is an.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f30a EN - What colour is an.mp4",
+      "fecha": "2026-09-18T14:26:04.853Z",
+      "estado": "ok",
+      "id": "6aad49fcd7a2d94521ea4e6c",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-18|15:00|instagram|videos/Fab f30a EN - What colour is an.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f30a EN - What colour is an.mp4",
+      "fecha": "2026-09-18T14:26:07.833Z",
+      "estado": "ok",
+      "id": "6aad49ffcd1a38c6fbf97e9f",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-18|14:40|youtube|videos/Fab f31a - Cual es el planeta.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f31a - Cual es el planeta.mp4",
+      "fecha": "2026-09-18T14:34:58.348Z",
+      "estado": "error",
+      "error": "youtube init 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"YouTube Data API v3 has not been used in project 622104854465 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtube.googleapis.com/overview?project=622104854465 then retry. If you enable"
+    },
+    {
+      "clave": "2026-09-18|15:00|youtube|videos/Fab f31a EN - Which is the largest.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f31a EN - Which is the largest.mp4",
+      "fecha": "2026-09-18T14:34:58.434Z",
+      "estado": "error",
+      "error": "youtube init 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"YouTube Data API v3 has not been used in project 622104854465 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtube.googleapis.com/overview?project=622104854465 then retry. If you enable"
+    },
+    {
+      "clave": "2026-09-19|14:00|tiktok|videos/Fab f32a - Cual es el planeta.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f32a - Cual es el planeta.mp4",
+      "fecha": "2026-09-19T12:24:00.000Z",
+      "estado": "ok",
+      "id": "6aad4c17f74af5e77239dc1e",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-19|14:00|instagram|videos/Fab f32a - Cual es el planeta.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f32a - Cual es el planeta.mp4",
+      "fecha": "2026-09-19T12:45:00.000Z",
+      "estado": "ok",
+      "id": "6aad4c1bbce81a431d4b452d",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-19|17:00|tiktok|videos/Fab f32a EN - Which planet is closest.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f32a EN - Which planet is closest.mp4",
+      "fecha": "2026-09-19T14:52:00.000Z",
+      "estado": "ok",
+      "id": "6aad4c1f6f370e335be6e807",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-19|17:00|instagram|videos/Fab f32a EN - Which planet is closest.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f32a EN - Which planet is closest.mp4",
+      "fecha": "2026-09-19T15:30:00.000Z",
+      "estado": "ok",
+      "id": "6aad4c22bce81a431d4b4794",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|17:00|tiktok|videos/Fab f52a EN - Which animal is the.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f52a EN - Which animal is the.mp4",
+      "fecha": "2026-09-20T15:28:00.000Z",
+      "estado": "ok",
+      "id": "6aaddfd904838aa1c4575585",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|17:00|instagram|videos/Fab f52a EN - Which animal is the.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f52a EN - Which animal is the.mp4",
+      "fecha": "2026-09-20T15:47:00.000Z",
+      "estado": "ok",
+      "id": "6aaddfe3560f708e81498942",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|21:00|instagram|videos/Fab f52a - Que animal es el.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f52a - Que animal es el.mp4",
+      "fecha": "2026-09-20T18:54:00.000Z",
+      "estado": "ok",
+      "id": "6aaddfe798827948876a6fdb",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-20|21:00|tiktok|videos/Fab f52a - Que animal es el.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f52a - Que animal es el.mp4",
+      "fecha": "2026-09-20T19:47:00.000Z",
+      "estado": "ok",
+      "id": "6aaddfea98827948876a733d",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-20|13:30|instagram|videos/Fab f31a - Cual es el planeta.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f31a - Cual es el planeta.mp4",
+      "fecha": "2026-09-20T22:01:00.000Z",
+      "estado": "ok",
+      "id": "6aade2535fe629aa2666af01",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-20|13:30|tiktok|videos/Fab f31a - Cual es el planeta.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f31a - Cual es el planeta.mp4",
+      "fecha": "2026-09-20T22:51:00.000Z",
+      "estado": "ok",
+      "id": "6aade2551e8bdcdb52358dc8",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-20|15:00|instagram|videos/Fab f31a EN - Which is the largest.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f31a EN - Which is the largest.mp4",
+      "fecha": "2026-09-20T18:55:00.000Z",
+      "estado": "ok",
+      "id": "6aade259a4c300df32a40f28",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|15:00|tiktok|videos/Fab f31a EN - Which is the largest.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f31a EN - Which is the largest.mp4",
+      "fecha": "2026-09-20T18:32:00.000Z",
+      "estado": "ok",
+      "id": "6aade25d5fe629aa2666aff0",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|18:00|instagram|videos/Fab f33a - Cual es el hueso.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f33a - Cual es el hueso.mp4",
+      "fecha": "2026-09-21T01:08:00.000Z",
+      "estado": "ok",
+      "id": "6aade261560f708e8149bde2",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-20|19:30|tiktok|videos/Fab f33a EN - What is the longest.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f33a EN - What is the longest.mp4",
+      "fecha": "2026-09-20T21:33:00.000Z",
+      "estado": "ok",
+      "id": "6aade265560f708e8149be18",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-20|23:00|tiktok|videos/Fab f53a EN - What is the longest.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f53a EN - What is the longest.mp4",
+      "fecha": "2026-09-21T00:35:00.000Z",
+      "estado": "ok",
+      "id": "6aade26898827948876aad4e",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-19|00:20|youtube|videos/Fab f32a - Cual es el planeta.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f32a - Cual es el planeta.mp4",
+      "fecha": "2026-09-18T22:14:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-19|00:40|youtube|videos/Fab f32a EN - Which planet is closest.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f32a EN - Which planet is closest.mp4",
+      "fecha": "2026-09-18T22:34:00.000Z",
+      "estado": "perdido"
+    }
+  ]
+}
