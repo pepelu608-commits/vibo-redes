@@ -23,7 +23,7 @@ import { PLAN, planCalentamiento, construirFilas, elegirPreguntas, proximoSabado
 const CARPETA = __dirname;
 
 /** Bote real de la próxima partida (--bote 20 en euros, o la base de datos). Los pies de foto abren con él. */
-async function boteReal(args: string[]): Promise<{ sabado: number; mes: number } | undefined> {
+async function boteReal(args: string[]): Promise<{ sabado: number; mes: number; empieza?: string } | undefined> {
   const i = args.indexOf("--bote");
   if (i >= 0) {
     const eur = Number(String(args[i + 1]).replace(",", "."));
@@ -43,7 +43,7 @@ async function boteReal(args: string[]): Promise<{ sabado: number; mes: number }
   const temporada = ligas?.[0]?.temporada;
   const ligaCents = (ligas ?? []).filter((l) => l.temporada === temporada).reduce((a, l) => a + (l.bote_cents ?? 0), 0);
   console.log(`Bote real de la edición ${rows[0].edicion}: ${rows[0].bote_cents / 100} € · ligas: ${ligaCents / 100} € · este mes: ${(rows[0].bote_cents + ligaCents) / 100} € · empieza ${rows[0].empieza_en}`);
-  return { sabado: rows[0].bote_cents, mes: rows[0].bote_cents + ligaCents };
+  return { sabado: rows[0].bote_cents, mes: rows[0].bote_cents + ligaCents, empieza: rows[0].empieza_en };
 }
 
 async function main() {
@@ -80,7 +80,7 @@ async function main() {
     porDia.set(p.dia, mecs);
   }
 
-  const filas = construirFilas(sabado, catalogo, estado, plan, botes?.sabado, botes?.mes);
+  const filas = construirFilas(sabado, catalogo, estado, plan, botes?.sabado, botes?.mes, botes?.empieza);
   const linea = (f: (typeof filas)[number]) =>
     [f.date, f.time, f.networks.join(";"), f.video, `"${f.caption.replace(/"/g, '""')}"`, `"${f.hashtags}"`].join(",");
   const cabecera = "date,time,network,video,caption,hashtags";

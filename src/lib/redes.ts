@@ -123,20 +123,36 @@ export const PLAN: Hueco[] = [
  * nos diferencia tiene que leerse antes de que sigan bajando. Sin "gana
  * dinero" ni "sorteo" (línea roja): se dice la cifra y quién se la lleva.
  */
-export function caption(v: Video, boteCents?: number, mesCents?: number): string {
+/**
+ * "este sábado" solo si la partida cae en 7 días; si no, la fecha. (22 sep
+ * 2026: la partida es el 17 oct y los pies decían "este sábado" desde
+ * septiembre: quien viniera el 26 no encontraría nada.)
+ */
+export function cuandoPartida(empiezaEn: string | Date | undefined, lang: "es" | "en"): { frase: string; corta: string } {
+  const es = lang === "es";
+  if (!empiezaEn) return { frase: es ? "este sábado" : "this Saturday", corta: es ? "Sábado" : "Saturday" };
+  const d = new Date(empiezaEn);
+  if ((d.getTime() - Date.now()) / 86400000 <= 7) return { frase: es ? "este sábado" : "this Saturday", corta: es ? "Sábado" : "Saturday" };
+  const larga = d.toLocaleDateString(es ? "es-ES" : "en-GB", { day: "numeric", month: "long", timeZone: "Europe/Madrid" });
+  const cortaF = d.toLocaleDateString(es ? "es-ES" : "en-GB", { day: "numeric", month: "short", timeZone: "Europe/Madrid" }).replace(".", "");
+  return { frase: es ? `el sábado ${larga}` : `on Saturday ${larga}`, corta: es ? `Sábado ${cortaF}` : `Saturday ${cortaF}` };
+}
+
+export function caption(v: Video, boteCents?: number, mesCents?: number, empiezaEn?: string | Date): string {
   const es = v.lang === "es";
-  const cita = es ? `Sábado 18:00 · gratis · ${URL_APP}` : `Saturday 6 PM CET · free · ${URL_APP}`;
+  const cp = cuandoPartida(empiezaEn, v.lang);
+  const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM CET · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   const dinero = mes
-    ? (es ? `${mes} en juego este sábado (${bote} de bote + ligas).` : `${mes} on the line this Saturday (${bote} pot + leagues).`)
-    : bote ? (es ? `${bote} en juego este sábado.` : `${bote} on the line this Saturday.`) : "";
+    ? (es ? `${mes} en juego ${cp.frase} (${bote} de bote + ligas).` : `${mes} on the line ${cp.frase} (${bote} pot + leagues).`)
+    : bote ? (es ? `${bote} en juego ${cp.frase}.` : `${bote} on the line ${cp.frase}.`) : "";
   // Llamada a comentar (15 sep 2026): los comentarios son lo que más empuja
   // un vídeo en TikTok/IG. En "misterio" no hay respuesta en el vídeo: se
   // pide la apuesta. En el resto, si la sabía.
   if (v.pregunta) {
     const cta = v.mecanica === "fabrica-misterio"
-      ? (es ? "Esta cae el sábado. Deja tu respuesta en comentarios." : "This one's in Saturday's game. Drop your answer in the comments.")
+      ? (es ? `Esta cae ${cp.frase}. Deja tu respuesta en comentarios.` : `This one's in the game ${cp.frase}. Drop your answer in the comments.`)
       : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
     const quien = bote ? (es ? " Para los 5 mejores." : " Top 5 split it.") : "";
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
@@ -225,7 +241,7 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
   return eleccion;
 }
 
-export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado, plan: Hueco[] = PLAN, boteCents?: number, mesCents?: number): Fila[] {
+export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado, plan: Hueco[] = PLAN, boteCents?: number, mesCents?: number, empiezaEn?: string): Fila[] {
   const porFile = new Map(catalogo.map((v) => [v.file, v]));
   // Hueco fijo cuyo vídeo está desactivado (18 sep 2026: los diseños
   // antiguos a 360p) → se convierte en un hueco de pregunta del mismo
@@ -245,7 +261,7 @@ export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado,
       time: p.hora,
       networks: v.lang === "es" ? ["tiktok", "instagram", "youtube", "x", "facebook", "threads", "bluesky", "linkedin"] : ["tiktok", "instagram", "youtube", "x", "threads", "bluesky"],
       video: `videos/${v.file}`,
-      caption: caption(v, boteCents, mesCents),
+      caption: caption(v, boteCents, mesCents, empiezaEn),
       hashtags: hashtagsDe(v),
       nota: p.nota,
       lang: v.lang,
@@ -378,7 +394,9 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
   const rota = hashEstable(f.video + red) % Math.max(1, tags.length);
   const rotados = [...tags.slice(rota), ...tags.slice(0, rota)];
   const base = f.caption.replace(/·\s*vibo-azure\.vercel\.app(\/app)?/i, "").replace(/vibo-azure\.vercel\.app(\/app)?/i, "").trim();
-  const pregunta = base.split("Sábado")[0].split("Saturday")[0].trim();
+  // Título = la pregunta (la primera frase acabada en "?"); antes se cortaba
+  // en "Saturday" y en inglés el título de YouTube salía sin pregunta.
+  const pregunta = (base.match(/[^.?!]*\?/)?.[0] ?? base.split("Sábado")[0].split("Saturday")[0]).replace(/^[\s(]*\)?\s*/, "").trim();
   const en = /Saturday/i.test(f.caption);
   // Cada red lleva su ?o= (§ migración 047): así /redes sabe qué red trae gente.
   const web = `https://${URL_APP}?o=${red === "youtube" ? "yt" : red}-${en ? "en" : "es"}`;
