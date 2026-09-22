@@ -314,6 +314,7 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
 
   const planes: Plan[] = [];
   const contador: Record<string, number> = {};
+  const ocupadosPor: Record<string, number[]> = {};
   const ordenadas = [...filas].sort((a, b) => madridADate(a.date, a.time).getTime() - madridADate(b.date, b.time).getTime());
   for (const f of ordenadas) {
     const redes = f.networks.filter((n): n is Red => (REDES as string[]).includes(n));
@@ -335,8 +336,17 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
       let cuando = new Date(madridADate(f.date, f.time).getTime() + (R.ESCALON_MIN[i] + j) * 60000);
       const pm = partesMadrid(cuando);
       if (pm.hora >= R.SILENCIO.desde && pm.hora < R.SILENCIO.hasta) cuando = new Date(madridADate(pm.dia, "07:15").getTime() + Math.abs(j) * 60000);
-      const u = ultimaPlan[c];
-      if (u && cuando.getTime() - u.getTime() < R.GAP_MISMA_RED_MIN * 60000) cuando = new Date(u.getTime() + (R.GAP_MISMA_RED_MIN + Math.abs(j)) * 60000);
+      // Separación mínima con TODO lo que esa cuenta ya tiene (publicado,
+      // programado en Buffer o planificado en esta pasada), no solo con el
+      // último (22 sep 2026): un post programado para mañana bloqueaba todos
+      // los huecos de hoy y la cuenta se quedaba en 1 al día.
+      const gap = R.GAP_MISMA_RED_MIN * 60000;
+      const ocupados = (ocupadosPor[c] ??= porCuentaOk(c).map((p) => new Date(p.fecha).getTime()));
+      for (let intentos = 0; intentos < 20; intentos++) {
+        const choque = ocupados.find((t) => Math.abs(t - cuando.getTime()) < gap);
+        if (choque === undefined) break;
+        cuando = new Date(choque + gap + Math.abs(j) * 60000);
+      }
 
       const dia = partesMadrid(cuando).dia;
       const k = `${c}|${dia}`;
@@ -355,7 +365,7 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
       // El resumen de la partida se llama igual cada semana pero es un vídeo nuevo (datos de esa partida): no cuenta como repetido.
       else if (!/Resumen/.test(f.video) && porCuentaOk(c).some((p) => p.video === f.video && ahora.getTime() - new Date(p.fecha).getTime() < R.NO_REPETIR_DIAS * 86400000)) motivo = "mismo vídeo hace <30 días";
       else if (PROHIBIDO.some((re) => re.test(f.caption + f.hashtags))) motivo = "texto prohibido (línea roja)";
-      if (!motivo) { contador[k]++; ultimaPlan[c] = cuando; }
+      if (!motivo) { contador[k]++; ultimaPlan[c] = cuando; ocupados.push(cuando.getTime()); }
       planes.push({ clave, red, fila: f, cuando, motivo });
     });
   }
