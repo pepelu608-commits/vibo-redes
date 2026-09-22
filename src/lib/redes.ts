@@ -152,7 +152,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   // pide la apuesta. En el resto, si la sabía.
   if (v.pregunta) {
     const cta = v.mecanica === "fabrica-misterio"
-      ? (es ? `Esta cae ${cp.frase}. Deja tu respuesta en comentarios.` : `This one's in the game ${cp.frase}. Drop your answer in the comments.`)
+      ? (es ? "Esta cae en la partida. Deja tu respuesta en comentarios." : "This one's in the game. Drop your answer in the comments.")
       : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
     const quien = bote ? (es ? " Para los 5 mejores." : " Top 5 split it.") : "";
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
@@ -398,13 +398,26 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
   // en "Saturday" y en inglés el título de YouTube salía sin pregunta.
   const pregunta = (base.match(/[^.?!]*\?/)?.[0] ?? base.split("Sábado")[0].split("Saturday")[0]).replace(/^[\s(]*\)?\s*/, "").trim();
   const en = /Saturday/i.test(f.caption);
+  // Versión corta para TikTok/IG: sin el paréntesis del desglose, sin "¿La
+  // sabías?", sin "Para los 5 mejores." y sin la cita final (van en sus líneas).
+  const citaFinal = base.match(/(?:Sábado|Saturday)[^.?!]*$/)?.[0] ?? "";
+  const cuandoCorto = citaFinal ? citaFinal.replace(/\s*·\s*(gratis|free)\s*$/i, "").trim().replace(/\s+(18:00|6 PM CET)$/, ", $1") + "." : "";
+  const corto = base
+    .replace(/\s*\([^)]*\)/, "")
+    .replace(/¿La sabías\?\s*|Did you know it\?\s*/g, "")
+    .replace(/\s*(Para los 5 mejores\.|Top 5 split it\.)/g, "")
+    .replace(/\s*(Sábado|Saturday)[^.?!]*$/, "")
+    .trim();
   // Cada red lleva su ?o= (§ migración 047): así /redes sabe qué red trae gente.
   const web = `https://${URL_APP}?o=${red === "youtube" ? "yt" : red}-${en ? "en" : "es"}`;
   switch (red) {
     // TikTok e Instagram (22 sep 2026): los enlaces del texto NO son clicables;
     // lo que convierte es el nombre para buscar en la tienda + "enlace en la bio".
-    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${base}\n${en ? "Search VIBO on the App Store · link in bio" : "Busca VIBO en la App Store · enlace en la bio"}\n${rotados.slice(0, 4).join(" ")}`.trim() };
-    case "instagram": return { titulo: "", texto: `${base}\n${en ? "Search VIBO on the App Store · link in bio." : "Busca VIBO en la App Store · enlace en la bio."}\n\n${rotados.slice(0, 5).join(" ")}` };
+    // TikTok e Instagram (22 sep 2026): sin enlace clicable (TikTok lo
+    // desbloquea a 1.000 seguidores) → el texto tiene que cerrar solo. Tres
+    // líneas: dinero + pregunta + comentar / gratis y quién cobra / cómo entrar.
+    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Search “VIBO” on the App Store and get in." : "Busca «VIBO» en la App Store y entra."}\n${rotados.slice(0, 4).join(" ")}`.trim() };
+    case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Search “VIBO” on the App Store · link in bio." : "Busca «VIBO» en la App Store · enlace en la bio."}\n\n${rotados.slice(0, 5).join(" ")}` };
     case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "x": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 2).join(" ")}`.slice(0, 280) };
     case "bluesky": return { titulo: "", texto: `${base}\n${web}`.slice(0, 300) };
