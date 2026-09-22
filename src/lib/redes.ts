@@ -177,7 +177,8 @@ export function planCalentamiento(desdeDia: number, hastaDia = -10): Hueco[] {
   // 19 sep 2026: 3 al día y por idioma, con al menos 3 h entre vídeos de la
   // misma cuenta (es la ráfaga, no el volumen, lo que hace que te tapen).
   // En Instagram el tope de 2 al día recorta el tercero solo.
-  const HORAS_ES = ["13:30", "18:00", "21:30"];
+  // 22 sep 2026 (fundador): las 21:30 era tarde. Mañana, sobremesa y tarde.
+  const HORAS_ES = ["11:00", "14:30", "19:00"];
   const HORAS_EN = ["15:00", "19:30", "23:00"];
   for (let d = desdeDia; d <= hastaDia; d++) {
     for (const h of HORAS_ES) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "es" });
@@ -317,6 +318,12 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
   for (const f of ordenadas) {
     const redes = f.networks.filter((n): n is Red => (REDES as string[]).includes(n));
     if (!redes.length) continue;
+    // Huecos ya perdidos (22 sep 2026): una fila cuya hora pasó hace más de la
+    // ventana de retraso no se publica nunca (publicar-directo la marca
+    // "perdido"), así que tampoco debe ocupar sitio en la cola: antes, al
+    // cambiar las horas del plan, decenas de filas viejas empujaban TikTok e
+    // Instagram dos días hacia delante.
+    if (ahora.getTime() - madridADate(f.date, f.time).getTime() > (R.VENTANA_TARDE_MIN + 24 * 60) * 60000) continue;
     const desplaz = hashEstable(f.video) % redes.length;
     const orden = [...redes.slice(desplaz), ...redes.slice(0, desplaz)];
     const lang: Lang = f.lang ?? langDeVideo(f.video);
@@ -337,7 +344,10 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
       // El calentamiento se mide contra la fecha DEL HUECO, no contra el momento
       // de ejecutar: si no, una sola pasada de hoy dejaba todo el calendario
       // futuro capado a 1 al día (19 sep 2026).
-      const calentando = !opciones.cuentasCalientes && (!primera[c] || cuando.getTime() - primera[c]!.getTime() < R.CALENTAMIENTO_DIAS * 86400000);
+      // Calentamiento solo donde existe el "shadowban" de cuenta nueva (TikTok,
+      // Instagram, Threads). YouTube y X no penalizan el volumen inicial (22 sep 2026).
+      const conCalentamiento = red === "tiktok" || red === "instagram" || red === "threads";
+      const calentando = conCalentamiento && !opciones.cuentasCalientes && (!primera[c] || cuando.getTime() - primera[c]!.getTime() < R.CALENTAMIENTO_DIAS * 86400000);
       const tope = calentando ? 1 : R.TOPE_DIA[red];
       let motivo: string | undefined;
       if (contador[k] >= tope) motivo = calentando ? "cuenta nueva: 1 al día" : "tope diario";
@@ -363,8 +373,10 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
   // Cada red lleva su ?o= (§ migración 047): así /redes sabe qué red trae gente.
   const web = `https://${URL_APP}?o=${red === "youtube" ? "yt" : red}-${en ? "en" : "es"}`;
   switch (red) {
-    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${base} ${rotados.slice(0, 4).join(" ")}`.trim() };
-    case "instagram": return { titulo: "", texto: `${base}\n${en ? "Link in bio." : "Enlace en la bio."}\n\n${rotados.slice(0, 5).join(" ")}` };
+    // TikTok e Instagram (22 sep 2026): los enlaces del texto NO son clicables;
+    // lo que convierte es el nombre para buscar en la tienda + "enlace en la bio".
+    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${base}\n${en ? "Search VIBO on the App Store · link in bio" : "Busca VIBO en la App Store · enlace en la bio"}\n${rotados.slice(0, 4).join(" ")}`.trim() };
+    case "instagram": return { titulo: "", texto: `${base}\n${en ? "Search VIBO on the App Store · link in bio." : "Busca VIBO en la App Store · enlace en la bio."}\n\n${rotados.slice(0, 5).join(" ")}` };
     case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "x": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 2).join(" ")}`.slice(0, 280) };
     case "bluesky": return { titulo: "", texto: `${base}\n${web}`.slice(0, 300) };
