@@ -107,7 +107,34 @@ async function publicarYoutube(mp4: string, titulo: string, texto: string, en: b
   if (!inicio.ok) throw new Error(`youtube init ${inicio.status} ${await inicio.text()}`);
   const subida = inicio.headers.get("location")!;
   const r = await json(subida, { method: "PUT", headers: { authorization: `Bearer ${token}`, "content-type": "video/mp4" }, body: bytes });
+  await miniaturaYoutube(r.id as string, mp4, token);
   return r.id as string;
+}
+
+/**
+ * Miniatura en YouTube (fundador, 22 sep 2026): YouTube elegía solo un
+ * fotograma y a menudo caía en la RESPUESTA (el tic verde), que mata la
+ * curiosidad. Se saca el mismo segundo que en Buffer (miniaturaMs: pregunta
+ * + cuenta atrás) con ffmpeg y se sube con thumbnails.set. Si el canal no
+ * está verificado por teléfono, YouTube lo rechaza (403): se avisa y sigue.
+ */
+async function miniaturaYoutube(videoId: string, mp4: string, token: string) {
+  const { execFileSync } = await import("child_process");
+  const jpg = path.join(require("os").tmpdir(), `vibo-mini-${videoId}.jpg`);
+  try {
+    let ffmpeg = "ffmpeg";
+    try { ffmpeg = require("ffmpeg-static") as string; } catch {}
+    execFileSync(ffmpeg, ["-y", "-ss", (miniaturaMs(mp4) / 1000).toFixed(2), "-i", mp4, "-frames:v", "1", "-q:v", "2", jpg], { stdio: "ignore" });
+    const r = await fetch(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${videoId}`, {
+      method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "image/jpeg" }, body: fs.readFileSync(jpg) });
+    if (!r.ok) throw new Error(`${r.status} ${(await r.text()).slice(0, 200)}`);
+    console.log("  ✓ miniatura puesta (segundo " + (miniaturaMs(mp4) / 1000).toFixed(1) + ")");
+  } catch (e: any) {
+    const msg = String(e?.message ?? e);
+    console.log(msg.includes("403") || /forbidden|verif/i.test(msg)
+      ? "  ⚠ miniatura no puesta: el canal tiene que estar verificado por teléfono en YouTube (Ajustes → Canal → Verificación)."
+      : `  ⚠ miniatura no puesta: ${msg.slice(0, 160)}`);
+  } finally { try { fs.unlinkSync(jpg); } catch {} }
 }
 
 async function tokenX() {
