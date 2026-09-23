@@ -4693,7 +4693,9 @@
       "variante": "a",
       "gancho": "Did you see it?",
       "tags": "#eclipse #science #spain",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false,
+      "nota": "Desactivado 23 sep 2026: tema solo de España (público EN internacional)."
     },
     {
       "file": "Fab f105a - Quien presenta Conexion Honduras.mp4",
@@ -4717,7 +4719,9 @@
       "variante": "a",
       "gancho": "Only for Survivor fans",
       "tags": "#survivor #tv",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false,
+      "nota": "Desactivado 23 sep 2026: tema solo de España (público EN internacional)."
     },
     {
       "file": "Fab f106aF - Que significa farmear aura.mp4",
