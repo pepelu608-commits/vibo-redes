@@ -155,6 +155,11 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
       ? (es ? "Esta cae en la partida. Deja tu respuesta en comentarios." : "This one's in the game. Drop your answer in the comments.")
       : v.mecanica === "fabrica-comenta"
       ? (es ? "¿A, B, C o D? Deja tu respuesta en comentarios 👇" : "A, B, C or D? Drop your answer in the comments 👇")
+      // Formatos de varias preguntas (23 sep 2026): comentan su resultado.
+      : v.mecanica === "fabrica-tres"
+      ? (es ? "Comenta cuántas has acertado: 0, 1, 2 o 3 👇" : "Comment your score: 0, 1, 2 or 3 👇")
+      : v.mecanica === "fabrica-escalera"
+      ? (es ? "¿Hasta cuál llegaste? Comenta 1, 2 o 3 👇" : "How far did you get? Comment 1, 2 or 3 👇")
       : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
     const quien = bote ? (es ? " Para los 5 mejores." : " Top 5 split it.") : "";
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
