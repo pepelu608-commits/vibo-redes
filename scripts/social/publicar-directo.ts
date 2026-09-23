@@ -257,7 +257,7 @@ async function canalBuffer(token: string, red: Red): Promise<string> {
 /**
  * Segundo del vídeo que se usa como miniatura, según cómo está montado cada
  * uno (fundador, 22 sep 2026: "en el momento adecuado de cada vídeo"):
- *  - fábrica (revela/final/misterio): 3,2 s → pregunta + cuenta atrás + banda del dinero.
+ *  - fábrica (revela/final/misterio): 0,8 s → la pantalla de apertura (dinero / "pregunta 9 de 10").
  *  - resumen de partida y bote: 1,0 s → la cifra grande ya en pantalla.
  *  - promos/countdown/cara: 0,8 s → el primer rótulo, antes de cualquier corte.
  */
@@ -268,9 +268,24 @@ function miniaturaMs(mp4: string): number {
     const cat = JSON.parse(fs.readFileSync(path.join(CARPETA, "videos.json"), "utf8")) as { videos: { file: string; mecanica?: string }[] };
     mecanica = cat.videos.find((v) => v.file === file)?.mecanica ?? "";
   } catch {}
-  if (/^fabrica-/.test(mecanica) || /^Fab /.test(file)) return 3200;
+  // Fundador, 23 sep 2026: la miniatura es el PRIMER segundo (la pantalla del
+  // dinero / "pregunta 9 de 10"), nunca la respuesta ni la cuenta atrás.
+  if (/^fabrica-/.test(mecanica) || /^Fab /.test(file)) return 800;
   if (/resumen|bote/.test(mecanica) || /Resumen|Bote/.test(file)) return 1000;
   return 800;
+}
+
+/**
+ * Modo "aviso" de Buffer (fundador, 23 sep 2026): los vídeos que Buffer
+ * publicaba solo en TikTok tenían 0 visitas y el subido a mano 125. Con
+ * `notification`, a la hora prevista Buffer manda una notificación al móvil
+ * con el vídeo y el texto, y se publica desde la app de la red (sale como
+ * subido a mano). Variable SOCIAL_MANUAL_REDES (por defecto "tiktok,instagram");
+ * vacía = todo automático.
+ */
+function modoBuffer(red: Red): "automatic" | "notification" {
+  const manuales = (process.env.SOCIAL_MANUAL_REDES ?? "tiktok,instagram").split(",").map((r) => r.trim()).filter(Boolean);
+  return manuales.includes(red) ? "notification" : "automatic";
 }
 
 async function publicarBuffer(mp4: string, texto: string, red: Red, en: boolean, cuando: Date): Promise<string> {
@@ -285,7 +300,7 @@ async function publicarBuffer(mp4: string, texto: string, red: Red, en: boolean,
   const dueAt = new Date(Math.max(cuando.getTime(), Date.now() + 3 * 60000)).toISOString();
   const esc = (t: string) => JSON.stringify(t);
   const d = await graphqlBuffer(token, `mutation { createPost(input: {
-      text: ${esc(texto)}, channelId: ${esc(canal)}, schedulingType: automatic, mode: customScheduled, dueAt: ${esc(dueAt)},
+      text: ${esc(texto)}, channelId: ${esc(canal)}, schedulingType: ${modoBuffer(red)}, mode: customScheduled, dueAt: ${esc(dueAt)},
       assets: [{ video: { url: ${esc(url)}, metadata: { thumbnailOffset: ${thumbnailOffset} } } }]${red === "instagram" ? ", metadata: { instagram: { type: reel, shouldShareToFeed: true } }" : ""}
     }) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }`);
   if (d.createPost?.message) throw new Error("buffer: " + d.createPost.message);
