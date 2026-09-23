@@ -1,3445 +1,3717 @@
 {
-  "comentario": "Preguntas SOLO para vídeos de redes. La mayoría NO están en trivia.json a propósito: el vídeo da la respuesta y no queremos regalar la partida. Las marcadas enBanco:true sí caen en la partida (anzuelo: quien vio el vídeo la acierta el sábado y se lo cuenta a todos). 'gancho' = texto del primer segundo; 'nota' = lo que aparece con la respuesta; 'correcta' = índice 0-3.",
-  "preguntas": [
-    {
-      "id": "f01",
-      "gancho": "No contestes hasta que acabe el tiempo",
-      "texto": "¿Qué país tiene más husos horarios?",
-      "opciones": [
-        "Rusia",
-        "Francia",
-        "Estados Unidos",
-        "China"
-      ],
-      "correcta": 1,
-      "nota": "Por los territorios de ultramar. Rusia tiene 11; Francia, 12.",
-      "enBanco": true,
-      "texto_en": "Which country has the most time zones?",
-      "opciones_en": [
-        "Russia",
-        "France",
-        "United States",
-        "China"
-      ],
-      "nota_en": "Overseas territories. Russia has 11; France, 12.",
-      "gancho_en": "Don't answer until the timer ends",
-      "ganchos": [
-        "No contestes hasta que acabe el tiempo",
-        "Esta cae el sábado",
-        "Rusia no es la respuesta"
-      ],
-      "ganchos_en": [
-        "Don't answer until the timer ends",
-        "This one's in Saturday's game",
-        "Russia is not the answer"
-      ]
-    },
-    {
-      "id": "f02",
-      "gancho": "Mi madre la acertó. Yo no.",
-      "texto": "¿Qué instrumento tiene 47 cuerdas?",
-      "opciones": [
-        "Guitarra",
-        "Arpa",
-        "Violín",
-        "Piano"
-      ],
-      "correcta": 1,
-      "nota": "El arpa de concierto: 47 cuerdas y 7 pedales.",
-      "enBanco": true,
-      "texto_en": "Which instrument has 47 strings?",
-      "opciones_en": [
-        "Guitar",
-        "Harp",
-        "Violin",
-        "Piano"
-      ],
-      "nota_en": "The concert harp: 47 strings, 7 pedals.",
-      "gancho_en": "My mum got it. I didn't.",
-      "ganchos": [
-        "Mi madre la acertó. Yo no.",
-        "Esta cae el sábado",
-        "Nadie la sabe a la primera"
-      ],
-      "ganchos_en": [
-        "My mum got it. I didn't.",
-        "This one's in Saturday's game",
-        "Nobody gets it first try"
-      ]
-    },
-    {
-      "id": "f03",
-      "gancho": "Si dudas, ya has perdido",
-      "texto": "¿Cuántos lados tiene un hexágono?",
-      "opciones": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "correcta": 1,
-      "nota": "Seis. No había tiempo para contar.",
-      "enBanco": false,
-      "texto_en": "How many sides does a hexagon have?",
-      "opciones_en": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "nota_en": "Six. No time to count.",
-      "gancho_en": "If you hesitate, you've lost",
-      "ganchos": [
-        "Si dudas, ya has perdido",
-        "La más fácil del sábado",
-        "Contesta sin pensar"
-      ],
-      "ganchos_en": [
-        "If you hesitate, you've lost",
-        "The easiest one on Saturday",
-        "Answer without thinking"
-      ]
-    },
-    {
-      "id": "f04",
-      "gancho": "La que me sacó del bote",
-      "texto": "¿En qué país está el Kilimanjaro?",
-      "opciones": [
-        "Kenia",
-        "Tanzania",
-        "Etiopía",
-        "Uganda"
-      ],
-      "correcta": 1,
-      "nota": "Tanzania. Casi todo el mundo dice Kenia.",
-      "enBanco": false,
-      "texto_en": "Which country is Mount Kilimanjaro in?",
-      "opciones_en": [
-        "Kenya",
-        "Tanzania",
-        "Ethiopia",
-        "Uganda"
-      ],
-      "nota_en": "Tanzania. Almost everyone says Kenya.",
-      "gancho_en": "The one that cost me the pot",
-      "ganchos": [
-        "La que me sacó del bote",
-        "Todos dicen Kenia",
-        "Pregunta 4. Fuera 60."
-      ],
-      "ganchos_en": [
-        "The one that cost me the pot",
-        "Everyone says Kenya",
-        "Question 4. 60 out."
-      ]
-    },
-    {
-      "id": "f05",
-      "gancho": "Casi todos dicen Danubio",
-      "texto": "¿Cuál es el río más largo de Europa?",
-      "opciones": [
-        "Danubio",
-        "Volga",
-        "Rin",
-        "Sena"
-      ],
-      "correcta": 1,
-      "nota": "El Volga: 3.530 km. El Danubio, 2.850.",
-      "enBanco": false,
-      "texto_en": "What is the longest river in Europe?",
-      "opciones_en": [
-        "Danube",
-        "Volga",
-        "Rhine",
-        "Seine"
-      ],
-      "nota_en": "The Volga: 3,530 km. The Danube, 2,850.",
-      "gancho_en": "Almost everyone says Danube",
-      "ganchos": [
-        "Casi todos dicen Danubio",
-        "No es el Danubio",
-        "Mi profe de geografía la falló"
-      ],
-      "ganchos_en": [
-        "Almost everyone says Danube",
-        "It's not the Danube",
-        "My geography teacher got it wrong"
-      ]
-    },
-    {
-      "id": "f06",
-      "gancho": "Pregunta 10",
-      "texto": "¿Qué elemento químico tiene el símbolo W?",
-      "opciones": [
-        "Wolframio",
-        "Vanadio",
-        "Zinc",
-        "Bismuto"
-      ],
-      "correcta": 0,
-      "nota": "Wolframio, también llamado tungsteno. Así son las últimas.",
-      "enBanco": false,
-      "texto_en": "Which chemical element has the symbol W?",
-      "opciones_en": [
-        "Tungsten",
-        "Vanadium",
-        "Zinc",
-        "Bismuth"
-      ],
-      "nota_en": "Tungsten (wolfram). That's what question 10 looks like.",
-      "gancho_en": "Question 10",
-      "ganchos": [
-        "Pregunta 10",
-        "Los de ciencias, a ver",
-        "W. Solo eso."
-      ],
-      "ganchos_en": [
-        "Question 10",
-        "Science people, let's see",
-        "W. That's all."
-      ]
-    },
-    {
-      "id": "f07",
-      "gancho": "Lee hasta el final",
-      "texto": "¿Cuál de estos NO es un planeta?",
-      "opciones": [
-        "Marte",
-        "Plutón",
-        "Venus",
-        "Saturno"
-      ],
-      "correcta": 1,
-      "nota": "Desde 2006. Mucha gente sigue en 2005.",
-      "enBanco": false,
-      "texto_en": "Which of these is NOT a planet?",
-      "opciones_en": [
-        "Mars",
-        "Pluto",
-        "Venus",
-        "Saturn"
-      ],
-      "nota_en": "Since 2006. A lot of people are still in 2005.",
-      "gancho_en": "Read to the end",
-      "ganchos": [
-        "Lee hasta el final",
-        "Una no es un planeta",
-        "La que cae la mitad"
-      ],
-      "ganchos_en": [
-        "Read to the end",
-        "One isn't a planet",
-        "Half of you will miss it"
-      ]
-    },
-    {
-      "id": "f08",
-      "gancho": "Parece fácil",
-      "texto": "¿Cuál es la capital de Australia?",
-      "opciones": [
-        "Sídney",
-        "Melbourne",
-        "Canberra",
-        "Perth"
-      ],
-      "correcta": 2,
-      "nota": "Canberra. Sídney es la más grande, no la capital.",
-      "enBanco": true,
-      "texto_en": "What is the capital of Australia?",
-      "opciones_en": [
-        "Sydney",
-        "Melbourne",
-        "Canberra",
-        "Perth"
-      ],
-      "nota_en": "Canberra. Sydney is the biggest, not the capital.",
-      "gancho_en": "Looks easy",
-      "ganchos": [
-        "Parece fácil",
-        "Esta cae el sábado",
-        "No es Sídney"
-      ],
-      "ganchos_en": [
-        "Looks easy",
-        "This one's in Saturday's game",
-        "It's not Sydney"
-      ]
-    },
-    {
-      "id": "f09",
-      "gancho": "Tres seguidas o no vales",
-      "texto": "¿Cuál es la capital de Canadá?",
-      "opciones": [
-        "Toronto",
-        "Ottawa",
-        "Montreal",
-        "Vancouver"
-      ],
-      "correcta": 1,
-      "nota": "Ottawa. Toronto engaña a media clase.",
-      "enBanco": false,
-      "texto_en": "What is the capital of Canada?",
-      "opciones_en": [
-        "Toronto",
-        "Ottawa",
-        "Montreal",
-        "Vancouver"
-      ],
-      "nota_en": "Ottawa. Toronto fools half the room.",
-      "gancho_en": "Three in a row or you're out",
-      "ganchos": [
-        "Tres seguidas o no vales",
-        "No es Toronto",
-        "La que separa a los que saben"
-      ],
-      "ganchos_en": [
-        "Three in a row or you're out",
-        "It's not Toronto",
-        "This one sorts out who knows"
-      ]
-    },
-    {
-      "id": "f10",
-      "gancho": "6 segundos. Igual que el sábado.",
-      "texto": "¿Cuántos años tiene un lustro?",
-      "opciones": [
-        "3",
-        "5",
-        "10",
-        "15"
-      ],
-      "correcta": 1,
-      "nota": "Cinco. Un decenio son diez.",
-      "enBanco": false,
-      "texto_en": "How many years are in a lustrum?",
-      "opciones_en": [
-        "3",
-        "5",
-        "10",
-        "15"
-      ],
-      "nota_en": "Five. A decade is ten.",
-      "gancho_en": "6 seconds. Same as Saturday.",
-      "ganchos": [
-        "6 segundos. Igual que el sábado.",
-        "Un lustro. Sin mirar.",
-        "La de primaria que se olvida"
-      ],
-      "ganchos_en": [
-        "6 seconds. Same as Saturday.",
-        "A lustrum. No looking.",
-        "The primary-school one you forgot"
-      ]
-    },
-    {
-      "id": "f11",
-      "gancho": "Esta la fallan los listos",
-      "texto": "¿Cuántos planetas del sistema solar tienen anillos?",
-      "opciones": [
-        "1",
-        "2",
-        "4",
-        "6"
-      ],
-      "correcta": 2,
-      "nota": "Cuatro: Júpiter, Saturno, Urano y Neptuno.",
-      "enBanco": false,
-      "texto_en": "How many planets in the solar system have rings?",
-      "opciones_en": [
-        "1",
-        "2",
-        "4",
-        "6"
-      ],
-      "nota_en": "Four: Jupiter, Saturn, Uranus and Neptune.",
-      "gancho_en": "The smart ones get this wrong",
-      "ganchos": [
-        "Esta la fallan los listos",
-        "No es solo Saturno",
-        "Anillos. Cuenta."
-      ],
-      "ganchos_en": [
-        "The smart ones get this wrong",
-        "It's not just Saturn",
-        "Rings. Count them."
-      ]
-    },
-    {
-      "id": "f12",
-      "gancho": "Mira bien. Tienes 6 segundos.",
-      "texto": "¿Qué país tiene la bandera verde, blanca y naranja, con el verde junto al mástil?",
-      "opciones": [
-        "Costa de Marfil",
-        "Irlanda",
-        "Italia",
-        "Níger"
-      ],
-      "correcta": 1,
-      "nota": "Irlanda. Costa de Marfil es la misma al revés.",
-      "enBanco": false,
-      "texto_en": "Whose flag is green, white and orange, green next to the pole?",
-      "opciones_en": [
-        "Ivory Coast",
-        "Ireland",
-        "Italy",
-        "Niger"
-      ],
-      "nota_en": "Ireland. Ivory Coast is the same one reversed.",
-      "gancho_en": "Look closely. 6 seconds.",
-      "ganchos": [
-        "Mira bien. Tienes 6 segundos.",
-        "Verde, blanco, naranja",
-        "Dos banderas casi iguales"
-      ],
-      "ganchos_en": [
-        "Look closely. 6 seconds.",
-        "Green, white, orange",
-        "Two nearly identical flags"
-      ]
-    },
-    {
-      "id": "f13",
-      "gancho": "Contesta antes que el de al lado",
-      "texto": "¿En qué año llegó el ser humano a la Luna?",
-      "opciones": [
-        "1965",
-        "1969",
-        "1972",
-        "1975"
-      ],
-      "correcta": 1,
-      "nota": "1969. Apolo 11, 20 de julio.",
-      "enBanco": false,
-      "texto_en": "In which year did humans land on the Moon?",
-      "opciones_en": [
-        "1965",
-        "1969",
-        "1972",
-        "1975"
-      ],
-      "nota_en": "1969. Apollo 11, July 20.",
-      "gancho_en": "Answer before the person next to you",
-      "ganchos": [
-        "Contesta antes que el de al lado",
-        "El año, sin buscarlo",
-        "Mi padre lo vio en directo"
-      ],
-      "ganchos_en": [
-        "Answer before the person next to you",
-        "The year, no googling",
-        "My dad watched it live"
-      ]
-    },
-    {
-      "id": "f14",
-      "gancho": "Cuanto más sabes, peor",
-      "texto": "¿Cuántos huesos tiene un adulto?",
-      "opciones": [
-        "186",
-        "206",
-        "226",
-        "246"
-      ],
-      "correcta": 1,
-      "nota": "206. Un bebé nace con unos 270 y se van soldando.",
-      "enBanco": false,
-      "texto_en": "How many bones does an adult have?",
-      "opciones_en": [
-        "186",
-        "206",
-        "226",
-        "246"
-      ],
-      "nota_en": "206. A baby is born with about 270 that fuse over time.",
-      "gancho_en": "The more you know, the worse",
-      "ganchos": [
-        "Cuanto más sabes, peor",
-        "Un bebé tiene más",
-        "Biología de instituto"
-      ],
-      "ganchos_en": [
-        "The more you know, the worse",
-        "A baby has more",
-        "High-school biology"
-      ]
-    },
-    {
-      "id": "f15",
-      "gancho": "No leas las opciones. Contesta.",
-      "texto": "¿Cuál es el océano más grande?",
-      "opciones": [
-        "Atlántico",
-        "Índico",
-        "Pacífico",
-        "Ártico"
-      ],
-      "correcta": 2,
-      "nota": "El Pacífico. Más grande que toda la tierra firme junta.",
-      "enBanco": false,
-      "texto_en": "What is the largest ocean?",
-      "opciones_en": [
-        "Atlantic",
-        "Indian",
-        "Pacific",
-        "Arctic"
-      ],
-      "nota_en": "The Pacific. Bigger than all the land on Earth combined.",
-      "gancho_en": "Don't read the options. Answer.",
-      "ganchos": [
-        "No leas las opciones. Contesta.",
-        "La más fácil del sábado",
-        "Si fallas esta, no juegues"
-      ],
-      "ganchos_en": [
-        "Don't read the options. Answer.",
-        "The easiest one on Saturday",
-        "Miss this and don't bother playing"
-      ]
-    },
-    {
-      "id": "f16",
-      "gancho": "La pregunta 7 me sacó del bote",
-      "texto": "¿Qué gas necesitan las plantas para hacer la fotosíntesis?",
-      "opciones": [
-        "Oxígeno",
-        "Nitrógeno",
-        "Dióxido de carbono",
-        "Hidrógeno"
-      ],
-      "correcta": 2,
-      "nota": "CO₂. El oxígeno lo sueltan ellas.",
-      "enBanco": false,
-      "texto_en": "Which gas do plants need for photosynthesis?",
-      "opciones_en": [
-        "Oxygen",
-        "Nitrogen",
-        "Carbon dioxide",
-        "Hydrogen"
-      ],
-      "nota_en": "CO₂. Oxygen is what they give off.",
-      "gancho_en": "Question 7 knocked me out",
-      "ganchos": [
-        "La pregunta 7 me sacó del bote",
-        "No es oxígeno",
-        "Primaria. Y aun así."
-      ],
-      "ganchos_en": [
-        "Question 7 knocked me out",
-        "It's not oxygen",
-        "Primary school. And still."
-      ]
-    },
-    {
-      "id": "f17",
-      "gancho": "¿Aguantas más que yo?",
-      "texto": "¿Cuántas cuerdas tiene un violín?",
-      "opciones": [
-        "4",
-        "5",
-        "6",
-        "8"
-      ],
-      "correcta": 0,
-      "nota": "Cuatro: sol, re, la, mi.",
-      "enBanco": true,
-      "texto_en": "How many strings does a violin have?",
-      "opciones_en": [
-        "4",
-        "5",
-        "6",
-        "8"
-      ],
-      "nota_en": "Four: G, D, A, E.",
-      "gancho_en": "Can you last longer than me?",
-      "ganchos": [
-        "¿Aguantas más que yo?",
-        "Esta cae el sábado",
-        "Los músicos la saben"
-      ],
-      "ganchos_en": [
-        "Can you last longer than me?",
-        "This one's in Saturday's game",
-        "Musicians know this one"
-      ]
-    },
-    {
-      "id": "f18",
-      "gancho": "Si has dicho Bélgica, fuera",
-      "texto": "¿Cuál de estos países NO tiene frontera con Alemania?",
-      "opciones": [
-        "Austria",
-        "Bélgica",
-        "Eslovaquia",
-        "Luxemburgo"
-      ],
-      "correcta": 2,
-      "nota": "Eslovaquia. Entre medias está Chequia.",
-      "enBanco": false,
-      "texto_en": "Which of these countries does NOT border Germany?",
-      "opciones_en": [
-        "Austria",
-        "Belgium",
-        "Slovakia",
-        "Luxembourg"
-      ],
-      "nota_en": "Slovakia. Czechia sits in between.",
-      "gancho_en": "If you said Belgium, you're out",
-      "ganchos": [
-        "Si has dicho Bélgica, fuera",
-        "Solo uno no toca Alemania",
-        "Geografía de las que duelen"
-      ],
-      "ganchos_en": [
-        "If you said Belgium, you're out",
-        "Only one doesn't touch Germany",
-        "Geography that hurts"
-      ]
-    },
-    {
-      "id": "f19",
-      "gancho": "Parece fácil. No lo es.",
-      "texto": "¿Cuántos minutos tiene un día?",
-      "opciones": [
-        "1.240",
-        "1.440",
-        "1.640",
-        "2.400"
-      ],
-      "correcta": 1,
-      "nota": "1.440. 24 por 60. En 6 segundos no da tiempo.",
-      "enBanco": false,
-      "texto_en": "How many minutes are in a day?",
-      "opciones_en": [
-        "1,240",
-        "1,440",
-        "1,640",
-        "2,400"
-      ],
-      "nota_en": "1,440. 24 times 60. Not in 6 seconds.",
-      "gancho_en": "Looks easy. It isn't.",
-      "ganchos": [
-        "Parece fácil. No lo es.",
-        "Sin calculadora",
-        "24 por 60. Ya."
-      ],
-      "ganchos_en": [
-        "Looks easy. It isn't.",
-        "No calculator",
-        "24 times 60. Go."
-      ]
-    },
-    {
-      "id": "f20",
-      "gancho": "Mi abuela la acertó",
-      "texto": "¿Qué animal es el más rápido del mundo?",
-      "opciones": [
-        "Guepardo",
-        "Halcón peregrino",
-        "Pez vela",
-        "Liebre"
-      ],
-      "correcta": 1,
-      "nota": "El halcón peregrino: más de 300 km/h en picado. El guepardo es el más rápido en tierra.",
-      "enBanco": false,
-      "texto_en": "Which is the fastest animal in the world?",
-      "opciones_en": [
-        "Cheetah",
-        "Peregrine falcon",
-        "Sailfish",
-        "Hare"
-      ],
-      "nota_en": "Peregrine falcon: 300+ km/h in a dive. The cheetah is fastest on land.",
-      "gancho_en": "My grandma got it",
-      "ganchos": [
-        "Mi abuela la acertó",
-        "No es el guepardo",
-        "El más rápido no corre"
-      ],
-      "ganchos_en": [
-        "My grandma got it",
-        "It's not the cheetah",
-        "The fastest one doesn't run"
-      ]
-    },
-    {
-      "id": "f21",
-      "gancho": "Esta la fallan los listos",
-      "texto": "¿Cuál es el país más grande de África?",
-      "opciones": [
-        "Sudán",
-        "Argelia",
-        "Congo",
-        "Nigeria"
-      ],
-      "correcta": 1,
-      "nota": "Argelia, desde que Sudán se partió en 2011.",
-      "enBanco": false,
-      "texto_en": "What is the largest country in Africa?",
-      "opciones_en": [
-        "Sudan",
-        "Algeria",
-        "Congo",
-        "Nigeria"
-      ],
-      "nota_en": "Algeria, since Sudan split in 2011.",
-      "gancho_en": "The smart ones get this wrong",
-      "ganchos": [
-        "Esta la fallan los listos",
-        "No es Sudáfrica",
-        "El mapa engaña"
-      ],
-      "ganchos_en": [
-        "The smart ones get this wrong",
-        "It's not South Africa",
-        "The map lies"
-      ]
-    },
-    {
-      "id": "f22",
-      "gancho": "Lee hasta el final",
-      "texto": "¿Cuántas veces cabe la Tierra en el Sol?",
-      "opciones": [
-        "100",
-        "1.000",
-        "100.000",
-        "1.300.000"
-      ],
-      "correcta": 3,
-      "nota": "Alrededor de 1,3 millones de veces.",
-      "enBanco": false,
-      "texto_en": "How many Earths fit inside the Sun?",
-      "opciones_en": [
-        "100",
-        "1,000",
-        "100,000",
-        "1,300,000"
-      ],
-      "nota_en": "About 1.3 million.",
-      "gancho_en": "Read to the end",
-      "ganchos": [
-        "Lee hasta el final",
-        "Más de un millón",
-        "La cifra que nadie se cree"
-      ],
-      "ganchos_en": [
-        "Read to the end",
-        "More than a million",
-        "The number nobody believes"
-      ]
-    },
-    {
-      "id": "f23",
-      "gancho": "Si dudas, ya has perdido",
-      "texto": "¿En qué continente está Turquía?",
-      "opciones": [
-        "Europa",
-        "Asia",
-        "Los dos",
-        "Ninguno"
-      ],
-      "correcta": 2,
-      "nota": "Los dos. El 3 % en Europa, el resto en Asia.",
-      "enBanco": false,
-      "texto_en": "Which continent is Turkey in?",
-      "opciones_en": [
-        "Europe",
-        "Asia",
-        "Both",
-        "Neither"
-      ],
-      "nota_en": "Both. 3% in Europe, the rest in Asia.",
-      "gancho_en": "If you hesitate, you've lost",
-      "ganchos": [
-        "Si dudas, ya has perdido",
-        "Está en dos",
-        "Pregunta trampa"
-      ],
-      "ganchos_en": [
-        "If you hesitate, you've lost",
-        "It's in two",
-        "Trick question"
-      ]
-    },
-    {
-      "id": "f24",
-      "gancho": "Pregunta 10",
-      "texto": "¿Qué idioma tiene más hablantes nativos?",
-      "opciones": [
-        "Inglés",
-        "Chino mandarín",
-        "Español",
-        "Hindi"
-      ],
-      "correcta": 1,
-      "nota": "Mandarín. El español va segundo, por delante del inglés.",
-      "enBanco": false,
-      "texto_en": "Which language has the most native speakers?",
-      "opciones_en": [
-        "English",
-        "Mandarin Chinese",
-        "Spanish",
-        "Hindi"
-      ],
-      "nota_en": "Mandarin. Spanish is second, ahead of English.",
-      "gancho_en": "Question 10",
-      "ganchos": [
-        "Pregunta 10",
-        "No es el inglés",
-        "Nativos, no hablantes"
-      ],
-      "ganchos_en": [
-        "Question 10",
-        "It's not English",
-        "Native, not total speakers"
-      ]
-    },
-    {
-      "id": "f25",
-      "gancho": "Mira bien. Tienes 6 segundos.",
-      "texto": "¿Cuál es el metal más abundante en la corteza terrestre?",
-      "opciones": [
-        "Hierro",
-        "Aluminio",
-        "Cobre",
-        "Oro"
-      ],
-      "correcta": 1,
-      "nota": "Aluminio. El hierro es el más abundante en todo el planeta, no en la corteza.",
-      "enBanco": false,
-      "texto_en": "What is the most abundant metal in the Earth's crust?",
-      "opciones_en": [
-        "Iron",
-        "Aluminium",
-        "Copper",
-        "Gold"
-      ],
-      "nota_en": "Aluminium. Iron wins for the whole planet, not the crust.",
-      "gancho_en": "Look closely. 6 seconds.",
-      "ganchos": [
-        "Mira bien. Tienes 6 segundos.",
-        "No es el hierro",
-        "Química de la ESO"
-      ],
-      "ganchos_en": [
-        "Look closely. 6 seconds.",
-        "It's not iron",
-        "Secondary-school chemistry"
-      ]
-    },
-    {
-      "id": "f26",
-      "gancho": "Mi madre la acertó. Yo no.",
-      "texto": "¿Cuántos dientes tiene un adulto (sin las muelas del juicio)?",
-      "opciones": [
-        "24",
-        "28",
-        "32",
-        "36"
-      ],
-      "correcta": 1,
-      "nota": "28. Con las cuatro del juicio, 32.",
-      "enBanco": false,
-      "texto_en": "How many teeth does an adult have (without wisdom teeth)?",
-      "opciones_en": [
-        "24",
-        "28",
-        "32",
-        "36"
-      ],
-      "nota_en": "28. With the four wisdom teeth, 32.",
-      "gancho_en": "My mum got it. I didn't.",
-      "ganchos": [
-        "Mi madre la acertó. Yo no.",
-        "Cuéntalos. 6 segundos.",
-        "Sin las del juicio"
-      ],
-      "ganchos_en": [
-        "My mum got it. I didn't.",
-        "Count them. 6 seconds.",
-        "Without wisdom teeth"
-      ]
-    },
-    {
-      "id": "f27",
-      "gancho": "Casi todos la fallan",
-      "texto": "¿Qué país produce más café?",
-      "opciones": [
-        "Colombia",
-        "Brasil",
-        "Vietnam",
-        "Etiopía"
-      ],
-      "correcta": 1,
-      "nota": "Brasil, de largo. Colombia ni siquiera es segundo: es Vietnam.",
-      "enBanco": false,
-      "texto_en": "Which country produces the most coffee?",
-      "opciones_en": [
-        "Colombia",
-        "Brazil",
-        "Vietnam",
-        "Ethiopia"
-      ],
-      "nota_en": "Brazil, by far. Colombia isn't even second: Vietnam is.",
-      "gancho_en": "Almost everyone gets this wrong",
-      "ganchos": [
-        "Casi todos la fallan",
-        "No es Colombia",
-        "Café. Un solo país."
-      ],
-      "ganchos_en": [
-        "Almost everyone gets this wrong",
-        "It's not Colombia",
-        "Coffee. One country."
-      ]
-    },
-    {
-      "id": "f28",
-      "gancho": "La que me sacó del bote",
-      "texto": "¿Cuántos corazones tiene un pulpo?",
-      "opciones": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "correcta": 2,
-      "nota": "Tres. Dos para las branquias y uno para el resto.",
-      "enBanco": false,
-      "texto_en": "How many hearts does an octopus have?",
-      "opciones_en": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "nota_en": "Three. Two for the gills, one for the rest.",
-      "gancho_en": "The one that cost me the pot",
-      "ganchos": [
-        "La que me sacó del bote",
-        "Más de uno",
-        "El pulpo te elimina"
-      ],
-      "ganchos_en": [
-        "The one that cost me the pot",
-        "More than one",
-        "The octopus knocks you out"
-      ]
-    },
-    {
-      "id": "f29",
-      "gancho": "No contestes hasta que acabe el tiempo",
-      "texto": "¿Cuál es la ciudad más poblada del mundo?",
-      "opciones": [
-        "Shanghái",
-        "Tokio",
-        "Delhi",
-        "Ciudad de México"
-      ],
-      "correcta": 1,
-      "nota": "Tokio, contando el área metropolitana: unos 37 millones.",
-      "enBanco": false,
-      "texto_en": "What is the most populated city in the world?",
-      "opciones_en": [
-        "Shanghai",
-        "Tokyo",
-        "Delhi",
-        "Mexico City"
-      ],
-      "nota_en": "Tokyo, counting the metro area: about 37 million.",
-      "gancho_en": "Don't answer until the timer ends",
-      "ganchos": [
-        "No contestes hasta que acabe el tiempo",
-        "No es Nueva York",
-        "La ciudad, no el país"
-      ],
-      "ganchos_en": [
-        "Don't answer until the timer ends",
-        "It's not New York",
-        "The city, not the country"
-      ]
-    },
-    {
-      "id": "f30",
-      "gancho": "Cuanto más sabes, peor",
-      "texto": "¿De qué color es la caja negra de un avión?",
-      "opciones": [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Amarillo"
-      ],
-      "correcta": 1,
-      "nota": "Naranja, para encontrarla entre los restos.",
-      "enBanco": false,
-      "texto_en": "What colour is an aeroplane's black box?",
-      "opciones_en": [
-        "Black",
-        "Orange",
-        "Red",
-        "Yellow"
-      ],
-      "nota_en": "Orange, so it can be found in the wreckage.",
-      "gancho_en": "The more you know, the worse",
-      "ganchos": [
-        "Cuanto más sabes, peor",
-        "No es negra",
-        "La pregunta que todos fallan a la primera"
-      ],
-      "ganchos_en": [
-        "The more you know, the worse",
-        "It's not black",
-        "The one everyone misses first time"
-      ]
-    },
-    {
-      "id": "f31",
-      "gancho": "Pregunta 1. La de calentar.",
-      "texto": "¿Cuál es el planeta más grande del sistema solar?",
-      "opciones": [
-        "Saturno",
-        "Júpiter",
-        "Neptuno",
-        "Urano"
-      ],
-      "correcta": 1,
-      "nota": "Júpiter. Caben más de mil Tierras dentro.",
-      "enBanco": false,
-      "texto_en": "Which is the largest planet in the solar system?",
-      "opciones_en": [
-        "Saturn",
-        "Jupiter",
-        "Neptune",
-        "Uranus"
-      ],
-      "nota_en": "Jupiter. Over a thousand Earths would fit inside.",
-      "gancho_en": "Question 1. The warm-up.",
-      "ganchos": [
-        "Pregunta 1. La de calentar.",
-        "No es Saturno",
-        "Si fallas esta, no juegues"
-      ],
-      "ganchos_en": [
-        "Question 1. The warm-up.",
-        "It's not Saturn",
-        "Miss this and don't bother"
-      ],
-      "tags": "#espacio",
-      "tags_en": "#space"
-    },
-    {
-      "id": "f32",
-      "gancho": "Espacio. Sin pensar.",
-      "texto": "¿Cuál es el planeta más cercano al Sol?",
-      "opciones": [
-        "Venus",
-        "Mercurio",
-        "Marte",
-        "Tierra"
-      ],
-      "correcta": 1,
-      "nota": "Mercurio.",
-      "enBanco": false,
-      "texto_en": "Which planet is closest to the Sun?",
-      "opciones_en": [
-        "Venus",
-        "Mercury",
-        "Mars",
-        "Earth"
-      ],
-      "nota_en": "Mercury.",
-      "gancho_en": "Space. No thinking.",
-      "ganchos": [
-        "Espacio. Sin pensar.",
-        "No es Venus",
-        "Pregunta 2"
-      ],
-      "ganchos_en": [
-        "Space. No thinking.",
-        "It's not Venus",
-        "Question 2"
-      ],
-      "tags": "#espacio",
-      "tags_en": "#space"
-    },
-    {
-      "id": "f33",
-      "gancho": "Biología de instituto",
-      "texto": "¿Cuál es el hueso más largo del cuerpo humano?",
-      "opciones": [
-        "Húmero",
-        "Tibia",
-        "Fémur",
-        "Radio"
-      ],
-      "correcta": 2,
-      "nota": "El fémur, el del muslo.",
-      "enBanco": false,
-      "texto_en": "What is the longest bone in the human body?",
-      "opciones_en": [
-        "Humerus",
-        "Tibia",
-        "Femur",
-        "Radius"
-      ],
-      "nota_en": "The femur, in the thigh.",
-      "gancho_en": "High-school biology",
-      "ganchos": [
-        "Biología de instituto",
-        "No es la tibia",
-        "Anatomía en 6 segundos"
-      ],
-      "ganchos_en": [
-        "High-school biology",
-        "It's not the tibia",
-        "Anatomy in 6 seconds"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f34",
-      "gancho": "Arte. 6 segundos.",
-      "texto": "¿Quién pintó 'La noche estrellada'?",
-      "opciones": [
-        "Monet",
-        "Van Gogh",
-        "Picasso",
-        "Dalí"
-      ],
-      "correcta": 1,
-      "nota": "Van Gogh, en 1889, desde un sanatorio.",
-      "enBanco": false,
-      "texto_en": "Who painted 'The Starry Night'?",
-      "opciones_en": [
-        "Monet",
-        "Van Gogh",
-        "Picasso",
-        "Dalí"
-      ],
-      "nota_en": "Van Gogh, in 1889, from an asylum.",
-      "gancho_en": "Art. 6 seconds.",
-      "ganchos": [
-        "Arte. 6 segundos.",
-        "Todos la han visto",
-        "No es Monet"
-      ],
-      "ganchos_en": [
-        "Art. 6 seconds.",
-        "Everyone's seen it",
-        "It's not Monet"
-      ],
-      "tags": "#arte",
-      "tags_en": "#art"
-    },
-    {
-      "id": "f35",
-      "gancho": "La más fácil del sábado",
-      "texto": "¿Cuál es el animal terrestre más grande?",
-      "opciones": [
-        "Rinoceronte",
-        "Hipopótamo",
-        "Elefante africano",
-        "Jirafa"
-      ],
-      "correcta": 2,
-      "nota": "El elefante africano. Hasta 6 toneladas.",
-      "enBanco": false,
-      "texto_en": "What is the largest land animal?",
-      "opciones_en": [
-        "Rhinoceros",
-        "Hippopotamus",
-        "African elephant",
-        "Giraffe"
-      ],
-      "nota_en": "The African elephant. Up to 6 tonnes.",
-      "gancho_en": "The easiest one on Saturday",
-      "ganchos": [
-        "La más fácil del sábado",
-        "Terrestre. Ojo.",
-        "Mi sobrino la sabe"
-      ],
-      "ganchos_en": [
-        "The easiest one on Saturday",
-        "On land. Careful.",
-        "My nephew knows this"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f36",
-      "gancho": "Música. Sin pensar.",
-      "texto": "¿En qué país nació el tango?",
-      "opciones": [
-        "Brasil",
-        "Uruguay",
-        "Argentina",
-        "Cuba"
-      ],
-      "correcta": 2,
-      "nota": "Argentina. En los arrabales de Buenos Aires.",
-      "enBanco": false,
-      "texto_en": "In which country was tango born?",
-      "opciones_en": [
-        "Brazil",
-        "Uruguay",
-        "Argentina",
-        "Cuba"
-      ],
-      "nota_en": "Argentina. In the outskirts of Buenos Aires.",
-      "gancho_en": "Music. No thinking.",
-      "ganchos": [
-        "Música. Sin pensar.",
-        "Los uruguayos protestan",
-        "Pregunta 3"
-      ],
-      "ganchos_en": [
-        "Music. No thinking.",
-        "Uruguayans will argue",
-        "Question 3"
-      ],
-      "tags": "#musica",
-      "tags_en": "#music"
-    },
-    {
-      "id": "f37",
-      "gancho": "No es Mónaco",
-      "texto": "¿Cuál es el país más pequeño del mundo?",
-      "opciones": [
-        "Mónaco",
-        "San Marino",
-        "Vaticano",
-        "Liechtenstein"
-      ],
-      "correcta": 2,
-      "nota": "El Vaticano. Menos de medio kilómetro cuadrado.",
-      "enBanco": false,
-      "texto_en": "What is the smallest country in the world?",
-      "opciones_en": [
-        "Monaco",
-        "San Marino",
-        "Vatican City",
-        "Liechtenstein"
-      ],
-      "nota_en": "Vatican City. Under half a square kilometre.",
-      "gancho_en": "It's not Monaco",
-      "ganchos": [
-        "No es Mónaco",
-        "Cabe en un barrio",
-        "Geografía fácil"
-      ],
-      "ganchos_en": [
-        "It's not Monaco",
-        "Fits inside a neighbourhood",
-        "Easy geography"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f38",
-      "gancho": "Si fallas esta, cierra la app",
-      "texto": "¿Cuántos jugadores tiene un equipo de fútbol en el campo?",
-      "opciones": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "correcta": 2,
-      "nota": "Once. Contando al portero.",
-      "enBanco": false,
-      "texto_en": "How many players does a football team have on the pitch?",
-      "opciones_en": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "nota_en": "Eleven. Including the goalkeeper.",
-      "gancho_en": "Miss this and close the app",
-      "ganchos": [
-        "Si fallas esta, cierra la app",
-        "La de calentar",
-        "Deporte. 6 segundos."
-      ],
-      "ganchos_en": [
-        "Miss this and close the app",
-        "The warm-up",
-        "Sport. 6 seconds."
-      ],
-      "tags": "#deporte",
-      "tags_en": "#sports"
-    },
-    {
-      "id": "f39",
-      "gancho": "Los de ciencias, a ver",
-      "texto": "¿Qué órgano produce la insulina?",
-      "opciones": [
-        "Hígado",
-        "Páncreas",
-        "Riñón",
-        "Bazo"
-      ],
-      "correcta": 1,
-      "nota": "El páncreas.",
-      "enBanco": false,
-      "texto_en": "Which organ produces insulin?",
-      "opciones_en": [
-        "Liver",
-        "Pancreas",
-        "Kidney",
-        "Spleen"
-      ],
-      "nota_en": "The pancreas.",
-      "gancho_en": "Science people, let's see",
-      "ganchos": [
-        "Los de ciencias, a ver",
-        "No es el hígado",
-        "La que cae en la 6"
-      ],
-      "ganchos_en": [
-        "Science people, let's see",
-        "It's not the liver",
-        "The one that falls on 6"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f40",
-      "gancho": "Historia reciente",
-      "texto": "¿En qué año cayó el Muro de Berlín?",
-      "opciones": [
-        "1985",
-        "1989",
-        "1991",
-        "1993"
-      ],
-      "correcta": 1,
-      "nota": "1989. El 9 de noviembre.",
-      "enBanco": false,
-      "texto_en": "In what year did the Berlin Wall fall?",
-      "opciones_en": [
-        "1985",
-        "1989",
-        "1991",
-        "1993"
-      ],
-      "nota_en": "1989. On 9 November.",
-      "gancho_en": "Recent history",
-      "ganchos": [
-        "Historia reciente",
-        "Mi padre lo vio en directo",
-        "El año, sin buscarlo"
-      ],
-      "ganchos_en": [
-        "Recent history",
-        "My dad watched it live",
-        "The year, no googling"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f41",
-      "gancho": "No es el yuan",
-      "texto": "¿Cuál es la moneda de Japón?",
-      "opciones": [
-        "Yuan",
-        "Won",
-        "Yen",
-        "Ringgit"
-      ],
-      "correcta": 2,
-      "nota": "El yen.",
-      "enBanco": false,
-      "texto_en": "What is the currency of Japan?",
-      "opciones_en": [
-        "Yuan",
-        "Won",
-        "Yen",
-        "Ringgit"
-      ],
-      "nota_en": "The yen.",
-      "gancho_en": "It's not the yuan",
-      "ganchos": [
-        "No es el yuan",
-        "Se parecen a propósito",
-        "Economía en 6 segundos"
-      ],
-      "ganchos_en": [
-        "It's not the yuan",
-        "They sound alike on purpose",
-        "Economics in 6 seconds"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f42",
-      "gancho": "Química de la ESO",
-      "texto": "¿Cuál es el metal líquido a temperatura ambiente?",
-      "opciones": [
-        "Plomo",
-        "Mercurio",
-        "Estaño",
-        "Litio"
-      ],
-      "correcta": 1,
-      "nota": "El mercurio.",
-      "enBanco": false,
-      "texto_en": "Which metal is liquid at room temperature?",
-      "opciones_en": [
-        "Lead",
-        "Mercury",
-        "Tin",
-        "Lithium"
-      ],
-      "nota_en": "Mercury.",
-      "gancho_en": "Secondary-school chemistry",
-      "ganchos": [
-        "Química de la ESO",
-        "Solo hay uno",
-        "Pregunta 5"
-      ],
-      "ganchos_en": [
-        "Secondary-school chemistry",
-        "There's only one",
-        "Question 5"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f43",
-      "gancho": "Literatura. Sin pensar.",
-      "texto": "¿Qué escritor creó a Sherlock Holmes?",
-      "opciones": [
-        "Agatha Christie",
-        "Arthur Conan Doyle",
-        "Edgar Allan Poe",
-        "Charles Dickens"
-      ],
-      "correcta": 1,
-      "nota": "Arthur Conan Doyle, en 1887.",
-      "enBanco": false,
-      "texto_en": "Which writer created Sherlock Holmes?",
-      "opciones_en": [
-        "Agatha Christie",
-        "Arthur Conan Doyle",
-        "Edgar Allan Poe",
-        "Charles Dickens"
-      ],
-      "nota_en": "Arthur Conan Doyle, in 1887.",
-      "gancho_en": "Literature. No thinking.",
-      "ganchos": [
-        "Literatura. Sin pensar.",
-        "Elemental",
-        "No es Agatha Christie"
-      ],
-      "ganchos_en": [
-        "Literature. No thinking.",
-        "Elementary",
-        "It's not Agatha Christie"
-      ],
-      "tags": "#literatura",
-      "tags_en": "#books"
-    },
-    {
-      "id": "f44",
-      "gancho": "La señal de stop",
-      "texto": "¿Cuántos lados tiene un octógono?",
-      "opciones": [
-        "6",
-        "7",
-        "8",
-        "9"
-      ],
-      "correcta": 2,
-      "nota": "Ocho. Como la señal de stop.",
-      "enBanco": false,
-      "texto_en": "How many sides does an octagon have?",
-      "opciones_en": [
-        "6",
-        "7",
-        "8",
-        "9"
-      ],
-      "nota_en": "Eight. Like a stop sign.",
-      "gancho_en": "The stop sign",
-      "ganchos": [
-        "La señal de stop",
-        "Contesta sin pensar",
-        "La más fácil del sábado"
-      ],
-      "ganchos_en": [
-        "The stop sign",
-        "Answer without thinking",
-        "The easiest one on Saturday"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f45",
-      "gancho": "Si fallas esta, no juegues",
-      "texto": "¿En qué ciudad está la Sagrada Familia?",
-      "opciones": [
-        "Madrid",
-        "Sevilla",
-        "Barcelona",
-        "Valencia"
-      ],
-      "correcta": 2,
-      "nota": "Barcelona. Y sigue en obras.",
-      "enBanco": false,
-      "texto_en": "In which city is the Sagrada Família?",
-      "opciones_en": [
-        "Madrid",
-        "Seville",
-        "Barcelona",
-        "Valencia"
-      ],
-      "nota_en": "Barcelona. Still under construction.",
-      "gancho_en": "Miss this and don't bother",
-      "ganchos": [
-        "Si fallas esta, no juegues",
-        "Turismo. 6 segundos.",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "Miss this and don't bother",
-        "Tourism. 6 seconds.",
-        "Question 1"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f46",
-      "gancho": "No es el Sáhara",
-      "texto": "¿Cuál es el desierto más seco del mundo?",
-      "opciones": [
-        "Sáhara",
-        "Gobi",
-        "Atacama",
-        "Kalahari"
-      ],
-      "correcta": 2,
-      "nota": "Atacama, en Chile. Hay zonas donde no llueve en décadas.",
-      "enBanco": false,
-      "texto_en": "What is the driest desert in the world?",
-      "opciones_en": [
-        "Sahara",
-        "Gobi",
-        "Atacama",
-        "Kalahari"
-      ],
-      "nota_en": "Atacama, in Chile. Some spots go decades without rain.",
-      "gancho_en": "It's not the Sahara",
-      "ganchos": [
-        "No es el Sáhara",
-        "Seco. No grande.",
-        "La que cae la mitad"
-      ],
-      "ganchos_en": [
-        "It's not the Sahara",
-        "Driest. Not biggest.",
-        "Half of you will miss it"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f47",
-      "gancho": "Salud en 6 segundos",
-      "texto": "¿Qué vitamina produce la piel con el sol?",
-      "opciones": [
-        "A",
-        "B12",
-        "C",
-        "D"
-      ],
-      "correcta": 3,
-      "nota": "La D.",
-      "enBanco": false,
-      "texto_en": "Which vitamin does skin produce with sunlight?",
-      "opciones_en": [
-        "A",
-        "B12",
-        "C",
-        "D"
-      ],
-      "nota_en": "Vitamin D.",
-      "gancho_en": "Health in 6 seconds",
-      "ganchos": [
-        "Salud en 6 segundos",
-        "No es la C",
-        "Pregunta 4"
-      ],
-      "ganchos_en": [
-        "Health in 6 seconds",
-        "It's not C",
-        "Question 4"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f48",
-      "gancho": "Los músicos la saben",
-      "texto": "¿Cuántas teclas tiene un piano estándar?",
-      "opciones": [
-        "76",
-        "82",
-        "88",
-        "96"
-      ],
-      "correcta": 2,
-      "nota": "88: 52 blancas y 36 negras.",
-      "enBanco": false,
-      "texto_en": "How many keys does a standard piano have?",
-      "opciones_en": [
-        "76",
-        "82",
-        "88",
-        "96"
-      ],
-      "nota_en": "88: 52 white and 36 black.",
-      "gancho_en": "Musicians know this one",
-      "ganchos": [
-        "Los músicos la saben",
-        "Cuéntalas. 6 segundos.",
-        "No es 76"
-      ],
-      "ganchos_en": [
-        "Musicians know this one",
-        "Count them. 6 seconds.",
-        "It's not 76"
-      ],
-      "tags": "#musica",
-      "tags_en": "#music"
-    },
-    {
-      "id": "f49",
-      "gancho": "La de calentar",
-      "texto": "¿Qué país tiene forma de bota?",
-      "opciones": [
-        "Portugal",
-        "Grecia",
-        "Italia",
-        "Noruega"
-      ],
-      "correcta": 2,
-      "nota": "Italia.",
-      "enBanco": false,
-      "texto_en": "Which country is shaped like a boot?",
-      "opciones_en": [
-        "Portugal",
-        "Greece",
-        "Italy",
-        "Norway"
-      ],
-      "nota_en": "Italy.",
-      "gancho_en": "The warm-up",
-      "ganchos": [
-        "La de calentar",
-        "Si dudas, ya has perdido",
-        "Mi sobrino la sabe"
-      ],
-      "ganchos_en": [
-        "The warm-up",
-        "If you hesitate, you've lost",
-        "My nephew knows this"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f50",
-      "gancho": "Pregunta trampa",
-      "texto": "¿Cuál es el idioma oficial de Brasil?",
-      "opciones": [
-        "Español",
-        "Portugués",
-        "Brasileño",
-        "Italiano"
-      ],
-      "correcta": 1,
-      "nota": "Portugués. Brasileño no es un idioma.",
-      "enBanco": false,
-      "texto_en": "What is the official language of Brazil?",
-      "opciones_en": [
-        "Spanish",
-        "Portuguese",
-        "Brazilian",
-        "Italian"
-      ],
-      "nota_en": "Portuguese. 'Brazilian' isn't a language.",
-      "gancho_en": "Trick question",
-      "ganchos": [
-        "Pregunta trampa",
-        "No es español",
-        "Todos dicen la C"
-      ],
-      "ganchos_en": [
-        "Trick question",
-        "It's not Spanish",
-        "Everyone says C"
-      ],
-      "tags": "#idiomas",
-      "tags_en": "#languages"
-    },
-    {
-      "id": "f51",
-      "gancho": "Sin calculadora",
-      "texto": "¿Cuántos minutos tiene una hora y media?",
-      "opciones": [
-        "80",
-        "90",
-        "100",
-        "120"
-      ],
-      "correcta": 1,
-      "nota": "90.",
-      "enBanco": false,
-      "texto_en": "How many minutes are in an hour and a half?",
-      "opciones_en": [
-        "80",
-        "90",
-        "100",
-        "120"
-      ],
-      "nota_en": "90.",
-      "gancho_en": "No calculator",
-      "ganchos": [
-        "Sin calculadora",
-        "La que fallas por rápido",
-        "Matemáticas de 6 segundos"
-      ],
-      "ganchos_en": [
-        "No calculator",
-        "The one you miss by rushing",
-        "6-second maths"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f52",
-      "gancho": "Lo has visto mil veces",
-      "texto": "¿Qué animal es el símbolo del WWF?",
-      "opciones": [
-        "Tigre",
-        "Oso panda",
-        "Elefante",
-        "Ballena"
-      ],
-      "correcta": 1,
-      "nota": "El oso panda.",
-      "enBanco": false,
-      "texto_en": "Which animal is the symbol of the WWF?",
-      "opciones_en": [
-        "Tiger",
-        "Giant panda",
-        "Elephant",
-        "Whale"
-      ],
-      "nota_en": "The giant panda.",
-      "gancho_en": "You've seen it a thousand times",
-      "ganchos": [
-        "Lo has visto mil veces",
-        "No es el tigre",
-        "Pregunta 2"
-      ],
-      "ganchos_en": [
-        "You've seen it a thousand times",
-        "It's not the tiger",
-        "Question 2"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f53",
-      "gancho": "La que enfada a medio mundo",
-      "texto": "¿Cuál es el río más largo del mundo según la medición tradicional?",
-      "opciones": [
-        "Amazonas",
-        "Nilo",
-        "Yangtsé",
-        "Misisipi"
-      ],
-      "correcta": 1,
-      "nota": "El Nilo, con unos 6.650 km. El Amazonas lleva más agua.",
-      "enBanco": false,
-      "texto_en": "What is the longest river in the world by the traditional measure?",
-      "opciones_en": [
-        "Amazon",
-        "Nile",
-        "Yangtze",
-        "Mississippi"
-      ],
-      "nota_en": "The Nile, about 6,650 km. The Amazon carries more water.",
-      "gancho_en": "The one that starts arguments",
-      "ganchos": [
-        "La que enfada a medio mundo",
-        "Largo. No caudaloso.",
-        "Todos dicen Amazonas"
-      ],
-      "ganchos_en": [
-        "The one that starts arguments",
-        "Longest. Not biggest.",
-        "Everyone says Amazon"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f54",
-      "gancho": "No es oxígeno",
-      "texto": "¿Qué gas es el más abundante en la atmósfera terrestre?",
-      "opciones": [
-        "Oxígeno",
-        "Dióxido de carbono",
-        "Nitrógeno",
-        "Hidrógeno"
-      ],
-      "correcta": 2,
-      "nota": "Nitrógeno, cerca del 78 %.",
-      "enBanco": false,
-      "texto_en": "Which gas is the most abundant in Earth's atmosphere?",
-      "opciones_en": [
-        "Oxygen",
-        "Carbon dioxide",
-        "Nitrogen",
-        "Hydrogen"
-      ],
-      "nota_en": "Nitrogen, about 78%.",
-      "gancho_en": "It's not oxygen",
-      "ganchos": [
-        "No es oxígeno",
-        "Esta la fallan los listos",
-        "Química de la ESO"
-      ],
-      "ganchos_en": [
-        "It's not oxygen",
-        "The smart ones get this wrong",
-        "Secondary-school chemistry"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f55",
-      "gancho": "Historia. 6 segundos.",
-      "texto": "¿En qué año empezó la Primera Guerra Mundial?",
-      "opciones": [
-        "1910",
-        "1914",
-        "1918",
-        "1920"
-      ],
-      "correcta": 1,
-      "nota": "1914.",
-      "enBanco": false,
-      "texto_en": "In what year did the First World War begin?",
-      "opciones_en": [
-        "1910",
-        "1914",
-        "1918",
-        "1920"
-      ],
-      "nota_en": "1914.",
-      "gancho_en": "History. 6 seconds.",
-      "ganchos": [
-        "Historia. 6 segundos.",
-        "No confundas con el final",
-        "Pregunta 6"
-      ],
-      "ganchos_en": [
-        "History. 6 seconds.",
-        "Don't mix it up with the end",
-        "Question 6"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f56",
-      "gancho": "No es Estambul",
-      "texto": "¿Cuál es la capital de Turquía?",
-      "opciones": [
-        "Estambul",
-        "Ankara",
-        "Esmirna",
-        "Antalya"
-      ],
-      "correcta": 1,
-      "nota": "Ankara. Estambul es la más grande, no la capital.",
-      "enBanco": false,
-      "texto_en": "What is the capital of Turkey?",
-      "opciones_en": [
-        "Istanbul",
-        "Ankara",
-        "Izmir",
-        "Antalya"
-      ],
-      "nota_en": "Ankara. Istanbul is the biggest city, not the capital.",
-      "gancho_en": "It's not Istanbul",
-      "ganchos": [
-        "No es Estambul",
-        "La que elimina a la mitad",
-        "Capitales trampa"
-      ],
-      "ganchos_en": [
-        "It's not Istanbul",
-        "The one that knocks out half",
-        "Trick capitals"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f57",
-      "gancho": "Un bebé tiene más",
-      "texto": "¿Cuántos huesos tiene un recién nacido, aproximadamente?",
-      "opciones": [
-        "206",
-        "230",
-        "270",
-        "300"
-      ],
-      "correcta": 2,
-      "nota": "Unos 270. Luego se fusionan hasta 206.",
-      "enBanco": false,
-      "texto_en": "Roughly how many bones does a newborn have?",
-      "opciones_en": [
-        "206",
-        "230",
-        "270",
-        "300"
-      ],
-      "nota_en": "About 270. They later fuse into 206.",
-      "gancho_en": "A baby has more",
-      "ganchos": [
-        "Un bebé tiene más",
-        "Cuanto más sabes, peor",
-        "Biología rara"
-      ],
-      "ganchos_en": [
-        "A baby has more",
-        "The more you know, the worse",
-        "Weird biology"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f58",
-      "gancho": "Los de ciencias, a ver",
-      "texto": "¿Qué instrumento mide la presión atmosférica?",
-      "opciones": [
-        "Termómetro",
-        "Barómetro",
-        "Higrómetro",
-        "Anemómetro"
-      ],
-      "correcta": 1,
-      "nota": "El barómetro.",
-      "enBanco": false,
-      "texto_en": "Which instrument measures atmospheric pressure?",
-      "opciones_en": [
-        "Thermometer",
-        "Barometer",
-        "Hygrometer",
-        "Anemometer"
-      ],
-      "nota_en": "The barometer.",
-      "gancho_en": "Science people, let's see",
-      "ganchos": [
-        "Los de ciencias, a ver",
-        "Suenan igual a propósito",
-        "Pregunta 7"
-      ],
-      "ganchos_en": [
-        "Science people, let's see",
-        "They all sound alike on purpose",
-        "Question 7"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f59",
-      "gancho": "El pequeño, no el grande",
-      "texto": "¿Cuál es el océano más pequeño?",
-      "opciones": [
-        "Índico",
-        "Atlántico",
-        "Ártico",
-        "Antártico"
-      ],
-      "correcta": 2,
-      "nota": "El Ártico.",
-      "enBanco": false,
-      "texto_en": "Which is the smallest ocean?",
-      "opciones_en": [
-        "Indian",
-        "Atlantic",
-        "Arctic",
-        "Southern"
-      ],
-      "nota_en": "The Arctic.",
-      "gancho_en": "Smallest, not biggest",
-      "ganchos": [
-        "El pequeño, no el grande",
-        "Geografía fácil",
-        "Si dudas, ya has perdido"
-      ],
-      "ganchos_en": [
-        "Smallest, not biggest",
-        "Easy geography",
-        "If you hesitate, you've lost"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f60",
-      "gancho": "Literatura. 6 segundos.",
-      "texto": "¿Quién escribió 'Cien años de soledad'?",
-      "opciones": [
-        "Mario Vargas Llosa",
-        "Gabriel García Márquez",
-        "Julio Cortázar",
-        "Jorge Luis Borges"
-      ],
-      "correcta": 1,
-      "nota": "Gabriel García Márquez, 1967.",
-      "enBanco": false,
-      "texto_en": "Who wrote 'One Hundred Years of Solitude'?",
-      "opciones_en": [
-        "Mario Vargas Llosa",
-        "Gabriel García Márquez",
-        "Julio Cortázar",
-        "Jorge Luis Borges"
-      ],
-      "nota_en": "Gabriel García Márquez, 1967.",
-      "gancho_en": "Literature. 6 seconds.",
-      "ganchos": [
-        "Literatura. 6 segundos.",
-        "Macondo",
-        "No es Vargas Llosa"
-      ],
-      "ganchos_en": [
-        "Literature. 6 seconds.",
-        "Macondo",
-        "It's not Vargas Llosa"
-      ],
-      "tags": "#literatura",
-      "tags_en": "#books"
-    },
-    {
-      "id": "f61",
-      "gancho": "La más fácil del sábado",
-      "texto": "¿Cuántos grados tiene un ángulo recto?",
-      "opciones": [
-        "45",
-        "60",
-        "90",
-        "180"
-      ],
-      "correcta": 2,
-      "nota": "90.",
-      "enBanco": false,
-      "texto_en": "How many degrees are in a right angle?",
-      "opciones_en": [
-        "45",
-        "60",
-        "90",
-        "180"
-      ],
-      "nota_en": "90.",
-      "gancho_en": "The easiest one on Saturday",
-      "ganchos": [
-        "La más fácil del sábado",
-        "Contesta sin pensar",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "The easiest one on Saturday",
-        "Answer without thinking",
-        "Question 1"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f62",
-      "gancho": "No es el Matterhorn",
-      "texto": "¿Cuál es la montaña más alta de Europa occidental?",
-      "opciones": [
-        "Matterhorn",
-        "Mont Blanc",
-        "Aneto",
-        "Monte Rosa"
-      ],
-      "correcta": 1,
-      "nota": "El Mont Blanc, 4.808 m.",
-      "enBanco": false,
-      "texto_en": "What is the highest mountain in Western Europe?",
-      "opciones_en": [
-        "Matterhorn",
-        "Mont Blanc",
-        "Aneto",
-        "Monte Rosa"
-      ],
-      "nota_en": "Mont Blanc, 4,808 m.",
-      "gancho_en": "It's not the Matterhorn",
-      "ganchos": [
-        "No es el Matterhorn",
-        "Geografía de las que duelen",
-        "Pregunta 8"
-      ],
-      "ganchos_en": [
-        "It's not the Matterhorn",
-        "Geography that hurts",
-        "Question 8"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f63",
-      "gancho": "Si fallas esta, cierra la app",
-      "texto": "¿Qué planeta es conocido como el planeta rojo?",
-      "opciones": [
-        "Venus",
-        "Marte",
-        "Júpiter",
-        "Mercurio"
-      ],
-      "correcta": 1,
-      "nota": "Marte. Por el óxido de hierro de su superficie.",
-      "enBanco": false,
-      "texto_en": "Which planet is known as the red planet?",
-      "opciones_en": [
-        "Venus",
-        "Mars",
-        "Jupiter",
-        "Mercury"
-      ],
-      "nota_en": "Mars. Iron oxide on the surface.",
-      "gancho_en": "Miss this and close the app",
-      "ganchos": [
-        "Si fallas esta, cierra la app",
-        "Espacio. 6 segundos.",
-        "La de calentar"
-      ],
-      "ganchos_en": [
-        "Miss this and close the app",
-        "Space. 6 seconds.",
-        "The warm-up"
-      ],
-      "tags": "#espacio",
-      "tags_en": "#space"
-    },
-    {
-      "id": "f64",
-      "gancho": "Contesta sin pensar",
-      "texto": "¿Cuántos años dura un siglo?",
-      "opciones": [
-        "10",
-        "50",
-        "100",
-        "1000"
-      ],
-      "correcta": 2,
-      "nota": "100.",
-      "enBanco": false,
-      "texto_en": "How many years are in a century?",
-      "opciones_en": [
-        "10",
-        "50",
-        "100",
-        "1000"
-      ],
-      "nota_en": "100.",
-      "gancho_en": "Answer without thinking",
-      "ganchos": [
-        "Contesta sin pensar",
-        "Pregunta 1",
-        "La que fallas por rápido"
-      ],
-      "ganchos_en": [
-        "Answer without thinking",
-        "Question 1",
-        "The one you miss by rushing"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f65",
-      "gancho": "Turismo. 6 segundos.",
-      "texto": "¿En qué país está Machu Picchu?",
-      "opciones": [
-        "Bolivia",
-        "Perú",
-        "Ecuador",
-        "Colombia"
-      ],
-      "correcta": 1,
-      "nota": "Perú.",
-      "enBanco": false,
-      "texto_en": "In which country is Machu Picchu?",
-      "opciones_en": [
-        "Bolivia",
-        "Peru",
-        "Ecuador",
-        "Colombia"
-      ],
-      "nota_en": "Peru.",
-      "gancho_en": "Tourism. 6 seconds.",
-      "ganchos": [
-        "Turismo. 6 segundos.",
-        "No es Bolivia",
-        "Geografía fácil"
-      ],
-      "ganchos_en": [
-        "Tourism. 6 seconds.",
-        "It's not Bolivia",
-        "Easy geography"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f66",
-      "gancho": "Química. Sin pensar.",
-      "texto": "¿Cuál es el elemento químico con símbolo Au?",
-      "opciones": [
-        "Plata",
-        "Oro",
-        "Aluminio",
-        "Argón"
-      ],
-      "correcta": 1,
-      "nota": "Oro. De 'aurum'.",
-      "enBanco": false,
-      "texto_en": "Which chemical element has the symbol Au?",
-      "opciones_en": [
-        "Silver",
-        "Gold",
-        "Aluminium",
-        "Argon"
-      ],
-      "nota_en": "Gold. From 'aurum'.",
-      "gancho_en": "Chemistry. No thinking.",
-      "ganchos": [
-        "Química. Sin pensar.",
-        "No es plata",
-        "Pregunta 5"
-      ],
-      "ganchos_en": [
-        "Chemistry. No thinking.",
-        "It's not silver",
-        "Question 5"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f67",
-      "gancho": "Animales. 6 segundos.",
-      "texto": "¿Qué animal pone los huevos más grandes?",
-      "opciones": [
-        "Águila",
-        "Avestruz",
-        "Cocodrilo",
-        "Pingüino emperador"
-      ],
-      "correcta": 1,
-      "nota": "El avestruz. Hasta 1,5 kg.",
-      "enBanco": false,
-      "texto_en": "Which animal lays the largest eggs?",
-      "opciones_en": [
-        "Eagle",
-        "Ostrich",
-        "Crocodile",
-        "Emperor penguin"
-      ],
-      "nota_en": "The ostrich. Up to 1.5 kg.",
-      "gancho_en": "Animals. 6 seconds.",
-      "ganchos": [
-        "Animales. 6 segundos.",
-        "Mi abuela la acertó",
-        "Pregunta 3"
-      ],
-      "ganchos_en": [
-        "Animals. 6 seconds.",
-        "My grandma got it",
-        "Question 3"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f68",
-      "gancho": "Los músicos la saben",
-      "texto": "¿Cuántas cuerdas tiene una guitarra española?",
-      "opciones": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
-      "correcta": 2,
-      "nota": "Seis.",
-      "enBanco": false,
-      "texto_en": "How many strings does a classical guitar have?",
-      "opciones_en": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
-      "nota_en": "Six.",
-      "gancho_en": "Musicians know this one",
-      "ganchos": [
-        "Los músicos la saben",
-        "Cuéntalas. 6 segundos.",
-        "La más fácil del sábado"
-      ],
-      "ganchos_en": [
-        "Musicians know this one",
-        "Count them. 6 seconds.",
-        "The easiest one on Saturday"
-      ],
-      "tags": "#musica",
-      "tags_en": "#music"
-    },
-    {
-      "id": "f69",
-      "gancho": "Si fallas esta, no juegues",
-      "texto": "¿Qué mar baña Valencia?",
-      "opciones": [
-        "Cantábrico",
-        "Mediterráneo",
-        "Atlántico",
-        "Mar Menor"
-      ],
-      "correcta": 1,
-      "nota": "El Mediterráneo.",
-      "enBanco": false,
-      "texto_en": "Which sea borders Valencia?",
-      "opciones_en": [
-        "Bay of Biscay",
-        "Mediterranean",
-        "Atlantic",
-        "Mar Menor"
-      ],
-      "nota_en": "The Mediterranean.",
-      "gancho_en": "Miss this and don't bother",
-      "ganchos": [
-        "Si fallas esta, no juegues",
-        "Geografía de casa",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "Miss this and don't bother",
-        "Home geography",
-        "Question 1"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f70",
-      "gancho": "Deporte. Sin pensar.",
-      "texto": "¿Cuántos jugadores tiene un equipo de baloncesto en pista?",
-      "opciones": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
-      "correcta": 1,
-      "nota": "Cinco.",
-      "enBanco": false,
-      "texto_en": "How many players does a basketball team have on court?",
-      "opciones_en": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
-      "nota_en": "Five.",
-      "gancho_en": "Sport. No thinking.",
-      "ganchos": [
-        "Deporte. Sin pensar.",
-        "La de calentar",
-        "Contesta antes que el de al lado"
-      ],
-      "ganchos_en": [
-        "Sport. No thinking.",
-        "The warm-up",
-        "Answer before the person next to you"
-      ],
-      "tags": "#deporte",
-      "tags_en": "#sports"
-    },
-    {
-      "id": "f71",
-      "gancho": "Ya no es China",
-      "texto": "¿Cuál es el país con más habitantes del mundo?",
-      "opciones": [
-        "China",
-        "India",
-        "Estados Unidos",
-        "Indonesia"
-      ],
-      "correcta": 1,
-      "nota": "India, desde 2023.",
-      "enBanco": false,
-      "texto_en": "Which country has the largest population?",
-      "opciones_en": [
-        "China",
-        "India",
-        "United States",
-        "Indonesia"
-      ],
-      "nota_en": "India, since 2023.",
-      "gancho_en": "It's not China anymore",
-      "ganchos": [
-        "Ya no es China",
-        "La que cambió hace poco",
-        "Cuanto más sabes, peor"
-      ],
-      "ganchos_en": [
-        "It's not China anymore",
-        "The one that changed recently",
-        "The more you know, the worse"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f72",
-      "gancho": "Biología de instituto",
-      "texto": "¿Qué parte del ojo da el color?",
-      "opciones": [
-        "Pupila",
-        "Iris",
-        "Córnea",
-        "Retina"
-      ],
-      "correcta": 1,
-      "nota": "El iris.",
-      "enBanco": false,
-      "texto_en": "Which part of the eye gives it its colour?",
-      "opciones_en": [
-        "Pupil",
-        "Iris",
-        "Cornea",
-        "Retina"
-      ],
-      "nota_en": "The iris.",
-      "gancho_en": "High-school biology",
-      "ganchos": [
-        "Biología de instituto",
-        "No es la pupila",
-        "Pregunta 4"
-      ],
-      "ganchos_en": [
-        "High-school biology",
-        "It's not the pupil",
-        "Question 4"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f73",
-      "gancho": "Pregunta trampa",
-      "texto": "¿En qué continente está Egipto?",
-      "opciones": [
-        "Asia",
-        "África",
-        "Europa",
-        "Oriente Medio"
-      ],
-      "correcta": 1,
-      "nota": "África. El Sinaí está en Asia, pero el país es africano.",
-      "enBanco": false,
-      "texto_en": "On which continent is Egypt?",
-      "opciones_en": [
-        "Asia",
-        "Africa",
-        "Europe",
-        "Middle East"
-      ],
-      "nota_en": "Africa. Sinai is in Asia, but the country is African.",
-      "gancho_en": "Trick question",
-      "ganchos": [
-        "Pregunta trampa",
-        "Está en dos",
-        "Geografía de las que duelen"
-      ],
-      "ganchos_en": [
-        "Trick question",
-        "It's in two",
-        "Geography that hurts"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f74",
-      "gancho": "Esta la fallan los listos",
-      "texto": "¿Cuál es el número primo más pequeño?",
-      "opciones": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "correcta": 2,
-      "nota": "El 2. El 1 no es primo.",
-      "enBanco": false,
-      "texto_en": "What is the smallest prime number?",
-      "opciones_en": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "nota_en": "2. The number 1 isn't prime.",
-      "gancho_en": "The smart ones get this wrong",
-      "ganchos": [
-        "Esta la fallan los listos",
-        "No es el 1",
-        "Matemáticas de 6 segundos"
-      ],
-      "ganchos_en": [
-        "The smart ones get this wrong",
-        "It's not 1",
-        "6-second maths"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f75",
-      "gancho": "Música clásica. 6 segundos.",
-      "texto": "¿Qué compositor se quedó sordo?",
-      "opciones": [
-        "Mozart",
-        "Beethoven",
-        "Bach",
-        "Chopin"
-      ],
-      "correcta": 1,
-      "nota": "Beethoven. Compuso la Novena casi sin oír nada.",
-      "enBanco": false,
-      "texto_en": "Which composer went deaf?",
-      "opciones_en": [
-        "Mozart",
-        "Beethoven",
-        "Bach",
-        "Chopin"
-      ],
-      "nota_en": "Beethoven. He wrote the Ninth almost unable to hear.",
-      "gancho_en": "Classical music. 6 seconds.",
-      "ganchos": [
-        "Música clásica. 6 segundos.",
-        "No es Mozart",
-        "Pregunta 6"
-      ],
-      "ganchos_en": [
-        "Classical music. 6 seconds.",
-        "It's not Mozart",
-        "Question 6"
-      ],
-      "tags": "#musica",
-      "tags_en": "#music"
-    },
-    {
-      "id": "f76",
-      "gancho": "Está en el oído",
-      "texto": "¿Cuál es el hueso más pequeño del cuerpo humano?",
-      "opciones": [
-        "Estribo",
-        "Martillo",
-        "Yunque",
-        "Falange"
-      ],
-      "correcta": 0,
-      "nota": "El estribo, en el oído. Unos 3 milímetros.",
-      "enBanco": false,
-      "texto_en": "What is the smallest bone in the human body?",
-      "opciones_en": [
-        "Stapes",
-        "Malleus",
-        "Incus",
-        "Phalanx"
-      ],
-      "nota_en": "The stapes, in the ear. About 3 millimetres.",
-      "gancho_en": "It's in the ear",
-      "ganchos": [
-        "Está en el oído",
-        "Anatomía en 6 segundos",
-        "La que cae la mitad"
-      ],
-      "ganchos_en": [
-        "It's in the ear",
-        "Anatomy in 6 seconds",
-        "Half of you will miss it"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f77",
-      "gancho": "Historia. Sin pensar.",
-      "texto": "¿Qué país regaló la Estatua de la Libertad a Estados Unidos?",
-      "opciones": [
-        "Reino Unido",
-        "Francia",
-        "España",
-        "Italia"
-      ],
-      "correcta": 1,
-      "nota": "Francia, en 1886.",
-      "enBanco": false,
-      "texto_en": "Which country gave the Statue of Liberty to the United States?",
-      "opciones_en": [
-        "United Kingdom",
-        "France",
-        "Spain",
-        "Italy"
-      ],
-      "nota_en": "France, in 1886.",
-      "gancho_en": "History. No thinking.",
-      "ganchos": [
-        "Historia. Sin pensar.",
-        "No es Reino Unido",
-        "Pregunta 3"
-      ],
-      "ganchos_en": [
-        "History. No thinking.",
-        "It's not the UK",
-        "Question 3"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f78",
-      "gancho": "Cuéntalos. 6 segundos.",
-      "texto": "¿Cuántos colores tiene el arcoíris según la lista clásica?",
-      "opciones": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "correcta": 2,
-      "nota": "Siete: rojo, naranja, amarillo, verde, azul, añil y violeta.",
-      "enBanco": false,
-      "texto_en": "How many colours are in the rainbow, by the classic list?",
-      "opciones_en": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "nota_en": "Seven: red, orange, yellow, green, blue, indigo, violet.",
-      "gancho_en": "Count them. 6 seconds.",
-      "ganchos": [
-        "Cuéntalos. 6 segundos.",
-        "La de primaria que se olvida",
-        "Pregunta 2"
-      ],
-      "ganchos_en": [
-        "Count them. 6 seconds.",
-        "The primary-school one you forgot",
-        "Question 2"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f79",
-      "gancho": "Animales. 6 segundos.",
-      "texto": "¿Qué animal tiene el corazón más grande?",
-      "opciones": [
-        "Elefante",
-        "Ballena azul",
-        "Jirafa",
-        "Tiburón ballena"
-      ],
-      "correcta": 1,
-      "nota": "La ballena azul. Pesa como un coche pequeño.",
-      "enBanco": false,
-      "texto_en": "Which animal has the biggest heart?",
-      "opciones_en": [
-        "Elephant",
-        "Blue whale",
-        "Giraffe",
-        "Whale shark"
-      ],
-      "nota_en": "The blue whale. It weighs about as much as a small car.",
-      "gancho_en": "Animals. 6 seconds.",
-      "ganchos": [
-        "Animales. 6 segundos.",
-        "No es el elefante",
-        "Pregunta 5"
-      ],
-      "ganchos_en": [
-        "Animals. 6 seconds.",
-        "It's not the elephant",
-        "Question 5"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f80",
-      "gancho": "La de primaria que se olvida",
-      "texto": "¿En qué año llegó Colón a América?",
-      "opciones": [
-        "1482",
-        "1492",
-        "1502",
-        "1512"
-      ],
-      "correcta": 1,
-      "nota": "1492. El 12 de octubre.",
-      "enBanco": false,
-      "texto_en": "In what year did Columbus reach America?",
-      "opciones_en": [
-        "1482",
-        "1492",
-        "1502",
-        "1512"
-      ],
-      "nota_en": "1492. On 12 October.",
-      "gancho_en": "The primary-school one you forgot",
-      "ganchos": [
-        "La de primaria que se olvida",
-        "Historia. 6 segundos.",
-        "Si dudas, ya has perdido"
-      ],
-      "ganchos_en": [
-        "The primary-school one you forgot",
-        "History. 6 seconds.",
-        "If you hesitate, you've lost"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f81",
-      "gancho": "Química de la ESO",
-      "texto": "¿Cuál es el metal más ligero?",
-      "opciones": [
-        "Aluminio",
-        "Litio",
-        "Magnesio",
-        "Titanio"
-      ],
-      "correcta": 1,
-      "nota": "El litio.",
-      "enBanco": false,
-      "texto_en": "Which is the lightest metal?",
-      "opciones_en": [
-        "Aluminium",
-        "Lithium",
-        "Magnesium",
-        "Titanium"
-      ],
-      "nota_en": "Lithium.",
-      "gancho_en": "Secondary-school chemistry",
-      "ganchos": [
-        "Química de la ESO",
-        "No es el aluminio",
-        "Esta la fallan los listos"
-      ],
-      "ganchos_en": [
-        "Secondary-school chemistry",
-        "It's not aluminium",
-        "The smart ones get this wrong"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f82",
-      "gancho": "Contesta sin pensar",
-      "texto": "¿Cuántos días tiene un año bisiesto?",
-      "opciones": [
-        "364",
-        "365",
-        "366",
-        "367"
-      ],
-      "correcta": 2,
-      "nota": "366.",
-      "enBanco": false,
-      "texto_en": "How many days are in a leap year?",
-      "opciones_en": [
-        "364",
-        "365",
-        "366",
-        "367"
-      ],
-      "nota_en": "366.",
-      "gancho_en": "Answer without thinking",
-      "ganchos": [
-        "Contesta sin pensar",
-        "Pregunta 1",
-        "La que fallas por rápido"
-      ],
-      "ganchos_en": [
-        "Answer without thinking",
-        "Question 1",
-        "The one you miss by rushing"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f83",
-      "gancho": "Cuanto más sabes, peor",
-      "texto": "¿Qué país tiene más islas del mundo?",
-      "opciones": [
-        "Indonesia",
-        "Filipinas",
-        "Suecia",
-        "Canadá"
-      ],
-      "correcta": 2,
-      "nota": "Suecia, con más de 260.000 islas.",
-      "enBanco": false,
-      "texto_en": "Which country has the most islands?",
-      "opciones_en": [
-        "Indonesia",
-        "Philippines",
-        "Sweden",
-        "Canada"
-      ],
-      "nota_en": "Sweden, with over 260,000 islands.",
-      "gancho_en": "The more you know, the worse",
-      "ganchos": [
-        "Cuanto más sabes, peor",
-        "No es Indonesia",
-        "La cifra que nadie se cree"
-      ],
-      "ganchos_en": [
-        "The more you know, the worse",
-        "It's not Indonesia",
-        "The number nobody believes"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f84",
-      "gancho": "Pregunta trampa",
-      "texto": "¿Cuál es el órgano más grande del cuerpo humano?",
-      "opciones": [
-        "Hígado",
-        "Piel",
-        "Pulmón",
-        "Intestino"
-      ],
-      "correcta": 1,
-      "nota": "La piel.",
-      "enBanco": false,
-      "texto_en": "What is the largest organ of the human body?",
-      "opciones_en": [
-        "Liver",
-        "Skin",
-        "Lung",
-        "Intestine"
-      ],
-      "nota_en": "The skin.",
-      "gancho_en": "Trick question",
-      "ganchos": [
-        "Pregunta trampa",
-        "No es el hígado",
-        "Biología de instituto"
-      ],
-      "ganchos_en": [
-        "Trick question",
-        "It's not the liver",
-        "High-school biology"
-      ],
-      "tags": "#ciencia",
-      "tags_en": "#science"
-    },
-    {
-      "id": "f85",
-      "gancho": "Si fallas esta, no juegues",
-      "texto": "¿En qué ciudad está el Coliseo?",
-      "opciones": [
-        "Atenas",
-        "Roma",
-        "Nápoles",
-        "Estambul"
-      ],
-      "correcta": 1,
-      "nota": "Roma.",
-      "enBanco": false,
-      "texto_en": "In which city is the Colosseum?",
-      "opciones_en": [
-        "Athens",
-        "Rome",
-        "Naples",
-        "Istanbul"
-      ],
-      "nota_en": "Rome.",
-      "gancho_en": "Miss this and don't bother",
-      "ganchos": [
-        "Si fallas esta, no juegues",
-        "Turismo. 6 segundos.",
-        "La de calentar"
-      ],
-      "ganchos_en": [
-        "Miss this and don't bother",
-        "Tourism. 6 seconds.",
-        "The warm-up"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f86",
-      "gancho": "Sin calculadora",
-      "texto": "¿Cuántos segundos tiene un cuarto de hora?",
-      "opciones": [
-        "600",
-        "750",
-        "900",
-        "1200"
-      ],
-      "correcta": 2,
-      "nota": "900.",
-      "enBanco": false,
-      "texto_en": "How many seconds are in a quarter of an hour?",
-      "opciones_en": [
-        "600",
-        "750",
-        "900",
-        "1200"
-      ],
-      "nota_en": "900.",
-      "gancho_en": "No calculator",
-      "ganchos": [
-        "Sin calculadora",
-        "La que fallas por rápido",
-        "15 por 60. Ya."
-      ],
-      "ganchos_en": [
-        "No calculator",
-        "The one you miss by rushing",
-        "15 times 60. Go."
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f87",
-      "gancho": "Espacio. Sin pensar.",
-      "texto": "¿Qué planeta tiene los anillos más visibles?",
-      "opciones": [
-        "Júpiter",
-        "Saturno",
-        "Urano",
-        "Neptuno"
-      ],
-      "correcta": 1,
-      "nota": "Saturno.",
-      "enBanco": false,
-      "texto_en": "Which planet has the most visible rings?",
-      "opciones_en": [
-        "Jupiter",
-        "Saturn",
-        "Uranus",
-        "Neptune"
-      ],
-      "nota_en": "Saturn.",
-      "gancho_en": "Space. No thinking.",
-      "ganchos": [
-        "Espacio. Sin pensar.",
-        "La más fácil del sábado",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "Space. No thinking.",
-        "The easiest one on Saturday",
-        "Question 1"
-      ],
-      "tags": "#espacio",
-      "tags_en": "#space"
-    },
-    {
-      "id": "f88",
-      "gancho": "Total, no nativos",
-      "texto": "¿Cuál es la lengua con más hablantes en total, nativos y no nativos?",
-      "opciones": [
-        "Español",
-        "Chino mandarín",
-        "Inglés",
-        "Hindi"
-      ],
-      "correcta": 2,
-      "nota": "El inglés, sumando a quienes lo hablan como segunda lengua.",
-      "enBanco": false,
-      "texto_en": "Which language has the most speakers in total, native and non-native?",
-      "opciones_en": [
-        "Spanish",
-        "Mandarin Chinese",
-        "English",
-        "Hindi"
-      ],
-      "nota_en": "English, counting second-language speakers.",
-      "gancho_en": "Total, not native",
-      "ganchos": [
-        "Total, no nativos",
-        "La que enfada a medio mundo",
-        "Cuanto más sabes, peor"
-      ],
-      "ganchos_en": [
-        "Total, not native",
-        "The one that starts arguments",
-        "The more you know, the worse"
-      ],
-      "tags": "#idiomas",
-      "tags_en": "#languages"
-    },
-    {
-      "id": "f89",
-      "gancho": "Si fallas esta, cierra la app",
-      "texto": "¿Qué insecto produce la miel?",
-      "opciones": [
-        "Avispa",
-        "Abeja",
-        "Abejorro",
-        "Hormiga"
-      ],
-      "correcta": 1,
-      "nota": "La abeja.",
-      "enBanco": false,
-      "texto_en": "Which insect makes honey?",
-      "opciones_en": [
-        "Wasp",
-        "Bee",
-        "Bumblebee",
-        "Ant"
-      ],
-      "nota_en": "The bee.",
-      "gancho_en": "Miss this and close the app",
-      "ganchos": [
-        "Si fallas esta, cierra la app",
-        "La de calentar",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "Miss this and close the app",
-        "The warm-up",
-        "Question 1"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f90",
-      "gancho": "Geografía. 6 segundos.",
-      "texto": "¿Cuál es el punto más profundo de los océanos?",
-      "opciones": [
-        "Fosa de Java",
-        "Fosa de las Marianas",
-        "Fosa de Puerto Rico",
-        "Fosa de Tonga"
-      ],
-      "correcta": 1,
-      "nota": "La fosa de las Marianas, casi 11 km.",
-      "enBanco": false,
-      "texto_en": "What is the deepest point in the oceans?",
-      "opciones_en": [
-        "Java Trench",
-        "Mariana Trench",
-        "Puerto Rico Trench",
-        "Tonga Trench"
-      ],
-      "nota_en": "The Mariana Trench, nearly 11 km.",
-      "gancho_en": "Geography. 6 seconds.",
-      "ganchos": [
-        "Geografía. 6 segundos.",
-        "Casi 11 kilómetros",
-        "Pregunta 7"
-      ],
-      "ganchos_en": [
-        "Geography. 6 seconds.",
-        "Nearly 11 kilometres",
-        "Question 7"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f91",
-      "gancho": "No es Armstrong",
-      "texto": "¿Quién fue el primer ser humano en el espacio?",
-      "opciones": [
-        "Neil Armstrong",
-        "Yuri Gagarin",
-        "Alan Shepard",
-        "John Glenn"
-      ],
-      "correcta": 1,
-      "nota": "Yuri Gagarin, 1961.",
-      "enBanco": false,
-      "texto_en": "Who was the first human in space?",
-      "opciones_en": [
-        "Neil Armstrong",
-        "Yuri Gagarin",
-        "Alan Shepard",
-        "John Glenn"
-      ],
-      "nota_en": "Yuri Gagarin, 1961.",
-      "gancho_en": "It's not Armstrong",
-      "ganchos": [
-        "No es Armstrong",
-        "Historia. 6 segundos.",
-        "La que cae la mitad"
-      ],
-      "ganchos_en": [
-        "It's not Armstrong",
-        "History. 6 seconds.",
-        "Half of you will miss it"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f92",
-      "gancho": "No es un insecto",
-      "texto": "¿Cuántas patas tiene una araña?",
-      "opciones": [
-        "6",
-        "8",
-        "10",
-        "12"
-      ],
-      "correcta": 1,
-      "nota": "Ocho. Los insectos tienen seis.",
-      "enBanco": false,
-      "texto_en": "How many legs does a spider have?",
-      "opciones_en": [
-        "6",
-        "8",
-        "10",
-        "12"
-      ],
-      "nota_en": "Eight. Insects have six.",
-      "gancho_en": "It's not an insect",
-      "ganchos": [
-        "No es un insecto",
-        "Cuéntalas. 6 segundos.",
-        "Pregunta 2"
-      ],
-      "ganchos_en": [
-        "It's not an insect",
-        "Count them. 6 seconds.",
-        "Question 2"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f93",
-      "gancho": "No es Zúrich",
-      "texto": "¿Cuál es la capital de Suiza?",
-      "opciones": [
-        "Zúrich",
-        "Ginebra",
-        "Berna",
-        "Basilea"
-      ],
-      "correcta": 2,
-      "nota": "Berna.",
-      "enBanco": false,
-      "texto_en": "What is the capital of Switzerland?",
-      "opciones_en": [
-        "Zurich",
-        "Geneva",
-        "Bern",
-        "Basel"
-      ],
-      "nota_en": "Bern.",
-      "gancho_en": "It's not Zurich",
-      "ganchos": [
-        "No es Zúrich",
-        "Capitales trampa",
-        "La que elimina a la mitad"
-      ],
-      "ganchos_en": [
-        "It's not Zurich",
-        "Trick capitals",
-        "The one that knocks out half"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f94",
-      "gancho": "Los músicos la saben",
-      "texto": "¿Qué instrumento tiene teclas y cuerdas golpeadas por martillos?",
-      "opciones": [
-        "Órgano",
-        "Clavicémbalo",
-        "Piano",
-        "Acordeón"
-      ],
-      "correcta": 2,
-      "nota": "El piano. En el clavicémbalo las cuerdas se pellizcan.",
-      "enBanco": false,
-      "texto_en": "Which instrument has keys and strings struck by hammers?",
-      "opciones_en": [
-        "Organ",
-        "Harpsichord",
-        "Piano",
-        "Accordion"
-      ],
-      "nota_en": "The piano. A harpsichord plucks its strings.",
-      "gancho_en": "Musicians know this one",
-      "ganchos": [
-        "Los músicos la saben",
-        "Esta la fallan los listos",
-        "Pregunta 8"
-      ],
-      "ganchos_en": [
-        "Musicians know this one",
-        "The smart ones get this wrong",
-        "Question 8"
-      ],
-      "tags": "#musica",
-      "tags_en": "#music"
-    },
-    {
-      "id": "f95",
-      "gancho": "La de calentar",
-      "texto": "¿Cuál es el país más grande del mundo?",
-      "opciones": [
-        "Canadá",
-        "China",
-        "Rusia",
-        "Estados Unidos"
-      ],
-      "correcta": 2,
-      "nota": "Rusia. Más de 17 millones de km².",
-      "enBanco": false,
-      "texto_en": "Which is the largest country in the world?",
-      "opciones_en": [
-        "Canada",
-        "China",
-        "Russia",
-        "United States"
-      ],
-      "nota_en": "Russia. Over 17 million km².",
-      "gancho_en": "The warm-up",
-      "ganchos": [
-        "La de calentar",
-        "Si dudas, ya has perdido",
-        "Geografía fácil"
-      ],
-      "ganchos_en": [
-        "The warm-up",
-        "If you hesitate, you've lost",
-        "Easy geography"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    },
-    {
-      "id": "f96",
-      "gancho": "Matemáticas de 6 segundos",
-      "texto": "¿Cuántos lados iguales tiene un triángulo isósceles?",
-      "opciones": [
-        "0",
-        "2",
-        "3",
-        "4"
-      ],
-      "correcta": 1,
-      "nota": "Dos. El equilátero tiene tres.",
-      "enBanco": false,
-      "texto_en": "How many equal sides does an isosceles triangle have?",
-      "opciones_en": [
-        "0",
-        "2",
-        "3",
-        "4"
-      ],
-      "nota_en": "Two. An equilateral triangle has three.",
-      "gancho_en": "6-second maths",
-      "ganchos": [
-        "Matemáticas de 6 segundos",
-        "No es el equilátero",
-        "La de primaria que se olvida"
-      ],
-      "ganchos_en": [
-        "6-second maths",
-        "It's not the equilateral one",
-        "The primary-school one you forgot"
-      ],
-      "tags": "#matematicas",
-      "tags_en": "#maths"
-    },
-    {
-      "id": "f97",
-      "gancho": "Pregunta trampa",
-      "texto": "¿Qué tipo de animal es la ballena?",
-      "opciones": [
-        "Pez",
-        "Mamífero",
-        "Reptil",
-        "Anfibio"
-      ],
-      "correcta": 1,
-      "nota": "Mamífero. Respira aire y amamanta.",
-      "enBanco": false,
-      "texto_en": "What kind of animal is a whale?",
-      "opciones_en": [
-        "Fish",
-        "Mammal",
-        "Reptile",
-        "Amphibian"
-      ],
-      "nota_en": "Mammal. It breathes air and nurses its young.",
-      "gancho_en": "Trick question",
-      "ganchos": [
-        "Pregunta trampa",
-        "No es un pez",
-        "Biología de instituto"
-      ],
-      "ganchos_en": [
-        "Trick question",
-        "It's not a fish",
-        "High-school biology"
-      ],
-      "tags": "#animales",
-      "tags_en": "#animals"
-    },
-    {
-      "id": "f98",
-      "gancho": "No es Egipto",
-      "texto": "¿En qué país se inventó el papel?",
-      "opciones": [
-        "Egipto",
-        "China",
-        "Grecia",
-        "India"
-      ],
-      "correcta": 1,
-      "nota": "China, hace unos 2.000 años.",
-      "enBanco": false,
-      "texto_en": "In which country was paper invented?",
-      "opciones_en": [
-        "Egypt",
-        "China",
-        "Greece",
-        "India"
-      ],
-      "nota_en": "China, about 2,000 years ago.",
-      "gancho_en": "It's not Egypt",
-      "ganchos": [
-        "No es Egipto",
-        "Historia. 6 segundos.",
-        "Pregunta 6"
-      ],
-      "ganchos_en": [
-        "It's not Egypt",
-        "History. 6 seconds.",
-        "Question 6"
-      ],
-      "tags": "#historia",
-      "tags_en": "#history"
-    },
-    {
-      "id": "f99",
-      "gancho": "Pregunta trampa",
-      "texto": "¿Cuál es la estrella más cercana a la Tierra?",
-      "opciones": [
-        "Sirio",
-        "Alfa Centauri",
-        "El Sol",
-        "Próxima Centauri"
-      ],
-      "correcta": 2,
-      "nota": "El Sol. Es una estrella.",
-      "enBanco": false,
-      "texto_en": "What is the closest star to Earth?",
-      "opciones_en": [
-        "Sirius",
-        "Alpha Centauri",
-        "The Sun",
-        "Proxima Centauri"
-      ],
-      "nota_en": "The Sun. It's a star.",
-      "gancho_en": "Trick question",
-      "ganchos": [
-        "Pregunta trampa",
-        "Esta la fallan los listos",
-        "Lee hasta el final"
-      ],
-      "ganchos_en": [
-        "Trick question",
-        "The smart ones get this wrong",
-        "Read to the end"
-      ],
-      "tags": "#espacio",
-      "tags_en": "#space"
-    },
-    {
-      "id": "f100",
-      "gancho": "Si fallas esta, no juegues",
-      "texto": "¿Qué océano separa Europa de América?",
-      "opciones": [
-        "Pacífico",
-        "Índico",
-        "Atlántico",
-        "Ártico"
-      ],
-      "correcta": 2,
-      "nota": "El Atlántico.",
-      "enBanco": false,
-      "texto_en": "Which ocean separates Europe from America?",
-      "opciones_en": [
-        "Pacific",
-        "Indian",
-        "Atlantic",
-        "Arctic"
-      ],
-      "nota_en": "The Atlantic.",
-      "gancho_en": "Miss this and don't bother",
-      "ganchos": [
-        "Si fallas esta, no juegues",
-        "La de calentar",
-        "Pregunta 1"
-      ],
-      "ganchos_en": [
-        "Miss this and don't bother",
-        "The warm-up",
-        "Question 1"
-      ],
-      "tags": "#geografia",
-      "tags_en": "#geography"
-    }
-  ]
+ "comentario": "Preguntas SOLO para vídeos de redes. La mayoría NO están en trivia.json a propósito: el vídeo da la respuesta y no queremos regalar la partida. Las marcadas enBanco:true sí caen en la partida (anzuelo: quien vio el vídeo la acierta el sábado y se lo cuenta a todos). 'gancho' = texto del primer segundo; 'nota' = lo que aparece con la respuesta; 'correcta' = índice 0-3.",
+ "preguntas": [
+  {
+   "id": "f01",
+   "gancho": "No contestes hasta que acabe el tiempo",
+   "texto": "¿Qué país tiene más husos horarios?",
+   "opciones": [
+    "Rusia",
+    "Francia",
+    "Estados Unidos",
+    "China"
+   ],
+   "correcta": 1,
+   "nota": "Por los territorios de ultramar. Rusia tiene 11; Francia, 12.",
+   "enBanco": true,
+   "texto_en": "Which country has the most time zones?",
+   "opciones_en": [
+    "Russia",
+    "France",
+    "United States",
+    "China"
+   ],
+   "nota_en": "Overseas territories. Russia has 11; France, 12.",
+   "gancho_en": "Don't answer until the timer ends",
+   "ganchos": [
+    "No contestes hasta que acabe el tiempo",
+    "Esta cae el sábado",
+    "Rusia no es la respuesta"
+   ],
+   "ganchos_en": [
+    "Don't answer until the timer ends",
+    "This one's in Saturday's game",
+    "Russia is not the answer"
+   ]
+  },
+  {
+   "id": "f02",
+   "gancho": "Mi madre la acertó. Yo no.",
+   "texto": "¿Qué instrumento tiene 47 cuerdas?",
+   "opciones": [
+    "Guitarra",
+    "Arpa",
+    "Violín",
+    "Piano"
+   ],
+   "correcta": 1,
+   "nota": "El arpa de concierto: 47 cuerdas y 7 pedales.",
+   "enBanco": true,
+   "texto_en": "Which instrument has 47 strings?",
+   "opciones_en": [
+    "Guitar",
+    "Harp",
+    "Violin",
+    "Piano"
+   ],
+   "nota_en": "The concert harp: 47 strings, 7 pedals.",
+   "gancho_en": "My mum got it. I didn't.",
+   "ganchos": [
+    "Mi madre la acertó. Yo no.",
+    "Esta cae el sábado",
+    "Nadie la sabe a la primera"
+   ],
+   "ganchos_en": [
+    "My mum got it. I didn't.",
+    "This one's in Saturday's game",
+    "Nobody gets it first try"
+   ]
+  },
+  {
+   "id": "f03",
+   "gancho": "Si dudas, ya has perdido",
+   "texto": "¿Cuántos lados tiene un hexágono?",
+   "opciones": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "correcta": 1,
+   "nota": "Seis. No había tiempo para contar.",
+   "enBanco": false,
+   "texto_en": "How many sides does a hexagon have?",
+   "opciones_en": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "nota_en": "Six. No time to count.",
+   "gancho_en": "If you hesitate, you've lost",
+   "ganchos": [
+    "Si dudas, ya has perdido",
+    "La más fácil del sábado",
+    "Contesta sin pensar"
+   ],
+   "ganchos_en": [
+    "If you hesitate, you've lost",
+    "The easiest one on Saturday",
+    "Answer without thinking"
+   ]
+  },
+  {
+   "id": "f04",
+   "gancho": "La que me sacó del bote",
+   "texto": "¿En qué país está el Kilimanjaro?",
+   "opciones": [
+    "Kenia",
+    "Tanzania",
+    "Etiopía",
+    "Uganda"
+   ],
+   "correcta": 1,
+   "nota": "Tanzania. Casi todo el mundo dice Kenia.",
+   "enBanco": false,
+   "texto_en": "Which country is Mount Kilimanjaro in?",
+   "opciones_en": [
+    "Kenya",
+    "Tanzania",
+    "Ethiopia",
+    "Uganda"
+   ],
+   "nota_en": "Tanzania. Almost everyone says Kenya.",
+   "gancho_en": "The one that cost me the pot",
+   "ganchos": [
+    "La que me sacó del bote",
+    "Todos dicen Kenia",
+    "Pregunta 4. Fuera 60."
+   ],
+   "ganchos_en": [
+    "The one that cost me the pot",
+    "Everyone says Kenya",
+    "Question 4. 60 out."
+   ]
+  },
+  {
+   "id": "f05",
+   "gancho": "Casi todos dicen Danubio",
+   "texto": "¿Cuál es el río más largo de Europa?",
+   "opciones": [
+    "Danubio",
+    "Volga",
+    "Rin",
+    "Sena"
+   ],
+   "correcta": 1,
+   "nota": "El Volga: 3.530 km. El Danubio, 2.850.",
+   "enBanco": false,
+   "texto_en": "What is the longest river in Europe?",
+   "opciones_en": [
+    "Danube",
+    "Volga",
+    "Rhine",
+    "Seine"
+   ],
+   "nota_en": "The Volga: 3,530 km. The Danube, 2,850.",
+   "gancho_en": "Almost everyone says Danube",
+   "ganchos": [
+    "Casi todos dicen Danubio",
+    "No es el Danubio",
+    "Mi profe de geografía la falló"
+   ],
+   "ganchos_en": [
+    "Almost everyone says Danube",
+    "It's not the Danube",
+    "My geography teacher got it wrong"
+   ]
+  },
+  {
+   "id": "f06",
+   "gancho": "Pregunta 10",
+   "texto": "¿Qué elemento químico tiene el símbolo W?",
+   "opciones": [
+    "Wolframio",
+    "Vanadio",
+    "Zinc",
+    "Bismuto"
+   ],
+   "correcta": 0,
+   "nota": "Wolframio, también llamado tungsteno. Así son las últimas.",
+   "enBanco": false,
+   "texto_en": "Which chemical element has the symbol W?",
+   "opciones_en": [
+    "Tungsten",
+    "Vanadium",
+    "Zinc",
+    "Bismuth"
+   ],
+   "nota_en": "Tungsten (wolfram). That's what question 10 looks like.",
+   "gancho_en": "Question 10",
+   "ganchos": [
+    "Pregunta 10",
+    "Los de ciencias, a ver",
+    "W. Solo eso."
+   ],
+   "ganchos_en": [
+    "Question 10",
+    "Science people, let's see",
+    "W. That's all."
+   ]
+  },
+  {
+   "id": "f07",
+   "gancho": "Lee hasta el final",
+   "texto": "¿Cuál de estos NO es un planeta?",
+   "opciones": [
+    "Marte",
+    "Plutón",
+    "Venus",
+    "Saturno"
+   ],
+   "correcta": 1,
+   "nota": "Desde 2006. Mucha gente sigue en 2005.",
+   "enBanco": false,
+   "texto_en": "Which of these is NOT a planet?",
+   "opciones_en": [
+    "Mars",
+    "Pluto",
+    "Venus",
+    "Saturn"
+   ],
+   "nota_en": "Since 2006. A lot of people are still in 2005.",
+   "gancho_en": "Read to the end",
+   "ganchos": [
+    "Lee hasta el final",
+    "Una no es un planeta",
+    "La que cae la mitad"
+   ],
+   "ganchos_en": [
+    "Read to the end",
+    "One isn't a planet",
+    "Half of you will miss it"
+   ]
+  },
+  {
+   "id": "f08",
+   "gancho": "Parece fácil",
+   "texto": "¿Cuál es la capital de Australia?",
+   "opciones": [
+    "Sídney",
+    "Melbourne",
+    "Canberra",
+    "Perth"
+   ],
+   "correcta": 2,
+   "nota": "Canberra. Sídney es la más grande, no la capital.",
+   "enBanco": true,
+   "texto_en": "What is the capital of Australia?",
+   "opciones_en": [
+    "Sydney",
+    "Melbourne",
+    "Canberra",
+    "Perth"
+   ],
+   "nota_en": "Canberra. Sydney is the biggest, not the capital.",
+   "gancho_en": "Looks easy",
+   "ganchos": [
+    "Parece fácil",
+    "Esta cae el sábado",
+    "No es Sídney"
+   ],
+   "ganchos_en": [
+    "Looks easy",
+    "This one's in Saturday's game",
+    "It's not Sydney"
+   ]
+  },
+  {
+   "id": "f09",
+   "gancho": "Tres seguidas o no vales",
+   "texto": "¿Cuál es la capital de Canadá?",
+   "opciones": [
+    "Toronto",
+    "Ottawa",
+    "Montreal",
+    "Vancouver"
+   ],
+   "correcta": 1,
+   "nota": "Ottawa. Toronto engaña a media clase.",
+   "enBanco": false,
+   "texto_en": "What is the capital of Canada?",
+   "opciones_en": [
+    "Toronto",
+    "Ottawa",
+    "Montreal",
+    "Vancouver"
+   ],
+   "nota_en": "Ottawa. Toronto fools half the room.",
+   "gancho_en": "Three in a row or you're out",
+   "ganchos": [
+    "Tres seguidas o no vales",
+    "No es Toronto",
+    "La que separa a los que saben"
+   ],
+   "ganchos_en": [
+    "Three in a row or you're out",
+    "It's not Toronto",
+    "This one sorts out who knows"
+   ]
+  },
+  {
+   "id": "f10",
+   "gancho": "6 segundos. Igual que el sábado.",
+   "texto": "¿Cuántos años tiene un lustro?",
+   "opciones": [
+    "3",
+    "5",
+    "10",
+    "15"
+   ],
+   "correcta": 1,
+   "nota": "Cinco. Un decenio son diez.",
+   "enBanco": false,
+   "texto_en": "How many years are in a lustrum?",
+   "opciones_en": [
+    "3",
+    "5",
+    "10",
+    "15"
+   ],
+   "nota_en": "Five. A decade is ten.",
+   "gancho_en": "6 seconds. Same as Saturday.",
+   "ganchos": [
+    "6 segundos. Igual que el sábado.",
+    "Un lustro. Sin mirar.",
+    "La de primaria que se olvida"
+   ],
+   "ganchos_en": [
+    "6 seconds. Same as Saturday.",
+    "A lustrum. No looking.",
+    "The primary-school one you forgot"
+   ]
+  },
+  {
+   "id": "f11",
+   "gancho": "Esta la fallan los listos",
+   "texto": "¿Cuántos planetas del sistema solar tienen anillos?",
+   "opciones": [
+    "1",
+    "2",
+    "4",
+    "6"
+   ],
+   "correcta": 2,
+   "nota": "Cuatro: Júpiter, Saturno, Urano y Neptuno.",
+   "enBanco": false,
+   "texto_en": "How many planets in the solar system have rings?",
+   "opciones_en": [
+    "1",
+    "2",
+    "4",
+    "6"
+   ],
+   "nota_en": "Four: Jupiter, Saturn, Uranus and Neptune.",
+   "gancho_en": "The smart ones get this wrong",
+   "ganchos": [
+    "Esta la fallan los listos",
+    "No es solo Saturno",
+    "Anillos. Cuenta."
+   ],
+   "ganchos_en": [
+    "The smart ones get this wrong",
+    "It's not just Saturn",
+    "Rings. Count them."
+   ]
+  },
+  {
+   "id": "f12",
+   "gancho": "Mira bien. Tienes 6 segundos.",
+   "texto": "¿Qué país tiene la bandera verde, blanca y naranja, con el verde junto al mástil?",
+   "opciones": [
+    "Costa de Marfil",
+    "Irlanda",
+    "Italia",
+    "Níger"
+   ],
+   "correcta": 1,
+   "nota": "Irlanda. Costa de Marfil es la misma al revés.",
+   "enBanco": false,
+   "texto_en": "Whose flag is green, white and orange, green next to the pole?",
+   "opciones_en": [
+    "Ivory Coast",
+    "Ireland",
+    "Italy",
+    "Niger"
+   ],
+   "nota_en": "Ireland. Ivory Coast is the same one reversed.",
+   "gancho_en": "Look closely. 6 seconds.",
+   "ganchos": [
+    "Mira bien. Tienes 6 segundos.",
+    "Verde, blanco, naranja",
+    "Dos banderas casi iguales"
+   ],
+   "ganchos_en": [
+    "Look closely. 6 seconds.",
+    "Green, white, orange",
+    "Two nearly identical flags"
+   ]
+  },
+  {
+   "id": "f13",
+   "gancho": "Contesta antes que el de al lado",
+   "texto": "¿En qué año llegó el ser humano a la Luna?",
+   "opciones": [
+    "1965",
+    "1969",
+    "1972",
+    "1975"
+   ],
+   "correcta": 1,
+   "nota": "1969. Apolo 11, 20 de julio.",
+   "enBanco": false,
+   "texto_en": "In which year did humans land on the Moon?",
+   "opciones_en": [
+    "1965",
+    "1969",
+    "1972",
+    "1975"
+   ],
+   "nota_en": "1969. Apollo 11, July 20.",
+   "gancho_en": "Answer before the person next to you",
+   "ganchos": [
+    "Contesta antes que el de al lado",
+    "El año, sin buscarlo",
+    "Mi padre lo vio en directo"
+   ],
+   "ganchos_en": [
+    "Answer before the person next to you",
+    "The year, no googling",
+    "My dad watched it live"
+   ]
+  },
+  {
+   "id": "f14",
+   "gancho": "Cuanto más sabes, peor",
+   "texto": "¿Cuántos huesos tiene un adulto?",
+   "opciones": [
+    "186",
+    "206",
+    "226",
+    "246"
+   ],
+   "correcta": 1,
+   "nota": "206. Un bebé nace con unos 270 y se van soldando.",
+   "enBanco": false,
+   "texto_en": "How many bones does an adult have?",
+   "opciones_en": [
+    "186",
+    "206",
+    "226",
+    "246"
+   ],
+   "nota_en": "206. A baby is born with about 270 that fuse over time.",
+   "gancho_en": "The more you know, the worse",
+   "ganchos": [
+    "Cuanto más sabes, peor",
+    "Un bebé tiene más",
+    "Biología de instituto"
+   ],
+   "ganchos_en": [
+    "The more you know, the worse",
+    "A baby has more",
+    "High-school biology"
+   ]
+  },
+  {
+   "id": "f15",
+   "gancho": "No leas las opciones. Contesta.",
+   "texto": "¿Cuál es el océano más grande?",
+   "opciones": [
+    "Atlántico",
+    "Índico",
+    "Pacífico",
+    "Ártico"
+   ],
+   "correcta": 2,
+   "nota": "El Pacífico. Más grande que toda la tierra firme junta.",
+   "enBanco": false,
+   "texto_en": "What is the largest ocean?",
+   "opciones_en": [
+    "Atlantic",
+    "Indian",
+    "Pacific",
+    "Arctic"
+   ],
+   "nota_en": "The Pacific. Bigger than all the land on Earth combined.",
+   "gancho_en": "Don't read the options. Answer.",
+   "ganchos": [
+    "No leas las opciones. Contesta.",
+    "La más fácil del sábado",
+    "Si fallas esta, no juegues"
+   ],
+   "ganchos_en": [
+    "Don't read the options. Answer.",
+    "The easiest one on Saturday",
+    "Miss this and don't bother playing"
+   ]
+  },
+  {
+   "id": "f16",
+   "gancho": "La pregunta 7 me sacó del bote",
+   "texto": "¿Qué gas necesitan las plantas para hacer la fotosíntesis?",
+   "opciones": [
+    "Oxígeno",
+    "Nitrógeno",
+    "Dióxido de carbono",
+    "Hidrógeno"
+   ],
+   "correcta": 2,
+   "nota": "CO₂. El oxígeno lo sueltan ellas.",
+   "enBanco": false,
+   "texto_en": "Which gas do plants need for photosynthesis?",
+   "opciones_en": [
+    "Oxygen",
+    "Nitrogen",
+    "Carbon dioxide",
+    "Hydrogen"
+   ],
+   "nota_en": "CO₂. Oxygen is what they give off.",
+   "gancho_en": "Question 7 knocked me out",
+   "ganchos": [
+    "La pregunta 7 me sacó del bote",
+    "No es oxígeno",
+    "Primaria. Y aun así."
+   ],
+   "ganchos_en": [
+    "Question 7 knocked me out",
+    "It's not oxygen",
+    "Primary school. And still."
+   ]
+  },
+  {
+   "id": "f17",
+   "gancho": "¿Aguantas más que yo?",
+   "texto": "¿Cuántas cuerdas tiene un violín?",
+   "opciones": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correcta": 0,
+   "nota": "Cuatro: sol, re, la, mi.",
+   "enBanco": true,
+   "texto_en": "How many strings does a violin have?",
+   "opciones_en": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "nota_en": "Four: G, D, A, E.",
+   "gancho_en": "Can you last longer than me?",
+   "ganchos": [
+    "¿Aguantas más que yo?",
+    "Esta cae el sábado",
+    "Los músicos la saben"
+   ],
+   "ganchos_en": [
+    "Can you last longer than me?",
+    "This one's in Saturday's game",
+    "Musicians know this one"
+   ]
+  },
+  {
+   "id": "f18",
+   "gancho": "Si has dicho Bélgica, fuera",
+   "texto": "¿Cuál de estos países NO tiene frontera con Alemania?",
+   "opciones": [
+    "Austria",
+    "Bélgica",
+    "Eslovaquia",
+    "Luxemburgo"
+   ],
+   "correcta": 2,
+   "nota": "Eslovaquia. Entre medias está Chequia.",
+   "enBanco": false,
+   "texto_en": "Which of these countries does NOT border Germany?",
+   "opciones_en": [
+    "Austria",
+    "Belgium",
+    "Slovakia",
+    "Luxembourg"
+   ],
+   "nota_en": "Slovakia. Czechia sits in between.",
+   "gancho_en": "If you said Belgium, you're out",
+   "ganchos": [
+    "Si has dicho Bélgica, fuera",
+    "Solo uno no toca Alemania",
+    "Geografía de las que duelen"
+   ],
+   "ganchos_en": [
+    "If you said Belgium, you're out",
+    "Only one doesn't touch Germany",
+    "Geography that hurts"
+   ]
+  },
+  {
+   "id": "f19",
+   "gancho": "Parece fácil. No lo es.",
+   "texto": "¿Cuántos minutos tiene un día?",
+   "opciones": [
+    "1.240",
+    "1.440",
+    "1.640",
+    "2.400"
+   ],
+   "correcta": 1,
+   "nota": "1.440. 24 por 60. En 6 segundos no da tiempo.",
+   "enBanco": false,
+   "texto_en": "How many minutes are in a day?",
+   "opciones_en": [
+    "1,240",
+    "1,440",
+    "1,640",
+    "2,400"
+   ],
+   "nota_en": "1,440. 24 times 60. Not in 6 seconds.",
+   "gancho_en": "Looks easy. It isn't.",
+   "ganchos": [
+    "Parece fácil. No lo es.",
+    "Sin calculadora",
+    "24 por 60. Ya."
+   ],
+   "ganchos_en": [
+    "Looks easy. It isn't.",
+    "No calculator",
+    "24 times 60. Go."
+   ]
+  },
+  {
+   "id": "f20",
+   "gancho": "Mi abuela la acertó",
+   "texto": "¿Qué animal es el más rápido del mundo?",
+   "opciones": [
+    "Guepardo",
+    "Halcón peregrino",
+    "Pez vela",
+    "Liebre"
+   ],
+   "correcta": 1,
+   "nota": "El halcón peregrino: más de 300 km/h en picado. El guepardo es el más rápido en tierra.",
+   "enBanco": false,
+   "texto_en": "Which is the fastest animal in the world?",
+   "opciones_en": [
+    "Cheetah",
+    "Peregrine falcon",
+    "Sailfish",
+    "Hare"
+   ],
+   "nota_en": "Peregrine falcon: 300+ km/h in a dive. The cheetah is fastest on land.",
+   "gancho_en": "My grandma got it",
+   "ganchos": [
+    "Mi abuela la acertó",
+    "No es el guepardo",
+    "El más rápido no corre"
+   ],
+   "ganchos_en": [
+    "My grandma got it",
+    "It's not the cheetah",
+    "The fastest one doesn't run"
+   ]
+  },
+  {
+   "id": "f21",
+   "gancho": "Esta la fallan los listos",
+   "texto": "¿Cuál es el país más grande de África?",
+   "opciones": [
+    "Sudán",
+    "Argelia",
+    "Congo",
+    "Nigeria"
+   ],
+   "correcta": 1,
+   "nota": "Argelia, desde que Sudán se partió en 2011.",
+   "enBanco": false,
+   "texto_en": "What is the largest country in Africa?",
+   "opciones_en": [
+    "Sudan",
+    "Algeria",
+    "Congo",
+    "Nigeria"
+   ],
+   "nota_en": "Algeria, since Sudan split in 2011.",
+   "gancho_en": "The smart ones get this wrong",
+   "ganchos": [
+    "Esta la fallan los listos",
+    "No es Sudáfrica",
+    "El mapa engaña"
+   ],
+   "ganchos_en": [
+    "The smart ones get this wrong",
+    "It's not South Africa",
+    "The map lies"
+   ]
+  },
+  {
+   "id": "f22",
+   "gancho": "Lee hasta el final",
+   "texto": "¿Cuántas veces cabe la Tierra en el Sol?",
+   "opciones": [
+    "100",
+    "1.000",
+    "100.000",
+    "1.300.000"
+   ],
+   "correcta": 3,
+   "nota": "Alrededor de 1,3 millones de veces.",
+   "enBanco": false,
+   "texto_en": "How many Earths fit inside the Sun?",
+   "opciones_en": [
+    "100",
+    "1,000",
+    "100,000",
+    "1,300,000"
+   ],
+   "nota_en": "About 1.3 million.",
+   "gancho_en": "Read to the end",
+   "ganchos": [
+    "Lee hasta el final",
+    "Más de un millón",
+    "La cifra que nadie se cree"
+   ],
+   "ganchos_en": [
+    "Read to the end",
+    "More than a million",
+    "The number nobody believes"
+   ]
+  },
+  {
+   "id": "f23",
+   "gancho": "Si dudas, ya has perdido",
+   "texto": "¿En qué continente está Turquía?",
+   "opciones": [
+    "Europa",
+    "Asia",
+    "Los dos",
+    "Ninguno"
+   ],
+   "correcta": 2,
+   "nota": "Los dos. El 3 % en Europa, el resto en Asia.",
+   "enBanco": false,
+   "texto_en": "Which continent is Turkey in?",
+   "opciones_en": [
+    "Europe",
+    "Asia",
+    "Both",
+    "Neither"
+   ],
+   "nota_en": "Both. 3% in Europe, the rest in Asia.",
+   "gancho_en": "If you hesitate, you've lost",
+   "ganchos": [
+    "Si dudas, ya has perdido",
+    "Está en dos",
+    "Pregunta trampa"
+   ],
+   "ganchos_en": [
+    "If you hesitate, you've lost",
+    "It's in two",
+    "Trick question"
+   ]
+  },
+  {
+   "id": "f24",
+   "gancho": "Pregunta 10",
+   "texto": "¿Qué idioma tiene más hablantes nativos?",
+   "opciones": [
+    "Inglés",
+    "Chino mandarín",
+    "Español",
+    "Hindi"
+   ],
+   "correcta": 1,
+   "nota": "Mandarín. El español va segundo, por delante del inglés.",
+   "enBanco": false,
+   "texto_en": "Which language has the most native speakers?",
+   "opciones_en": [
+    "English",
+    "Mandarin Chinese",
+    "Spanish",
+    "Hindi"
+   ],
+   "nota_en": "Mandarin. Spanish is second, ahead of English.",
+   "gancho_en": "Question 10",
+   "ganchos": [
+    "Pregunta 10",
+    "No es el inglés",
+    "Nativos, no hablantes"
+   ],
+   "ganchos_en": [
+    "Question 10",
+    "It's not English",
+    "Native, not total speakers"
+   ]
+  },
+  {
+   "id": "f25",
+   "gancho": "Mira bien. Tienes 6 segundos.",
+   "texto": "¿Cuál es el metal más abundante en la corteza terrestre?",
+   "opciones": [
+    "Hierro",
+    "Aluminio",
+    "Cobre",
+    "Oro"
+   ],
+   "correcta": 1,
+   "nota": "Aluminio. El hierro es el más abundante en todo el planeta, no en la corteza.",
+   "enBanco": false,
+   "texto_en": "What is the most abundant metal in the Earth's crust?",
+   "opciones_en": [
+    "Iron",
+    "Aluminium",
+    "Copper",
+    "Gold"
+   ],
+   "nota_en": "Aluminium. Iron wins for the whole planet, not the crust.",
+   "gancho_en": "Look closely. 6 seconds.",
+   "ganchos": [
+    "Mira bien. Tienes 6 segundos.",
+    "No es el hierro",
+    "Química de la ESO"
+   ],
+   "ganchos_en": [
+    "Look closely. 6 seconds.",
+    "It's not iron",
+    "Secondary-school chemistry"
+   ]
+  },
+  {
+   "id": "f26",
+   "gancho": "Mi madre la acertó. Yo no.",
+   "texto": "¿Cuántos dientes tiene un adulto (sin las muelas del juicio)?",
+   "opciones": [
+    "24",
+    "28",
+    "32",
+    "36"
+   ],
+   "correcta": 1,
+   "nota": "28. Con las cuatro del juicio, 32.",
+   "enBanco": false,
+   "texto_en": "How many teeth does an adult have (without wisdom teeth)?",
+   "opciones_en": [
+    "24",
+    "28",
+    "32",
+    "36"
+   ],
+   "nota_en": "28. With the four wisdom teeth, 32.",
+   "gancho_en": "My mum got it. I didn't.",
+   "ganchos": [
+    "Mi madre la acertó. Yo no.",
+    "Cuéntalos. 6 segundos.",
+    "Sin las del juicio"
+   ],
+   "ganchos_en": [
+    "My mum got it. I didn't.",
+    "Count them. 6 seconds.",
+    "Without wisdom teeth"
+   ]
+  },
+  {
+   "id": "f27",
+   "gancho": "Casi todos la fallan",
+   "texto": "¿Qué país produce más café?",
+   "opciones": [
+    "Colombia",
+    "Brasil",
+    "Vietnam",
+    "Etiopía"
+   ],
+   "correcta": 1,
+   "nota": "Brasil, de largo. Colombia ni siquiera es segundo: es Vietnam.",
+   "enBanco": false,
+   "texto_en": "Which country produces the most coffee?",
+   "opciones_en": [
+    "Colombia",
+    "Brazil",
+    "Vietnam",
+    "Ethiopia"
+   ],
+   "nota_en": "Brazil, by far. Colombia isn't even second: Vietnam is.",
+   "gancho_en": "Almost everyone gets this wrong",
+   "ganchos": [
+    "Casi todos la fallan",
+    "No es Colombia",
+    "Café. Un solo país."
+   ],
+   "ganchos_en": [
+    "Almost everyone gets this wrong",
+    "It's not Colombia",
+    "Coffee. One country."
+   ]
+  },
+  {
+   "id": "f28",
+   "gancho": "La que me sacó del bote",
+   "texto": "¿Cuántos corazones tiene un pulpo?",
+   "opciones": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "correcta": 2,
+   "nota": "Tres. Dos para las branquias y uno para el resto.",
+   "enBanco": false,
+   "texto_en": "How many hearts does an octopus have?",
+   "opciones_en": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "nota_en": "Three. Two for the gills, one for the rest.",
+   "gancho_en": "The one that cost me the pot",
+   "ganchos": [
+    "La que me sacó del bote",
+    "Más de uno",
+    "El pulpo te elimina"
+   ],
+   "ganchos_en": [
+    "The one that cost me the pot",
+    "More than one",
+    "The octopus knocks you out"
+   ]
+  },
+  {
+   "id": "f29",
+   "gancho": "No contestes hasta que acabe el tiempo",
+   "texto": "¿Cuál es la ciudad más poblada del mundo?",
+   "opciones": [
+    "Shanghái",
+    "Tokio",
+    "Delhi",
+    "Ciudad de México"
+   ],
+   "correcta": 1,
+   "nota": "Tokio, contando el área metropolitana: unos 37 millones.",
+   "enBanco": false,
+   "texto_en": "What is the most populated city in the world?",
+   "opciones_en": [
+    "Shanghai",
+    "Tokyo",
+    "Delhi",
+    "Mexico City"
+   ],
+   "nota_en": "Tokyo, counting the metro area: about 37 million.",
+   "gancho_en": "Don't answer until the timer ends",
+   "ganchos": [
+    "No contestes hasta que acabe el tiempo",
+    "No es Nueva York",
+    "La ciudad, no el país"
+   ],
+   "ganchos_en": [
+    "Don't answer until the timer ends",
+    "It's not New York",
+    "The city, not the country"
+   ]
+  },
+  {
+   "id": "f30",
+   "gancho": "Cuanto más sabes, peor",
+   "texto": "¿De qué color es la caja negra de un avión?",
+   "opciones": [
+    "Negro",
+    "Naranja",
+    "Rojo",
+    "Amarillo"
+   ],
+   "correcta": 1,
+   "nota": "Naranja, para encontrarla entre los restos.",
+   "enBanco": false,
+   "texto_en": "What colour is an aeroplane's black box?",
+   "opciones_en": [
+    "Black",
+    "Orange",
+    "Red",
+    "Yellow"
+   ],
+   "nota_en": "Orange, so it can be found in the wreckage.",
+   "gancho_en": "The more you know, the worse",
+   "ganchos": [
+    "Cuanto más sabes, peor",
+    "No es negra",
+    "La pregunta que todos fallan a la primera"
+   ],
+   "ganchos_en": [
+    "The more you know, the worse",
+    "It's not black",
+    "The one everyone misses first time"
+   ]
+  },
+  {
+   "id": "f31",
+   "gancho": "Pregunta 1. La de calentar.",
+   "texto": "¿Cuál es el planeta más grande del sistema solar?",
+   "opciones": [
+    "Saturno",
+    "Júpiter",
+    "Neptuno",
+    "Urano"
+   ],
+   "correcta": 1,
+   "nota": "Júpiter. Caben más de mil Tierras dentro.",
+   "enBanco": false,
+   "texto_en": "Which is the largest planet in the solar system?",
+   "opciones_en": [
+    "Saturn",
+    "Jupiter",
+    "Neptune",
+    "Uranus"
+   ],
+   "nota_en": "Jupiter. Over a thousand Earths would fit inside.",
+   "gancho_en": "Question 1. The warm-up.",
+   "ganchos": [
+    "Pregunta 1. La de calentar.",
+    "No es Saturno",
+    "Si fallas esta, no juegues"
+   ],
+   "ganchos_en": [
+    "Question 1. The warm-up.",
+    "It's not Saturn",
+    "Miss this and don't bother"
+   ],
+   "tags": "#espacio",
+   "tags_en": "#space"
+  },
+  {
+   "id": "f32",
+   "gancho": "Espacio. Sin pensar.",
+   "texto": "¿Cuál es el planeta más cercano al Sol?",
+   "opciones": [
+    "Venus",
+    "Mercurio",
+    "Marte",
+    "Tierra"
+   ],
+   "correcta": 1,
+   "nota": "Mercurio.",
+   "enBanco": false,
+   "texto_en": "Which planet is closest to the Sun?",
+   "opciones_en": [
+    "Venus",
+    "Mercury",
+    "Mars",
+    "Earth"
+   ],
+   "nota_en": "Mercury.",
+   "gancho_en": "Space. No thinking.",
+   "ganchos": [
+    "Espacio. Sin pensar.",
+    "No es Venus",
+    "Pregunta 2"
+   ],
+   "ganchos_en": [
+    "Space. No thinking.",
+    "It's not Venus",
+    "Question 2"
+   ],
+   "tags": "#espacio",
+   "tags_en": "#space"
+  },
+  {
+   "id": "f33",
+   "gancho": "Biología de instituto",
+   "texto": "¿Cuál es el hueso más largo del cuerpo humano?",
+   "opciones": [
+    "Húmero",
+    "Tibia",
+    "Fémur",
+    "Radio"
+   ],
+   "correcta": 2,
+   "nota": "El fémur, el del muslo.",
+   "enBanco": false,
+   "texto_en": "What is the longest bone in the human body?",
+   "opciones_en": [
+    "Humerus",
+    "Tibia",
+    "Femur",
+    "Radius"
+   ],
+   "nota_en": "The femur, in the thigh.",
+   "gancho_en": "High-school biology",
+   "ganchos": [
+    "Biología de instituto",
+    "No es la tibia",
+    "Anatomía en 6 segundos"
+   ],
+   "ganchos_en": [
+    "High-school biology",
+    "It's not the tibia",
+    "Anatomy in 6 seconds"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f34",
+   "gancho": "Arte. 6 segundos.",
+   "texto": "¿Quién pintó 'La noche estrellada'?",
+   "opciones": [
+    "Monet",
+    "Van Gogh",
+    "Picasso",
+    "Dalí"
+   ],
+   "correcta": 1,
+   "nota": "Van Gogh, en 1889, desde un sanatorio.",
+   "enBanco": false,
+   "texto_en": "Who painted 'The Starry Night'?",
+   "opciones_en": [
+    "Monet",
+    "Van Gogh",
+    "Picasso",
+    "Dalí"
+   ],
+   "nota_en": "Van Gogh, in 1889, from an asylum.",
+   "gancho_en": "Art. 6 seconds.",
+   "ganchos": [
+    "Arte. 6 segundos.",
+    "Todos la han visto",
+    "No es Monet"
+   ],
+   "ganchos_en": [
+    "Art. 6 seconds.",
+    "Everyone's seen it",
+    "It's not Monet"
+   ],
+   "tags": "#arte",
+   "tags_en": "#art"
+  },
+  {
+   "id": "f35",
+   "gancho": "La más fácil del sábado",
+   "texto": "¿Cuál es el animal terrestre más grande?",
+   "opciones": [
+    "Rinoceronte",
+    "Hipopótamo",
+    "Elefante africano",
+    "Jirafa"
+   ],
+   "correcta": 2,
+   "nota": "El elefante africano. Hasta 6 toneladas.",
+   "enBanco": false,
+   "texto_en": "What is the largest land animal?",
+   "opciones_en": [
+    "Rhinoceros",
+    "Hippopotamus",
+    "African elephant",
+    "Giraffe"
+   ],
+   "nota_en": "The African elephant. Up to 6 tonnes.",
+   "gancho_en": "The easiest one on Saturday",
+   "ganchos": [
+    "La más fácil del sábado",
+    "Terrestre. Ojo.",
+    "Mi sobrino la sabe"
+   ],
+   "ganchos_en": [
+    "The easiest one on Saturday",
+    "On land. Careful.",
+    "My nephew knows this"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f36",
+   "gancho": "Música. Sin pensar.",
+   "texto": "¿En qué país nació el tango?",
+   "opciones": [
+    "Brasil",
+    "Uruguay",
+    "Argentina",
+    "Cuba"
+   ],
+   "correcta": 2,
+   "nota": "Argentina. En los arrabales de Buenos Aires.",
+   "enBanco": false,
+   "texto_en": "In which country was tango born?",
+   "opciones_en": [
+    "Brazil",
+    "Uruguay",
+    "Argentina",
+    "Cuba"
+   ],
+   "nota_en": "Argentina. In the outskirts of Buenos Aires.",
+   "gancho_en": "Music. No thinking.",
+   "ganchos": [
+    "Música. Sin pensar.",
+    "Los uruguayos protestan",
+    "Pregunta 3"
+   ],
+   "ganchos_en": [
+    "Music. No thinking.",
+    "Uruguayans will argue",
+    "Question 3"
+   ],
+   "tags": "#musica",
+   "tags_en": "#music"
+  },
+  {
+   "id": "f37",
+   "gancho": "No es Mónaco",
+   "texto": "¿Cuál es el país más pequeño del mundo?",
+   "opciones": [
+    "Mónaco",
+    "San Marino",
+    "Vaticano",
+    "Liechtenstein"
+   ],
+   "correcta": 2,
+   "nota": "El Vaticano. Menos de medio kilómetro cuadrado.",
+   "enBanco": false,
+   "texto_en": "What is the smallest country in the world?",
+   "opciones_en": [
+    "Monaco",
+    "San Marino",
+    "Vatican City",
+    "Liechtenstein"
+   ],
+   "nota_en": "Vatican City. Under half a square kilometre.",
+   "gancho_en": "It's not Monaco",
+   "ganchos": [
+    "No es Mónaco",
+    "Cabe en un barrio",
+    "Geografía fácil"
+   ],
+   "ganchos_en": [
+    "It's not Monaco",
+    "Fits inside a neighbourhood",
+    "Easy geography"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f38",
+   "gancho": "Si fallas esta, cierra la app",
+   "texto": "¿Cuántos jugadores tiene un equipo de fútbol en el campo?",
+   "opciones": [
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "correcta": 2,
+   "nota": "Once. Contando al portero.",
+   "enBanco": false,
+   "texto_en": "How many players does a football team have on the pitch?",
+   "opciones_en": [
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "nota_en": "Eleven. Including the goalkeeper.",
+   "gancho_en": "Miss this and close the app",
+   "ganchos": [
+    "Si fallas esta, cierra la app",
+    "La de calentar",
+    "Deporte. 6 segundos."
+   ],
+   "ganchos_en": [
+    "Miss this and close the app",
+    "The warm-up",
+    "Sport. 6 seconds."
+   ],
+   "tags": "#deporte",
+   "tags_en": "#sports"
+  },
+  {
+   "id": "f39",
+   "gancho": "Los de ciencias, a ver",
+   "texto": "¿Qué órgano produce la insulina?",
+   "opciones": [
+    "Hígado",
+    "Páncreas",
+    "Riñón",
+    "Bazo"
+   ],
+   "correcta": 1,
+   "nota": "El páncreas.",
+   "enBanco": false,
+   "texto_en": "Which organ produces insulin?",
+   "opciones_en": [
+    "Liver",
+    "Pancreas",
+    "Kidney",
+    "Spleen"
+   ],
+   "nota_en": "The pancreas.",
+   "gancho_en": "Science people, let's see",
+   "ganchos": [
+    "Los de ciencias, a ver",
+    "No es el hígado",
+    "La que cae en la 6"
+   ],
+   "ganchos_en": [
+    "Science people, let's see",
+    "It's not the liver",
+    "The one that falls on 6"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f40",
+   "gancho": "Historia reciente",
+   "texto": "¿En qué año cayó el Muro de Berlín?",
+   "opciones": [
+    "1985",
+    "1989",
+    "1991",
+    "1993"
+   ],
+   "correcta": 1,
+   "nota": "1989. El 9 de noviembre.",
+   "enBanco": false,
+   "texto_en": "In what year did the Berlin Wall fall?",
+   "opciones_en": [
+    "1985",
+    "1989",
+    "1991",
+    "1993"
+   ],
+   "nota_en": "1989. On 9 November.",
+   "gancho_en": "Recent history",
+   "ganchos": [
+    "Historia reciente",
+    "Mi padre lo vio en directo",
+    "El año, sin buscarlo"
+   ],
+   "ganchos_en": [
+    "Recent history",
+    "My dad watched it live",
+    "The year, no googling"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f41",
+   "gancho": "No es el yuan",
+   "texto": "¿Cuál es la moneda de Japón?",
+   "opciones": [
+    "Yuan",
+    "Won",
+    "Yen",
+    "Ringgit"
+   ],
+   "correcta": 2,
+   "nota": "El yen.",
+   "enBanco": false,
+   "texto_en": "What is the currency of Japan?",
+   "opciones_en": [
+    "Yuan",
+    "Won",
+    "Yen",
+    "Ringgit"
+   ],
+   "nota_en": "The yen.",
+   "gancho_en": "It's not the yuan",
+   "ganchos": [
+    "No es el yuan",
+    "Se parecen a propósito",
+    "Economía en 6 segundos"
+   ],
+   "ganchos_en": [
+    "It's not the yuan",
+    "They sound alike on purpose",
+    "Economics in 6 seconds"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f42",
+   "gancho": "Química de la ESO",
+   "texto": "¿Cuál es el metal líquido a temperatura ambiente?",
+   "opciones": [
+    "Plomo",
+    "Mercurio",
+    "Estaño",
+    "Litio"
+   ],
+   "correcta": 1,
+   "nota": "El mercurio.",
+   "enBanco": false,
+   "texto_en": "Which metal is liquid at room temperature?",
+   "opciones_en": [
+    "Lead",
+    "Mercury",
+    "Tin",
+    "Lithium"
+   ],
+   "nota_en": "Mercury.",
+   "gancho_en": "Secondary-school chemistry",
+   "ganchos": [
+    "Química de la ESO",
+    "Solo hay uno",
+    "Pregunta 5"
+   ],
+   "ganchos_en": [
+    "Secondary-school chemistry",
+    "There's only one",
+    "Question 5"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f43",
+   "gancho": "Literatura. Sin pensar.",
+   "texto": "¿Qué escritor creó a Sherlock Holmes?",
+   "opciones": [
+    "Agatha Christie",
+    "Arthur Conan Doyle",
+    "Edgar Allan Poe",
+    "Charles Dickens"
+   ],
+   "correcta": 1,
+   "nota": "Arthur Conan Doyle, en 1887.",
+   "enBanco": false,
+   "texto_en": "Which writer created Sherlock Holmes?",
+   "opciones_en": [
+    "Agatha Christie",
+    "Arthur Conan Doyle",
+    "Edgar Allan Poe",
+    "Charles Dickens"
+   ],
+   "nota_en": "Arthur Conan Doyle, in 1887.",
+   "gancho_en": "Literature. No thinking.",
+   "ganchos": [
+    "Literatura. Sin pensar.",
+    "Elemental",
+    "No es Agatha Christie"
+   ],
+   "ganchos_en": [
+    "Literature. No thinking.",
+    "Elementary",
+    "It's not Agatha Christie"
+   ],
+   "tags": "#literatura",
+   "tags_en": "#books"
+  },
+  {
+   "id": "f44",
+   "gancho": "La señal de stop",
+   "texto": "¿Cuántos lados tiene un octógono?",
+   "opciones": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "correcta": 2,
+   "nota": "Ocho. Como la señal de stop.",
+   "enBanco": false,
+   "texto_en": "How many sides does an octagon have?",
+   "opciones_en": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "nota_en": "Eight. Like a stop sign.",
+   "gancho_en": "The stop sign",
+   "ganchos": [
+    "La señal de stop",
+    "Contesta sin pensar",
+    "La más fácil del sábado"
+   ],
+   "ganchos_en": [
+    "The stop sign",
+    "Answer without thinking",
+    "The easiest one on Saturday"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f45",
+   "gancho": "Si fallas esta, no juegues",
+   "texto": "¿En qué ciudad está la Sagrada Familia?",
+   "opciones": [
+    "Madrid",
+    "Sevilla",
+    "Barcelona",
+    "Valencia"
+   ],
+   "correcta": 2,
+   "nota": "Barcelona. Y sigue en obras.",
+   "enBanco": false,
+   "texto_en": "In which city is the Sagrada Família?",
+   "opciones_en": [
+    "Madrid",
+    "Seville",
+    "Barcelona",
+    "Valencia"
+   ],
+   "nota_en": "Barcelona. Still under construction.",
+   "gancho_en": "Miss this and don't bother",
+   "ganchos": [
+    "Si fallas esta, no juegues",
+    "Turismo. 6 segundos.",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "Miss this and don't bother",
+    "Tourism. 6 seconds.",
+    "Question 1"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f46",
+   "gancho": "No es el Sáhara",
+   "texto": "¿Cuál es el desierto más seco del mundo?",
+   "opciones": [
+    "Sáhara",
+    "Gobi",
+    "Atacama",
+    "Kalahari"
+   ],
+   "correcta": 2,
+   "nota": "Atacama, en Chile. Hay zonas donde no llueve en décadas.",
+   "enBanco": false,
+   "texto_en": "What is the driest desert in the world?",
+   "opciones_en": [
+    "Sahara",
+    "Gobi",
+    "Atacama",
+    "Kalahari"
+   ],
+   "nota_en": "Atacama, in Chile. Some spots go decades without rain.",
+   "gancho_en": "It's not the Sahara",
+   "ganchos": [
+    "No es el Sáhara",
+    "Seco. No grande.",
+    "La que cae la mitad"
+   ],
+   "ganchos_en": [
+    "It's not the Sahara",
+    "Driest. Not biggest.",
+    "Half of you will miss it"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f47",
+   "gancho": "Salud en 6 segundos",
+   "texto": "¿Qué vitamina produce la piel con el sol?",
+   "opciones": [
+    "A",
+    "B12",
+    "C",
+    "D"
+   ],
+   "correcta": 3,
+   "nota": "La D.",
+   "enBanco": false,
+   "texto_en": "Which vitamin does skin produce with sunlight?",
+   "opciones_en": [
+    "A",
+    "B12",
+    "C",
+    "D"
+   ],
+   "nota_en": "Vitamin D.",
+   "gancho_en": "Health in 6 seconds",
+   "ganchos": [
+    "Salud en 6 segundos",
+    "No es la C",
+    "Pregunta 4"
+   ],
+   "ganchos_en": [
+    "Health in 6 seconds",
+    "It's not C",
+    "Question 4"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f48",
+   "gancho": "Los músicos la saben",
+   "texto": "¿Cuántas teclas tiene un piano estándar?",
+   "opciones": [
+    "76",
+    "82",
+    "88",
+    "96"
+   ],
+   "correcta": 2,
+   "nota": "88: 52 blancas y 36 negras.",
+   "enBanco": false,
+   "texto_en": "How many keys does a standard piano have?",
+   "opciones_en": [
+    "76",
+    "82",
+    "88",
+    "96"
+   ],
+   "nota_en": "88: 52 white and 36 black.",
+   "gancho_en": "Musicians know this one",
+   "ganchos": [
+    "Los músicos la saben",
+    "Cuéntalas. 6 segundos.",
+    "No es 76"
+   ],
+   "ganchos_en": [
+    "Musicians know this one",
+    "Count them. 6 seconds.",
+    "It's not 76"
+   ],
+   "tags": "#musica",
+   "tags_en": "#music"
+  },
+  {
+   "id": "f49",
+   "gancho": "La de calentar",
+   "texto": "¿Qué país tiene forma de bota?",
+   "opciones": [
+    "Portugal",
+    "Grecia",
+    "Italia",
+    "Noruega"
+   ],
+   "correcta": 2,
+   "nota": "Italia.",
+   "enBanco": false,
+   "texto_en": "Which country is shaped like a boot?",
+   "opciones_en": [
+    "Portugal",
+    "Greece",
+    "Italy",
+    "Norway"
+   ],
+   "nota_en": "Italy.",
+   "gancho_en": "The warm-up",
+   "ganchos": [
+    "La de calentar",
+    "Si dudas, ya has perdido",
+    "Mi sobrino la sabe"
+   ],
+   "ganchos_en": [
+    "The warm-up",
+    "If you hesitate, you've lost",
+    "My nephew knows this"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f50",
+   "gancho": "Pregunta trampa",
+   "texto": "¿Cuál es el idioma oficial de Brasil?",
+   "opciones": [
+    "Español",
+    "Portugués",
+    "Brasileño",
+    "Italiano"
+   ],
+   "correcta": 1,
+   "nota": "Portugués. Brasileño no es un idioma.",
+   "enBanco": false,
+   "texto_en": "What is the official language of Brazil?",
+   "opciones_en": [
+    "Spanish",
+    "Portuguese",
+    "Brazilian",
+    "Italian"
+   ],
+   "nota_en": "Portuguese. 'Brazilian' isn't a language.",
+   "gancho_en": "Trick question",
+   "ganchos": [
+    "Pregunta trampa",
+    "No es español",
+    "Todos dicen la C"
+   ],
+   "ganchos_en": [
+    "Trick question",
+    "It's not Spanish",
+    "Everyone says C"
+   ],
+   "tags": "#idiomas",
+   "tags_en": "#languages"
+  },
+  {
+   "id": "f51",
+   "gancho": "Sin calculadora",
+   "texto": "¿Cuántos minutos tiene una hora y media?",
+   "opciones": [
+    "80",
+    "90",
+    "100",
+    "120"
+   ],
+   "correcta": 1,
+   "nota": "90.",
+   "enBanco": false,
+   "texto_en": "How many minutes are in an hour and a half?",
+   "opciones_en": [
+    "80",
+    "90",
+    "100",
+    "120"
+   ],
+   "nota_en": "90.",
+   "gancho_en": "No calculator",
+   "ganchos": [
+    "Sin calculadora",
+    "La que fallas por rápido",
+    "Matemáticas de 6 segundos"
+   ],
+   "ganchos_en": [
+    "No calculator",
+    "The one you miss by rushing",
+    "6-second maths"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f52",
+   "gancho": "Lo has visto mil veces",
+   "texto": "¿Qué animal es el símbolo del WWF?",
+   "opciones": [
+    "Tigre",
+    "Oso panda",
+    "Elefante",
+    "Ballena"
+   ],
+   "correcta": 1,
+   "nota": "El oso panda.",
+   "enBanco": false,
+   "texto_en": "Which animal is the symbol of the WWF?",
+   "opciones_en": [
+    "Tiger",
+    "Giant panda",
+    "Elephant",
+    "Whale"
+   ],
+   "nota_en": "The giant panda.",
+   "gancho_en": "You've seen it a thousand times",
+   "ganchos": [
+    "Lo has visto mil veces",
+    "No es el tigre",
+    "Pregunta 2"
+   ],
+   "ganchos_en": [
+    "You've seen it a thousand times",
+    "It's not the tiger",
+    "Question 2"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f53",
+   "gancho": "La que enfada a medio mundo",
+   "texto": "¿Cuál es el río más largo del mundo según la medición tradicional?",
+   "opciones": [
+    "Amazonas",
+    "Nilo",
+    "Yangtsé",
+    "Misisipi"
+   ],
+   "correcta": 1,
+   "nota": "El Nilo, con unos 6.650 km. El Amazonas lleva más agua.",
+   "enBanco": false,
+   "texto_en": "What is the longest river in the world by the traditional measure?",
+   "opciones_en": [
+    "Amazon",
+    "Nile",
+    "Yangtze",
+    "Mississippi"
+   ],
+   "nota_en": "The Nile, about 6,650 km. The Amazon carries more water.",
+   "gancho_en": "The one that starts arguments",
+   "ganchos": [
+    "La que enfada a medio mundo",
+    "Largo. No caudaloso.",
+    "Todos dicen Amazonas"
+   ],
+   "ganchos_en": [
+    "The one that starts arguments",
+    "Longest. Not biggest.",
+    "Everyone says Amazon"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f54",
+   "gancho": "No es oxígeno",
+   "texto": "¿Qué gas es el más abundante en la atmósfera terrestre?",
+   "opciones": [
+    "Oxígeno",
+    "Dióxido de carbono",
+    "Nitrógeno",
+    "Hidrógeno"
+   ],
+   "correcta": 2,
+   "nota": "Nitrógeno, cerca del 78 %.",
+   "enBanco": false,
+   "texto_en": "Which gas is the most abundant in Earth's atmosphere?",
+   "opciones_en": [
+    "Oxygen",
+    "Carbon dioxide",
+    "Nitrogen",
+    "Hydrogen"
+   ],
+   "nota_en": "Nitrogen, about 78%.",
+   "gancho_en": "It's not oxygen",
+   "ganchos": [
+    "No es oxígeno",
+    "Esta la fallan los listos",
+    "Química de la ESO"
+   ],
+   "ganchos_en": [
+    "It's not oxygen",
+    "The smart ones get this wrong",
+    "Secondary-school chemistry"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f55",
+   "gancho": "Historia. 6 segundos.",
+   "texto": "¿En qué año empezó la Primera Guerra Mundial?",
+   "opciones": [
+    "1910",
+    "1914",
+    "1918",
+    "1920"
+   ],
+   "correcta": 1,
+   "nota": "1914.",
+   "enBanco": false,
+   "texto_en": "In what year did the First World War begin?",
+   "opciones_en": [
+    "1910",
+    "1914",
+    "1918",
+    "1920"
+   ],
+   "nota_en": "1914.",
+   "gancho_en": "History. 6 seconds.",
+   "ganchos": [
+    "Historia. 6 segundos.",
+    "No confundas con el final",
+    "Pregunta 6"
+   ],
+   "ganchos_en": [
+    "History. 6 seconds.",
+    "Don't mix it up with the end",
+    "Question 6"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f56",
+   "gancho": "No es Estambul",
+   "texto": "¿Cuál es la capital de Turquía?",
+   "opciones": [
+    "Estambul",
+    "Ankara",
+    "Esmirna",
+    "Antalya"
+   ],
+   "correcta": 1,
+   "nota": "Ankara. Estambul es la más grande, no la capital.",
+   "enBanco": false,
+   "texto_en": "What is the capital of Turkey?",
+   "opciones_en": [
+    "Istanbul",
+    "Ankara",
+    "Izmir",
+    "Antalya"
+   ],
+   "nota_en": "Ankara. Istanbul is the biggest city, not the capital.",
+   "gancho_en": "It's not Istanbul",
+   "ganchos": [
+    "No es Estambul",
+    "La que elimina a la mitad",
+    "Capitales trampa"
+   ],
+   "ganchos_en": [
+    "It's not Istanbul",
+    "The one that knocks out half",
+    "Trick capitals"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f57",
+   "gancho": "Un bebé tiene más",
+   "texto": "¿Cuántos huesos tiene un recién nacido, aproximadamente?",
+   "opciones": [
+    "206",
+    "230",
+    "270",
+    "300"
+   ],
+   "correcta": 2,
+   "nota": "Unos 270. Luego se fusionan hasta 206.",
+   "enBanco": false,
+   "texto_en": "Roughly how many bones does a newborn have?",
+   "opciones_en": [
+    "206",
+    "230",
+    "270",
+    "300"
+   ],
+   "nota_en": "About 270. They later fuse into 206.",
+   "gancho_en": "A baby has more",
+   "ganchos": [
+    "Un bebé tiene más",
+    "Cuanto más sabes, peor",
+    "Biología rara"
+   ],
+   "ganchos_en": [
+    "A baby has more",
+    "The more you know, the worse",
+    "Weird biology"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f58",
+   "gancho": "Los de ciencias, a ver",
+   "texto": "¿Qué instrumento mide la presión atmosférica?",
+   "opciones": [
+    "Termómetro",
+    "Barómetro",
+    "Higrómetro",
+    "Anemómetro"
+   ],
+   "correcta": 1,
+   "nota": "El barómetro.",
+   "enBanco": false,
+   "texto_en": "Which instrument measures atmospheric pressure?",
+   "opciones_en": [
+    "Thermometer",
+    "Barometer",
+    "Hygrometer",
+    "Anemometer"
+   ],
+   "nota_en": "The barometer.",
+   "gancho_en": "Science people, let's see",
+   "ganchos": [
+    "Los de ciencias, a ver",
+    "Suenan igual a propósito",
+    "Pregunta 7"
+   ],
+   "ganchos_en": [
+    "Science people, let's see",
+    "They all sound alike on purpose",
+    "Question 7"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f59",
+   "gancho": "El pequeño, no el grande",
+   "texto": "¿Cuál es el océano más pequeño?",
+   "opciones": [
+    "Índico",
+    "Atlántico",
+    "Ártico",
+    "Antártico"
+   ],
+   "correcta": 2,
+   "nota": "El Ártico.",
+   "enBanco": false,
+   "texto_en": "Which is the smallest ocean?",
+   "opciones_en": [
+    "Indian",
+    "Atlantic",
+    "Arctic",
+    "Southern"
+   ],
+   "nota_en": "The Arctic.",
+   "gancho_en": "Smallest, not biggest",
+   "ganchos": [
+    "El pequeño, no el grande",
+    "Geografía fácil",
+    "Si dudas, ya has perdido"
+   ],
+   "ganchos_en": [
+    "Smallest, not biggest",
+    "Easy geography",
+    "If you hesitate, you've lost"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f60",
+   "gancho": "Literatura. 6 segundos.",
+   "texto": "¿Quién escribió 'Cien años de soledad'?",
+   "opciones": [
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez",
+    "Julio Cortázar",
+    "Jorge Luis Borges"
+   ],
+   "correcta": 1,
+   "nota": "Gabriel García Márquez, 1967.",
+   "enBanco": false,
+   "texto_en": "Who wrote 'One Hundred Years of Solitude'?",
+   "opciones_en": [
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez",
+    "Julio Cortázar",
+    "Jorge Luis Borges"
+   ],
+   "nota_en": "Gabriel García Márquez, 1967.",
+   "gancho_en": "Literature. 6 seconds.",
+   "ganchos": [
+    "Literatura. 6 segundos.",
+    "Macondo",
+    "No es Vargas Llosa"
+   ],
+   "ganchos_en": [
+    "Literature. 6 seconds.",
+    "Macondo",
+    "It's not Vargas Llosa"
+   ],
+   "tags": "#literatura",
+   "tags_en": "#books"
+  },
+  {
+   "id": "f61",
+   "gancho": "La más fácil del sábado",
+   "texto": "¿Cuántos grados tiene un ángulo recto?",
+   "opciones": [
+    "45",
+    "60",
+    "90",
+    "180"
+   ],
+   "correcta": 2,
+   "nota": "90.",
+   "enBanco": false,
+   "texto_en": "How many degrees are in a right angle?",
+   "opciones_en": [
+    "45",
+    "60",
+    "90",
+    "180"
+   ],
+   "nota_en": "90.",
+   "gancho_en": "The easiest one on Saturday",
+   "ganchos": [
+    "La más fácil del sábado",
+    "Contesta sin pensar",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "The easiest one on Saturday",
+    "Answer without thinking",
+    "Question 1"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f62",
+   "gancho": "No es el Matterhorn",
+   "texto": "¿Cuál es la montaña más alta de Europa occidental?",
+   "opciones": [
+    "Matterhorn",
+    "Mont Blanc",
+    "Aneto",
+    "Monte Rosa"
+   ],
+   "correcta": 1,
+   "nota": "El Mont Blanc, 4.808 m.",
+   "enBanco": false,
+   "texto_en": "What is the highest mountain in Western Europe?",
+   "opciones_en": [
+    "Matterhorn",
+    "Mont Blanc",
+    "Aneto",
+    "Monte Rosa"
+   ],
+   "nota_en": "Mont Blanc, 4,808 m.",
+   "gancho_en": "It's not the Matterhorn",
+   "ganchos": [
+    "No es el Matterhorn",
+    "Geografía de las que duelen",
+    "Pregunta 8"
+   ],
+   "ganchos_en": [
+    "It's not the Matterhorn",
+    "Geography that hurts",
+    "Question 8"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f63",
+   "gancho": "Si fallas esta, cierra la app",
+   "texto": "¿Qué planeta es conocido como el planeta rojo?",
+   "opciones": [
+    "Venus",
+    "Marte",
+    "Júpiter",
+    "Mercurio"
+   ],
+   "correcta": 1,
+   "nota": "Marte. Por el óxido de hierro de su superficie.",
+   "enBanco": false,
+   "texto_en": "Which planet is known as the red planet?",
+   "opciones_en": [
+    "Venus",
+    "Mars",
+    "Jupiter",
+    "Mercury"
+   ],
+   "nota_en": "Mars. Iron oxide on the surface.",
+   "gancho_en": "Miss this and close the app",
+   "ganchos": [
+    "Si fallas esta, cierra la app",
+    "Espacio. 6 segundos.",
+    "La de calentar"
+   ],
+   "ganchos_en": [
+    "Miss this and close the app",
+    "Space. 6 seconds.",
+    "The warm-up"
+   ],
+   "tags": "#espacio",
+   "tags_en": "#space"
+  },
+  {
+   "id": "f64",
+   "gancho": "Contesta sin pensar",
+   "texto": "¿Cuántos años dura un siglo?",
+   "opciones": [
+    "10",
+    "50",
+    "100",
+    "1000"
+   ],
+   "correcta": 2,
+   "nota": "100.",
+   "enBanco": false,
+   "texto_en": "How many years are in a century?",
+   "opciones_en": [
+    "10",
+    "50",
+    "100",
+    "1000"
+   ],
+   "nota_en": "100.",
+   "gancho_en": "Answer without thinking",
+   "ganchos": [
+    "Contesta sin pensar",
+    "Pregunta 1",
+    "La que fallas por rápido"
+   ],
+   "ganchos_en": [
+    "Answer without thinking",
+    "Question 1",
+    "The one you miss by rushing"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f65",
+   "gancho": "Turismo. 6 segundos.",
+   "texto": "¿En qué país está Machu Picchu?",
+   "opciones": [
+    "Bolivia",
+    "Perú",
+    "Ecuador",
+    "Colombia"
+   ],
+   "correcta": 1,
+   "nota": "Perú.",
+   "enBanco": false,
+   "texto_en": "In which country is Machu Picchu?",
+   "opciones_en": [
+    "Bolivia",
+    "Peru",
+    "Ecuador",
+    "Colombia"
+   ],
+   "nota_en": "Peru.",
+   "gancho_en": "Tourism. 6 seconds.",
+   "ganchos": [
+    "Turismo. 6 segundos.",
+    "No es Bolivia",
+    "Geografía fácil"
+   ],
+   "ganchos_en": [
+    "Tourism. 6 seconds.",
+    "It's not Bolivia",
+    "Easy geography"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f66",
+   "gancho": "Química. Sin pensar.",
+   "texto": "¿Cuál es el elemento químico con símbolo Au?",
+   "opciones": [
+    "Plata",
+    "Oro",
+    "Aluminio",
+    "Argón"
+   ],
+   "correcta": 1,
+   "nota": "Oro. De 'aurum'.",
+   "enBanco": false,
+   "texto_en": "Which chemical element has the symbol Au?",
+   "opciones_en": [
+    "Silver",
+    "Gold",
+    "Aluminium",
+    "Argon"
+   ],
+   "nota_en": "Gold. From 'aurum'.",
+   "gancho_en": "Chemistry. No thinking.",
+   "ganchos": [
+    "Química. Sin pensar.",
+    "No es plata",
+    "Pregunta 5"
+   ],
+   "ganchos_en": [
+    "Chemistry. No thinking.",
+    "It's not silver",
+    "Question 5"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f67",
+   "gancho": "Animales. 6 segundos.",
+   "texto": "¿Qué animal pone los huevos más grandes?",
+   "opciones": [
+    "Águila",
+    "Avestruz",
+    "Cocodrilo",
+    "Pingüino emperador"
+   ],
+   "correcta": 1,
+   "nota": "El avestruz. Hasta 1,5 kg.",
+   "enBanco": false,
+   "texto_en": "Which animal lays the largest eggs?",
+   "opciones_en": [
+    "Eagle",
+    "Ostrich",
+    "Crocodile",
+    "Emperor penguin"
+   ],
+   "nota_en": "The ostrich. Up to 1.5 kg.",
+   "gancho_en": "Animals. 6 seconds.",
+   "ganchos": [
+    "Animales. 6 segundos.",
+    "Mi abuela la acertó",
+    "Pregunta 3"
+   ],
+   "ganchos_en": [
+    "Animals. 6 seconds.",
+    "My grandma got it",
+    "Question 3"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f68",
+   "gancho": "Los músicos la saben",
+   "texto": "¿Cuántas cuerdas tiene una guitarra española?",
+   "opciones": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correcta": 2,
+   "nota": "Seis.",
+   "enBanco": false,
+   "texto_en": "How many strings does a classical guitar have?",
+   "opciones_en": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "nota_en": "Six.",
+   "gancho_en": "Musicians know this one",
+   "ganchos": [
+    "Los músicos la saben",
+    "Cuéntalas. 6 segundos.",
+    "La más fácil del sábado"
+   ],
+   "ganchos_en": [
+    "Musicians know this one",
+    "Count them. 6 seconds.",
+    "The easiest one on Saturday"
+   ],
+   "tags": "#musica",
+   "tags_en": "#music"
+  },
+  {
+   "id": "f69",
+   "gancho": "Si fallas esta, no juegues",
+   "texto": "¿Qué mar baña Valencia?",
+   "opciones": [
+    "Cantábrico",
+    "Mediterráneo",
+    "Atlántico",
+    "Mar Menor"
+   ],
+   "correcta": 1,
+   "nota": "El Mediterráneo.",
+   "enBanco": false,
+   "texto_en": "Which sea borders Valencia?",
+   "opciones_en": [
+    "Bay of Biscay",
+    "Mediterranean",
+    "Atlantic",
+    "Mar Menor"
+   ],
+   "nota_en": "The Mediterranean.",
+   "gancho_en": "Miss this and don't bother",
+   "ganchos": [
+    "Si fallas esta, no juegues",
+    "Geografía de casa",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "Miss this and don't bother",
+    "Home geography",
+    "Question 1"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f70",
+   "gancho": "Deporte. Sin pensar.",
+   "texto": "¿Cuántos jugadores tiene un equipo de baloncesto en pista?",
+   "opciones": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correcta": 1,
+   "nota": "Cinco.",
+   "enBanco": false,
+   "texto_en": "How many players does a basketball team have on court?",
+   "opciones_en": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "nota_en": "Five.",
+   "gancho_en": "Sport. No thinking.",
+   "ganchos": [
+    "Deporte. Sin pensar.",
+    "La de calentar",
+    "Contesta antes que el de al lado"
+   ],
+   "ganchos_en": [
+    "Sport. No thinking.",
+    "The warm-up",
+    "Answer before the person next to you"
+   ],
+   "tags": "#deporte",
+   "tags_en": "#sports"
+  },
+  {
+   "id": "f71",
+   "gancho": "Ya no es China",
+   "texto": "¿Cuál es el país con más habitantes del mundo?",
+   "opciones": [
+    "China",
+    "India",
+    "Estados Unidos",
+    "Indonesia"
+   ],
+   "correcta": 1,
+   "nota": "India, desde 2023.",
+   "enBanco": false,
+   "texto_en": "Which country has the largest population?",
+   "opciones_en": [
+    "China",
+    "India",
+    "United States",
+    "Indonesia"
+   ],
+   "nota_en": "India, since 2023.",
+   "gancho_en": "It's not China anymore",
+   "ganchos": [
+    "Ya no es China",
+    "La que cambió hace poco",
+    "Cuanto más sabes, peor"
+   ],
+   "ganchos_en": [
+    "It's not China anymore",
+    "The one that changed recently",
+    "The more you know, the worse"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f72",
+   "gancho": "Biología de instituto",
+   "texto": "¿Qué parte del ojo da el color?",
+   "opciones": [
+    "Pupila",
+    "Iris",
+    "Córnea",
+    "Retina"
+   ],
+   "correcta": 1,
+   "nota": "El iris.",
+   "enBanco": false,
+   "texto_en": "Which part of the eye gives it its colour?",
+   "opciones_en": [
+    "Pupil",
+    "Iris",
+    "Cornea",
+    "Retina"
+   ],
+   "nota_en": "The iris.",
+   "gancho_en": "High-school biology",
+   "ganchos": [
+    "Biología de instituto",
+    "No es la pupila",
+    "Pregunta 4"
+   ],
+   "ganchos_en": [
+    "High-school biology",
+    "It's not the pupil",
+    "Question 4"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f73",
+   "gancho": "Pregunta trampa",
+   "texto": "¿En qué continente está Egipto?",
+   "opciones": [
+    "Asia",
+    "África",
+    "Europa",
+    "Oriente Medio"
+   ],
+   "correcta": 1,
+   "nota": "África. El Sinaí está en Asia, pero el país es africano.",
+   "enBanco": false,
+   "texto_en": "On which continent is Egypt?",
+   "opciones_en": [
+    "Asia",
+    "Africa",
+    "Europe",
+    "Middle East"
+   ],
+   "nota_en": "Africa. Sinai is in Asia, but the country is African.",
+   "gancho_en": "Trick question",
+   "ganchos": [
+    "Pregunta trampa",
+    "Está en dos",
+    "Geografía de las que duelen"
+   ],
+   "ganchos_en": [
+    "Trick question",
+    "It's in two",
+    "Geography that hurts"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f74",
+   "gancho": "Esta la fallan los listos",
+   "texto": "¿Cuál es el número primo más pequeño?",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "correcta": 2,
+   "nota": "El 2. El 1 no es primo.",
+   "enBanco": false,
+   "texto_en": "What is the smallest prime number?",
+   "opciones_en": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "nota_en": "2. The number 1 isn't prime.",
+   "gancho_en": "The smart ones get this wrong",
+   "ganchos": [
+    "Esta la fallan los listos",
+    "No es el 1",
+    "Matemáticas de 6 segundos"
+   ],
+   "ganchos_en": [
+    "The smart ones get this wrong",
+    "It's not 1",
+    "6-second maths"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f75",
+   "gancho": "Música clásica. 6 segundos.",
+   "texto": "¿Qué compositor se quedó sordo?",
+   "opciones": [
+    "Mozart",
+    "Beethoven",
+    "Bach",
+    "Chopin"
+   ],
+   "correcta": 1,
+   "nota": "Beethoven. Compuso la Novena casi sin oír nada.",
+   "enBanco": false,
+   "texto_en": "Which composer went deaf?",
+   "opciones_en": [
+    "Mozart",
+    "Beethoven",
+    "Bach",
+    "Chopin"
+   ],
+   "nota_en": "Beethoven. He wrote the Ninth almost unable to hear.",
+   "gancho_en": "Classical music. 6 seconds.",
+   "ganchos": [
+    "Música clásica. 6 segundos.",
+    "No es Mozart",
+    "Pregunta 6"
+   ],
+   "ganchos_en": [
+    "Classical music. 6 seconds.",
+    "It's not Mozart",
+    "Question 6"
+   ],
+   "tags": "#musica",
+   "tags_en": "#music"
+  },
+  {
+   "id": "f76",
+   "gancho": "Está en el oído",
+   "texto": "¿Cuál es el hueso más pequeño del cuerpo humano?",
+   "opciones": [
+    "Estribo",
+    "Martillo",
+    "Yunque",
+    "Falange"
+   ],
+   "correcta": 0,
+   "nota": "El estribo, en el oído. Unos 3 milímetros.",
+   "enBanco": false,
+   "texto_en": "What is the smallest bone in the human body?",
+   "opciones_en": [
+    "Stapes",
+    "Malleus",
+    "Incus",
+    "Phalanx"
+   ],
+   "nota_en": "The stapes, in the ear. About 3 millimetres.",
+   "gancho_en": "It's in the ear",
+   "ganchos": [
+    "Está en el oído",
+    "Anatomía en 6 segundos",
+    "La que cae la mitad"
+   ],
+   "ganchos_en": [
+    "It's in the ear",
+    "Anatomy in 6 seconds",
+    "Half of you will miss it"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f77",
+   "gancho": "Historia. Sin pensar.",
+   "texto": "¿Qué país regaló la Estatua de la Libertad a Estados Unidos?",
+   "opciones": [
+    "Reino Unido",
+    "Francia",
+    "España",
+    "Italia"
+   ],
+   "correcta": 1,
+   "nota": "Francia, en 1886.",
+   "enBanco": false,
+   "texto_en": "Which country gave the Statue of Liberty to the United States?",
+   "opciones_en": [
+    "United Kingdom",
+    "France",
+    "Spain",
+    "Italy"
+   ],
+   "nota_en": "France, in 1886.",
+   "gancho_en": "History. No thinking.",
+   "ganchos": [
+    "Historia. Sin pensar.",
+    "No es Reino Unido",
+    "Pregunta 3"
+   ],
+   "ganchos_en": [
+    "History. No thinking.",
+    "It's not the UK",
+    "Question 3"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f78",
+   "gancho": "Cuéntalos. 6 segundos.",
+   "texto": "¿Cuántos colores tiene el arcoíris según la lista clásica?",
+   "opciones": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "correcta": 2,
+   "nota": "Siete: rojo, naranja, amarillo, verde, azul, añil y violeta.",
+   "enBanco": false,
+   "texto_en": "How many colours are in the rainbow, by the classic list?",
+   "opciones_en": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "nota_en": "Seven: red, orange, yellow, green, blue, indigo, violet.",
+   "gancho_en": "Count them. 6 seconds.",
+   "ganchos": [
+    "Cuéntalos. 6 segundos.",
+    "La de primaria que se olvida",
+    "Pregunta 2"
+   ],
+   "ganchos_en": [
+    "Count them. 6 seconds.",
+    "The primary-school one you forgot",
+    "Question 2"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f79",
+   "gancho": "Animales. 6 segundos.",
+   "texto": "¿Qué animal tiene el corazón más grande?",
+   "opciones": [
+    "Elefante",
+    "Ballena azul",
+    "Jirafa",
+    "Tiburón ballena"
+   ],
+   "correcta": 1,
+   "nota": "La ballena azul. Pesa como un coche pequeño.",
+   "enBanco": false,
+   "texto_en": "Which animal has the biggest heart?",
+   "opciones_en": [
+    "Elephant",
+    "Blue whale",
+    "Giraffe",
+    "Whale shark"
+   ],
+   "nota_en": "The blue whale. It weighs about as much as a small car.",
+   "gancho_en": "Animals. 6 seconds.",
+   "ganchos": [
+    "Animales. 6 segundos.",
+    "No es el elefante",
+    "Pregunta 5"
+   ],
+   "ganchos_en": [
+    "Animals. 6 seconds.",
+    "It's not the elephant",
+    "Question 5"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f80",
+   "gancho": "La de primaria que se olvida",
+   "texto": "¿En qué año llegó Colón a América?",
+   "opciones": [
+    "1482",
+    "1492",
+    "1502",
+    "1512"
+   ],
+   "correcta": 1,
+   "nota": "1492. El 12 de octubre.",
+   "enBanco": false,
+   "texto_en": "In what year did Columbus reach America?",
+   "opciones_en": [
+    "1482",
+    "1492",
+    "1502",
+    "1512"
+   ],
+   "nota_en": "1492. On 12 October.",
+   "gancho_en": "The primary-school one you forgot",
+   "ganchos": [
+    "La de primaria que se olvida",
+    "Historia. 6 segundos.",
+    "Si dudas, ya has perdido"
+   ],
+   "ganchos_en": [
+    "The primary-school one you forgot",
+    "History. 6 seconds.",
+    "If you hesitate, you've lost"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f81",
+   "gancho": "Química de la ESO",
+   "texto": "¿Cuál es el metal más ligero?",
+   "opciones": [
+    "Aluminio",
+    "Litio",
+    "Magnesio",
+    "Titanio"
+   ],
+   "correcta": 1,
+   "nota": "El litio.",
+   "enBanco": false,
+   "texto_en": "Which is the lightest metal?",
+   "opciones_en": [
+    "Aluminium",
+    "Lithium",
+    "Magnesium",
+    "Titanium"
+   ],
+   "nota_en": "Lithium.",
+   "gancho_en": "Secondary-school chemistry",
+   "ganchos": [
+    "Química de la ESO",
+    "No es el aluminio",
+    "Esta la fallan los listos"
+   ],
+   "ganchos_en": [
+    "Secondary-school chemistry",
+    "It's not aluminium",
+    "The smart ones get this wrong"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f82",
+   "gancho": "Contesta sin pensar",
+   "texto": "¿Cuántos días tiene un año bisiesto?",
+   "opciones": [
+    "364",
+    "365",
+    "366",
+    "367"
+   ],
+   "correcta": 2,
+   "nota": "366.",
+   "enBanco": false,
+   "texto_en": "How many days are in a leap year?",
+   "opciones_en": [
+    "364",
+    "365",
+    "366",
+    "367"
+   ],
+   "nota_en": "366.",
+   "gancho_en": "Answer without thinking",
+   "ganchos": [
+    "Contesta sin pensar",
+    "Pregunta 1",
+    "La que fallas por rápido"
+   ],
+   "ganchos_en": [
+    "Answer without thinking",
+    "Question 1",
+    "The one you miss by rushing"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f83",
+   "gancho": "Cuanto más sabes, peor",
+   "texto": "¿Qué país tiene más islas del mundo?",
+   "opciones": [
+    "Indonesia",
+    "Filipinas",
+    "Suecia",
+    "Canadá"
+   ],
+   "correcta": 2,
+   "nota": "Suecia, con más de 260.000 islas.",
+   "enBanco": false,
+   "texto_en": "Which country has the most islands?",
+   "opciones_en": [
+    "Indonesia",
+    "Philippines",
+    "Sweden",
+    "Canada"
+   ],
+   "nota_en": "Sweden, with over 260,000 islands.",
+   "gancho_en": "The more you know, the worse",
+   "ganchos": [
+    "Cuanto más sabes, peor",
+    "No es Indonesia",
+    "La cifra que nadie se cree"
+   ],
+   "ganchos_en": [
+    "The more you know, the worse",
+    "It's not Indonesia",
+    "The number nobody believes"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f84",
+   "gancho": "Pregunta trampa",
+   "texto": "¿Cuál es el órgano más grande del cuerpo humano?",
+   "opciones": [
+    "Hígado",
+    "Piel",
+    "Pulmón",
+    "Intestino"
+   ],
+   "correcta": 1,
+   "nota": "La piel.",
+   "enBanco": false,
+   "texto_en": "What is the largest organ of the human body?",
+   "opciones_en": [
+    "Liver",
+    "Skin",
+    "Lung",
+    "Intestine"
+   ],
+   "nota_en": "The skin.",
+   "gancho_en": "Trick question",
+   "ganchos": [
+    "Pregunta trampa",
+    "No es el hígado",
+    "Biología de instituto"
+   ],
+   "ganchos_en": [
+    "Trick question",
+    "It's not the liver",
+    "High-school biology"
+   ],
+   "tags": "#ciencia",
+   "tags_en": "#science"
+  },
+  {
+   "id": "f85",
+   "gancho": "Si fallas esta, no juegues",
+   "texto": "¿En qué ciudad está el Coliseo?",
+   "opciones": [
+    "Atenas",
+    "Roma",
+    "Nápoles",
+    "Estambul"
+   ],
+   "correcta": 1,
+   "nota": "Roma.",
+   "enBanco": false,
+   "texto_en": "In which city is the Colosseum?",
+   "opciones_en": [
+    "Athens",
+    "Rome",
+    "Naples",
+    "Istanbul"
+   ],
+   "nota_en": "Rome.",
+   "gancho_en": "Miss this and don't bother",
+   "ganchos": [
+    "Si fallas esta, no juegues",
+    "Turismo. 6 segundos.",
+    "La de calentar"
+   ],
+   "ganchos_en": [
+    "Miss this and don't bother",
+    "Tourism. 6 seconds.",
+    "The warm-up"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f86",
+   "gancho": "Sin calculadora",
+   "texto": "¿Cuántos segundos tiene un cuarto de hora?",
+   "opciones": [
+    "600",
+    "750",
+    "900",
+    "1200"
+   ],
+   "correcta": 2,
+   "nota": "900.",
+   "enBanco": false,
+   "texto_en": "How many seconds are in a quarter of an hour?",
+   "opciones_en": [
+    "600",
+    "750",
+    "900",
+    "1200"
+   ],
+   "nota_en": "900.",
+   "gancho_en": "No calculator",
+   "ganchos": [
+    "Sin calculadora",
+    "La que fallas por rápido",
+    "15 por 60. Ya."
+   ],
+   "ganchos_en": [
+    "No calculator",
+    "The one you miss by rushing",
+    "15 times 60. Go."
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f87",
+   "gancho": "Espacio. Sin pensar.",
+   "texto": "¿Qué planeta tiene los anillos más visibles?",
+   "opciones": [
+    "Júpiter",
+    "Saturno",
+    "Urano",
+    "Neptuno"
+   ],
+   "correcta": 1,
+   "nota": "Saturno.",
+   "enBanco": false,
+   "texto_en": "Which planet has the most visible rings?",
+   "opciones_en": [
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+   ],
+   "nota_en": "Saturn.",
+   "gancho_en": "Space. No thinking.",
+   "ganchos": [
+    "Espacio. Sin pensar.",
+    "La más fácil del sábado",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "Space. No thinking.",
+    "The easiest one on Saturday",
+    "Question 1"
+   ],
+   "tags": "#espacio",
+   "tags_en": "#space"
+  },
+  {
+   "id": "f88",
+   "gancho": "Total, no nativos",
+   "texto": "¿Cuál es la lengua con más hablantes en total, nativos y no nativos?",
+   "opciones": [
+    "Español",
+    "Chino mandarín",
+    "Inglés",
+    "Hindi"
+   ],
+   "correcta": 2,
+   "nota": "El inglés, sumando a quienes lo hablan como segunda lengua.",
+   "enBanco": false,
+   "texto_en": "Which language has the most speakers in total, native and non-native?",
+   "opciones_en": [
+    "Spanish",
+    "Mandarin Chinese",
+    "English",
+    "Hindi"
+   ],
+   "nota_en": "English, counting second-language speakers.",
+   "gancho_en": "Total, not native",
+   "ganchos": [
+    "Total, no nativos",
+    "La que enfada a medio mundo",
+    "Cuanto más sabes, peor"
+   ],
+   "ganchos_en": [
+    "Total, not native",
+    "The one that starts arguments",
+    "The more you know, the worse"
+   ],
+   "tags": "#idiomas",
+   "tags_en": "#languages"
+  },
+  {
+   "id": "f89",
+   "gancho": "Si fallas esta, cierra la app",
+   "texto": "¿Qué insecto produce la miel?",
+   "opciones": [
+    "Avispa",
+    "Abeja",
+    "Abejorro",
+    "Hormiga"
+   ],
+   "correcta": 1,
+   "nota": "La abeja.",
+   "enBanco": false,
+   "texto_en": "Which insect makes honey?",
+   "opciones_en": [
+    "Wasp",
+    "Bee",
+    "Bumblebee",
+    "Ant"
+   ],
+   "nota_en": "The bee.",
+   "gancho_en": "Miss this and close the app",
+   "ganchos": [
+    "Si fallas esta, cierra la app",
+    "La de calentar",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "Miss this and close the app",
+    "The warm-up",
+    "Question 1"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f90",
+   "gancho": "Geografía. 6 segundos.",
+   "texto": "¿Cuál es el punto más profundo de los océanos?",
+   "opciones": [
+    "Fosa de Java",
+    "Fosa de las Marianas",
+    "Fosa de Puerto Rico",
+    "Fosa de Tonga"
+   ],
+   "correcta": 1,
+   "nota": "La fosa de las Marianas, casi 11 km.",
+   "enBanco": false,
+   "texto_en": "What is the deepest point in the oceans?",
+   "opciones_en": [
+    "Java Trench",
+    "Mariana Trench",
+    "Puerto Rico Trench",
+    "Tonga Trench"
+   ],
+   "nota_en": "The Mariana Trench, nearly 11 km.",
+   "gancho_en": "Geography. 6 seconds.",
+   "ganchos": [
+    "Geografía. 6 segundos.",
+    "Casi 11 kilómetros",
+    "Pregunta 7"
+   ],
+   "ganchos_en": [
+    "Geography. 6 seconds.",
+    "Nearly 11 kilometres",
+    "Question 7"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f91",
+   "gancho": "No es Armstrong",
+   "texto": "¿Quién fue el primer ser humano en el espacio?",
+   "opciones": [
+    "Neil Armstrong",
+    "Yuri Gagarin",
+    "Alan Shepard",
+    "John Glenn"
+   ],
+   "correcta": 1,
+   "nota": "Yuri Gagarin, 1961.",
+   "enBanco": false,
+   "texto_en": "Who was the first human in space?",
+   "opciones_en": [
+    "Neil Armstrong",
+    "Yuri Gagarin",
+    "Alan Shepard",
+    "John Glenn"
+   ],
+   "nota_en": "Yuri Gagarin, 1961.",
+   "gancho_en": "It's not Armstrong",
+   "ganchos": [
+    "No es Armstrong",
+    "Historia. 6 segundos.",
+    "La que cae la mitad"
+   ],
+   "ganchos_en": [
+    "It's not Armstrong",
+    "History. 6 seconds.",
+    "Half of you will miss it"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f92",
+   "gancho": "No es un insecto",
+   "texto": "¿Cuántas patas tiene una araña?",
+   "opciones": [
+    "6",
+    "8",
+    "10",
+    "12"
+   ],
+   "correcta": 1,
+   "nota": "Ocho. Los insectos tienen seis.",
+   "enBanco": false,
+   "texto_en": "How many legs does a spider have?",
+   "opciones_en": [
+    "6",
+    "8",
+    "10",
+    "12"
+   ],
+   "nota_en": "Eight. Insects have six.",
+   "gancho_en": "It's not an insect",
+   "ganchos": [
+    "No es un insecto",
+    "Cuéntalas. 6 segundos.",
+    "Pregunta 2"
+   ],
+   "ganchos_en": [
+    "It's not an insect",
+    "Count them. 6 seconds.",
+    "Question 2"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f93",
+   "gancho": "No es Zúrich",
+   "texto": "¿Cuál es la capital de Suiza?",
+   "opciones": [
+    "Zúrich",
+    "Ginebra",
+    "Berna",
+    "Basilea"
+   ],
+   "correcta": 2,
+   "nota": "Berna.",
+   "enBanco": false,
+   "texto_en": "What is the capital of Switzerland?",
+   "opciones_en": [
+    "Zurich",
+    "Geneva",
+    "Bern",
+    "Basel"
+   ],
+   "nota_en": "Bern.",
+   "gancho_en": "It's not Zurich",
+   "ganchos": [
+    "No es Zúrich",
+    "Capitales trampa",
+    "La que elimina a la mitad"
+   ],
+   "ganchos_en": [
+    "It's not Zurich",
+    "Trick capitals",
+    "The one that knocks out half"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f94",
+   "gancho": "Los músicos la saben",
+   "texto": "¿Qué instrumento tiene teclas y cuerdas golpeadas por martillos?",
+   "opciones": [
+    "Órgano",
+    "Clavicémbalo",
+    "Piano",
+    "Acordeón"
+   ],
+   "correcta": 2,
+   "nota": "El piano. En el clavicémbalo las cuerdas se pellizcan.",
+   "enBanco": false,
+   "texto_en": "Which instrument has keys and strings struck by hammers?",
+   "opciones_en": [
+    "Organ",
+    "Harpsichord",
+    "Piano",
+    "Accordion"
+   ],
+   "nota_en": "The piano. A harpsichord plucks its strings.",
+   "gancho_en": "Musicians know this one",
+   "ganchos": [
+    "Los músicos la saben",
+    "Esta la fallan los listos",
+    "Pregunta 8"
+   ],
+   "ganchos_en": [
+    "Musicians know this one",
+    "The smart ones get this wrong",
+    "Question 8"
+   ],
+   "tags": "#musica",
+   "tags_en": "#music"
+  },
+  {
+   "id": "f95",
+   "gancho": "La de calentar",
+   "texto": "¿Cuál es el país más grande del mundo?",
+   "opciones": [
+    "Canadá",
+    "China",
+    "Rusia",
+    "Estados Unidos"
+   ],
+   "correcta": 2,
+   "nota": "Rusia. Más de 17 millones de km².",
+   "enBanco": false,
+   "texto_en": "Which is the largest country in the world?",
+   "opciones_en": [
+    "Canada",
+    "China",
+    "Russia",
+    "United States"
+   ],
+   "nota_en": "Russia. Over 17 million km².",
+   "gancho_en": "The warm-up",
+   "ganchos": [
+    "La de calentar",
+    "Si dudas, ya has perdido",
+    "Geografía fácil"
+   ],
+   "ganchos_en": [
+    "The warm-up",
+    "If you hesitate, you've lost",
+    "Easy geography"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f96",
+   "gancho": "Matemáticas de 6 segundos",
+   "texto": "¿Cuántos lados iguales tiene un triángulo isósceles?",
+   "opciones": [
+    "0",
+    "2",
+    "3",
+    "4"
+   ],
+   "correcta": 1,
+   "nota": "Dos. El equilátero tiene tres.",
+   "enBanco": false,
+   "texto_en": "How many equal sides does an isosceles triangle have?",
+   "opciones_en": [
+    "0",
+    "2",
+    "3",
+    "4"
+   ],
+   "nota_en": "Two. An equilateral triangle has three.",
+   "gancho_en": "6-second maths",
+   "ganchos": [
+    "Matemáticas de 6 segundos",
+    "No es el equilátero",
+    "La de primaria que se olvida"
+   ],
+   "ganchos_en": [
+    "6-second maths",
+    "It's not the equilateral one",
+    "The primary-school one you forgot"
+   ],
+   "tags": "#matematicas",
+   "tags_en": "#maths"
+  },
+  {
+   "id": "f97",
+   "gancho": "Pregunta trampa",
+   "texto": "¿Qué tipo de animal es la ballena?",
+   "opciones": [
+    "Pez",
+    "Mamífero",
+    "Reptil",
+    "Anfibio"
+   ],
+   "correcta": 1,
+   "nota": "Mamífero. Respira aire y amamanta.",
+   "enBanco": false,
+   "texto_en": "What kind of animal is a whale?",
+   "opciones_en": [
+    "Fish",
+    "Mammal",
+    "Reptile",
+    "Amphibian"
+   ],
+   "nota_en": "Mammal. It breathes air and nurses its young.",
+   "gancho_en": "Trick question",
+   "ganchos": [
+    "Pregunta trampa",
+    "No es un pez",
+    "Biología de instituto"
+   ],
+   "ganchos_en": [
+    "Trick question",
+    "It's not a fish",
+    "High-school biology"
+   ],
+   "tags": "#animales",
+   "tags_en": "#animals"
+  },
+  {
+   "id": "f98",
+   "gancho": "No es Egipto",
+   "texto": "¿En qué país se inventó el papel?",
+   "opciones": [
+    "Egipto",
+    "China",
+    "Grecia",
+    "India"
+   ],
+   "correcta": 1,
+   "nota": "China, hace unos 2.000 años.",
+   "enBanco": false,
+   "texto_en": "In which country was paper invented?",
+   "opciones_en": [
+    "Egypt",
+    "China",
+    "Greece",
+    "India"
+   ],
+   "nota_en": "China, about 2,000 years ago.",
+   "gancho_en": "It's not Egypt",
+   "ganchos": [
+    "No es Egipto",
+    "Historia. 6 segundos.",
+    "Pregunta 6"
+   ],
+   "ganchos_en": [
+    "It's not Egypt",
+    "History. 6 seconds.",
+    "Question 6"
+   ],
+   "tags": "#historia",
+   "tags_en": "#history"
+  },
+  {
+   "id": "f99",
+   "gancho": "Pregunta trampa",
+   "texto": "¿Cuál es la estrella más cercana a la Tierra?",
+   "opciones": [
+    "Sirio",
+    "Alfa Centauri",
+    "El Sol",
+    "Próxima Centauri"
+   ],
+   "correcta": 2,
+   "nota": "El Sol. Es una estrella.",
+   "enBanco": false,
+   "texto_en": "What is the closest star to Earth?",
+   "opciones_en": [
+    "Sirius",
+    "Alpha Centauri",
+    "The Sun",
+    "Proxima Centauri"
+   ],
+   "nota_en": "The Sun. It's a star.",
+   "gancho_en": "Trick question",
+   "ganchos": [
+    "Pregunta trampa",
+    "Esta la fallan los listos",
+    "Lee hasta el final"
+   ],
+   "ganchos_en": [
+    "Trick question",
+    "The smart ones get this wrong",
+    "Read to the end"
+   ],
+   "tags": "#espacio",
+   "tags_en": "#space"
+  },
+  {
+   "id": "f100",
+   "gancho": "Si fallas esta, no juegues",
+   "texto": "¿Qué océano separa Europa de América?",
+   "opciones": [
+    "Pacífico",
+    "Índico",
+    "Atlántico",
+    "Ártico"
+   ],
+   "correcta": 2,
+   "nota": "El Atlántico.",
+   "enBanco": false,
+   "texto_en": "Which ocean separates Europe from America?",
+   "opciones_en": [
+    "Pacific",
+    "Indian",
+    "Atlantic",
+    "Arctic"
+   ],
+   "nota_en": "The Atlantic.",
+   "gancho_en": "Miss this and don't bother",
+   "ganchos": [
+    "Si fallas esta, no juegues",
+    "La de calentar",
+    "Pregunta 1"
+   ],
+   "ganchos_en": [
+    "Miss this and don't bother",
+    "The warm-up",
+    "Question 1"
+   ],
+   "tags": "#geografia",
+   "tags_en": "#geography"
+  },
+  {
+   "id": "f101",
+   "gancho": "Esto lo vio medio país",
+   "texto": "¿Quién marcó el gol de España en la final del Mundial 2026?",
+   "opciones": [
+    "Lamine Yamal",
+    "Ferran Torres",
+    "Nico Williams",
+    "Mikel Oyarzabal"
+   ],
+   "correcta": 1,
+   "nota": "Ferran Torres, en la prórroga.",
+   "enBanco": false,
+   "texto_en": "Who scored Spain's goal in the 2026 World Cup final?",
+   "opciones_en": [
+    "Lamine Yamal",
+    "Ferran Torres",
+    "Nico Williams",
+    "Mikel Oyarzabal"
+   ],
+   "nota_en": "Ferran Torres, in extra time.",
+   "gancho_en": "Half the world watched this",
+   "ganchos": [
+    "Esto lo vio medio país",
+    "Si eres de la Roja, esta es fácil"
+   ],
+   "ganchos_en": [
+    "Half the world watched this",
+    "If you watched it, this is easy"
+   ],
+   "tags": "#futbol #mundial2026 #seleccion",
+   "tags_en": "#football #worldcup2026",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f102",
+   "gancho": "Muchos fallan esta",
+   "texto": "¿Cuántos Mundiales ha ganado ya España?",
+   "opciones": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "correcta": 1,
+   "nota": "Dos: 2010 y 2026.",
+   "enBanco": false,
+   "texto_en": "How many World Cups has Spain won?",
+   "opciones_en": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "nota_en": "Two: 2010 and 2026.",
+   "gancho_en": "Lots of people get this wrong",
+   "ganchos": [
+    "Muchos fallan esta",
+    "¿Llevas la cuenta?"
+   ],
+   "ganchos_en": [
+    "Lots of people get this wrong",
+    "Have you been counting?"
+   ],
+   "tags": "#futbol #mundial2026",
+   "tags_en": "#football #worldcup",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f103",
+   "gancho": "Este verano no se habló de otra cosa",
+   "texto": "¿A quién ganó España la final del Mundial 2026?",
+   "opciones": [
+    "Francia",
+    "Brasil",
+    "Argentina",
+    "Alemania"
+   ],
+   "correcta": 2,
+   "nota": "A Argentina, 1-0.",
+   "enBanco": false,
+   "texto_en": "Who did Spain beat in the 2026 World Cup final?",
+   "opciones_en": [
+    "France",
+    "Brazil",
+    "Argentina",
+    "Germany"
+   ],
+   "nota_en": "Argentina, 1-0.",
+   "gancho_en": "Nobody talked about anything else",
+   "ganchos": [
+    "Este verano no se habló de otra cosa",
+    "Pregunta de verano"
+   ],
+   "ganchos_en": [
+    "Nobody talked about anything else",
+    "Summer question"
+   ],
+   "tags": "#futbol #mundial2026",
+   "tags_en": "#football #worldcup2026",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f104",
+   "gancho": "¿Lo viste desde tu ciudad?",
+   "texto": "El 12 de agosto hubo eclipse total de Sol. ¿Desde qué ciudad se vio total?",
+   "opciones": [
+    "Sevilla",
+    "Málaga",
+    "Cádiz",
+    "Valencia"
+   ],
+   "correcta": 3,
+   "nota": "Valencia. En el sur solo fue parcial.",
+   "enBanco": false,
+   "texto_en": "On 12 August there was a total solar eclipse in Spain. Where was it total?",
+   "opciones_en": [
+    "Seville",
+    "Málaga",
+    "Cádiz",
+    "Valencia"
+   ],
+   "nota_en": "Valencia. The south only saw a partial one.",
+   "gancho_en": "Did you see it?",
+   "ganchos": [
+    "¿Lo viste desde tu ciudad?",
+    "Solo duró un minuto"
+   ],
+   "ganchos_en": [
+    "Did you see it?",
+    "It lasted one minute"
+   ],
+   "tags": "#eclipse #ciencia #espana",
+   "tags_en": "#eclipse #science #spain",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f105",
+   "gancho": "El que la falle, no ve la tele",
+   "texto": "¿Quién presenta «Conexión Honduras» en Supervivientes?",
+   "opciones": [
+    "Sandra Barneda",
+    "Jorge Javier Vázquez",
+    "Ion Aramendi",
+    "Carlos Sobera"
+   ],
+   "correcta": 0,
+   "nota": "Sandra Barneda, los domingos.",
+   "enBanco": false,
+   "texto_en": "Who hosts 'Conexión Honduras' on the Spanish Survivor?",
+   "opciones_en": [
+    "Sandra Barneda",
+    "Jorge Javier Vázquez",
+    "Ion Aramendi",
+    "Carlos Sobera"
+   ],
+   "nota_en": "Sandra Barneda, on Sundays.",
+   "gancho_en": "Only for Survivor fans",
+   "ganchos": [
+    "El que la falle, no ve la tele",
+    "Los de Supervivientes, a ver"
+   ],
+   "ganchos_en": [
+    "Only for Survivor fans",
+    "Survivor fans, go"
+   ],
+   "tags": "#supervivientes #tele",
+   "tags_en": "#survivor #tv",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f106",
+   "gancho": "Tu hermano pequeño la sabe",
+   "texto": "¿Qué significa «farmear aura»?",
+   "opciones": [
+    "Ahorrar dinero",
+    "Ganar carisma y estilo",
+    "Cultivar plantas",
+    "Dormir mucho"
+   ],
+   "correcta": 1,
+   "nota": "Ganar puntos de carisma, confianza o estilo.",
+   "enBanco": false,
+   "texto_en": "What does 'farming aura' mean?",
+   "opciones_en": [
+    "Saving money",
+    "Gaining charisma and style",
+    "Growing plants",
+    "Sleeping a lot"
+   ],
+   "nota_en": "Racking up charisma, confidence or style points.",
+   "gancho_en": "Your little brother knows this",
+   "ganchos": [
+    "Tu hermano pequeño la sabe",
+    "Si estás en TikTok, fácil"
+   ],
+   "ganchos_en": [
+    "Your little brother knows this",
+    "Easy if you're on TikTok"
+   ],
+   "tags": "#tiktok #tendencias #jerga",
+   "tags_en": "#tiktok #trends #slang",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f107",
+   "gancho": "Está en todos los vídeos",
+   "texto": "¿De qué videojuego es Freddy Fazbear?",
+   "opciones": [
+    "Among Us",
+    "Minecraft",
+    "Five Nights at Freddy's",
+    "Fortnite"
+   ],
+   "correcta": 2,
+   "nota": "Five Nights at Freddy's.",
+   "enBanco": false,
+   "texto_en": "Which video game is Freddy Fazbear from?",
+   "opciones_en": [
+    "Among Us",
+    "Minecraft",
+    "Five Nights at Freddy's",
+    "Fortnite"
+   ],
+   "nota_en": "Five Nights at Freddy's.",
+   "gancho_en": "He's all over your feed",
+   "ganchos": [
+    "Está en todos los vídeos",
+    "Se viene Halloween"
+   ],
+   "ganchos_en": [
+    "He's all over your feed",
+    "Halloween is coming"
+   ],
+   "tags": "#videojuegos #halloween #tiktok",
+   "tags_en": "#gaming #halloween",
+   "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f108",
+   "gancho": "Vino este verano",
+   "texto": "¿De qué país es el Papa León XIV, que visitó España en junio?",
+   "opciones": [
+    "Italia",
+    "Argentina",
+    "Polonia",
+    "Estados Unidos"
+   ],
+   "correcta": 3,
+   "nota": "Estados Unidos. Nació en Chicago.",
+   "enBanco": false,
+   "texto_en": "Which country is Pope Leo XIV, who visited Spain in June, from?",
+   "opciones_en": [
+    "Italy",
+    "Argentina",
+    "Poland",
+    "United States"
+   ],
+   "nota_en": "The United States. He was born in Chicago.",
+   "gancho_en": "He came this summer",
+   "ganchos": [
+    "Vino este verano",
+    "La de actualidad"
+   ],
+   "ganchos_en": [
+    "He came this summer",
+    "The news one"
+   ],
+   "tags": "#actualidad #papa",
+   "tags_en": "#news #pope",
+   "actualidad": "2026-09-23"
+  }
+ ]
 }

@@ -15,7 +15,7 @@ export const URL_APP = `${URL_WEB}/app`;
 export const TZ = "Europe/Madrid";
 
 export type Lang = "es" | "en";
-export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean };
+export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string };
 export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linkedin" | "threads" | "bluesky";
 export const REDES: Red[] = ["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"];
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
@@ -226,8 +226,13 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // hueco de pregunta con un vídeo sin texto sale con el pie genérico y
     // parece un anuncio. Los 6 sin texto quedan al final, de reserva.
     const conTexto = (g: string) => grupos.get(g)!.some((v) => !!v.pregunta);
+    // Actualidad (23 sep 2026, fundador: "preguntas de lo que está pasando
+    // hoy"): las marcadas con `actualidad` van primero mientras sean frescas
+    // (21 días desde la fecha) y no hayan salido ya.
+    const fresca = (g: string) => grupos.get(g)!.some((v) => v.actualidad && Date.now() - new Date(v.actualidad).getTime() < 21 * 86400000);
     const cola = [
-      ...orden.filter((g) => conTexto(g) && !recientes.has(g)),
+      ...orden.filter((g) => conTexto(g) && fresca(g) && !recientes.has(g)),
+      ...orden.filter((g) => conTexto(g) && !fresca(g) && !recientes.has(g)),
       ...orden.filter((g) => conTexto(g) && recientes.has(g)),
       ...orden.filter((g) => !conTexto(g)),
     ];
