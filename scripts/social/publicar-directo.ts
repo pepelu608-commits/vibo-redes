@@ -281,10 +281,10 @@ function miniaturaMs(mp4: string): number {
  * `notification`, a la hora prevista Buffer manda una notificación al móvil
  * con el vídeo y el texto, y se publica desde la app de la red (sale como
  * subido a mano). Variable SOCIAL_MANUAL_REDES (por defecto "tiktok,instagram");
- * vacía = todo automático.
+ *
  */
 function modoBuffer(red: Red): "automatic" | "notification" {
-  const manuales = (process.env.SOCIAL_MANUAL_REDES ?? "tiktok,instagram").split(",").map((r) => r.trim()).filter(Boolean);
+  const manuales = (process.env.SOCIAL_MANUAL_REDES ?? "").split(",").map((r) => r.trim()).filter(Boolean);
   return manuales.includes(red) ? "notification" : "automatic";
 }
 
