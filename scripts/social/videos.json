@@ -4794,6 +4794,226 @@
       "gancho": "He came this summer",
       "tags": "#news #pope",
       "actualidad": "2026-09-23"
+    },
+    {
+      "file": "Fab f03aC - Cuantos lados tiene un.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos lados tiene un hexágono?",
+      "id": "f03",
+      "variante": "a",
+      "gancho": "Si dudas, ya has perdido",
+      "tags": ""
+    },
+    {
+      "file": "Fab f03aC EN - How many sides does.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many sides does a hexagon have?",
+      "id": "f03",
+      "variante": "a",
+      "gancho": "If you hesitate, you've lost",
+      "tags": ""
+    },
+    {
+      "file": "Fab f09aC - Cual es la capital.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es la capital de Canadá?",
+      "id": "f09",
+      "variante": "a",
+      "gancho": "Tres seguidas o no vales",
+      "tags": ""
+    },
+    {
+      "file": "Fab f09aC EN - What is the capital.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the capital of Canada?",
+      "id": "f09",
+      "variante": "a",
+      "gancho": "Three in a row or you're out",
+      "tags": ""
+    },
+    {
+      "file": "Fab f10aC - Cuantos anos tiene un.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos años tiene un lustro?",
+      "id": "f10",
+      "variante": "a",
+      "gancho": "6 segundos. Igual que el sábado.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f10aC EN - How many years are.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many years are in a lustrum?",
+      "id": "f10",
+      "variante": "a",
+      "gancho": "6 seconds. Same as Saturday.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f11aC - Cuantos planetas del sistema.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos planetas del sistema solar tienen anillos?",
+      "id": "f11",
+      "variante": "a",
+      "gancho": "Esta la fallan los listos",
+      "tags": ""
+    },
+    {
+      "file": "Fab f11aC EN - How many planets in.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many planets in the solar system have rings?",
+      "id": "f11",
+      "variante": "a",
+      "gancho": "The smart ones get this wrong",
+      "tags": ""
+    },
+    {
+      "file": "Fab f12aC - Que pais tiene la.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué país tiene la bandera verde, blanca y naranja, con el verde junto al mástil?",
+      "id": "f12",
+      "variante": "a",
+      "gancho": "Mira bien. Tienes 6 segundos.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f12aC EN - Whose flag is green.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Whose flag is green, white and orange, green next to the pole?",
+      "id": "f12",
+      "variante": "a",
+      "gancho": "Look closely. 6 seconds.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f13aC - En que ano llego.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿En qué año llegó el ser humano a la Luna?",
+      "id": "f13",
+      "variante": "a",
+      "gancho": "Contesta antes que el de al lado",
+      "tags": ""
+    },
+    {
+      "file": "Fab f13aC EN - In which year did.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "In which year did humans land on the Moon?",
+      "id": "f13",
+      "variante": "a",
+      "gancho": "Answer before the person next to you",
+      "tags": ""
+    },
+    {
+      "file": "Fab f14aC - Cuantos huesos tiene un.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos huesos tiene un adulto?",
+      "id": "f14",
+      "variante": "a",
+      "gancho": "Cuanto más sabes, peor",
+      "tags": ""
+    },
+    {
+      "file": "Fab f14aC EN - How many bones does.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many bones does an adult have?",
+      "id": "f14",
+      "variante": "a",
+      "gancho": "The more you know, the worse",
+      "tags": ""
+    },
+    {
+      "file": "Fab f15aC - Cual es el oceano.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el océano más grande?",
+      "id": "f15",
+      "variante": "a",
+      "gancho": "No leas las opciones. Contesta.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f15aC EN - What is the largest.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the largest ocean?",
+      "id": "f15",
+      "variante": "a",
+      "gancho": "Don't read the options. Answer.",
+      "tags": ""
+    },
+    {
+      "file": "Fab f16aC - Que gas necesitan las.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué gas necesitan las plantas para hacer la fotosíntesis?",
+      "id": "f16",
+      "variante": "a",
+      "gancho": "La pregunta 7 me sacó del bote",
+      "tags": ""
+    },
+    {
+      "file": "Fab f16aC EN - Which gas do plants.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which gas do plants need for photosynthesis?",
+      "id": "f16",
+      "variante": "a",
+      "gancho": "Question 7 knocked me out",
+      "tags": ""
+    },
+    {
+      "file": "Fab f18aC - Cual de estos paises.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál de estos países NO tiene frontera con Alemania?",
+      "id": "f18",
+      "variante": "a",
+      "gancho": "Si has dicho Bélgica, fuera",
+      "tags": ""
+    },
+    {
+      "file": "Fab f18aC EN - Which of these countries.mp4",
+      "mecanica": "fabrica-comenta",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which of these countries does NOT border Germany?",
+      "id": "f18",
+      "variante": "a",
+      "gancho": "If you said Belgium, you're out",
+      "tags": ""
     }
   ]
 }

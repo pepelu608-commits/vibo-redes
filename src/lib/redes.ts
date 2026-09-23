@@ -153,6 +153,8 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   if (v.pregunta) {
     const cta = v.mecanica === "fabrica-misterio"
       ? (es ? "Esta cae en la partida. Deja tu respuesta en comentarios." : "This one's in the game. Drop your answer in the comments.")
+      : v.mecanica === "fabrica-comenta"
+      ? (es ? "¿A, B, C o D? Deja tu respuesta en comentarios 👇" : "A, B, C or D? Drop your answer in the comments 👇")
       : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
     const quien = bote ? (es ? " Para los 5 mejores." : " Top 5 split it.") : "";
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
