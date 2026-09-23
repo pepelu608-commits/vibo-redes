@@ -237,9 +237,22 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // hoy"): las marcadas con `actualidad` van primero mientras sean frescas
     // (21 días desde la fecha) y no hayan salido ya.
     const fresca = (g: string) => grupos.get(g)!.some((v) => v.actualidad && Date.now() - new Date(v.actualidad).getTime() < 21 * 86400000);
+    // Formatos por turnos (23 sep 2026, fundador: "probar distintos formatos
+    // para ver cuál funciona"): una pregunta suelta, un "tres", una
+    // "escalera"… Así cada formato sale los mismos días que los demás y la
+    // comparación es justa (antes salían en bloques de 20 del mismo tipo).
+    const familia = (g: string) => { const m = grupos.get(g)![0].mecanica; return m === "fabrica-tres" || m === "fabrica-escalera" ? m : "pregunta"; };
+    const porTurnos = (gs: string[]) => {
+      const colas = new Map<string, string[]>();
+      for (const g of gs) colas.set(familia(g), [...(colas.get(familia(g)) ?? []), g]);
+      const fams = [...colas.values()];
+      const out: string[] = [];
+      for (let i = 0; out.length < gs.length; i++) for (const c of fams) if (c[i]) out.push(c[i]);
+      return out;
+    };
     const cola = [
       ...orden.filter((g) => conTexto(g) && fresca(g) && !recientes.has(g)),
-      ...orden.filter((g) => conTexto(g) && !fresca(g) && !recientes.has(g)),
+      ...porTurnos(orden.filter((g) => conTexto(g) && !fresca(g) && !recientes.has(g))),
       ...orden.filter((g) => conTexto(g) && recientes.has(g)),
       ...orden.filter((g) => !conTexto(g)),
     ];
@@ -300,6 +313,9 @@ export const fmtMadrid = (d: Date) => d.toLocaleString("es-ES", { timeZone: TZ, 
 export function hashEstable(s: string): number {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  // Mezcla final (23 sep 2026): sin ella, ids parecidos ("e01", "e02"…)
+  // daban números parecidos y el calendario los ponía todos seguidos.
+  h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b); h ^= h >>> 13; h = Math.imul(h, 0xc2b2ae35); h ^= h >>> 16;
   return h >>> 0;
 }
 
