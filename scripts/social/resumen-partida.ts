@@ -16,7 +16,6 @@
 import * as fs from "fs";
 import * as path from "path";
 import { execFileSync } from "child_process";
-import { createClient } from "@supabase/supabase-js";
 import { config } from "dotenv";
 
 const RAIZ = path.resolve(__dirname, "../..");
@@ -104,21 +103,17 @@ function pegarSonido(mp4: string) {
 }
 
 async function datosReales(): Promise<Datos | null> {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) throw new Error("Faltan NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY");
-  const admin = createClient(url, key);
-  const desde = new Date(Date.now() - 36 * 3600000).toISOString();
-  const { data: game } = await admin.from("game").select("id,edicion,bote_cents,inscritos_total,empieza_en")
-    .eq("estado", "terminada").not("edicion", "ilike", "ENSAYO%").gte("empieza_en", desde)
-    .order("empieza_en", { ascending: false }).limit(1).maybeSingle();
-  if (!game) { console.log("No hay partida terminada en las últimas 36 h: no se fabrica el resumen."); return null; }
+  // Sin llave maestra (24 sep 2026): la última partida TERMINADA es pública
+  // (sale en la repetición); se lee de VIBO (/api/redes/datos).
+  const vibo = process.env.VIBO_URL ?? "https://vibo-azure.vercel.app";
+  const r = await fetch(`${vibo}/api/redes/datos`);
+  if (!r.ok) throw new Error(`VIBO no responde (${r.status})`);
+  const game = (await r.json()).ultima;
+  if (!game || new Date(game.empieza_en).getTime() < Date.now() - 36 * 3600000) { console.log("No hay partida terminada en las últimas 36 h: no se fabrica el resumen."); return null; }
   if ((game.inscritos_total ?? 0) < 20) { console.log(`Solo ${game.inscritos_total} inscritos: sin resumen (mínimo 20 para que las cifras signifiquen algo).`); return null; }
-
-  const { data: qs } = await admin.from("question").select("orden,texto,texto_en,opciones,opciones_en,correcta,total_respuestas,total_correctas")
-    .eq("game_id", game.id).not("cerrada_en", "is", null);
-  const { count: finalistas } = await admin.from("player").select("id", { count: "exact", head: true }).eq("game_id", game.id).not("puesto_final", "is", null);
-  const { data: premios } = await admin.from("player").select("premio_cents").eq("game_id", game.id).not("premio_cents", "is", null);
-  const repartido = (premios ?? []).reduce((s, p) => s + (p.premio_cents ?? 0), 0);
+  const qs: any[] = game.preguntas;
+  const finalistas: number = game.finalistas;
+  const repartido: number = game.repartido_cents;
 
   // La pregunta con más fallos ABSOLUTOS (la que tumbó a más gente), con % real.
   let peor: any = null;

@@ -31,19 +31,14 @@ async function boteReal(args: string[]): Promise<{ sabado: number; mes: number; 
     const j = args.indexOf("--mes");
     return { sabado: Math.round(eur * 100), mes: Math.round((j >= 0 ? Number(args[j + 1]) : eur) * 100) };
   }
-  const { config } = require("dotenv");
-  config({ path: path.join(CARPETA, "..", "..", ".env.local") });
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) { console.log("⚠ Sin acceso a la base de datos: pies de foto sin cifra del bote (pasa --bote N)."); return undefined; }
-  const r = await fetch(`${url}/rest/v1/game?select=edicion,bote_cents,empieza_en&edicion=not.ilike.ENSAYO*&estado=eq.programada&order=empieza_en.asc&limit=1`, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
-  const rows = (await r.json()) as { edicion: string; bote_cents: number; empieza_en: string }[];
-  if (!rows?.[0]?.bote_cents) { console.log("⚠ No hay partida programada con bote: pies de foto sin cifra."); return undefined; }
-  const rl = await fetch(`${url}/rest/v1/bote_liga?select=temporada,bote_cents&order=temporada.desc`, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
-  const ligas = (await rl.json()) as { temporada: number; bote_cents: number }[];
-  const temporada = ligas?.[0]?.temporada;
-  const ligaCents = (ligas ?? []).filter((l) => l.temporada === temporada).reduce((a, l) => a + (l.bote_cents ?? 0), 0);
-  console.log(`Bote real de la edición ${rows[0].edicion}: ${rows[0].bote_cents / 100} € · ligas: ${ligaCents / 100} € · este mes: ${(rows[0].bote_cents + ligaCents) / 100} € · empieza ${rows[0].empieza_en}`);
-  return { sabado: rows[0].bote_cents, mes: rows[0].bote_cents + ligaCents, empieza: rows[0].empieza_en };
+  // Sin llave maestra (24 sep 2026): la cifra del bote es pública; se lee
+  // de VIBO (/api/redes/datos), como la portada.
+  const vibo = process.env.VIBO_URL ?? "https://vibo-azure.vercel.app";
+  const d = await fetch(`${vibo}/api/redes/datos`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const p = d?.proxima as { edicion: string; bote_cents: number; empieza_en: string; ligas_cents: number } | null;
+  if (!p?.bote_cents) { console.log("⚠ No hay partida programada con bote (o VIBO no responde): pies de foto sin cifra."); return undefined; }
+  console.log(`Bote real de la edición ${p.edicion}: ${p.bote_cents / 100} € · ligas: ${p.ligas_cents / 100} € · este mes: ${(p.bote_cents + p.ligas_cents) / 100} € · empieza ${p.empieza_en}`);
+  return { sabado: p.bote_cents, mes: p.bote_cents + p.ligas_cents, empieza: p.empieza_en };
 }
 
 async function main() {

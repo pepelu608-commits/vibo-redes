@@ -19,7 +19,6 @@
 import * as fs from "fs";
 import * as path from "path";
 import { execFileSync } from "child_process";
-import { createClient } from "@supabase/supabase-js";
 import { config } from "dotenv";
 
 const RAIZ = path.resolve(__dirname, "../..");
@@ -141,29 +140,21 @@ function pegarSonido(mp4: string, n: number) {
 }
 
 async function datosReales(): Promise<{ es: Datos; en: Datos } | null> {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) throw new Error("Faltan NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY");
-  const admin = createClient(url, key);
-  const desde = new Date(Date.now() - 36 * 3600000).toISOString();
-  const { data: game } = await admin.from("game").select("id,edicion,inscritos_total,ganador_player_id")
-    .eq("estado", "terminada").not("edicion", "ilike", "ENSAYO%").gte("empieza_en", desde)
-    .order("empieza_en", { ascending: false }).limit(1).maybeSingle();
-  if (!game) { console.log("No hay partida terminada en las últimas 36 h: no se fabrica la repetición."); return null; }
+  // Sin llave maestra (24 sep 2026): la última partida TERMINADA es pública
+  // (sale en esta misma repetición); se lee de VIBO (/api/redes/datos).
+  const vibo = process.env.VIBO_URL ?? "https://vibo-azure.vercel.app";
+  const r = await fetch(`${vibo}/api/redes/datos`);
+  if (!r.ok) throw new Error(`VIBO no responde (${r.status})`);
+  const game = (await r.json()).ultima;
+  if (!game || new Date(game.empieza_en).getTime() < Date.now() - 36 * 3600000) { console.log("No hay partida terminada en las últimas 36 h: no se fabrica la repetición."); return null; }
   const empezaron = game.inscritos_total ?? 0;
   if (empezaron < 20) { console.log(`Solo ${empezaron} inscritos: sin repetición (mínimo 20).`); return null; }
 
-  const { data: qs } = await admin.from("question").select("orden,tipo,texto,texto_en,opciones,opciones_en,correcta,total_respuestas,total_correctas")
-    .eq("game_id", game.id).not("cerrada_en", "is", null).order("orden");
-  const { data: jugadores } = await admin.from("player").select("eliminado_en_pregunta,premio_cents,anulado_en").eq("game_id", game.id);
-  const caidosHasta = (orden: number) => (jugadores ?? []).filter((p) => p.eliminado_en_pregunta != null && p.eliminado_en_pregunta <= orden).length;
-  const repartidoCents = (jugadores ?? []).filter((p) => !p.anulado_en).reduce((s, p) => s + (p.premio_cents ?? 0), 0);
-
-  let ganador: string | null = null;
-  if (game.ganador_player_id) {
-    const { data: pg } = await admin.from("player").select("user_id").eq("id", game.ganador_player_id).maybeSingle();
-    const { data: u } = pg ? await admin.from("app_user").select("alias,mostrar_en_ganadores").eq("id", pg.user_id).maybeSingle() : { data: null };
-    if (u && u.mostrar_en_ganadores !== false) ganador = String(u.alias);
-  }
+  const qs: any[] = game.preguntas;
+  const caidas: Record<string, number> = game.caidas_por_pregunta ?? {};
+  const caidosHasta = (orden: number) => Object.entries(caidas).filter(([o]) => Number(o) <= orden).reduce((s, [, n]) => s + n, 0);
+  const repartidoCents: number = game.repartido_cents;
+  const ganador: string | null = game.ganador;
   const preguntas = (lang: Lang): Q[] => (qs ?? [])
     // Las de reflejos (el color que no salió) no se entienden sin el estímulo:
     // fuera del vídeo. "Quedan N" sigue siendo exacto (se cuenta por número).

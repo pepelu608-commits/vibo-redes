@@ -41,8 +41,8 @@
  *   X:         X_CLIENT_ID, X_CLIENT_SECRET, X_REFRESH_TOKEN
  *   Instagram: IG_USER_ID, IG_ACCESS_TOKEN (token largo, caduca a los 60 días:
  *              el script avisa cuando falla)
- *              + NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (Instagram
- *              exige una URL pública del MP4: se sube al bucket "social")
+ *              + la subida del MP4 (Instagram
+ *              exige una URL pública: bucket "social"; en la nube con la firma de GitHub, sin llave)
  *   TikTok:    TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_REFRESH_TOKEN
  *   BUFFER (camino preferido para TikTok e Instagram, decisión 15 sep 2026):
  *              BUFFER_TOKEN (cuenta española, viboapp1) y BUFFER_TOKEN_EN
@@ -170,8 +170,22 @@ async function publicarX(mp4: string, texto: string) {
   return tweet.data.id as string;
 }
 
+/** ¿Puede subir vídeos? En la nube, con la firma de GitHub; en el Mac, con la llave de .env.local. */
+const puedeSubir = () => !!process.env.ACTIONS_ID_TOKEN_REQUEST_URL || !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
+
 async function urlPublica(mp4: string): Promise<string> {
   // Instagram no acepta bytes: quiere una URL pública. Bucket "social" de Supabase (público, solo lectura).
+  // En la nube (24 sep 2026), SIN llave maestra: GitHub firma que esto es el
+  // robot de vibo-redes y VIBO da permiso para subir solo este vídeo
+  // (/api/redes/subida). La llave maestra ya no está en el repositorio público.
+  if (process.env.ACTIONS_ID_TOKEN_REQUEST_URL) {
+    const vibo = process.env.VIBO_URL ?? "https://vibo-azure.vercel.app";
+    const firma = await json(`${process.env.ACTIONS_ID_TOKEN_REQUEST_URL}&audience=vibo-redes`, { headers: { authorization: `Bearer ${process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN}` } });
+    const permiso = await json(`${vibo}/api/redes/subida`, { method: "POST", headers: { authorization: `Bearer ${firma.value}`, "content-type": "application/json" }, body: JSON.stringify({ nombre: path.basename(mp4).replace(/[^a-zA-Z0-9._-]/g, "_") }) });
+    const r = await fetch(permiso.subir, { method: "PUT", headers: { "content-type": "video/mp4", "x-upsert": "true" }, body: fs.readFileSync(mp4) });
+    if (!r.ok) throw new Error(`subida ${r.status} ${await r.text()}`);
+    return permiso.publica as string;
+  }
   const base = process.env.NEXT_PUBLIC_SUPABASE_URL!, key = process.env.SUPABASE_SERVICE_ROLE_KEY!;
   const nombre = `videos/${path.basename(mp4).replace(/[^a-zA-Z0-9._-]/g, "_")}`;
   const r = await fetch(`${base}/storage/v1/object/social/${nombre}`, { method: "POST", headers: { authorization: `Bearer ${key}`, apikey: key, "content-type": "video/mp4", "x-upsert": "true" }, body: fs.readFileSync(mp4) });
@@ -308,12 +322,12 @@ async function publicarBuffer(mp4: string, texto: string, red: Red, en: boolean,
 }
 
 function tieneSecrets(red: Red, en = false) {
-  if (REDES_BUFFER.includes(red) && tokensBufferPara(red, en).length && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) return true;
+  if (REDES_BUFFER.includes(red) && tokensBufferPara(red, en).length && puedeSubir()) return true;
   const req: Partial<Record<Red, string[]>> = {
     youtube: ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"], x: ["X_CLIENT_ID", "X_CLIENT_SECRET", "X_REFRESH_TOKEN"],
-    instagram: ["IG_USER_ID", "IG_ACCESS_TOKEN", "NEXT_PUBLIC_SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"], tiktok: ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"],
+    instagram: ["IG_USER_ID", "IG_ACCESS_TOKEN"], tiktok: ["TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"],
   };
-  return (req[red] ?? [""]).every((k) => k && process.env[k]);
+  return (req[red] ?? [""]).every((k) => k && process.env[k]) && (red !== "instagram" || puedeSubir());
 }
 
 // ───────────── Principal ─────────────
