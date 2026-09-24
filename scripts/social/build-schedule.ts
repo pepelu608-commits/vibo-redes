@@ -50,7 +50,11 @@ async function main() {
   const args = process.argv.slice(2);
   const botes = await boteReal(args);
   const idx = args.indexOf("--sabado");
-  const sabado = idx >= 0 ? new Date(`${args[idx + 1]}T12:00:00`) : proximoSabado(new Date());
+  let sabado = idx >= 0 ? new Date(`${args[idx + 1]}T12:00:00`) : proximoSabado(new Date());
+  // 24 sep 2026: el robot de la nube lleva la fecha fija (SABADO_PARTIDA). Pasada
+  // esa partida, el calendario salta solo al sábado siguiente: así el domingo
+  // salen el resumen y la repetición sin que nadie cambie la variable.
+  if (idx >= 0 && sabado.getTime() < Date.now() - 12 * 3600000) sabado = proximoSabado(new Date());
   if (isNaN(sabado.getTime())) throw new Error("Fecha inválida en --sabado (formato: YYYY-MM-DD)");
   if (sabado.getDay() !== 6) throw new Error(`${sabado.toISOString().slice(0, 10)} no es sábado`);
 

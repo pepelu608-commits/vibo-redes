@@ -567,6 +567,22 @@
       "tags": "#results"
     },
     {
+      "file": "Vibo Repeticion - La Partida Pregunta A Pregunta.mp4",
+      "mecanica": "repeticion",
+      "lang": "es",
+      "tipo": "repeticion",
+      "pregunta": null,
+      "tags": "#resultados #concurso"
+    },
+    {
+      "file": "Vibo Repeticion EN - The Whole Game.mp4",
+      "mecanica": "repeticion",
+      "lang": "en",
+      "tipo": "repeticion",
+      "pregunta": null,
+      "tags": "#results #quizshow"
+    },
+    {
       "file": "Fab f01a - Que pais tiene mas.mp4",
       "mecanica": "fabrica-misterio",
       "lang": "es",

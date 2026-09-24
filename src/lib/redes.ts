@@ -115,6 +115,10 @@ export const PLAN: Hueco[] = [
   // no hay partida reciente, el MP4 no existe y el publicador lo salta.
   { dia: -6, hora: "12:00", file: "Vibo Resumen - Asi Fue La Partida.mp4", nota: "Datos reales de la partida del sábado" },
   { dia: -6, hora: "16:00", file: "Vibo Resumen EN - How It Went.mp4", nota: "Datos reales de la partida del sábado" },
+  // S-6 domingo — la repetición entera, pregunta a pregunta (24 sep 2026, la
+  // fabrica scripts/social/repeticion-partida.ts detrás del resumen).
+  { dia: -6, hora: "19:00", file: "Vibo Repeticion - La Partida Pregunta A Pregunta.mp4", nota: "Repetición real del sábado" },
+  { dia: -6, hora: "20:00", file: "Vibo Repeticion EN - The Whole Game.mp4", nota: "Repetición real del sábado" },
 ];
 
 /**
@@ -165,6 +169,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
   }
   if (v.tipo === "resumen") return es ? `Así fue la partida del sábado. Datos reales. ${cita}` : `How Saturday's game went. Real numbers. ${cita}`;
+  if (v.tipo === "repeticion") return es ? `La partida del sábado, pregunta a pregunta. ¿Hasta dónde habrías llegado tú? ${cita}` : `Saturday's game, question by question. How far would you have got? ${cita}`;
   if (v.tipo === "bote") return es ? `El bote sube con cada registro. ${cita}` : `The pot grows with every sign-up. ${cita}`;
   return `${dinero} ${cita}`.trim();
 }
@@ -407,7 +412,7 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
       if (contador[k] >= tope) motivo = calentando ? "cuenta nueva: 1 al día" : "tope diario";
       else if (erroresDia(c, dia) >= R.ERRORES_PARA_PARAR) motivo = "red parada hoy por errores";
       // El resumen de la partida se llama igual cada semana pero es un vídeo nuevo (datos de esa partida): no cuenta como repetido.
-      else if (!/Resumen/.test(f.video) && porCuentaOk(c).some((p) => p.video === f.video && ahora.getTime() - new Date(p.fecha).getTime() < R.NO_REPETIR_DIAS * 86400000)) motivo = "mismo vídeo hace <30 días";
+      else if (!/Resumen|Repeticion/.test(f.video) && porCuentaOk(c).some((p) => p.video === f.video && ahora.getTime() - new Date(p.fecha).getTime() < R.NO_REPETIR_DIAS * 86400000)) motivo = "mismo vídeo hace <30 días";
       else if (PROHIBIDO.some((re) => re.test(f.caption + f.hashtags))) motivo = "texto prohibido (línea roja)";
       if (!motivo) { contador[k]++; ultimaPlan[c] = cuando; ocupados.push(cuando.getTime()); }
       planes.push({ clave, red, fila: f, cuando, motivo });

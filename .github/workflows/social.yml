@@ -22,6 +22,29 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # Domingo a las 08 UTC (10:00 en Madrid): el resumen y la repetición de
+      # la partida del sábado, con datos reales (24 sep 2026). Se guardan en el
+      # repo para que los encuentren las publicaciones de las 12, 16, 19 y 20 h.
+      # Sin partida en las últimas 36 h (o con menos de 20 inscritos) no se
+      # fabrica nada y esas publicaciones se saltan solas.
+      - name: Fabricar resumen y repetición del sábado (domingos 08 UTC)
+        if: ${{ vars.SOCIAL_APPLY == 'true' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          if [ "$(date -u +%u)" = "7" ] && [ "$(date -u +%H)" = "08" ]; then
+            npx tsx scripts/social/resumen-partida.ts --grabar || echo "resumen: no se pudo"
+            npx tsx scripts/social/repeticion-partida.ts --grabar || echo "repetición: no se pudo"
+            git config user.name "vibo-social"
+            git config user.email "social@vibo.invalid"
+            git add -A social/videos
+            git diff --cached --quiet || (git commit -m "social: resumen y repetición del sábado" && git pull --rebase -q origin main && git push)
+          else
+            echo "No toca (solo domingos a las 08 UTC)."
+          fi
+        continue-on-error: true
       - name: Calendario con el bote real
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}

@@ -271,7 +271,7 @@ function miniaturaMs(mp4: string): number {
   // Fundador, 23 sep 2026: la miniatura es el PRIMER segundo (la pantalla del
   // dinero / "pregunta 9 de 10"), nunca la respuesta ni la cuenta atrás.
   if (/^fabrica-/.test(mecanica) || /^Fab /.test(file)) return 800;
-  if (/resumen|bote/.test(mecanica) || /Resumen|Bote/.test(file)) return 1000;
+  if (/resumen|bote|repeticion/.test(mecanica) || /Resumen|Bote|Repeticion/.test(file)) return 1000;
   return 800;
 }
 
