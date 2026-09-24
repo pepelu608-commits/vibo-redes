@@ -1,0 +1,47 @@
+name: Reloj VIBO
+# 24 sep 2026: VIVE AQUÍ, en el repo PÚBLICO (los repos públicos no gastan
+# minutos de Actions; el privado "vibo" se quedó sin cuota el 21 sep y el
+# reloj dejó de correr). Los registros solo dicen el estado de la partida
+# ("pregunta_abierta 3"), nunca una pregunta ni una respuesta. En el repo
+# privado queda una copia que solo se lanza a mano (nunca dos relojes a la vez).
+
+# CUOTA (15 sep 2026): GitHub cobra cada lanzamiento como 1 minuto aunque
+# dure 3 segundos, y el plan gratis son 2.000 min/mes. "Cada 5 minutos
+# todo el día" son ~8.600 lanzamientos al mes: imposible. Ahora:
+#   · Cada 5 min SOLO el sábado de 15:00 a 20:59 UTC (17:00-22:59 Madrid en
+#     verano, 16:00-21:59 en invierno): la sala, la partida y la resolución.
+#   · El resto de la semana, cada 3 horas (17 sep 2026; antes cada hora):
+#     basta para mover estados que no tienen prisa (siembra, cierres) y
+#     mantener el despertador. La cuota se agotó el 16 sep con el reloj
+#     horario + el robot social cada 2 h.
+# ≈ 540 min/mes. Si la partida deja de ser en sábado, cambiar el "6".
+on:
+  schedule:
+    - cron: "*/5 15-20 * * 6"
+    - cron: "23 */3 * * *"
+  workflow_dispatch: {}
+
+# Sin esto, si una partida activa tarda en resolverse (mucha muerte
+# súbita) y el run sigue vivo cuando el disparador vuelve a saltar 5 min
+# después, GitHub lanzaría un segundo run en paralelo tickeando la MISMA
+# partida a la vez — carrera real entre dos reloj.ts concurrentes. Con
+# cancel-in-progress:false, el nuevo run espera en cola en vez de
+# solaparse (y en vez de matar el run en curso a medio tick).
+concurrency:
+  group: reloj-vibo
+  cancel-in-progress: false
+
+jobs:
+  latido:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Latido del reloj
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: node scripts/reloj-actions.mjs

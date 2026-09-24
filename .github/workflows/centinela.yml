@@ -1,0 +1,57 @@
+name: Centinela VIBO
+# 24 sep 2026: VIVE AQUÍ, en el repo PÚBLICO (los repos públicos no gastan
+# minutos de Actions; el privado "vibo" se quedó sin cuota el 21 sep y el
+# reloj dejó de correr). Los registros solo dicen el estado de la partida
+# ("pregunta_abierta 3"), nunca una pregunta ni una respuesta. En el repo
+# privado queda una copia que solo se lanza a mano (nunca dos relojes a la vez).
+
+# El segundo corazón del sábado (ver scripts/centinela.mjs). Se despierta
+# antes de la partida de las 18:00 Madrid, verifica que todo está en su
+# sitio, hace guardia durante el arranque, y TERMINA EN ERROR (= email a
+# Nicolás por la notificación de workflow fallido de GitHub) si el motor
+# no responde, no hay partida sembrada, o la hora llega y no arranca.
+#
+# Cada run hace guardia 27 min como máximo (MAX_MS en centinela.mjs), así
+# que hacen falta VARIOS runs encadenados para cubrir las 18:00 de Madrid
+# tanto en verano (16:00 UTC) como en invierno (17:00 UTC). Auditoría 9 sep
+# 2026: con solo dos runs (15:20 y 16:20 UTC) el centinela terminaba a las
+# 17:47 Madrid en invierno y nadie vigilaba el arranque. Ahora: 15:20,
+# 15:50, 16:20, 16:50, 17:20 y 17:50 UTC = de 17:20 a 20:17 en verano y de
+# 16:20 a 19:17 en invierno; la cola de concurrencia los encadena.
+on:
+  schedule:
+    - cron: "20,50 15-17 * * 6"
+  workflow_dispatch: {}
+
+concurrency:
+  group: centinela-vibo
+  cancel-in-progress: false
+
+jobs:
+  guardia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Guardia del centinela
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: node scripts/centinela.mjs
+      - name: Parte verde
+        if: success()
+        run: >
+          curl -s -X POST "${{ secrets.APP_URL }}/api/admin/alerta"
+          -H "authorization: Bearer ${{ secrets.CRON_SECRET }}"
+          -H "content-type: application/json"
+          -d '{"robot":"centinela","nivel":"verde","mensaje":"Guardia del sábado cumplida sin incidencias"}'
+      - name: Parte rojo
+        if: failure()
+        run: >
+          curl -s -X POST "${{ secrets.APP_URL }}/api/admin/alerta"
+          -H "authorization: Bearer ${{ secrets.CRON_SECRET }}"
+          -H "content-type: application/json"
+          -d '{"robot":"centinela","nivel":"rojo","mensaje":"CENTINELA EN ROJO: motor sin responder, sábado sin partida, o la hora llegó y no arranca — encender reloj manual YA"}'
