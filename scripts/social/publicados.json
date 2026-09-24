@@ -2147,6 +2147,157 @@
       "fecha": "2026-09-24T13:31:19.790Z",
       "estado": "error",
       "error": "buffer: Invalid post: Twitter / X posts cannot exceed 280 characters."
+    },
+    {
+      "clave": "2026-09-23|23:00|threads|videos/Fab f87a EN - Which planet has the.mp4",
+      "red": "threads",
+      "video": "videos/Fab f87a EN - Which planet has the.mp4",
+      "fecha": "2026-09-23T21:53:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-23|23:00|bluesky|videos/Fab f87a EN - Which planet has the.mp4",
+      "red": "bluesky",
+      "video": "videos/Fab f87a EN - Which planet has the.mp4",
+      "fecha": "2026-09-23T22:23:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-23|23:00|tiktok|videos/Fab f87a EN - Which planet has the.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f87a EN - Which planet has the.mp4",
+      "fecha": "2026-09-23T22:47:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-23|23:00|instagram|videos/Fab f87a EN - Which planet has the.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f87a EN - Which planet has the.mp4",
+      "fecha": "2026-09-24T05:18:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|facebook|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "facebook",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T11:30:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|threads|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "threads",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T11:56:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|youtube|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T12:27:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|x|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "x",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T12:47:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|facebook|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "facebook",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T14:37:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|threads|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "threads",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T14:56:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|bluesky|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "bluesky",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T14:09:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|linkedin|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "linkedin",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T14:35:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|tiktok|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T16:03:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|instagram|videos/Fab f87a - Que planeta tiene los.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f87a - Que planeta tiene los.mp4",
+      "fecha": "2026-09-24T15:33:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|15:00|x|videos/Fab t05 EN - What is the most.mp4",
+      "red": "x",
+      "video": "videos/Fab t05 EN - What is the most.mp4",
+      "fecha": "2026-09-24T13:08:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|15:00|threads|videos/Fab t05 EN - What is the most.mp4",
+      "red": "threads",
+      "video": "videos/Fab t05 EN - What is the most.mp4",
+      "fecha": "2026-09-24T13:22:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|15:00|bluesky|videos/Fab t05 EN - What is the most.mp4",
+      "red": "bluesky",
+      "video": "videos/Fab t05 EN - What is the most.mp4",
+      "fecha": "2026-09-24T13:45:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|15:00|tiktok|videos/Fab t05 EN - What is the most.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab t05 EN - What is the most.mp4",
+      "fecha": "2026-09-24T14:16:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|15:00|youtube|videos/Fab t05 EN - What is the most.mp4",
+      "red": "youtube",
+      "video": "videos/Fab t05 EN - What is the most.mp4",
+      "fecha": "2026-09-24T18:24:07.073Z",
+      "estado": "ok",
+      "id": "koJ8lfRWh-I",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-24|19:00|x|videos/Fab t05 - Cual es el metal.mp4",
+      "red": "x",
+      "video": "videos/Fab t05 - Cual es el metal.mp4",
+      "fecha": "2026-09-24T18:24:10.581Z",
+      "estado": "error",
+      "error": "buffer: Invalid post: Twitter / X posts cannot exceed 280 characters."
+    },
+    {
+      "clave": "2026-09-24|19:30|x|videos/Fab e09 EN - Which country produces the.mp4",
+      "red": "x",
+      "video": "videos/Fab e09 EN - Which country produces the.mp4",
+      "fecha": "2026-09-24T18:24:13.852Z",
+      "estado": "error",
+      "error": "buffer: Invalid post: Twitter / X posts cannot exceed 280 characters."
     }
   ]
 }
