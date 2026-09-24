@@ -9,6 +9,11 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  # 24 sep 2026: SIN llave maestra de la base de datos en este repositorio
+  # público. Para subir un vídeo, el robot pide a GitHub su firma (id-token)
+  # y VIBO le da permiso para subir solo ese vídeo (/api/redes/subida). Los
+  # datos que usa (bote, partida terminada) los lee de /api/redes/datos.
+  id-token: write
 concurrency:
   group: social
   cancel-in-progress: false
@@ -30,8 +35,6 @@ jobs:
       - name: Fabricar resumen y repetición del sábado (domingos 08 UTC)
         if: ${{ vars.SOCIAL_APPLY == 'true' }}
         env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           CHROME_PATH: /usr/bin/google-chrome
         run: |
           if [ "$(date -u +%u)" = "7" ] && [ "$(date -u +%H)" = "08" ]; then
@@ -46,9 +49,6 @@ jobs:
           fi
         continue-on-error: true
       - name: Calendario con el bote real
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npx tsx scripts/social/build-schedule.ts --sabado ${{ vars.SABADO_PARTIDA }} --calentamiento ${{ vars.CALENTAMIENTO_DIAS || 16 }}
         continue-on-error: true
       - name: Publicar lo que toca
@@ -70,8 +70,6 @@ jobs:
           BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
           BUFFER_TOKEN_EN: ${{ secrets.BUFFER_TOKEN_EN }}
           BUFFER_TOKEN_EXTRA: ${{ secrets.BUFFER_TOKEN_EXTRA }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npx tsx scripts/social/publicar-directo.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }}
       - name: Guardar el registro de lo publicado
         if: ${{ vars.SOCIAL_APPLY == 'true' }}
