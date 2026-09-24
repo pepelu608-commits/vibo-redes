@@ -2072,6 +2072,81 @@
       "video": "videos/Fab f44aF EN - How many sides does.mp4",
       "fecha": "2026-09-24T05:20:00.000Z",
       "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-23|23:00|instagram|videos/Fab f44aF EN - How many sides does.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f44aF EN - How many sides does.mp4",
+      "fecha": "2026-09-24T01:22:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|bluesky|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "bluesky",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T09:00:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|linkedin|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "linkedin",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T09:18:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|tiktok|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T09:57:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|instagram|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "instagram",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T10:25:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|youtube|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "youtube",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T10:52:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|11:00|x|videos/Fab f104aF - El 12 de agosto.mp4",
+      "red": "x",
+      "video": "videos/Fab f104aF - El 12 de agosto.mp4",
+      "fecha": "2026-09-24T11:02:00.000Z",
+      "estado": "perdido"
+    },
+    {
+      "clave": "2026-09-24|14:30|tiktok|videos/Fab f44aF - Cuantos lados tiene un.mp4",
+      "red": "tiktok",
+      "video": "videos/Fab f44aF - Cuantos lados tiene un.mp4",
+      "fecha": "2026-09-24T12:58:00.000Z",
+      "estado": "ok",
+      "id": "6ab52620977152ab73d606d9",
+      "lang": "es"
+    },
+    {
+      "clave": "2026-09-24|15:00|youtube|videos/Fab e08 EN - What is the smallest.mp4",
+      "red": "youtube",
+      "video": "videos/Fab e08 EN - What is the smallest.mp4",
+      "fecha": "2026-09-24T13:31:17.668Z",
+      "estado": "ok",
+      "id": "Sc8ykzI_ZJs",
+      "lang": "en"
+    },
+    {
+      "clave": "2026-09-24|15:00|x|videos/Fab e08 EN - What is the smallest.mp4",
+      "red": "x",
+      "video": "videos/Fab e08 EN - What is the smallest.mp4",
+      "fecha": "2026-09-24T13:31:19.790Z",
+      "estado": "error",
+      "error": "buffer: Invalid post: Twitter / X posts cannot exceed 280 characters."
     }
   ]
 }
