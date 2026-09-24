@@ -449,8 +449,11 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     // TikTok e Instagram (22 sep 2026): sin enlace clicable (TikTok lo
     // desbloquea a 1.000 seguidores) → el texto tiene que cerrar solo. Tres
     // líneas: dinero + pregunta + comentar / gratis y quién cobra / cómo entrar.
-    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Search “VIBO” on the App Store and get in." : "Busca «VIBO» en la App Store y entra."}\n${rotados.slice(0, 4).join(" ")}`.trim() };
-    case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Search “VIBO” on the App Store · link in bio." : "Busca «VIBO» en la App Store · enlace en la bio."}\n\n${rotados.slice(0, 5).join(" ")}` };
+    // 24 sep 2026 (recorrido "como un desconocido"): "Busca VIBO en la App
+    // Store" dejaba fuera a Android (3 de cada 4 móviles en España): la web
+    // se juega desde el navegador del móvil. Con dominio propio, URL_WEB.
+    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? `iPhone: search “VIBO” on the App Store. Android: ${URL_WEB}` : `iPhone: busca «VIBO» en la App Store. Android: ${URL_WEB}`}\n${rotados.slice(0, 4).join(" ")}`.trim() };
+    case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
     case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "x": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 2).join(" ")}`.slice(0, 280) };
     case "bluesky": return { titulo: "", texto: `${base}\n${web}`.slice(0, 300) };
