@@ -458,7 +458,17 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? `iPhone: search “VIBO” on the App Store. Android: ${URL_WEB}` : `iPhone: busca «VIBO» en la App Store. Android: ${URL_WEB}`}\n${rotados.slice(0, 4).join(" ")}`.trim() };
     case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Top 5 get paid." : "Gratis. Los 5 mejores cobran."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
     case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
-    case "x": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 2).join(" ")}`.slice(0, 280) };
+    case "x": {
+      // X cuenta distinto (24 sep 2026: tres rechazos por "más de 280"): el €
+      // y los emojis pesan 2 y cada enlace pesa 23. Se quitan primero los
+      // hashtags y, si aún no cabe, se acorta el texto; el enlace nunca se corta.
+      const pesoX = (t: string) => [...t.replace(/https?:\/\/\S+/g, "x".repeat(23))].reduce((n, c) => n + (c.codePointAt(0)! <= 0x10ff ? 1 : 2), 0);
+      let t = `${base}\n${web} ${rotados.slice(0, 2).join(" ")}`;
+      if (pesoX(t) > 275) t = `${base}\n${web}`;
+      let b = base;
+      while (pesoX(t) > 275 && b.length > 20) { b = b.slice(0, b.lastIndexOf(" ", b.length - 2)).replace(/[\s.,;:]+$/, "") + "…"; t = `${b}\n${web}`; }
+      return { titulo: "", texto: t };
+    }
     case "bluesky": return { titulo: "", texto: `${base}\n${web}`.slice(0, 300) };
     case "threads": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 3).join(" ")}`.slice(0, 500) };
     case "linkedin": return { titulo: "", texto: `${base}\n\n${en ? "Free to play. Live every Saturday." : "Gratis. En directo cada sábado."}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
