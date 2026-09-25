@@ -251,7 +251,17 @@ function tokenBuffer(en: boolean) { return en ? process.env.BUFFER_TOKEN_EN : pr
  * si no, se buscan en la cuenta del idioma. Sin canal conectado: se salta.
  */
 const REDES_EXTRA: Red[] = ["x", "facebook", "threads", "linkedin", "bluesky"];
+/**
+ * Redes que el robot NO toca por idioma (fundador, 25 sep 2026: la cuenta
+ * nueva de TikTok España, @viboapp.es, la lleva él a mano desde el móvil en
+ * HD). Variable SOCIAL_SALTAR, p. ej. "tiktok-es"; sin ella, todo igual.
+ */
+function saltada(red: Red, en: boolean): boolean {
+  const lista = (process.env.SOCIAL_SALTAR ?? "").split(",").map((r) => r.trim().toLowerCase()).filter(Boolean);
+  return lista.includes(`${red}-${en ? "en" : "es"}`);
+}
 function tokensBufferPara(red: Red, en: boolean): string[] {
+  if (saltada(red, en)) return [];
   const t = [] as string[];
   if (REDES_EXTRA.includes(red) && process.env.BUFFER_TOKEN_EXTRA) t.push(process.env.BUFFER_TOKEN_EXTRA);
   const propio = tokenBuffer(en);
@@ -386,6 +396,7 @@ async function main() {
     // SOCIAL_SOLO_EN=true (ensayo, 15 sep 2026): publica solo en las cuentas
     // inglesas (0 seguidores; sirven de banco de pruebas la primera semana).
     if (process.env.SOCIAL_SOLO_EN === "true" && !en) { console.log("  · ensayo solo EN: se salta"); continue; }
+    if (saltada(p.red, en)) { console.log("  · SOCIAL_SALTAR: esta la lleva el fundador a mano; se salta"); continue; }
     if (!apply) continue;
     if (!tieneSecrets(p.red, en)) { console.log("  · sin secrets de esta red: se salta (no cuenta como error)"); continue; }
     try {
