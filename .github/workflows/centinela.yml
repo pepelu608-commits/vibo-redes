@@ -27,6 +27,12 @@ concurrency:
   group: centinela-vibo
   cancel-in-progress: false
 
+# actions: read → el centinela pregunta a GitHub si hay un run del reloj en
+# marcha, para no latir nunca a la vez que él (auditoría 25 sep 2026).
+permissions:
+  contents: read
+  actions: read
+
 jobs:
   guardia:
     runs-on: ubuntu-latest
@@ -40,6 +46,7 @@ jobs:
         env:
           APP_URL: ${{ secrets.APP_URL }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/centinela.mjs
       - name: Parte verde
         if: success()

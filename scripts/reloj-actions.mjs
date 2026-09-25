@@ -26,6 +26,8 @@ async function tick() {
   const res = await fetch(`${APP_URL}/api/cron`, {
     method: "POST",
     headers: { authorization: `Bearer ${CRON_SECRET}` },
+    // Un latido colgado no puede congelar el run entero (25 sep 2026).
+    signal: AbortSignal.timeout(30_000),
   });
   return res.json();
 }
