@@ -98,10 +98,18 @@ async function tokenGoogle(en: boolean) {
     body: form({ client_id: process.env.YT_CLIENT_ID!, client_secret: process.env.YT_CLIENT_SECRET!, refresh_token: refresh, grant_type: "refresh_token" }) });
   return b.access_token as string;
 }
-async function publicarYoutube(mp4: string, titulo: string, texto: string, en: boolean) {
+// 25 sep 2026: GitHub se salta muchas ejecuciones programadas (el 24 corrió 5
+// veces en vez de 12) y lo que pasaba de hora se perdía: el canal ES dejó de
+// publicar. Si la hora del plan aún no ha llegado, el vídeo se sube PRIVADO con
+// publishAt y YouTube lo publica solo a esa hora, corra o no el robot.
+async function publicarYoutube(mp4: string, titulo: string, texto: string, en: boolean, cuando?: Date) {
   const token = await tokenGoogle(en);
   const bytes = fs.readFileSync(mp4);
-  const meta = { snippet: { title: titulo, description: texto, categoryId: "24", defaultLanguage: en ? "en" : "es" }, status: { privacyStatus: "public", selfDeclaredMadeForKids: false } };
+  const programado = cuando && cuando.getTime() > Date.now() + 15 * 60000;
+  const status = programado
+    ? { privacyStatus: "private", publishAt: cuando!.toISOString(), selfDeclaredMadeForKids: false }
+    : { privacyStatus: "public", selfDeclaredMadeForKids: false };
+  const meta = { snippet: { title: titulo, description: texto, categoryId: "24", defaultLanguage: en ? "en" : "es" }, status };
   const inicio = await fetch("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", {
     method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json", "x-upload-content-type": "video/mp4", "x-upload-content-length": String(bytes.length) }, body: JSON.stringify(meta) });
   if (!inicio.ok) throw new Error(`youtube init ${inicio.status} ${await inicio.text()}`);
@@ -357,7 +365,7 @@ async function main() {
   const adelantoH = Number((process.argv.find((a) => a.startsWith("--adelantar=")) ?? "").split("=")[1] || 0);
   const limite = new Date(ahora.getTime() + adelantoH * 3600000);
   const porAdelantado = adelantoH > 0
-    ? planes.filter((p) => !p.motivo && p.cuando > ahora && p.cuando <= limite && REDES_BUFFER.includes(p.red) && tokensBufferPara(p.red, (p.fila.lang ?? langDeVideo(p.fila.video)) === "en").length > 0)
+    ? planes.filter((p) => !p.motivo && p.cuando > ahora && p.cuando <= limite && (p.red === "youtube" || (REDES_BUFFER.includes(p.red) && tokensBufferPara(p.red, (p.fila.lang ?? langDeVideo(p.fila.video)) === "en").length > 0)))
     : [];
   const ahoraSi = [...toca.filter((p) => !tarde.includes(p)), ...porAdelantado];
   const proximas = planes.filter((p) => !p.motivo && p.cuando > ahora).slice(0, 6);
@@ -384,14 +392,15 @@ async function main() {
       let id = "", est: Publicado["estado"] = "ok";
       // X: por Buffer si hay cuenta con canal; si no, por la API directa (claves X_*).
       const porBuffer = REDES_BUFFER.includes(p.red) && tokensBufferPara(p.red, en).length > 0 && !(p.red === "x" && !process.env.BUFFER_TOKEN_EXTRA && process.env.X_REFRESH_TOKEN);
+      const ytProgramado = !porBuffer && p.red === "youtube" && p.cuando.getTime() > Date.now() + 15 * 60000;
       if (porBuffer) id = await publicarBuffer(mp4, texto, p.red, en, p.cuando);
-      else if (p.red === "youtube") id = await publicarYoutube(mp4, titulo, texto, en);
+      else if (p.red === "youtube") id = await publicarYoutube(mp4, titulo, texto, en, p.cuando);
       else if (p.red === "x") id = await publicarX(mp4, texto);
       else if (p.red === "instagram") id = await publicarInstagram(mp4, texto);
       else { const r = await publicarTikTok(mp4, titulo || texto); id = r.id; est = r.borrador ? "borrador" : "ok"; }
-      // Por Buffer la fecha real es la programada (cuenta para el tope de ese día, no de hoy).
-      estado.publicados.push({ clave: p.clave, red: p.red, video: p.fila.video, fecha: (porBuffer ? p.cuando : new Date()).toISOString(), estado: est, id, lang: en ? "en" : "es" });
-      console.log(est === "borrador" ? `  ✓ en tus borradores de TikTok (publícalo desde el móvil) · ${id}` : porBuffer ? `  ✓ programado en Buffer · ${id}` : `  ✓ publicado · ${id}`);
+      // Por Buffer (o YouTube programado) la fecha real es la programada (cuenta para el tope de ese día, no de hoy).
+      estado.publicados.push({ clave: p.clave, red: p.red, video: p.fila.video, fecha: (porBuffer || ytProgramado ? p.cuando : new Date()).toISOString(), estado: est, id, lang: en ? "en" : "es" });
+      console.log(est === "borrador" ? `  ✓ en tus borradores de TikTok (publícalo desde el móvil) · ${id}` : porBuffer ? `  ✓ programado en Buffer · ${id}` : ytProgramado ? `  ✓ programado en YouTube para ${fmt(p.cuando)} · ${id}` : `  ✓ publicado · ${id}`);
     } catch (e: any) {
       if (e instanceof SinCanal) { console.log(`  · ${e.message} (conéctalo en Buffer; se salta)`); continue; }
       estado.publicados.push({ clave: p.clave, red: p.red, video: p.fila.video, fecha: new Date().toISOString(), estado: "error", error: String(e.message ?? e).slice(0, 300) });

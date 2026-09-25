@@ -70,7 +70,10 @@ jobs:
           BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
           BUFFER_TOKEN_EN: ${{ secrets.BUFFER_TOKEN_EN }}
           BUFFER_TOKEN_EXTRA: ${{ secrets.BUFFER_TOKEN_EXTRA }}
-        run: npx tsx scripts/social/publicar-directo.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }}
+        # --adelantar=8 (25 sep 2026): GitHub se salta ejecuciones (huecos de 5-7 h
+        # el 24 sep) y lo que pasaba de hora se perdía. Cada pasada deja
+        # programado lo de las próximas 8 h en Buffer y en YouTube (publishAt).
+        run: npx tsx scripts/social/publicar-directo.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }} --adelantar=8
       - name: Guardar el registro de lo publicado
         if: ${{ vars.SOCIAL_APPLY == 'true' }}
         run: |

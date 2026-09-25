@@ -149,7 +149,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   const dinero = mes
-    ? (es ? `${mes} en juego ${cp.frase} (${bote} de bote + ligas).` : `${mes} on the line ${cp.frase} (${bote} pot + leagues).`)
+    ? (es ? `${mes} en juego ${cp.frase} (${bote} de premio + ligas).` : `${mes} on the line ${cp.frase} (${bote} prize + leagues).`)
     : bote ? (es ? `${bote} en juego ${cp.frase}.` : `${bote} on the line ${cp.frase}.`) : "";
   // Llamada a comentar (15 sep 2026): los comentarios son lo que más empuja
   // un vídeo en TikTok/IG. En "misterio" no hay respuesta en el vídeo: se
@@ -170,7 +170,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   }
   if (v.tipo === "resumen") return es ? `Así fue la partida del sábado. Datos reales. ${cita}` : `How Saturday's game went. Real numbers. ${cita}`;
   if (v.tipo === "repeticion") return es ? `La partida del sábado, pregunta a pregunta. ¿Hasta dónde habrías llegado tú? ${cita}` : `Saturday's game, question by question. How far would you have got? ${cita}`;
-  if (v.tipo === "bote") return es ? `El bote sube con cada registro. ${cita}` : `The pot grows with every sign-up. ${cita}`;
+  if (v.tipo === "bote") return es ? `El premio sube con cada registro. ${cita}` : `The prize grows with every sign-up. ${cita}`;
   return `${dinero} ${cita}`.trim();
 }
 
