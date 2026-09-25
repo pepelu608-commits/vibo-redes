@@ -15,7 +15,8 @@ export const URL_APP = `${URL_WEB}/app`;
 export const TZ = "Europe/Madrid";
 
 export type Lang = "es" | "en";
-export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string };
+// cta (25 sep 2026): la llamada a comentar propia de cada formato de vídeo (scripts/social/formatos.ts).
+export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string; cta?: string };
 export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linkedin" | "threads" | "bluesky";
 export const REDES: Red[] = ["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"];
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
@@ -155,7 +156,8 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   // un vídeo en TikTok/IG. En "misterio" no hay respuesta en el vídeo: se
   // pide la apuesta. En el resto, si la sabía.
   if (v.pregunta) {
-    const cta = v.mecanica === "fabrica-misterio"
+    const cta = v.cta ? v.cta
+      : v.mecanica === "fabrica-misterio"
       ? (es ? "Esta cae en la partida. Deja tu respuesta en comentarios." : "This one's in the game. Drop your answer in the comments.")
       : v.mecanica === "fabrica-comenta"
       ? (es ? "¿A, B, C o D? Deja tu respuesta en comentarios 👇" : "A, B, C or D? Drop your answer in the comments 👇")
@@ -246,7 +248,8 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // para ver cuál funciona"): una pregunta suelta, un "tres", una
     // "escalera"… Así cada formato sale los mismos días que los demás y la
     // comparación es justa (antes salían en bloques de 20 del mismo tipo).
-    const familia = (g: string) => { const m = grupos.get(g)![0].mecanica; return m === "fabrica-tres" || m === "fabrica-escalera" ? m : "pregunta"; };
+    // 25 sep 2026: cada formato nuevo (formato-rapidas, formato-banderas…) tiene su propio turno.
+    const familia = (g: string) => { const m = grupos.get(g)![0].mecanica; return m === "fabrica-tres" || m === "fabrica-escalera" || m.startsWith("formato-") ? m : "pregunta"; };
     const porTurnos = (gs: string[]) => {
       const colas = new Map<string, string[]>();
       for (const g of gs) colas.set(familia(g), [...(colas.get(familia(g)) ?? []), g]);

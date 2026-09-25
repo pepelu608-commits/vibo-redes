@@ -5,7 +5,9 @@
 name: social
 on:
   schedule:
-    - cron: "7 */2 * * *"
+    # Cada hora (25 sep 2026): GitHub se salta muchas ejecuciones programadas;
+    # con más intentos y --adelantar=8, no se pierde nada. Lo ya programado no se repite.
+    - cron: "17 * * * *"
   workflow_dispatch: {}
 permissions:
   contents: write
