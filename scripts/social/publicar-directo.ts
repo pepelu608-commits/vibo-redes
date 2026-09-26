@@ -126,6 +126,41 @@ async function publicarYoutube(mp4: string, titulo: string, texto: string, en: b
  * + cuenta atrás) con ffmpeg y se sube con thumbnails.set. Si el canal no
  * está verificado por teléfono, YouTube lo rechaza (403): se avisa y sigue.
  */
+
+/**
+ * MÚSICA (26 sep 2026, fundador: los vídeos mudos no los enseña TikTok): si
+ * el MP4 no trae sonido, se le pone una pista de concurso de social/musica
+ * (Pixabay, licencia libre para uso comercial) justo antes de subirlo. La
+ * pista se elige por el nombre del vídeo (siempre la misma para ese vídeo),
+ * a volumen medio y con fundido al final. Si algo falla, sube el original.
+ */
+function conMusica(mp4: string): string {
+  try {
+    const { execFileSync, spawnSync } = require("child_process");
+    let ffmpeg = "ffmpeg";
+    try { ffmpeg = require("ffmpeg-static") as string; } catch {}
+    const info = spawnSync(ffmpeg, ["-i", mp4], { encoding: "utf8" }).stderr as string;
+    if (/Audio:/.test(info)) return mp4;
+    const dur = Number((info.match(/Duration: (\d+):(\d+):([\d.]+)/) ?? []).slice(1).reduce((a: number, x: string) => a * 60 + Number(x), 0)) || 15;
+    const dir = path.join(RAIZ, "social", "musica");
+    const pistas = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".mp3")).sort() : [];
+    if (!pistas.length) return mp4;
+    let h = 0;
+    for (const c of path.basename(mp4)) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+    const pista = path.join(dir, pistas[h % pistas.length]);
+    // Mismo nombre que el original (miniaturaMs y la subida lo buscan por nombre).
+    const carpeta = path.join(require("os").tmpdir(), "vibo-musica");
+    fs.mkdirSync(carpeta, { recursive: true });
+    const salida = path.join(carpeta, path.basename(mp4));
+    execFileSync(ffmpeg, ["-y", "-v", "error", "-i", mp4, "-i", pista, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+      "-af", `volume=0.6,afade=t=out:st=${Math.max(0, dur - 1.2).toFixed(2)}:d=1.2`, "-shortest", "-movflags", "+faststart", salida]);
+    return salida;
+  } catch (e: any) {
+    console.log("  (sin música:", e?.message?.slice(0, 80), ")");
+    return mp4;
+  }
+}
+
 async function miniaturaYoutube(videoId: string, mp4: string, token: string) {
   const { execFileSync } = await import("child_process");
   const jpg = path.join(require("os").tmpdir(), `vibo-mini-${videoId}.jpg`);
@@ -388,10 +423,11 @@ async function main() {
   for (const p of proximas) console.log(`  próxima  ${fmt(p.cuando)} ${p.red} ${p.fila.video.replace(/^videos\//, "")}`);
 
   for (const p of ahoraSi) {
-    const mp4 = path.join(VIDEOS, p.fila.video);
+    const original = path.join(VIDEOS, p.fila.video);
     const { texto, titulo } = textoPara(p.red, p.fila);
     console.log(`\n→ ${p.red.toUpperCase()}  ${p.fila.video}\n  ${texto.replace(/\n/g, " / ")}`);
-    if (!fs.existsSync(mp4)) { console.log("  ✗ no existe el MP4"); continue; }
+    if (!fs.existsSync(original)) { console.log("  ✗ no existe el MP4"); continue; }
+    const mp4 = conMusica(original);
     const en = (p.fila.lang ?? langDeVideo(p.fila.video)) === "en";
     // SOCIAL_SOLO_EN=true (ensayo, 15 sep 2026): publica solo en las cuentas
     // inglesas (0 seguidores; sirven de banco de pruebas la primera semana).
