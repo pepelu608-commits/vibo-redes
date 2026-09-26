@@ -149,9 +149,13 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM CET · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
-  const dinero = mes
-    ? (es ? `${mes} en juego ${cp.frase} (${bote} de premio + ligas).` : `${mes} on the line ${cp.frase} (${bote} prize + leagues).`)
-    : bote ? (es ? `${bote} en juego ${cp.frase}.` : `${bote} on the line ${cp.frase}.`) : "";
+  // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
+  // sábado" (daba a entender 65 € el día 17). Premio del sábado + ligas aparte.
+  const dinero = bote
+    ? es
+      ? `${bote} de premio ${cp.frase}${mes ? `, y ${mes} en premios esta temporada` : ""}.`
+      : `${bote} prize ${cp.frase}${mes ? `, and ${mes} in prizes this season` : ""}.`
+    : "";
   // Llamada a comentar (15 sep 2026): los comentarios son lo que más empuja
   // un vídeo en TikTok/IG. En "misterio" no hay respuesta en el vídeo: se
   // pide la apuesta. En el resto, si la sabía.
