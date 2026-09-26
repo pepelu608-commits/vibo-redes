@@ -5650,6 +5650,266 @@
       "gancho": "COMPLETA EL REFRÁN",
       "tags": "#refranes #espanol",
       "cta": "¿Cuántos sabías? Comenta de 0 a 4 👇"
+    },
+    {
+      "file": "Real r01 - Quien marco el gol.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿quién marcó el gol de españa en la final del mundial?",
+      "tags": "#datoscuriosos",
+      "id": "r01",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r02 - Cuantas tierras caben dentro.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuántas tierras caben dentro del sol?",
+      "tags": "#datoscuriosos",
+      "id": "r02",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r03 - Con cuantos huesos nace.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿con cuántos huesos nace un bebé?",
+      "tags": "#datoscuriosos",
+      "id": "r03",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r04 - En que pais esta.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿en qué país está el kilimanjaro?",
+      "tags": "#datoscuriosos",
+      "id": "r04",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r05 - Que pais produce mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué país produce más café del mundo?",
+      "tags": "#datoscuriosos",
+      "id": "r05",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r06 - Que significa farmear aura.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué significa «farmear aura»?",
+      "tags": "#datoscuriosos",
+      "id": "r06",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r07 - Que idioma tiene mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué idioma tiene más hablantes nativos?",
+      "tags": "#datoscuriosos",
+      "id": "r07",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r08 - Quien le dio el.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿quién le dio el pase a ferran torres en el gol de la final?",
+      "tags": "#datoscuriosos",
+      "id": "r08",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e02 EN - How many earths fit.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many earths fit inside the sun?",
+      "tags": "#funfacts",
+      "id": "e02en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e03 EN - How many bones is.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many bones is a baby born with?",
+      "tags": "#funfacts",
+      "id": "e03en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e04 EN - Which country is mount.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which country is mount kilimanjaro in?",
+      "tags": "#funfacts",
+      "id": "e04en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e05 EN - Which country produces the.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which country produces the most coffee?",
+      "tags": "#funfacts",
+      "id": "e05en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e06 EN - What colour is a.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What colour is a plane's black box?",
+      "tags": "#funfacts",
+      "id": "e06en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e07 EN - How many times hotter.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many times hotter than the sun's surface can lightning be?",
+      "tags": "#funfacts",
+      "id": "e07en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e08 EN - Which us state is.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which us state is the kilauea volcano in?",
+      "tags": "#funfacts",
+      "id": "e08en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e09 EN - In a pride of.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "In a pride of lions, who does most of the hunting?",
+      "tags": "#funfacts",
+      "id": "e09en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e10 EN - What is the aurora.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the aurora in the southern hemisphere called?",
+      "tags": "#funfacts",
+      "id": "e10en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e11 EN - What is a sharks.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is a shark's skeleton made of?",
+      "tags": "#funfacts",
+      "id": "e11en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real e12 EN - Which is the largest.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the largest ocean on earth?",
+      "tags": "#funfacts",
+      "id": "e12en",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r09 - De que color es.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿de qué color es la caja negra de un avión?",
+      "tags": "#datoscuriosos",
+      "id": "r09",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r10 - Cuantas veces mas caliente.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuántas veces más caliente que la superficie del sol puede estar un rayo?",
+      "tags": "#datoscuriosos",
+      "id": "r10",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r11 - En que estado de.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿en qué estado de estados unidos está el volcán kilauea?",
+      "tags": "#datoscuriosos",
+      "id": "r11",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r12 - En una manada de.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "En una manada de leones, ¿quién hace la mayor parte de la caza?",
+      "tags": "#datoscuriosos",
+      "id": "r12",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r13 - Como se llama la.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cómo se llama la aurora del hemisferio sur?",
+      "tags": "#datoscuriosos",
+      "id": "r13",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r14 - De que esta hecho.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿de qué está hecho el esqueleto de un tiburón?",
+      "tags": "#datoscuriosos",
+      "id": "r14",
+      "actualidad": "2026-09-26"
+    },
+    {
+      "file": "Real r15 - Cual es el oceano.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál es el océano más grande del mundo?",
+      "tags": "#datoscuriosos",
+      "id": "r15",
+      "actualidad": "2026-09-26"
     }
   ]
 }
