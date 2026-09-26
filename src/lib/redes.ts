@@ -235,7 +235,11 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
   }
   const eleccion = new Map<Hueco, Video>();
   for (const lang of ["es", "en"] as Lang[]) {
-    const huecos = plan.filter((h) => h.pool === "pregunta" && h.lang === lang);
+    // 26 sep 2026: los huecos que ya pasaron van al final del reparto; si no,
+    // lo prioritario (actualidad, vídeos reales) caía en días pasados y se perdía.
+    const hoy = new Date().toISOString().slice(0, 10);
+    const todos = plan.filter((h) => h.pool === "pregunta" && h.lang === lang);
+    const huecos = [...todos.filter((h) => fechaMas(sabado, h.dia) >= hoy), ...todos.filter((h) => fechaMas(sabado, h.dia) < hoy)];
     if (!huecos.length) continue;
     const grupos = new Map<string, Video[]>();
     for (const v of catalogo) if (v.tipo === "pregunta" && v.lang === lang && v.activo !== false) grupos.set(grupo(v), [...(grupos.get(grupo(v)) ?? []), v]);
