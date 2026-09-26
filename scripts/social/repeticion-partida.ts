@@ -29,7 +29,7 @@ const NOMBRE = { es: "Vibo Repeticion - La Partida Pregunta A Pregunta", en: "Vi
 const FIJAS = 10;
 
 type Lang = "es" | "en";
-type Q = { orden: number; texto: string; opciones: string[]; correcta: number; pctFallo: number | null; quedan: number };
+type Q = { orden: number; texto: string; opciones: string[]; correcta: number; pctFallo: number | null; quedan: number; imagen?: string };
 type Datos = { edicion: string; empezaron: number; preguntas: Q[]; ganador: string | null; repartidoCents: number; sinGanador: boolean };
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -57,7 +57,9 @@ function html(d: Datos, lang: Lang): string {
   const t = T[lang];
   const pant = d.preguntas.map((q, i) => {
     const ops = q.opciones.map((o, k) => `<div class="op" data-bien="${k === q.correcta ? 1 : 0}"><span>${"ABCD"[k] ?? ""}</span>${esc(o)}</div>`).join("");
-    return `<div class="pant" id="q${i}"><div class="num anton">${t.pregunta(q.orden)}</div><div class="preg">${esc(q.texto)}</div><div class="ops">${ops}</div>
+    // Pregunta de bandera (25 sep 2026): la bandera, entre el texto y las opciones.
+    const imagen = q.imagen ? `<img class="imagen" src="${esc(q.imagen)}" alt="">` : "";
+    return `<div class="pant" id="q${i}"><div class="num anton">${t.pregunta(q.orden)}</div><div class="preg">${esc(q.texto)}</div>${imagen}<div class="ops">${ops}</div>
       <div class="dato">${q.pctFallo != null ? `<div class="fallo anton">${t.fallo(q.pctFallo)}</div>` : ""}<div class="quedan anton">${t.quedan(q.quedan)}</div></div></div>`;
   }).join("\n");
   const final = d.sinGanador
@@ -81,6 +83,7 @@ function html(d: Datos, lang: Lang): string {
   #emp{font-size:96px;color:#2ee6a8;margin-top:70px}
   .num{font-size:44px;color:#ffd166;letter-spacing:5px;margin-bottom:40px}
   .preg{font-size:64px;font-weight:800;line-height:1.15;margin-bottom:50px;text-wrap:balance}
+  .imagen{width:560px;height:420px;border-radius:28px;margin-bottom:50px}
   .ops{display:grid;grid-template-columns:1fr 1fr;gap:22px;width:100%}
   .op{background:rgba(255,255,255,.08);border:3px solid rgba(255,255,255,.14);border-radius:28px;padding:30px 18px;font-size:42px;font-weight:800;transition:all .25s}
   .op span{display:block;font-size:24px;color:#8b93c7;margin-bottom:8px;letter-spacing:3px}
@@ -167,6 +170,7 @@ async function datosReales(): Promise<{ es: Datos; en: Datos } | null> {
       correcta: q.correcta as number,
       pctFallo: (q.total_respuestas ?? 0) >= 10 ? Math.round(((q.total_respuestas - (q.total_correctas ?? 0)) / q.total_respuestas) * 100) : null,
       quedan: Math.max(0, empezaron - caidosHasta(q.orden)),
+      ...(typeof q.imagen === "string" ? { imagen: `${vibo}${q.imagen}` } : {}),
     }));
   const base = { edicion: String(game.edicion), empezaron, ganador, repartidoCents, sinGanador: !game.ganador_player_id && repartidoCents === 0 };
   return { es: { ...base, preguntas: preguntas("es") }, en: { ...base, preguntas: preguntas("en") } };

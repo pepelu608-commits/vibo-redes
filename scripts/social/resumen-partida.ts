@@ -27,7 +27,7 @@ const NOMBRE = { es: "Vibo Resumen - Asi Fue La Partida", en: "Vibo Resumen EN -
 type Lang = "es" | "en";
 type Datos = {
   edicion: string; jugaron: number; finalistas: number; boteCents: number;
-  pregunta: { texto: string; opciones: string[]; correcta: number; pctFallo: number | null } | null;
+  pregunta: { texto: string; opciones: string[]; correcta: number; pctFallo: number | null; imagen?: string } | null;
 };
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -60,6 +60,7 @@ function html(d: Datos, lang: Lang): string {
   #big2{font-size:84px;margin-top:10px}
   #tumbo{font-size:40px;color:#ffd166;letter-spacing:4px;margin-bottom:40px}
   #preg{font-size:66px;font-weight:800;line-height:1.15;margin-bottom:50px;text-wrap:balance}
+  #imagen{width:560px;height:420px;border-radius:28px;margin-bottom:50px}
   #ops{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
   .op{background:rgba(255,255,255,.08);border:3px solid rgba(255,255,255,.14);border-radius:28px;padding:34px 20px;font-size:44px;font-weight:800}
   .op span{display:block;font-size:26px;color:#8b93c7;margin-bottom:8px;letter-spacing:3px}
@@ -74,7 +75,7 @@ function html(d: Datos, lang: Lang): string {
   <div id="logo">V<b>I</b>B<b>O</b></div>
   <div class="pant on" id="p1"><div id="gancho" class="anton">${t.gancho}</div><div id="ed" class="anton">${esc(d.edicion)}</div></div>
   <div class="pant" id="p2"><div id="big" class="anton">${d.jugaron}</div><div id="big2" class="anton">${t.jugaron}</div></div>
-  ${q ? `<div class="pant" id="p3"><div id="tumbo" class="anton">${t.tumbo}</div><div id="preg">${esc(q.texto)}</div><div id="ops">${ops}</div>${q.pctFallo != null ? `<div id="fallo" class="anton">${t.fallo(q.pctFallo)}</div>` : ""}</div>` : ""}
+  ${q ? `<div class="pant" id="p3"><div id="tumbo" class="anton">${t.tumbo}</div><div id="preg">${esc(q.texto)}</div>${q.imagen ? `<img id="imagen" src="${esc(q.imagen)}" alt="">` : ""}<div id="ops">${ops}</div>${q.pctFallo != null ? `<div id="fallo" class="anton">${t.fallo(q.pctFallo)}</div>` : ""}</div>` : ""}
   <div class="pant" id="p4"><div id="fin1" class="anton">${t.final(d.finalistas)}</div><div id="fin2" class="anton">${d.boteCents > 0 ? t.reparto(euros(d.boteCents, lang)) : t.sinReparto}</div></div>
   <div class="pant" id="negro"><div id="cierre"><div class="c1 anton">${t.c1}</div><div class="c2 anton">${t.c2}</div><div class="c3 anton">V<b>I</b>B<b>O</b></div></div></div>
 <script>
@@ -127,6 +128,8 @@ async function datosReales(): Promise<Datos | null> {
     opciones: lang === "en" ? (peor.opciones_en ?? peor.opciones) : peor.opciones,
     correcta: peor.correcta,
     pctFallo: (peor.total_respuestas ?? 0) >= 10 ? Math.round(((peor.total_respuestas - peor.total_correctas) / peor.total_respuestas) * 100) : null,
+    // Pregunta de bandera (25 sep 2026): la bandera, ya pública.
+    ...(typeof peor.imagen === "string" ? { imagen: `${vibo}${peor.imagen}` } : {}),
   } : null;
   return { edicion: game.edicion, jugaron: game.inscritos_total, finalistas: finalistas ?? 0, boteCents: repartido, pregunta: pregunta("es"), ...( { _en: pregunta("en") } as any) };
 }

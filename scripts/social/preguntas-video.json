@@ -3712,6 +3712,193 @@
    "tags": "#actualidad #papa",
    "tags_en": "#news #pope",
    "actualidad": "2026-09-23"
+  },
+  {
+   "id": "f109",
+   "gancho": "Si viste la final, esta es fácil",
+   "texto": "¿Quién le dio el pase a Ferran Torres en el gol de la final del Mundial 2026?",
+   "opciones": [
+    "Lamine Yamal",
+    "Nico Williams",
+    "Pedri",
+    "Mikel Oyarzabal"
+   ],
+   "correcta": 1,
+   "nota": "Nico Williams, tras un centro de Lamine Yamal. Minuto 106.",
+   "enBanco": false,
+   "texto_en": "Who assisted Ferran Torres's goal in the 2026 World Cup final?",
+   "opciones_en": [
+    "Lamine Yamal",
+    "Nico Williams",
+    "Pedri",
+    "Mikel Oyarzabal"
+   ],
+   "nota_en": "Nico Williams, after a cross from Lamine Yamal. Minute 106.",
+   "gancho_en": "If you watched the final, this is easy",
+   "ganchos": [
+    "Si viste la final, esta es fácil"
+   ],
+   "ganchos_en": [
+    "If you watched the final, this is easy"
+   ],
+   "tags": "#futbol #mundial2026 #seleccion",
+   "tags_en": "#football #worldcup2026",
+   "actualidad": "2026-09-25"
+  },
+  {
+   "id": "f110",
+   "gancho": "Esto no te lo esperas",
+   "texto": "¿Cuántas veces más caliente que la superficie del Sol puede estar un rayo?",
+   "opciones": [
+    "Igual",
+    "2 veces",
+    "5 veces",
+    "100 veces"
+   ],
+   "correcta": 2,
+   "nota": "Unas 5 veces: un rayo llega a unos 30.000 °C; la superficie del Sol, a unos 5.500 °C.",
+   "enBanco": false,
+   "texto_en": "How many times hotter than the surface of the Sun can a lightning bolt be?",
+   "opciones_en": [
+    "The same",
+    "2 times",
+    "5 times",
+    "100 times"
+   ],
+   "nota_en": "About 5 times: lightning reaches about 30,000 °C; the Sun’s surface, about 5,500 °C.",
+   "gancho_en": "You won’t expect this one",
+   "ganchos": [
+    "Esto no te lo esperas"
+   ],
+   "ganchos_en": [
+    "You won’t expect this one"
+   ],
+   "tags": "#rayos #tormenta",
+   "tags_en": "#lightning #storm"
+  },
+  {
+   "id": "f111",
+   "gancho": "Casi nadie lo sitúa bien",
+   "texto": "¿En qué estado de Estados Unidos está el volcán Kilauea?",
+   "opciones": [
+    "Alaska",
+    "Hawái",
+    "California",
+    "Washington"
+   ],
+   "correcta": 1,
+   "nota": "Hawái. Es uno de los volcanes más activos del mundo.",
+   "enBanco": false,
+   "texto_en": "In which US state is the Kilauea volcano?",
+   "opciones_en": [
+    "Alaska",
+    "Hawaii",
+    "California",
+    "Washington"
+   ],
+   "nota_en": "Hawaii. It is one of the most active volcanoes in the world.",
+   "gancho_en": "Almost nobody places it right",
+   "ganchos": [
+    "Casi nadie lo sitúa bien"
+   ],
+   "ganchos_en": [
+    "Almost nobody places it right"
+   ],
+   "tags": "#volcanes #geografia",
+   "tags_en": "#volcano #geography"
+  },
+  {
+   "id": "f112",
+   "gancho": "El rey de la selva… o no",
+   "texto": "En una manada de leones, ¿quién hace la mayor parte de la caza?",
+   "opciones": [
+    "Los machos",
+    "Las hembras",
+    "Los cachorros",
+    "Todos por igual"
+   ],
+   "correcta": 1,
+   "nota": "Las leonas. Cazan en grupo; el macho defiende el territorio.",
+   "enBanco": false,
+   "texto_en": "In a pride of lions, who does most of the hunting?",
+   "opciones_en": [
+    "The males",
+    "The females",
+    "The cubs",
+    "All equally"
+   ],
+   "nota_en": "The lionesses. They hunt as a team; the male defends the territory.",
+   "gancho_en": "King of the jungle… or not",
+   "ganchos": [
+    "El rey de la selva… o no"
+   ],
+   "ganchos_en": [
+    "King of the jungle… or not"
+   ],
+   "tags": "#leones #animales",
+   "tags_en": "#lions #animals"
+  },
+  {
+   "id": "f113",
+   "gancho": "La del norte la conoce todo el mundo",
+   "texto": "¿Cómo se llama la aurora que se ve en el hemisferio sur?",
+   "opciones": [
+    "Aurora boreal",
+    "Aurora austral",
+    "Aurora polar",
+    "Aurora solar"
+   ],
+   "correcta": 1,
+   "nota": "Aurora austral. La del norte es la boreal.",
+   "enBanco": false,
+   "texto_en": "What is the aurora seen in the Southern Hemisphere called?",
+   "opciones_en": [
+    "Aurora borealis",
+    "Aurora australis",
+    "Polar aurora",
+    "Solar aurora"
+   ],
+   "nota_en": "Aurora australis. The northern one is the borealis.",
+   "gancho_en": "Everyone knows the northern one",
+   "ganchos": [
+    "La del norte la conoce todo el mundo"
+   ],
+   "ganchos_en": [
+    "Everyone knows the northern one"
+   ],
+   "tags": "#aurora #ciencia",
+   "tags_en": "#aurora #science"
+  },
+  {
+   "id": "f114",
+   "gancho": "Casi todo el mundo falla esta",
+   "texto": "¿De qué está hecho el esqueleto de un tiburón?",
+   "opciones": [
+    "Hueso",
+    "Cartílago",
+    "Queratina",
+    "Coral"
+   ],
+   "correcta": 1,
+   "nota": "Cartílago, como tu nariz y tus orejas. No tiene ni un hueso.",
+   "enBanco": false,
+   "texto_en": "What is a shark’s skeleton made of?",
+   "opciones_en": [
+    "Bone",
+    "Cartilage",
+    "Keratin",
+    "Coral"
+   ],
+   "nota_en": "Cartilage, like your nose and ears. Not a single bone.",
+   "gancho_en": "Almost everyone gets this wrong",
+   "ganchos": [
+    "Casi todo el mundo falla esta"
+   ],
+   "ganchos_en": [
+    "Almost everyone gets this wrong"
+   ],
+   "tags": "#tiburones #animales",
+   "tags_en": "#sharks #animals"
   }
  ]
 }
