@@ -168,7 +168,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
       ? (es ? "¿Hasta cuál llegaste? Comenta 1, 2 o 3 👇" : "How far did you get? Comment 1, 2 or 3 👇")
       : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
     // 26 sep 2026: ya no cobran siempre 5 (premios según apuntados, reglas.ts).
-    const quien = bote ? (es ? " Cuanto más aguantas, más cobras." : " The longer you last, the more you get.") : "";
+    const quien = bote ? (es ? " Los que más aguantan, cobran." : " Those who last longest get paid.") : "";
     return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
   }
   if (v.tipo === "resumen") return es ? `Así fue la partida del sábado. Datos reales. ${cita}` : `How Saturday's game went. Real numbers. ${cita}`;
@@ -442,7 +442,7 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
   const corto = base
     .replace(/\s*\([^)]*\)/, "")
     .replace(/¿La sabías\?\s*|Did you know it\?\s*/g, "")
-    .replace(/\s*(Para los 5 mejores\.|Top 5 split it\.|Cuantos más jugáis, más premiados\.|More players, more winners\.|Cuanto más aguantas, más cobras\.|The longer you last, the more you get\.)/g, "")
+    .replace(/\s*(Para los 5 mejores\.|Top 5 split it\.|Cuantos más jugáis, más premiados\.|More players, more winners\.|Los que más aguantan, cobran\.|Those who last longest get paid\.)/g, "")
     .replace(/\s*(Sábado|Saturday)[^.?!]*$/, "")
     .trim();
   // Cada red lleva su ?o= (§ migración 047): así /redes sabe qué red trae gente.
@@ -456,8 +456,8 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     // 24 sep 2026 (recorrido "como un desconocido"): "Busca VIBO en la App
     // Store" dejaba fuera a Android (3 de cada 4 móviles en España): la web
     // se juega desde el navegador del móvil. Con dominio propio, URL_WEB.
-    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. The longer you last, the more you get." : "Gratis. Cuanto más aguantas, más cobras."} ${cuandoCorto}\n${en ? `iPhone: search “VIBO” on the App Store. Android: ${URL_WEB}` : `iPhone: busca «VIBO» en la App Store. Android: ${URL_WEB}`}\n${rotados.slice(0, 4).join(" ")}`.trim() };
-    case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. The longer you last, the more you get." : "Gratis. Cuanto más aguantas, más cobras."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
+    case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Those who last longest get paid." : "Gratis. Los que más aguantan, cobran."} ${cuandoCorto}\n${en ? `iPhone: search “VIBO” on the App Store. Android: ${URL_WEB}` : `iPhone: busca «VIBO» en la App Store. Android: ${URL_WEB}`}\n${rotados.slice(0, 4).join(" ")}`.trim() };
+    case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Those who last longest get paid." : "Gratis. Los que más aguantan, cobran."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
     case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "x": {
       // X cuenta distinto (24 sep 2026: tres rechazos por "más de 280"): el €
