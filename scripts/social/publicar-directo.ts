@@ -134,7 +134,10 @@ async function publicarYoutube(mp4: string, titulo: string, texto: string, en: b
  * pista se elige por el nombre del vídeo (siempre la misma para ese vídeo),
  * a volumen medio y con fundido al final. Si algo falla, sube el original.
  */
+// 28 sep 2026 (fundador): música desactivada. Para volver a ponerla, true.
+const MUSICA_ACTIVA = false;
 function conMusica(mp4: string): string {
+  if (!MUSICA_ACTIVA) return mp4;
   try {
     const { execFileSync, spawnSync } = require("child_process");
     let ffmpeg = "ffmpeg";
