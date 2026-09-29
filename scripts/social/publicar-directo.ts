@@ -63,7 +63,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import {
-  planificar, textoPara, fmtMadrid as fmt, RITMO, langDeVideo, REDES_BUFFER, type Red, type Fila, type Publicado, type Estado,
+  planificar, textoPara, fmtMadrid as fmt, RITMO, langDeVideo, REDES_BUFFER, type Red, type Fila, type Publicado, type Estado, URL_APP,
 } from "../../src/lib/redes";
 
 const CARPETA = __dirname;
@@ -109,7 +109,11 @@ async function publicarYoutube(mp4: string, titulo: string, texto: string, en: b
   const status = programado
     ? { privacyStatus: "private", publishAt: cuando!.toISOString(), selfDeclaredMadeForKids: false }
     : { privacyStatus: "public", selfDeclaredMadeForKids: false };
-  const meta = { snippet: { title: titulo, description: texto, categoryId: "24", defaultLanguage: en ? "en" : "es" }, status };
+  // 29 sep 2026 (fundador): en los Shorts casi nadie llegaba a la app (12 visitas desde
+  // YouTube con miles de reproducciones). El enlace, lo primero y completo (https://, así
+  // YouTube lo convierte en enlace) y con su origen para contarlo.
+  const enlace = `👉 ${en ? "Play free" : "Juega gratis"}: https://${URL_APP}?o=yt-${en ? "en" : "es"}`;
+  const meta = { snippet: { title: titulo, description: `${enlace}\n\n${texto}`, categoryId: "24", defaultLanguage: en ? "en" : "es" }, status };
   const inicio = await fetch("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", {
     method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json", "x-upload-content-type": "video/mp4", "x-upload-content-length": String(bytes.length) }, body: JSON.stringify(meta) });
   if (!inicio.ok) throw new Error(`youtube init ${inicio.status} ${await inicio.text()}`);
