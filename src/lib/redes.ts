@@ -18,7 +18,11 @@ export type Lang = "es" | "en";
 // cta (25 sep 2026): la llamada a comentar propia de cada formato de vídeo (scripts/social/formatos.ts).
 export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string; cta?: string };
 export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linkedin" | "threads" | "bluesky";
-export const REDES: Red[] = ["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"];
+// 29 sep 2026 (fundador: "paramos las que no están ni activadas"; TikTok lo sube él a mano):
+// el robot solo publica en Instagram, YouTube y X. TikTok daba 0 visitas con lo automático y
+// Facebook, LinkedIn, Threads y Bluesky perdían el 100 % de las publicaciones.
+export const REDES_PARADAS: Red[] = ["tiktok", "facebook", "linkedin", "threads", "bluesky"];
+export const REDES: Red[] = (["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"] as Red[]).filter((r) => !REDES_PARADAS.includes(r));
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
 export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky", "x"];
 
