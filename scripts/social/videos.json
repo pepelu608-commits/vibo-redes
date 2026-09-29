@@ -430,7 +430,8 @@
       "mecanica": "purga",
       "lang": "es",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 46 - POV Eliminado.mp4",
@@ -461,7 +462,8 @@
       "mecanica": "grow",
       "lang": "es",
       "tipo": "bote",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 50 - Duelo Pareja.mp4",
@@ -476,7 +478,8 @@
       "mecanica": "ladder",
       "lang": "es",
       "tipo": "bote",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 52 - El Comodin.mp4",
@@ -499,56 +502,64 @@
       "mecanica": "nearmiss",
       "lang": "es",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 55 EN - So Close.mp4",
       "mecanica": "nearmiss",
       "lang": "en",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 56 - Muerte Subita.mp4",
       "mecanica": "suddendeath",
       "lang": "es",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 57 EN - Sudden Death.mp4",
       "mecanica": "suddendeath",
       "lang": "en",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 58 - El Minuto De Antes.mp4",
       "mecanica": "ritual",
       "lang": "es",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 59 EN - The Final Minute.mp4",
       "mecanica": "ritual",
       "lang": "en",
       "tipo": "ritual",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 60 - Cuantos Mas Mas Bote.mp4",
       "mecanica": "grow",
       "lang": "es",
       "tipo": "bote",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Ad 61 EN - More Players Bigger Pot.mp4",
       "mecanica": "grow",
       "lang": "en",
       "tipo": "bote",
-      "pregunta": null
+      "pregunta": null,
+      "activo": false
     },
     {
       "file": "Vibo Resumen - Asi Fue La Partida.mp4",
@@ -556,7 +567,8 @@
       "lang": "es",
       "tipo": "resumen",
       "pregunta": null,
-      "tags": "#resultados"
+      "tags": "#resultados",
+      "activo": false
     },
     {
       "file": "Vibo Resumen EN - How It Went.mp4",
@@ -564,7 +576,8 @@
       "lang": "en",
       "tipo": "resumen",
       "pregunta": null,
-      "tags": "#results"
+      "tags": "#results",
+      "activo": false
     },
     {
       "file": "Vibo Repeticion - La Partida Pregunta A Pregunta.mp4",
@@ -572,7 +585,8 @@
       "lang": "es",
       "tipo": "repeticion",
       "pregunta": null,
-      "tags": "#resultados #concurso"
+      "tags": "#resultados #concurso",
+      "activo": false
     },
     {
       "file": "Vibo Repeticion EN - The Whole Game.mp4",
@@ -580,7 +594,8 @@
       "lang": "en",
       "tipo": "repeticion",
       "pregunta": null,
-      "tags": "#results #quizshow"
+      "tags": "#results #quizshow",
+      "activo": false
     },
     {
       "file": "Fab f01a - Que pais tiene mas.mp4",
