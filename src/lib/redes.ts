@@ -151,10 +151,13 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
   // sábado" (daba a entender 65 € el día 17). Premio del sábado + ligas aparte.
+  // 29 sep 2026 (fundador: "le daría importancia a los premios porque no es lo
+  // común, es lo que nos va a diferenciar"): 🏆 y la cifra, lo primero que se lee.
+  // El paréntesis de la temporada se cae solo en TikTok/IG (texto corto).
   const dinero = bote
     ? es
-      ? `${bote} de premio ${cp.frase}${mes ? `, y ${mes} en premios esta temporada` : ""}.`
-      : `${bote} prize ${cp.frase}${mes ? `, and ${mes} in prizes this season` : ""}.`
+      ? `🏆 ${bote} en premios ${cp.frase}${mes ? ` (${mes} esta temporada)` : ""}.`
+      : `🏆 ${bote} in prizes ${cp.frase}${mes ? ` (${mes} this season)` : ""}.`
     : "";
   // Llamada a comentar (15 sep 2026): los comentarios son lo que más empuja
   // un vídeo en TikTok/IG. En "misterio" no hay respuesta en el vídeo: se
@@ -170,10 +173,14 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
       ? (es ? "Comenta cuántas has acertado: 0, 1, 2 o 3 👇" : "Comment your score: 0, 1, 2 or 3 👇")
       : v.mecanica === "fabrica-escalera"
       ? (es ? "¿Hasta cuál llegaste? Comenta 1, 2 o 3 👇" : "How far did you get? Comment 1, 2 or 3 👇")
-      : (es ? "¿La sabías? Dilo en comentarios." : "Did you know it? Say so in the comments.");
+      : v.mecanica === "real-historia"
+      ? (es ? "¿Tú habrías llegado hasta aquí? Comenta 👇" : "Would you have made it this far? Comment 👇")
+      : (es ? "Comenta qué dijiste tú 👇" : "Comment what you picked 👇");
     // 26 sep 2026: ya no cobran siempre 5 (premios según apuntados, reglas.ts).
     const quien = bote ? (es ? " Los que más aguantan, cobran." : " Those who last longest get paid.") : "";
-    return `${dinero} ${v.pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
+    // La pregunta del vídeo va en minúsculas (estilo TikTok); en el pie, con mayúscula.
+    const pregunta = v.pregunta.replace(/^(¿?)(\p{L})/u, (_m, a: string, b: string) => a + b.toUpperCase());
+    return `${dinero} ${pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
   }
   if (v.tipo === "resumen") return es ? `Así fue la partida del sábado. Datos reales. ${cita}` : `How Saturday's game went. Real numbers. ${cita}`;
   if (v.tipo === "repeticion") return es ? `La partida del sábado, pregunta a pregunta. ¿Hasta dónde habrías llegado tú? ${cita}` : `Saturday's game, question by question. How far would you have got? ${cita}`;
