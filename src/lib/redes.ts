@@ -85,10 +85,7 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   const cp = cuandoPartida(empiezaEn, v.lang);
   const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM CET · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
-  // 29 sep 2026: sin el total de la temporada. En octubre (temporada 0) las ligas
-  // no tienen premio: "65 € esta temporada" no era verdad. Solo el premio del sábado.
-  void mesCents;
-  const mes = "";
+  const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
   // sábado" (daba a entender 65 € el día 17). Premio del sábado + ligas aparte.
   // 29 sep 2026 (fundador: "le daría importancia a los premios porque no es lo
