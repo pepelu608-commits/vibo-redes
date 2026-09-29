@@ -1,5 +1,5 @@
 {
-  "comentario": "Catálogo de los MP4 promocionales (1080x1920, sin sonido). 'file' = nombre del MP4 exportado en la carpeta videos/. 'tipo': pregunta | bote | ritual | countdown | promo. 'pregunta' alimenta el caption; null = caption genérico. Ad 14 y Ad 18 se llaman 'Top 1-' en disco (guion incluido). Los Ads 45-51 se fabrican en casa: social/videos-src/*.html + scripts/grabar-videos.ts.",
+  "comentario": "Catálogo de los MP4 promocionales (1080x1920, sin sonido). 'file' = nombre del MP4 exportado en la carpeta videos/. 'tipo': pregunta | bote | ritual | countdown | promo. 'pregunta' alimenta el caption; null = caption genérico. Ad 14 y Ad 18 se llaman 'Top 1-' en disco (guion incluido). Los Ads 45-51 se fabrican en casa: social/videos-src/*.html + scripts/grabar-videos.ts. 29 sep 2026 (fundador: 'el formato tipo videojuego no funciona y parece para niños'): fabrica-* y formato-* desactivados; solo reales.",
   "videos": [
     {
       "file": "Vibo Ad 1 - Desierto.mp4",
@@ -591,7 +591,8 @@
       "id": "f01",
       "variante": "a",
       "gancho": "No contestes hasta que acabe el tiempo",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f01b - Que pais tiene mas.mp4",
@@ -628,7 +629,8 @@
       "id": "f01",
       "variante": "a",
       "gancho": "Don't answer until the timer ends",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f01b EN - Which country has the.mp4",
@@ -665,7 +667,8 @@
       "id": "f02",
       "variante": "a",
       "gancho": "Mi madre la acertó. Yo no.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f02b - Que instrumento tiene 47.mp4",
@@ -702,7 +705,8 @@
       "id": "f02",
       "variante": "a",
       "gancho": "My mum got it. I didn't.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f02b EN - Which instrument has 47.mp4",
@@ -739,7 +743,8 @@
       "id": "f03",
       "variante": "a",
       "gancho": "Si dudas, ya has perdido",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f03b - Cuantos lados tiene un.mp4",
@@ -776,7 +781,8 @@
       "id": "f03",
       "variante": "a",
       "gancho": "If you hesitate, you've lost",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f03b EN - How many sides does.mp4",
@@ -891,7 +897,8 @@
       "id": "f05",
       "variante": "a",
       "gancho": "Casi todos dicen Danubio",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f05b - Cual es el rio.mp4",
@@ -928,7 +935,8 @@
       "id": "f05",
       "variante": "a",
       "gancho": "Almost everyone says Danube",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f05b EN - What is the longest.mp4",
@@ -1043,7 +1051,8 @@
       "id": "f07",
       "variante": "a",
       "gancho": "Lee hasta el final",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f07b - Cual de estos NO.mp4",
@@ -1080,7 +1089,8 @@
       "id": "f07",
       "variante": "a",
       "gancho": "Read to the end",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f07b EN - Which of these is.mp4",
@@ -1117,7 +1127,8 @@
       "id": "f08",
       "variante": "a",
       "gancho": "Parece fácil",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f08b - Cual es la capital.mp4",
@@ -1154,7 +1165,8 @@
       "id": "f08",
       "variante": "a",
       "gancho": "Looks easy",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f08b EN - What is the capital.mp4",
@@ -1191,7 +1203,8 @@
       "id": "f09",
       "variante": "a",
       "gancho": "Tres seguidas o no vales",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f09b - Cual es la capital.mp4",
@@ -1228,7 +1241,8 @@
       "id": "f09",
       "variante": "a",
       "gancho": "Three in a row or you're out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f09b EN - What is the capital.mp4",
@@ -1343,7 +1357,8 @@
       "id": "f11",
       "variante": "a",
       "gancho": "Esta la fallan los listos",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f11b - Cuantos planetas del sistema.mp4",
@@ -1380,7 +1395,8 @@
       "id": "f11",
       "variante": "a",
       "gancho": "The smart ones get this wrong",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f11b EN - How many planets in.mp4",
@@ -1456,7 +1472,8 @@
       "id": "f13",
       "variante": "a",
       "gancho": "Contesta antes que el de al lado",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f13a EN - In which year did.mp4",
@@ -1467,7 +1484,8 @@
       "id": "f13",
       "variante": "a",
       "gancho": "Answer before the person next to you",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f14a - Cuantos huesos tiene un.mp4",
@@ -1504,7 +1522,8 @@
       "id": "f15",
       "variante": "a",
       "gancho": "No leas las opciones. Contesta.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f15a EN - What is the largest.mp4",
@@ -1515,7 +1534,8 @@
       "id": "f15",
       "variante": "a",
       "gancho": "Don't read the options. Answer.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f16a - Que gas necesitan las.mp4",
@@ -1552,7 +1572,8 @@
       "id": "f17",
       "variante": "a",
       "gancho": "¿Aguantas más que yo?",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f17a EN - How many strings does.mp4",
@@ -1563,7 +1584,8 @@
       "id": "f17",
       "variante": "a",
       "gancho": "Can you last longer than me?",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f18a - Cual de estos paises.mp4",
@@ -1600,7 +1622,8 @@
       "id": "f19",
       "variante": "a",
       "gancho": "Parece fácil. No lo es.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f19a EN - How many minutes are.mp4",
@@ -1611,7 +1634,8 @@
       "id": "f19",
       "variante": "a",
       "gancho": "Looks easy. It isn't.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f20a - Que animal es el.mp4",
@@ -1648,7 +1672,8 @@
       "id": "f21",
       "variante": "a",
       "gancho": "Esta la fallan los listos",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f21a EN - What is the largest.mp4",
@@ -1659,7 +1684,8 @@
       "id": "f21",
       "variante": "a",
       "gancho": "The smart ones get this wrong",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f22a - Cuantas veces cabe la.mp4",
@@ -1696,7 +1722,8 @@
       "id": "f23",
       "variante": "a",
       "gancho": "Si dudas, ya has perdido",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f23a EN - Which continent is Turkey.mp4",
@@ -1707,7 +1734,8 @@
       "id": "f23",
       "variante": "a",
       "gancho": "If you hesitate, you've lost",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f24a - Que idioma tiene mas.mp4",
@@ -1744,7 +1772,8 @@
       "id": "f25",
       "variante": "a",
       "gancho": "Mira bien. Tienes 6 segundos.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f25a EN - What is the most.mp4",
@@ -1755,7 +1784,8 @@
       "id": "f25",
       "variante": "a",
       "gancho": "Look closely. 6 seconds.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f26a - Cuantos dientes tiene un.mp4",
@@ -1792,7 +1822,8 @@
       "id": "f27",
       "variante": "a",
       "gancho": "Casi todos la fallan",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f27a EN - Which country produces the.mp4",
@@ -1803,7 +1834,8 @@
       "id": "f27",
       "variante": "a",
       "gancho": "Almost everyone gets this wrong",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f28a - Cuantos corazones tiene un.mp4",
@@ -1840,7 +1872,8 @@
       "id": "f29",
       "variante": "a",
       "gancho": "No contestes hasta que acabe el tiempo",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f29a EN - What is the most.mp4",
@@ -1851,7 +1884,8 @@
       "id": "f29",
       "variante": "a",
       "gancho": "Don't answer until the timer ends",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f30a - De que color es.mp4",
@@ -1888,7 +1922,8 @@
       "id": "f31",
       "variante": "a",
       "gancho": "Pregunta 1. La de calentar.",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab f31a EN - Which is the largest.mp4",
@@ -1899,7 +1934,8 @@
       "id": "f31",
       "variante": "a",
       "gancho": "Question 1. The warm-up.",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab f32a - Cual es el planeta.mp4",
@@ -1936,7 +1972,8 @@
       "id": "f33",
       "variante": "a",
       "gancho": "Biología de instituto",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f33a EN - What is the longest.mp4",
@@ -1947,7 +1984,8 @@
       "id": "f33",
       "variante": "a",
       "gancho": "High-school biology",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f34a - Quien pinto La noche.mp4",
@@ -1984,7 +2022,8 @@
       "id": "f35",
       "variante": "a",
       "gancho": "La más fácil del sábado",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f35a EN - What is the largest.mp4",
@@ -1995,7 +2034,8 @@
       "id": "f35",
       "variante": "a",
       "gancho": "The easiest one on Saturday",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f36a - En que pais nacio.mp4",
@@ -2032,7 +2072,8 @@
       "id": "f37",
       "variante": "a",
       "gancho": "No es Mónaco",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f37a EN - What is the smallest.mp4",
@@ -2043,7 +2084,8 @@
       "id": "f37",
       "variante": "a",
       "gancho": "It's not Monaco",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f38a - Cuantos jugadores tiene un.mp4",
@@ -2080,7 +2122,8 @@
       "id": "f39",
       "variante": "a",
       "gancho": "Los de ciencias, a ver",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f39a EN - Which organ produces insulin.mp4",
@@ -2091,7 +2134,8 @@
       "id": "f39",
       "variante": "a",
       "gancho": "Science people, let's see",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f40a - En que ano cayo.mp4",
@@ -2128,7 +2172,8 @@
       "id": "f41",
       "variante": "a",
       "gancho": "No es el yuan",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f41a EN - What is the currency.mp4",
@@ -2139,7 +2184,8 @@
       "id": "f41",
       "variante": "a",
       "gancho": "It's not the yuan",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f42a - Cual es el metal.mp4",
@@ -2176,7 +2222,8 @@
       "id": "f43",
       "variante": "a",
       "gancho": "Literatura. Sin pensar.",
-      "tags": "#literatura"
+      "tags": "#literatura",
+      "activo": false
     },
     {
       "file": "Fab f43a EN - Which writer created Sherlock.mp4",
@@ -2187,7 +2234,8 @@
       "id": "f43",
       "variante": "a",
       "gancho": "Literature. No thinking.",
-      "tags": "#books"
+      "tags": "#books",
+      "activo": false
     },
     {
       "file": "Fab f44a - Cuantos lados tiene un.mp4",
@@ -2224,7 +2272,8 @@
       "id": "f45",
       "variante": "a",
       "gancho": "Si fallas esta, no juegues",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f45a EN - In which city is.mp4",
@@ -2235,7 +2284,8 @@
       "id": "f45",
       "variante": "a",
       "gancho": "Miss this and don't bother",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f46a - Cual es el desierto.mp4",
@@ -2272,7 +2322,8 @@
       "id": "f47",
       "variante": "a",
       "gancho": "Salud en 6 segundos",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f47a EN - Which vitamin does skin.mp4",
@@ -2283,7 +2334,8 @@
       "id": "f47",
       "variante": "a",
       "gancho": "Health in 6 seconds",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f48a - Cuantas teclas tiene un.mp4",
@@ -2320,7 +2372,8 @@
       "id": "f49",
       "variante": "a",
       "gancho": "La de calentar",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f49a EN - Which country is shaped.mp4",
@@ -2331,7 +2384,8 @@
       "id": "f49",
       "variante": "a",
       "gancho": "The warm-up",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f50a - Cual es el idioma.mp4",
@@ -2368,7 +2422,8 @@
       "id": "f51",
       "variante": "a",
       "gancho": "Sin calculadora",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f51a EN - How many minutes are.mp4",
@@ -2379,7 +2434,8 @@
       "id": "f51",
       "variante": "a",
       "gancho": "No calculator",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f52a - Que animal es el.mp4",
@@ -2416,7 +2472,8 @@
       "id": "f53",
       "variante": "a",
       "gancho": "La que enfada a medio mundo",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f53a EN - What is the longest.mp4",
@@ -2427,7 +2484,8 @@
       "id": "f53",
       "variante": "a",
       "gancho": "The one that starts arguments",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f54a - Que gas es el.mp4",
@@ -2464,7 +2522,8 @@
       "id": "f55",
       "variante": "a",
       "gancho": "Historia. 6 segundos.",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f55a EN - In what year did.mp4",
@@ -2475,7 +2534,8 @@
       "id": "f55",
       "variante": "a",
       "gancho": "History. 6 seconds.",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f56a - Cual es la capital.mp4",
@@ -2538,7 +2598,8 @@
       "id": "f57",
       "variante": "a",
       "gancho": "Un bebé tiene más",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f57a EN - Roughly how many bones.mp4",
@@ -2549,7 +2610,8 @@
       "id": "f57",
       "variante": "a",
       "gancho": "A baby has more",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f58a - Que instrumento mide la.mp4",
@@ -2586,7 +2648,8 @@
       "id": "f59",
       "variante": "a",
       "gancho": "El pequeño, no el grande",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f59a EN - Which is the smallest.mp4",
@@ -2597,7 +2660,8 @@
       "id": "f59",
       "variante": "a",
       "gancho": "Smallest, not biggest",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f60a - Quien escribio Cien anos.mp4",
@@ -2634,7 +2698,8 @@
       "id": "f61",
       "variante": "a",
       "gancho": "La más fácil del sábado",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f61a EN - How many degrees are.mp4",
@@ -2645,7 +2710,8 @@
       "id": "f61",
       "variante": "a",
       "gancho": "The easiest one on Saturday",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f62a - Cual es la montana.mp4",
@@ -2682,7 +2748,8 @@
       "id": "f63",
       "variante": "a",
       "gancho": "Si fallas esta, cierra la app",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab f63a EN - Which planet is known.mp4",
@@ -2693,7 +2760,8 @@
       "id": "f63",
       "variante": "a",
       "gancho": "Miss this and close the app",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab f64a - Cuantos anos dura un.mp4",
@@ -2730,7 +2798,8 @@
       "id": "f65",
       "variante": "a",
       "gancho": "Turismo. 6 segundos.",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f65a EN - In which country is.mp4",
@@ -2741,7 +2810,8 @@
       "id": "f65",
       "variante": "a",
       "gancho": "Tourism. 6 seconds.",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f66a - Cual es el elemento.mp4",
@@ -2778,7 +2848,8 @@
       "id": "f67",
       "variante": "a",
       "gancho": "Animales. 6 segundos.",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f67a EN - Which animal lays the.mp4",
@@ -2789,7 +2860,8 @@
       "id": "f67",
       "variante": "a",
       "gancho": "Animals. 6 seconds.",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f68a - Cuantas cuerdas tiene una.mp4",
@@ -2826,7 +2898,8 @@
       "id": "f69",
       "variante": "a",
       "gancho": "Si fallas esta, no juegues",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f69a EN - Which sea borders Valencia.mp4",
@@ -2837,7 +2910,8 @@
       "id": "f69",
       "variante": "a",
       "gancho": "Miss this and don't bother",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f70a - Cuantos jugadores tiene un.mp4",
@@ -2874,7 +2948,8 @@
       "id": "f71",
       "variante": "a",
       "gancho": "Ya no es China",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f71a EN - Which country has the.mp4",
@@ -2885,7 +2960,8 @@
       "id": "f71",
       "variante": "a",
       "gancho": "It's not China anymore",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f72a - Que parte del ojo.mp4",
@@ -2922,7 +2998,8 @@
       "id": "f73",
       "variante": "a",
       "gancho": "Pregunta trampa",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f73a EN - On which continent is.mp4",
@@ -2933,7 +3010,8 @@
       "id": "f73",
       "variante": "a",
       "gancho": "Trick question",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f74a - Cual es el numero.mp4",
@@ -2970,7 +3048,8 @@
       "id": "f75",
       "variante": "a",
       "gancho": "Música clásica. 6 segundos.",
-      "tags": "#musica"
+      "tags": "#musica",
+      "activo": false
     },
     {
       "file": "Fab f75a EN - Which composer went deaf.mp4",
@@ -2981,7 +3060,8 @@
       "id": "f75",
       "variante": "a",
       "gancho": "Classical music. 6 seconds.",
-      "tags": "#music"
+      "tags": "#music",
+      "activo": false
     },
     {
       "file": "Fab f76a - Cual es el hueso.mp4",
@@ -3018,7 +3098,8 @@
       "id": "f77",
       "variante": "a",
       "gancho": "Historia. Sin pensar.",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f77a EN - Which country gave the.mp4",
@@ -3029,7 +3110,8 @@
       "id": "f77",
       "variante": "a",
       "gancho": "History. No thinking.",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f78a - Cuantos colores tiene el.mp4",
@@ -3066,7 +3148,8 @@
       "id": "f79",
       "variante": "a",
       "gancho": "Animales. 6 segundos.",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f79a EN - Which animal has the.mp4",
@@ -3077,7 +3160,8 @@
       "id": "f79",
       "variante": "a",
       "gancho": "Animals. 6 seconds.",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f80a - En que ano llego.mp4",
@@ -3114,7 +3198,8 @@
       "id": "f81",
       "variante": "a",
       "gancho": "Química de la ESO",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f81a EN - Which is the lightest.mp4",
@@ -3125,7 +3210,8 @@
       "id": "f81",
       "variante": "a",
       "gancho": "Secondary-school chemistry",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f82a - Cuantos dias tiene un.mp4",
@@ -3162,7 +3248,8 @@
       "id": "f83",
       "variante": "a",
       "gancho": "Cuanto más sabes, peor",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f83a EN - Which country has the.mp4",
@@ -3173,7 +3260,8 @@
       "id": "f83",
       "variante": "a",
       "gancho": "The more you know, the worse",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f84a - Cual es el organo.mp4",
@@ -3210,7 +3298,8 @@
       "id": "f85",
       "variante": "a",
       "gancho": "Si fallas esta, no juegues",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f85a EN - In which city is.mp4",
@@ -3221,7 +3310,8 @@
       "id": "f85",
       "variante": "a",
       "gancho": "Miss this and don't bother",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f86a - Cuantos segundos tiene un.mp4",
@@ -3258,7 +3348,8 @@
       "id": "f87",
       "variante": "a",
       "gancho": "Espacio. Sin pensar.",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab f87a EN - Which planet has the.mp4",
@@ -3269,7 +3360,8 @@
       "id": "f87",
       "variante": "a",
       "gancho": "Space. No thinking.",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab f88a - Cual es la lengua.mp4",
@@ -3306,7 +3398,8 @@
       "id": "f89",
       "variante": "a",
       "gancho": "Si fallas esta, cierra la app",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f89a EN - Which insect makes honey.mp4",
@@ -3317,7 +3410,8 @@
       "id": "f89",
       "variante": "a",
       "gancho": "Miss this and close the app",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f90a - Cual es el punto.mp4",
@@ -3354,7 +3448,8 @@
       "id": "f91",
       "variante": "a",
       "gancho": "No es Armstrong",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f91a EN - Who was the first.mp4",
@@ -3365,7 +3460,8 @@
       "id": "f91",
       "variante": "a",
       "gancho": "It's not Armstrong",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f92a - Cuantas patas tiene una.mp4",
@@ -3402,7 +3498,8 @@
       "id": "f93",
       "variante": "a",
       "gancho": "No es Zúrich",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f93a EN - What is the capital.mp4",
@@ -3413,7 +3510,8 @@
       "id": "f93",
       "variante": "a",
       "gancho": "It's not Zurich",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f94a - Que instrumento tiene teclas.mp4",
@@ -3450,7 +3548,8 @@
       "id": "f95",
       "variante": "a",
       "gancho": "La de calentar",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f95a EN - Which is the largest.mp4",
@@ -3461,7 +3560,8 @@
       "id": "f95",
       "variante": "a",
       "gancho": "The warm-up",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f96a - Cuantos lados iguales tiene.mp4",
@@ -3498,7 +3598,8 @@
       "id": "f97",
       "variante": "a",
       "gancho": "Pregunta trampa",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f97a EN - What kind of animal.mp4",
@@ -3509,7 +3610,8 @@
       "id": "f97",
       "variante": "a",
       "gancho": "Trick question",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f98a - En que pais se.mp4",
@@ -3546,7 +3648,8 @@
       "id": "f99",
       "variante": "a",
       "gancho": "Pregunta trampa",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab f99a EN - What is the closest.mp4",
@@ -3557,7 +3660,8 @@
       "id": "f99",
       "variante": "a",
       "gancho": "Trick question",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab f04aF - En que pais esta.mp4",
@@ -3568,7 +3672,8 @@
       "id": "f04",
       "variante": "a",
       "gancho": "La que me sacó del bote",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f04aF EN - Which country is Mount.mp4",
@@ -3579,7 +3684,8 @@
       "id": "f04",
       "variante": "a",
       "gancho": "The one that cost me the pot",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f06aF - Que elemento quimico tiene.mp4",
@@ -3590,7 +3696,8 @@
       "id": "f06",
       "variante": "a",
       "gancho": "Pregunta 10",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f06aF EN - Which chemical element has.mp4",
@@ -3601,7 +3708,8 @@
       "id": "f06",
       "variante": "a",
       "gancho": "Question 10",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f10aF - Cuantos anos tiene un.mp4",
@@ -3612,7 +3720,8 @@
       "id": "f10",
       "variante": "a",
       "gancho": "6 segundos. Igual que el sábado.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f10aF EN - How many years are.mp4",
@@ -3623,7 +3732,8 @@
       "id": "f10",
       "variante": "a",
       "gancho": "6 seconds. Same as Saturday.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f12aF - Que pais tiene la.mp4",
@@ -3634,7 +3744,8 @@
       "id": "f12",
       "variante": "a",
       "gancho": "Mira bien. Tienes 6 segundos.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f12aF EN - Whose flag is green.mp4",
@@ -3645,7 +3756,8 @@
       "id": "f12",
       "variante": "a",
       "gancho": "Look closely. 6 seconds.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f14aF - Cuantos huesos tiene un.mp4",
@@ -3656,7 +3768,8 @@
       "id": "f14",
       "variante": "a",
       "gancho": "Cuanto más sabes, peor",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f14aF EN - How many bones does.mp4",
@@ -3667,7 +3780,8 @@
       "id": "f14",
       "variante": "a",
       "gancho": "The more you know, the worse",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f16aF - Que gas necesitan las.mp4",
@@ -3678,7 +3792,8 @@
       "id": "f16",
       "variante": "a",
       "gancho": "La pregunta 7 me sacó del bote",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f16aF EN - Which gas do plants.mp4",
@@ -3689,7 +3804,8 @@
       "id": "f16",
       "variante": "a",
       "gancho": "Question 7 knocked me out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f18aF - Cual de estos paises.mp4",
@@ -3700,7 +3816,8 @@
       "id": "f18",
       "variante": "a",
       "gancho": "Si has dicho Bélgica, fuera",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f18aF EN - Which of these countries.mp4",
@@ -3711,7 +3828,8 @@
       "id": "f18",
       "variante": "a",
       "gancho": "If you said Belgium, you're out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f20aF - Que animal es el.mp4",
@@ -3722,7 +3840,8 @@
       "id": "f20",
       "variante": "a",
       "gancho": "Mi abuela la acertó",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f20aF EN - Which is the fastest.mp4",
@@ -3733,7 +3852,8 @@
       "id": "f20",
       "variante": "a",
       "gancho": "My grandma got it",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f22aF - Cuantas veces cabe la.mp4",
@@ -3744,7 +3864,8 @@
       "id": "f22",
       "variante": "a",
       "gancho": "Lee hasta el final",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f22aF EN - How many Earths fit.mp4",
@@ -3755,7 +3876,8 @@
       "id": "f22",
       "variante": "a",
       "gancho": "Read to the end",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f24aF - Que idioma tiene mas.mp4",
@@ -3766,7 +3888,8 @@
       "id": "f24",
       "variante": "a",
       "gancho": "Pregunta 10",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f24aF EN - Which language has the.mp4",
@@ -3777,7 +3900,8 @@
       "id": "f24",
       "variante": "a",
       "gancho": "Question 10",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f26aF - Cuantos dientes tiene un.mp4",
@@ -3788,7 +3912,8 @@
       "id": "f26",
       "variante": "a",
       "gancho": "Mi madre la acertó. Yo no.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f26aF EN - How many teeth does.mp4",
@@ -3799,7 +3924,8 @@
       "id": "f26",
       "variante": "a",
       "gancho": "My mum got it. I didn't.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f28aF - Cuantos corazones tiene un.mp4",
@@ -3810,7 +3936,8 @@
       "id": "f28",
       "variante": "a",
       "gancho": "La que me sacó del bote",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f28aF EN - How many hearts does.mp4",
@@ -3821,7 +3948,8 @@
       "id": "f28",
       "variante": "a",
       "gancho": "The one that cost me the pot",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f30aF - De que color es.mp4",
@@ -3832,7 +3960,8 @@
       "id": "f30",
       "variante": "a",
       "gancho": "Cuanto más sabes, peor",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f30aF EN - What colour is an.mp4",
@@ -3843,7 +3972,8 @@
       "id": "f30",
       "variante": "a",
       "gancho": "The more you know, the worse",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f32aF - Cual es el planeta.mp4",
@@ -3854,7 +3984,8 @@
       "id": "f32",
       "variante": "a",
       "gancho": "Espacio. Sin pensar.",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab f32aF EN - Which planet is closest.mp4",
@@ -3865,7 +3996,8 @@
       "id": "f32",
       "variante": "a",
       "gancho": "Space. No thinking.",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab f34aF - Quien pinto La noche.mp4",
@@ -3876,7 +4008,8 @@
       "id": "f34",
       "variante": "a",
       "gancho": "Arte. 6 segundos.",
-      "tags": "#arte"
+      "tags": "#arte",
+      "activo": false
     },
     {
       "file": "Fab f34aF EN - Who painted The Starry.mp4",
@@ -3887,7 +4020,8 @@
       "id": "f34",
       "variante": "a",
       "gancho": "Art. 6 seconds.",
-      "tags": "#art"
+      "tags": "#art",
+      "activo": false
     },
     {
       "file": "Fab f36aF - En que pais nacio.mp4",
@@ -3898,7 +4032,8 @@
       "id": "f36",
       "variante": "a",
       "gancho": "Música. Sin pensar.",
-      "tags": "#musica"
+      "tags": "#musica",
+      "activo": false
     },
     {
       "file": "Fab f36aF EN - In which country was.mp4",
@@ -3909,7 +4044,8 @@
       "id": "f36",
       "variante": "a",
       "gancho": "Music. No thinking.",
-      "tags": "#music"
+      "tags": "#music",
+      "activo": false
     },
     {
       "file": "Fab f38aF - Cuantos jugadores tiene un.mp4",
@@ -3920,7 +4056,8 @@
       "id": "f38",
       "variante": "a",
       "gancho": "Si fallas esta, cierra la app",
-      "tags": "#deporte"
+      "tags": "#deporte",
+      "activo": false
     },
     {
       "file": "Fab f38aF EN - How many players does.mp4",
@@ -3931,7 +4068,8 @@
       "id": "f38",
       "variante": "a",
       "gancho": "Miss this and close the app",
-      "tags": "#sports"
+      "tags": "#sports",
+      "activo": false
     },
     {
       "file": "Fab f40aF - En que ano cayo.mp4",
@@ -3942,7 +4080,8 @@
       "id": "f40",
       "variante": "a",
       "gancho": "Historia reciente",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f40aF EN - In what year did.mp4",
@@ -3953,7 +4092,8 @@
       "id": "f40",
       "variante": "a",
       "gancho": "Recent history",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f42aF - Cual es el metal.mp4",
@@ -3964,7 +4104,8 @@
       "id": "f42",
       "variante": "a",
       "gancho": "Química de la ESO",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f42aF EN - Which metal is liquid.mp4",
@@ -3975,7 +4116,8 @@
       "id": "f42",
       "variante": "a",
       "gancho": "Secondary-school chemistry",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f44aF - Cuantos lados tiene un.mp4",
@@ -3986,7 +4128,8 @@
       "id": "f44",
       "variante": "a",
       "gancho": "La señal de stop",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f44aF EN - How many sides does.mp4",
@@ -3997,7 +4140,8 @@
       "id": "f44",
       "variante": "a",
       "gancho": "The stop sign",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f46aF - Cual es el desierto.mp4",
@@ -4008,7 +4152,8 @@
       "id": "f46",
       "variante": "a",
       "gancho": "No es el Sáhara",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f46aF EN - What is the driest.mp4",
@@ -4019,7 +4164,8 @@
       "id": "f46",
       "variante": "a",
       "gancho": "It's not the Sahara",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f48aF - Cuantas teclas tiene un.mp4",
@@ -4030,7 +4176,8 @@
       "id": "f48",
       "variante": "a",
       "gancho": "Los músicos la saben",
-      "tags": "#musica"
+      "tags": "#musica",
+      "activo": false
     },
     {
       "file": "Fab f48aF EN - How many keys does.mp4",
@@ -4041,7 +4188,8 @@
       "id": "f48",
       "variante": "a",
       "gancho": "Musicians know this one",
-      "tags": "#music"
+      "tags": "#music",
+      "activo": false
     },
     {
       "file": "Fab f50aF - Cual es el idioma.mp4",
@@ -4052,7 +4200,8 @@
       "id": "f50",
       "variante": "a",
       "gancho": "Pregunta trampa",
-      "tags": "#idiomas"
+      "tags": "#idiomas",
+      "activo": false
     },
     {
       "file": "Fab f50aF EN - What is the official.mp4",
@@ -4063,7 +4212,8 @@
       "id": "f50",
       "variante": "a",
       "gancho": "Trick question",
-      "tags": "#languages"
+      "tags": "#languages",
+      "activo": false
     },
     {
       "file": "Fab f52aF - Que animal es el.mp4",
@@ -4074,7 +4224,8 @@
       "id": "f52",
       "variante": "a",
       "gancho": "Lo has visto mil veces",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f52aF EN - Which animal is the.mp4",
@@ -4085,7 +4236,8 @@
       "id": "f52",
       "variante": "a",
       "gancho": "You've seen it a thousand times",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f54aF - Que gas es el.mp4",
@@ -4096,7 +4248,8 @@
       "id": "f54",
       "variante": "a",
       "gancho": "No es oxígeno",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f54aF EN - Which gas is the.mp4",
@@ -4107,7 +4260,8 @@
       "id": "f54",
       "variante": "a",
       "gancho": "It's not oxygen",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f56aF - Cual es la capital.mp4",
@@ -4118,7 +4272,8 @@
       "id": "f56",
       "variante": "a",
       "gancho": "No es Estambul",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f56aF EN - What is the capital.mp4",
@@ -4129,7 +4284,8 @@
       "id": "f56",
       "variante": "a",
       "gancho": "It's not Istanbul",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f58aF - Que instrumento mide la.mp4",
@@ -4140,7 +4296,8 @@
       "id": "f58",
       "variante": "a",
       "gancho": "Los de ciencias, a ver",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f58aF EN - Which instrument measures atmospheric.mp4",
@@ -4151,7 +4308,8 @@
       "id": "f58",
       "variante": "a",
       "gancho": "Science people, let's see",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f60aF - Quien escribio Cien anos.mp4",
@@ -4162,7 +4320,8 @@
       "id": "f60",
       "variante": "a",
       "gancho": "Literatura. 6 segundos.",
-      "tags": "#literatura"
+      "tags": "#literatura",
+      "activo": false
     },
     {
       "file": "Fab f60aF EN - Who wrote One Hundred.mp4",
@@ -4173,7 +4332,8 @@
       "id": "f60",
       "variante": "a",
       "gancho": "Literature. 6 seconds.",
-      "tags": "#books"
+      "tags": "#books",
+      "activo": false
     },
     {
       "file": "Fab f62aF - Cual es la montana.mp4",
@@ -4184,7 +4344,8 @@
       "id": "f62",
       "variante": "a",
       "gancho": "No es el Matterhorn",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f62aF EN - What is the highest.mp4",
@@ -4195,7 +4356,8 @@
       "id": "f62",
       "variante": "a",
       "gancho": "It's not the Matterhorn",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f64aF - Cuantos anos dura un.mp4",
@@ -4206,7 +4368,8 @@
       "id": "f64",
       "variante": "a",
       "gancho": "Contesta sin pensar",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f64aF EN - How many years are.mp4",
@@ -4217,7 +4380,8 @@
       "id": "f64",
       "variante": "a",
       "gancho": "Answer without thinking",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f66aF - Cual es el elemento.mp4",
@@ -4228,7 +4392,8 @@
       "id": "f66",
       "variante": "a",
       "gancho": "Química. Sin pensar.",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f66aF EN - Which chemical element has.mp4",
@@ -4239,7 +4404,8 @@
       "id": "f66",
       "variante": "a",
       "gancho": "Chemistry. No thinking.",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f68aF - Cuantas cuerdas tiene una.mp4",
@@ -4250,7 +4416,8 @@
       "id": "f68",
       "variante": "a",
       "gancho": "Los músicos la saben",
-      "tags": "#musica"
+      "tags": "#musica",
+      "activo": false
     },
     {
       "file": "Fab f68aF EN - How many strings does.mp4",
@@ -4261,7 +4428,8 @@
       "id": "f68",
       "variante": "a",
       "gancho": "Musicians know this one",
-      "tags": "#music"
+      "tags": "#music",
+      "activo": false
     },
     {
       "file": "Fab f70aF - Cuantos jugadores tiene un.mp4",
@@ -4272,7 +4440,8 @@
       "id": "f70",
       "variante": "a",
       "gancho": "Deporte. Sin pensar.",
-      "tags": "#deporte"
+      "tags": "#deporte",
+      "activo": false
     },
     {
       "file": "Fab f70aF EN - How many players does.mp4",
@@ -4283,7 +4452,8 @@
       "id": "f70",
       "variante": "a",
       "gancho": "Sport. No thinking.",
-      "tags": "#sports"
+      "tags": "#sports",
+      "activo": false
     },
     {
       "file": "Fab f72aF - Que parte del ojo.mp4",
@@ -4294,7 +4464,8 @@
       "id": "f72",
       "variante": "a",
       "gancho": "Biología de instituto",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f72aF EN - Which part of the.mp4",
@@ -4305,7 +4476,8 @@
       "id": "f72",
       "variante": "a",
       "gancho": "High-school biology",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f74aF - Cual es el numero.mp4",
@@ -4316,7 +4488,8 @@
       "id": "f74",
       "variante": "a",
       "gancho": "Esta la fallan los listos",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f74aF EN - What is the smallest.mp4",
@@ -4327,7 +4500,8 @@
       "id": "f74",
       "variante": "a",
       "gancho": "The smart ones get this wrong",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f76aF - Cual es el hueso.mp4",
@@ -4338,7 +4512,8 @@
       "id": "f76",
       "variante": "a",
       "gancho": "Está en el oído",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f76aF EN - What is the smallest.mp4",
@@ -4349,7 +4524,8 @@
       "id": "f76",
       "variante": "a",
       "gancho": "It's in the ear",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f78aF - Cuantos colores tiene el.mp4",
@@ -4360,7 +4536,8 @@
       "id": "f78",
       "variante": "a",
       "gancho": "Cuéntalos. 6 segundos.",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f78aF EN - How many colours are.mp4",
@@ -4371,7 +4548,8 @@
       "id": "f78",
       "variante": "a",
       "gancho": "Count them. 6 seconds.",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f80aF - En que ano llego.mp4",
@@ -4382,7 +4560,8 @@
       "id": "f80",
       "variante": "a",
       "gancho": "La de primaria que se olvida",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f80aF EN - In what year did.mp4",
@@ -4393,7 +4572,8 @@
       "id": "f80",
       "variante": "a",
       "gancho": "The primary-school one you forgot",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f82aF - Cuantos dias tiene un.mp4",
@@ -4404,7 +4584,8 @@
       "id": "f82",
       "variante": "a",
       "gancho": "Contesta sin pensar",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f82aF EN - How many days are.mp4",
@@ -4415,7 +4596,8 @@
       "id": "f82",
       "variante": "a",
       "gancho": "Answer without thinking",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f84aF - Cual es el organo.mp4",
@@ -4426,7 +4608,8 @@
       "id": "f84",
       "variante": "a",
       "gancho": "Pregunta trampa",
-      "tags": "#ciencia"
+      "tags": "#ciencia",
+      "activo": false
     },
     {
       "file": "Fab f84aF EN - What is the largest.mp4",
@@ -4437,7 +4620,8 @@
       "id": "f84",
       "variante": "a",
       "gancho": "Trick question",
-      "tags": "#science"
+      "tags": "#science",
+      "activo": false
     },
     {
       "file": "Fab f86aF - Cuantos segundos tiene un.mp4",
@@ -4448,7 +4632,8 @@
       "id": "f86",
       "variante": "a",
       "gancho": "Sin calculadora",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f86aF EN - How many seconds are.mp4",
@@ -4459,7 +4644,8 @@
       "id": "f86",
       "variante": "a",
       "gancho": "No calculator",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f88aF - Cual es la lengua.mp4",
@@ -4470,7 +4656,8 @@
       "id": "f88",
       "variante": "a",
       "gancho": "Total, no nativos",
-      "tags": "#idiomas"
+      "tags": "#idiomas",
+      "activo": false
     },
     {
       "file": "Fab f88aF EN - Which language has the.mp4",
@@ -4481,7 +4668,8 @@
       "id": "f88",
       "variante": "a",
       "gancho": "Total, not native",
-      "tags": "#languages"
+      "tags": "#languages",
+      "activo": false
     },
     {
       "file": "Fab f90aF - Cual es el punto.mp4",
@@ -4492,7 +4680,8 @@
       "id": "f90",
       "variante": "a",
       "gancho": "Geografía. 6 segundos.",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f90aF EN - What is the deepest.mp4",
@@ -4503,7 +4692,8 @@
       "id": "f90",
       "variante": "a",
       "gancho": "Geography. 6 seconds.",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f92aF - Cuantas patas tiene una.mp4",
@@ -4514,7 +4704,8 @@
       "id": "f92",
       "variante": "a",
       "gancho": "No es un insecto",
-      "tags": "#animales"
+      "tags": "#animales",
+      "activo": false
     },
     {
       "file": "Fab f92aF EN - How many legs does.mp4",
@@ -4525,7 +4716,8 @@
       "id": "f92",
       "variante": "a",
       "gancho": "It's not an insect",
-      "tags": "#animals"
+      "tags": "#animals",
+      "activo": false
     },
     {
       "file": "Fab f94aF - Que instrumento tiene teclas.mp4",
@@ -4536,7 +4728,8 @@
       "id": "f94",
       "variante": "a",
       "gancho": "Los músicos la saben",
-      "tags": "#musica"
+      "tags": "#musica",
+      "activo": false
     },
     {
       "file": "Fab f94aF EN - Which instrument has keys.mp4",
@@ -4547,7 +4740,8 @@
       "id": "f94",
       "variante": "a",
       "gancho": "Musicians know this one",
-      "tags": "#music"
+      "tags": "#music",
+      "activo": false
     },
     {
       "file": "Fab f96aF - Cuantos lados iguales tiene.mp4",
@@ -4558,7 +4752,8 @@
       "id": "f96",
       "variante": "a",
       "gancho": "Matemáticas de 6 segundos",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab f96aF EN - How many equal sides.mp4",
@@ -4569,7 +4764,8 @@
       "id": "f96",
       "variante": "a",
       "gancho": "6-second maths",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab f98aF - En que pais se.mp4",
@@ -4580,7 +4776,8 @@
       "id": "f98",
       "variante": "a",
       "gancho": "No es Egipto",
-      "tags": "#historia"
+      "tags": "#historia",
+      "activo": false
     },
     {
       "file": "Fab f98aF EN - In which country was.mp4",
@@ -4591,7 +4788,8 @@
       "id": "f98",
       "variante": "a",
       "gancho": "It's not Egypt",
-      "tags": "#history"
+      "tags": "#history",
+      "activo": false
     },
     {
       "file": "Fab f100aF - Que oceano separa Europa.mp4",
@@ -4602,7 +4800,8 @@
       "id": "f100",
       "variante": "a",
       "gancho": "Si fallas esta, no juegues",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab f100aF EN - Which ocean separates Europe.mp4",
@@ -4613,7 +4812,8 @@
       "id": "f100",
       "variante": "a",
       "gancho": "Miss this and don't bother",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab f101a - Quien marco el gol.mp4",
@@ -4625,7 +4825,8 @@
       "variante": "a",
       "gancho": "Esto lo vio medio país",
       "tags": "#futbol #mundial2026 #seleccion",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f101a EN - Who scored Spains goal.mp4",
@@ -4637,7 +4838,8 @@
       "variante": "a",
       "gancho": "Half the world watched this",
       "tags": "#football #worldcup2026",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f102aF - Cuantos Mundiales ha ganado.mp4",
@@ -4649,7 +4851,8 @@
       "variante": "a",
       "gancho": "Muchos fallan esta",
       "tags": "#futbol #mundial2026",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f102aF EN - How many World Cups.mp4",
@@ -4661,7 +4864,8 @@
       "variante": "a",
       "gancho": "Lots of people get this wrong",
       "tags": "#football #worldcup",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f103a - A quien gano Espana.mp4",
@@ -4673,7 +4877,8 @@
       "variante": "a",
       "gancho": "Este verano no se habló de otra cosa",
       "tags": "#futbol #mundial2026",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f103a EN - Who did Spain beat.mp4",
@@ -4685,7 +4890,8 @@
       "variante": "a",
       "gancho": "Nobody talked about anything else",
       "tags": "#football #worldcup2026",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f104aF - El 12 de agosto.mp4",
@@ -4697,7 +4903,8 @@
       "variante": "a",
       "gancho": "¿Lo viste desde tu ciudad?",
       "tags": "#eclipse #ciencia #espana",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f104aF EN - On 12 August there.mp4",
@@ -4723,7 +4930,8 @@
       "variante": "a",
       "gancho": "El que la falle, no ve la tele",
       "tags": "#supervivientes #tele",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f105a EN - Who hosts Conexion Honduras.mp4",
@@ -4749,7 +4957,8 @@
       "variante": "a",
       "gancho": "Tu hermano pequeño la sabe",
       "tags": "#tiktok #tendencias #jerga",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f106aF EN - What does farming aura.mp4",
@@ -4761,7 +4970,8 @@
       "variante": "a",
       "gancho": "Your little brother knows this",
       "tags": "#tiktok #trends #slang",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f107a - De que videojuego es.mp4",
@@ -4773,7 +4983,8 @@
       "variante": "a",
       "gancho": "Está en todos los vídeos",
       "tags": "#videojuegos #halloween #tiktok",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f107a EN - Which video game is.mp4",
@@ -4785,7 +4996,8 @@
       "variante": "a",
       "gancho": "He's all over your feed",
       "tags": "#gaming #halloween",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f108aF - De que pais es.mp4",
@@ -4797,7 +5009,8 @@
       "variante": "a",
       "gancho": "Vino este verano",
       "tags": "#actualidad #papa",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f108aF EN - Which country is Pope.mp4",
@@ -4809,7 +5022,8 @@
       "variante": "a",
       "gancho": "He came this summer",
       "tags": "#news #pope",
-      "actualidad": "2026-09-23"
+      "actualidad": "2026-09-23",
+      "activo": false
     },
     {
       "file": "Fab f03aC - Cuantos lados tiene un.mp4",
@@ -4820,7 +5034,8 @@
       "id": "f03",
       "variante": "a",
       "gancho": "Si dudas, ya has perdido",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f03aC EN - How many sides does.mp4",
@@ -4831,7 +5046,8 @@
       "id": "f03",
       "variante": "a",
       "gancho": "If you hesitate, you've lost",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f09aC - Cual es la capital.mp4",
@@ -4842,7 +5058,8 @@
       "id": "f09",
       "variante": "a",
       "gancho": "Tres seguidas o no vales",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f09aC EN - What is the capital.mp4",
@@ -4853,7 +5070,8 @@
       "id": "f09",
       "variante": "a",
       "gancho": "Three in a row or you're out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f10aC - Cuantos anos tiene un.mp4",
@@ -4864,7 +5082,8 @@
       "id": "f10",
       "variante": "a",
       "gancho": "6 segundos. Igual que el sábado.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f10aC EN - How many years are.mp4",
@@ -4875,7 +5094,8 @@
       "id": "f10",
       "variante": "a",
       "gancho": "6 seconds. Same as Saturday.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f11aC - Cuantos planetas del sistema.mp4",
@@ -4886,7 +5106,8 @@
       "id": "f11",
       "variante": "a",
       "gancho": "Esta la fallan los listos",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f11aC EN - How many planets in.mp4",
@@ -4897,7 +5118,8 @@
       "id": "f11",
       "variante": "a",
       "gancho": "The smart ones get this wrong",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f12aC - Que pais tiene la.mp4",
@@ -4908,7 +5130,8 @@
       "id": "f12",
       "variante": "a",
       "gancho": "Mira bien. Tienes 6 segundos.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f12aC EN - Whose flag is green.mp4",
@@ -4919,7 +5142,8 @@
       "id": "f12",
       "variante": "a",
       "gancho": "Look closely. 6 seconds.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f13aC - En que ano llego.mp4",
@@ -4930,7 +5154,8 @@
       "id": "f13",
       "variante": "a",
       "gancho": "Contesta antes que el de al lado",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f13aC EN - In which year did.mp4",
@@ -4941,7 +5166,8 @@
       "id": "f13",
       "variante": "a",
       "gancho": "Answer before the person next to you",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f14aC - Cuantos huesos tiene un.mp4",
@@ -4952,7 +5178,8 @@
       "id": "f14",
       "variante": "a",
       "gancho": "Cuanto más sabes, peor",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f14aC EN - How many bones does.mp4",
@@ -4963,7 +5190,8 @@
       "id": "f14",
       "variante": "a",
       "gancho": "The more you know, the worse",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f15aC - Cual es el oceano.mp4",
@@ -4974,7 +5202,8 @@
       "id": "f15",
       "variante": "a",
       "gancho": "No leas las opciones. Contesta.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f15aC EN - What is the largest.mp4",
@@ -4985,7 +5214,8 @@
       "id": "f15",
       "variante": "a",
       "gancho": "Don't read the options. Answer.",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f16aC - Que gas necesitan las.mp4",
@@ -4996,7 +5226,8 @@
       "id": "f16",
       "variante": "a",
       "gancho": "La pregunta 7 me sacó del bote",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f16aC EN - Which gas do plants.mp4",
@@ -5007,7 +5238,8 @@
       "id": "f16",
       "variante": "a",
       "gancho": "Question 7 knocked me out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f18aC - Cual de estos paises.mp4",
@@ -5018,7 +5250,8 @@
       "id": "f18",
       "variante": "a",
       "gancho": "Si has dicho Bélgica, fuera",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab f18aC EN - Which of these countries.mp4",
@@ -5029,7 +5262,8 @@
       "id": "f18",
       "variante": "a",
       "gancho": "If you said Belgium, you're out",
-      "tags": ""
+      "tags": "",
+      "activo": false
     },
     {
       "file": "Fab t01 - Cuantos corazones tiene un.mp4",
@@ -5040,7 +5274,8 @@
       "id": "t01",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#espacio"
+      "tags": "#espacio",
+      "activo": false
     },
     {
       "file": "Fab t01 EN - How many hearts does.mp4",
@@ -5051,7 +5286,8 @@
       "id": "t01",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#space"
+      "tags": "#space",
+      "activo": false
     },
     {
       "file": "Fab e01 - Cual es el rio.mp4",
@@ -5062,7 +5298,8 @@
       "id": "e01",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab e01 EN - What is the longest.mp4",
@@ -5073,7 +5310,8 @@
       "id": "e01",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab e03 - Cual es la lengua.mp4",
@@ -5084,7 +5322,8 @@
       "id": "e03",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#matematicas #literatura #idiomas"
+      "tags": "#matematicas #literatura #idiomas",
+      "activo": false
     },
     {
       "file": "Fab e03 EN - Which language has the.mp4",
@@ -5095,7 +5334,8 @@
       "id": "e03",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#maths #books #languages"
+      "tags": "#maths #books #languages",
+      "activo": false
     },
     {
       "file": "Fab t02 - Que pais tiene mas.mp4",
@@ -5106,7 +5346,8 @@
       "id": "t02",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#historia #musica #geografia"
+      "tags": "#historia #musica #geografia",
+      "activo": false
     },
     {
       "file": "Fab t02 EN - Which country has the.mp4",
@@ -5117,7 +5358,8 @@
       "id": "t02",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#history #music #geography"
+      "tags": "#history #music #geography",
+      "activo": false
     },
     {
       "file": "Fab t03 - Cual es el hueso.mp4",
@@ -5128,7 +5370,8 @@
       "id": "t03",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#animales #ciencia"
+      "tags": "#animales #ciencia",
+      "activo": false
     },
     {
       "file": "Fab t03 EN - What is the smallest.mp4",
@@ -5139,7 +5382,8 @@
       "id": "t03",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#animals #science"
+      "tags": "#animals #science",
+      "activo": false
     },
     {
       "file": "Fab t04 - Cuantos huesos tiene un.mp4",
@@ -5150,7 +5394,8 @@
       "id": "t04",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#espacio #ciencia"
+      "tags": "#espacio #ciencia",
+      "activo": false
     },
     {
       "file": "Fab t04 EN - Roughly how many bones.mp4",
@@ -5161,7 +5406,8 @@
       "id": "t04",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#space #science"
+      "tags": "#space #science",
+      "activo": false
     },
     {
       "file": "Fab t05 - Cual es el metal.mp4",
@@ -5172,7 +5418,8 @@
       "id": "t05",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#animales #geografia"
+      "tags": "#animales #geografia",
+      "activo": false
     },
     {
       "file": "Fab t05 EN - What is the most.mp4",
@@ -5183,7 +5430,8 @@
       "id": "t05",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#animals #geography"
+      "tags": "#animals #geography",
+      "activo": false
     },
     {
       "file": "Fab t06 - Que gas es el.mp4",
@@ -5194,7 +5442,8 @@
       "id": "t06",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#deporte #geografia #ciencia"
+      "tags": "#deporte #geografia #ciencia",
+      "activo": false
     },
     {
       "file": "Fab t06 EN - Which gas is the.mp4",
@@ -5205,7 +5454,8 @@
       "id": "t06",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#sports #geography #science"
+      "tags": "#sports #geography #science",
+      "activo": false
     },
     {
       "file": "Fab t07 - Cual es el metal.mp4",
@@ -5216,7 +5466,8 @@
       "id": "t07",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#geografia #ciencia"
+      "tags": "#geografia #ciencia",
+      "activo": false
     },
     {
       "file": "Fab t07 EN - Which is the lightest.mp4",
@@ -5227,7 +5478,8 @@
       "id": "t07",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#geography #science"
+      "tags": "#geography #science",
+      "activo": false
     },
     {
       "file": "Fab t08 - Que animal tiene el.mp4",
@@ -5238,7 +5490,8 @@
       "id": "t08",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#arte #geografia #animales"
+      "tags": "#arte #geografia #animales",
+      "activo": false
     },
     {
       "file": "Fab t08 EN - Which animal has the.mp4",
@@ -5249,7 +5502,8 @@
       "id": "t08",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#art #geography #animals"
+      "tags": "#art #geography #animals",
+      "activo": false
     },
     {
       "file": "Fab t09 - Que elemento quimico tiene.mp4",
@@ -5260,7 +5514,8 @@
       "id": "t09",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#matematicas"
+      "tags": "#matematicas",
+      "activo": false
     },
     {
       "file": "Fab t09 EN - Which chemical element has.mp4",
@@ -5271,7 +5526,8 @@
       "id": "t09",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#maths"
+      "tags": "#maths",
+      "activo": false
     },
     {
       "file": "Fab t10 - Cuantas veces cabe la.mp4",
@@ -5282,7 +5538,8 @@
       "id": "t10",
       "variante": "a",
       "gancho": "¿CUÁNTAS ACIERTAS?",
-      "tags": "#espacio #geografia"
+      "tags": "#espacio #geografia",
+      "activo": false
     },
     {
       "file": "Fab t10 EN - How many Earths fit.mp4",
@@ -5293,7 +5550,8 @@
       "id": "t10",
       "variante": "a",
       "gancho": "HOW MANY CAN YOU GET?",
-      "tags": "#space #geography"
+      "tags": "#space #geography",
+      "activo": false
     },
     {
       "file": "Fab e02 - En que continente esta.mp4",
@@ -5304,7 +5562,8 @@
       "id": "e02",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#animales #ciencia"
+      "tags": "#animales #ciencia",
+      "activo": false
     },
     {
       "file": "Fab e02 EN - Which continent is Turkey.mp4",
@@ -5315,7 +5574,8 @@
       "id": "e02",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#animals #science"
+      "tags": "#animals #science",
+      "activo": false
     },
     {
       "file": "Fab e04 - Cuantos lados iguales tiene.mp4",
@@ -5326,7 +5586,8 @@
       "id": "e04",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#matematicas #historia"
+      "tags": "#matematicas #historia",
+      "activo": false
     },
     {
       "file": "Fab e04 EN - How many equal sides.mp4",
@@ -5337,7 +5598,8 @@
       "id": "e04",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#maths #history"
+      "tags": "#maths #history",
+      "activo": false
     },
     {
       "file": "Fab e05 - Cuantos dientes tiene un.mp4",
@@ -5348,7 +5610,8 @@
       "id": "e05",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#espacio #animales"
+      "tags": "#espacio #animales",
+      "activo": false
     },
     {
       "file": "Fab e05 EN - How many teeth does.mp4",
@@ -5359,7 +5622,8 @@
       "id": "e05",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#space #animals"
+      "tags": "#space #animals",
+      "activo": false
     },
     {
       "file": "Fab e06 - Cuantos minutos tiene un.mp4",
@@ -5370,7 +5634,8 @@
       "id": "e06",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#geografia"
+      "tags": "#geografia",
+      "activo": false
     },
     {
       "file": "Fab e06 EN - How many minutes are.mp4",
@@ -5381,7 +5646,8 @@
       "id": "e06",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#geography"
+      "tags": "#geography",
+      "activo": false
     },
     {
       "file": "Fab e07 - Cuantos segundos tiene un.mp4",
@@ -5392,7 +5658,8 @@
       "id": "e07",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#geografia #ciencia #matematicas"
+      "tags": "#geografia #ciencia #matematicas",
+      "activo": false
     },
     {
       "file": "Fab e07 EN - How many seconds are.mp4",
@@ -5403,7 +5670,8 @@
       "id": "e07",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#geography #science #maths"
+      "tags": "#geography #science #maths",
+      "activo": false
     },
     {
       "file": "Fab e08 - Cual es el numero.mp4",
@@ -5414,7 +5682,8 @@
       "id": "e08",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#animales #historia #matematicas"
+      "tags": "#animales #historia #matematicas",
+      "activo": false
     },
     {
       "file": "Fab e08 EN - What is the smallest.mp4",
@@ -5425,7 +5694,8 @@
       "id": "e08",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#animals #history #maths"
+      "tags": "#animals #history #maths",
+      "activo": false
     },
     {
       "file": "Fab e09 - Que pais produce mas.mp4",
@@ -5436,7 +5706,8 @@
       "id": "e09",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#geografia #historia"
+      "tags": "#geografia #historia",
+      "activo": false
     },
     {
       "file": "Fab e09 EN - Which country produces the.mp4",
@@ -5447,7 +5718,8 @@
       "id": "e09",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#geography #history"
+      "tags": "#geography #history",
+      "activo": false
     },
     {
       "file": "Fab e10 - Cual es el pais.mp4",
@@ -5458,7 +5730,8 @@
       "id": "e10",
       "variante": "a",
       "gancho": "¿HASTA DÓNDE LLEGAS?",
-      "tags": "#espacio #ciencia #geografia"
+      "tags": "#espacio #ciencia #geografia",
+      "activo": false
     },
     {
       "file": "Fab e10 EN - Which country has the.mp4",
@@ -5469,7 +5742,8 @@
       "id": "e10",
       "variante": "a",
       "gancho": "HOW FAR CAN YOU GO?",
-      "tags": "#space #science #geography"
+      "tags": "#space #science #geography",
+      "activo": false
     },
     {
       "file": "Fab x01 - Ronda rapida 01.mp4",
@@ -5481,7 +5755,8 @@
       "variante": "a",
       "gancho": "RONDA RÁPIDA",
       "tags": "#ronda #preguntas",
-      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x02 - Ronda rapida 02.mp4",
@@ -5493,7 +5768,8 @@
       "variante": "a",
       "gancho": "RONDA RÁPIDA",
       "tags": "#ronda #preguntas",
-      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x03 - Verdadero o falso 03.mp4",
@@ -5505,7 +5781,8 @@
       "variante": "a",
       "gancho": "¿VERDADERO O FALSO?",
       "tags": "#verdaderoofalso #datoscuriosos",
-      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x04 - Verdadero o falso 04.mp4",
@@ -5517,7 +5794,8 @@
       "variante": "a",
       "gancho": "¿VERDADERO O FALSO?",
       "tags": "#verdaderoofalso #datoscuriosos",
-      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántas has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x05 - Adivina la peli 05.mp4",
@@ -5529,7 +5807,8 @@
       "variante": "a",
       "gancho": "ADIVINA LA PELI",
       "tags": "#peliculas #emojis",
-      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇"
+      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇",
+      "activo": false
     },
     {
       "file": "Fab x06 - Adivina la peli 06.mp4",
@@ -5541,7 +5820,8 @@
       "variante": "a",
       "gancho": "ADIVINA LA PELI",
       "tags": "#peliculas #emojis",
-      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇"
+      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇",
+      "activo": false
     },
     {
       "file": "Fab x07 - Banderas con zoom 07.mp4",
@@ -5553,7 +5833,8 @@
       "variante": "a",
       "gancho": "¿DE QUÉ PAÍS ES?",
       "tags": "#banderas #geografia",
-      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇"
+      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇",
+      "activo": false
     },
     {
       "file": "Fab x08 - Banderas con zoom 08.mp4",
@@ -5565,7 +5846,8 @@
       "variante": "a",
       "gancho": "¿DE QUÉ PAÍS ES?",
       "tags": "#banderas #geografia",
-      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇"
+      "cta": "¿Cuántas has sacado? Comenta de 0 a 4 👇",
+      "activo": false
     },
     {
       "file": "Fab x09 - Esta tiene trampa 09.mp4",
@@ -5577,7 +5859,8 @@
       "variante": "a",
       "gancho": "ESTA TIENE TRAMPA",
       "tags": "#trampa #preguntas",
-      "cta": "¿Has caído? Comenta sí o no 👇"
+      "cta": "¿Has caído? Comenta sí o no 👇",
+      "activo": false
     },
     {
       "file": "Fab x10 - Esta tiene trampa 10.mp4",
@@ -5589,7 +5872,8 @@
       "variante": "a",
       "gancho": "ESTA TIENE TRAMPA",
       "tags": "#trampa #preguntas",
-      "cta": "¿Has caído? Comenta sí o no 👇"
+      "cta": "¿Has caído? Comenta sí o no 👇",
+      "activo": false
     },
     {
       "file": "Fab x11 - Esto o aquello 11.mp4",
@@ -5601,7 +5885,8 @@
       "variante": "a",
       "gancho": "¿CUÁL ES MÁS…?",
       "tags": "#estooaquello #duelo",
-      "cta": "¿Cuántos has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántos has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x12 - Esto o aquello 12.mp4",
@@ -5613,7 +5898,8 @@
       "variante": "a",
       "gancho": "¿CUÁL ES MÁS…?",
       "tags": "#estooaquello #duelo",
-      "cta": "¿Cuántos has acertado? Comenta de 0 a 5 👇"
+      "cta": "¿Cuántos has acertado? Comenta de 0 a 5 👇",
+      "activo": false
     },
     {
       "file": "Fab x13 - Ordenalos 13.mp4",
@@ -5625,7 +5911,8 @@
       "variante": "a",
       "gancho": "ORDÉNALOS",
       "tags": "#ordena #reto",
-      "cta": "¿Lo has clavado? Comenta tu orden 👇"
+      "cta": "¿Lo has clavado? Comenta tu orden 👇",
+      "activo": false
     },
     {
       "file": "Fab x14 - Ordenalos 14.mp4",
@@ -5637,7 +5924,8 @@
       "variante": "a",
       "gancho": "ORDÉNALOS",
       "tags": "#ordena #reto",
-      "cta": "¿Lo has clavado? Comenta tu orden 👇"
+      "cta": "¿Lo has clavado? Comenta tu orden 👇",
+      "activo": false
     },
     {
       "file": "Fab x15 - Completa el refran 15.mp4",
@@ -5649,7 +5937,8 @@
       "variante": "a",
       "gancho": "COMPLETA EL REFRÁN",
       "tags": "#refranes #espanol",
-      "cta": "¿Cuántos sabías? Comenta de 0 a 4 👇"
+      "cta": "¿Cuántos sabías? Comenta de 0 a 4 👇",
+      "activo": false
     },
     {
       "file": "Real r01 - Quien marco el gol.mp4",
