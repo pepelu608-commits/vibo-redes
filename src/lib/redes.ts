@@ -54,10 +54,11 @@ export function hashtagsDe(v: Video): string {
  * semanas y /redes enseña qué gancho trae más gente.
  */
 export type Hueco = { dia: number; hora: string; file?: string; pool?: "pregunta"; lang?: Lang; nota?: string };
-// 29 sep 2026 (fundador: "igual nos estamos pasando"): 1 vídeo al día, solo
+// 29 sep 2026 (fundador: "igual nos estamos pasando"): pocos vídeos al día, solo
 // en español, de los de grabación real (los animados están prohibidos). Antes
 // eran 5-6 al día mezclando inglés en el mismo canal de YouTube.
-export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => ({ dia: i - 9, hora: "20:00", pool: "pregunta" as const, lang: "es" as const }));
+// 29 sep 2026, noche (fundador: "yo subiría con el robot por lo menos 2 vídeos al día"): 14:00 y 20:00.
+export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap((dia) => ["14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })));
 
 /**
  * Pie de cada publicación. Desde el 21 sep 2026 abre con el DINERO (la
@@ -157,7 +158,7 @@ export function planCalentamiento(desdeDia: number, hastaDia = -10): Hueco[] {
   // misma cuenta (es la ráfaga, no el volumen, lo que hace que te tapen).
   // En Instagram el tope de 2 al día recorta el tercero solo.
   // 22 sep 2026 (fundador): las 21:30 era tarde. Mañana, sobremesa y tarde.
-  const HORAS_ES = ["20:00"]; // 29 sep 2026: 1 al día, solo en español
+  const HORAS_ES = ["14:00", "20:00"]; // 29 sep 2026: 2 al día, solo en español
   const HORAS_EN: string[] = [];
   for (let d = desdeDia; d <= hastaDia; d++) {
     for (const h of HORAS_ES) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "es" });

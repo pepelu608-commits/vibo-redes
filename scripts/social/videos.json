@@ -6554,6 +6554,284 @@
       "tags": "#trivia",
       "id": "hg1-en",
       "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v01 - Cual es el videojuego mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el videojuego más vendido de la historia?",
+      "tags": "#videojuegos #minecraft",
+      "id": "v01",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v02 - Cual es el video mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el vídeo más visto de la historia de youtube?",
+      "tags": "#youtube #curiosidades",
+      "id": "v02",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v03 - Que canal de youtube tiene.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué canal de youtube tiene más suscriptores del mundo?",
+      "tags": "#youtube #mrbeast",
+      "id": "v03",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v04 - Cual es el emoji mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el emoji más usado del mundo?",
+      "tags": "#emoji #curiosidades",
+      "id": "v04",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v05 - De que pais salio tung.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿De qué país salió «tung tung tung sahur»?",
+      "tags": "#meme #brainrot",
+      "id": "v05",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v06 - Quien tiene mas seguidores en.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Quién tiene más seguidores en instagram?",
+      "tags": "#instagram #cristiano",
+      "id": "v06",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v07 - Cuantos anos tenia messi en.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos años tenía messi en la final del mundial 2026?",
+      "tags": "#messi #mundial2026",
+      "id": "v07",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real v08 - Antes del de agosto de.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "Antes del de agosto de 2026, ¿cuándo fue el último eclipse total en la península?",
+      "tags": "#eclipse #españa",
+      "id": "v08",
+      "actualidad": "2026-09-29"
+    },
+    {
+      "file": "Real ce01 - Cual conducirias.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál conducirías?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce01",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce02 - Donde te banarias.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Dónde te bañarías?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce02",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce03 - Que fiesta te gusta mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué fiesta te gusta más?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce03",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce04 - Que comida te gusta mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué comida te gusta más?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce04",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce05 - Que deporte te gusta mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué deporte te gusta más?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce05",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce06 - Con cual te quedas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Con cuál te quedas?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce06",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce07 - Donde dormirias esta noche.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Dónde dormirías esta noche?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce07",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce08 - Donde irias con tus amigos.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Dónde irías con tus amigos?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce08",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce09 - Cual tiene mejor pinta.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál tiene mejor pinta?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce09",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce10 - Que te comerias ahora mismo.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué te comerías ahora mismo?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce10",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce11 - Que plan harias este finde.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué plan harías este finde?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce11",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce12 - Con que vista te quedas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Con qué vista te quedas?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce12",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce13 - Te estan buscando a quien.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "Te están buscando… ¿a quién llamas?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce13",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce14 - Quien tiene mas aura.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Quién tiene más aura?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce14",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce15 - Con quien te irias de.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Con quién te irías de fiesta?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce15",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce16 - Con quien cenarias.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Con quién cenarías?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce16",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce17 - Final del mundial ultimo penalti.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "Final del mundial, último penalti… ¿quién lo tira?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce17",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? Comenta tu número 👇"
+    },
+    {
+      "file": "Real ce18 - Quien tiene mas seguidores en.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Quién tiene más seguidores en instagram?",
+      "tags": "#cualeliges #queprefieres",
+      "id": "ce18",
+      "actualidad": "2026-09-29",
+      "cta": "¿1, 2, 3 o 4? La respuesta, al final 👀"
     }
   ]
 }
