@@ -21,7 +21,9 @@ export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linke
 // 29 sep 2026 (fundador: "paramos las que no están ni activadas"; TikTok lo sube él a mano):
 // el robot solo publica en Instagram, YouTube y X. TikTok daba 0 visitas con lo automático y
 // Facebook, LinkedIn, Threads y Bluesky perdían el 100 % de las publicaciones.
-export const REDES_PARADAS: Red[] = ["tiktok", "facebook", "linkedin", "threads", "bluesky"];
+// 29 sep 2026 (fundador: "me voy a centrar en TikTok, lo subo yo; el resto automático"):
+// TikTok a mano; X parado; el robot solo YouTube e Instagram, 1 al día en español.
+export const REDES_PARADAS: Red[] = ["tiktok", "x", "facebook", "linkedin", "threads", "bluesky"];
 export const REDES: Red[] = (["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"] as Red[]).filter((r) => !REDES_PARADAS.includes(r));
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
 export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky", "x"];
@@ -52,79 +54,10 @@ export function hashtagsDe(v: Video): string {
  * semanas y /redes enseña qué gancho trae más gente.
  */
 export type Hueco = { dia: number; hora: string; file?: string; pool?: "pregunta"; lang?: Lang; nota?: string };
-export const PLAN: Hueco[] = [
-  // S-9 jueves — siembra (solo preguntas, cero marca)
-  { dia: -9, hora: "08:00", pool: "pregunta", lang: "es" },
-  { dia: -9, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -9, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -9, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-8 viernes — siembra + anuncio (FIJAR el de las 14:00)
-  { dia: -8, hora: "08:00", pool: "pregunta", lang: "es" },
-  { dia: -8, hora: "14:00", pool: "pregunta", lang: "es", nota: "FIJAR este post en el perfil" },
-  { dia: -8, hora: "17:00", pool: "pregunta", lang: "en" },
-  { dia: -8, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -8, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-7 sábado — ritual de ensayo
-  { dia: -7, hora: "10:00", file: "Vibo Ad 11 - Ritual Sabado.mp4" },
-  { dia: -7, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -7, hora: "18:00", pool: "pregunta", lang: "es", nota: "A la hora exacta de la partida: ancla la cita" },
-  { dia: -7, hora: "17:00", pool: "pregunta", lang: "en" },
-  { dia: -7, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -7, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-6 domingo — empieza la cuenta atrás
-  { dia: -6, hora: "10:00", file: "Vibo Countdown 6 - Faltan 6.mp4" },
-  { dia: -6, hora: "13:00", file: "Vibo Countdown 6 EN - 6 Days Left.mp4" },
-  { dia: -6, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -6, hora: "17:00", pool: "pregunta", lang: "en" },
-  { dia: -6, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -6, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-5 lunes
-  { dia: -5, hora: "08:00", file: "Vibo Countdown 5 - Faltan 5.mp4" },
-  { dia: -5, hora: "13:00", file: "Vibo Countdown 5 EN - 5 Days Left.mp4" },
-  { dia: -5, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -5, hora: "17:00", pool: "pregunta", lang: "en" },
-  { dia: -5, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -5, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-4 martes
-  { dia: -4, hora: "08:00", file: "Vibo Countdown 4 - Faltan 4.mp4" },
-  { dia: -4, hora: "13:00", file: "Vibo Countdown 4 EN - 4 Days Left.mp4" },
-  { dia: -4, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -4, hora: "17:00", pool: "pregunta", lang: "en" },
-  { dia: -4, hora: "21:00", pool: "pregunta", lang: "es" },
-  { dia: -4, hora: "23:00", pool: "pregunta", lang: "en" },
-  // S-3 miércoles — primera mención al bote
-  { dia: -3, hora: "08:00", file: "Vibo Countdown 3 - Faltan 3.mp4" },
-  { dia: -3, hora: "13:00", file: "Vibo Countdown 3 EN - 3 Days Left.mp4" },
-  { dia: -3, hora: "17:00", file: "Vibo Promo Video EN.mp4" },
-  { dia: -3, hora: "14:00", file: "Vibo Ad 36 - Bote Que Sube.mp4", nota: "Cifra real: pasar antes update-pot-video y re-exportar" },
-  { dia: -3, hora: "21:00", file: "Vibo Promo Video.mp4" },
-  { dia: -3, hora: "23:00", file: "Vibo Ad 37 EN - Growing Pot.mp4" },
-  // S-2 jueves
-  { dia: -2, hora: "08:00", file: "Vibo Countdown 2 - Faltan 2.mp4" },
-  { dia: -2, hora: "13:00", file: "Vibo Countdown 2 EN - 2 Days Left.mp4" },
-  { dia: -2, hora: "14:00", pool: "pregunta", lang: "es" },
-  { dia: -2, hora: "21:00", pool: "pregunta", lang: "es" },
-  // S-1 viernes
-  { dia: -1, hora: "08:00", file: "Vibo Countdown 1 - Faltan 1.mp4" },
-  { dia: -1, hora: "13:00", file: "Vibo Countdown 1 EN - 1 Days Left.mp4" },
-  { dia: -1, hora: "14:00", pool: "pregunta", lang: "es", nota: "Cambiar user y comentario por uno real de la semana" },
-  { dia: -1, hora: "21:00", file: "Vibo Ad 30 - Chat.mp4" },
-  { dia: -1, hora: "23:00", file: "Vibo Ad 31 EN - Chat.mp4" },
-  // S sábado — día de partida
-  { dia: 0, hora: "10:00", file: "Vibo Countdown 0 - Faltan 0.mp4" },
-  { dia: 0, hora: "13:00", file: "Vibo Countdown 0 EN - 0 Days Left.mp4" },
-  { dia: 0, hora: "15:00", file: "Vibo Ad 36 - Bote Que Sube.mp4", nota: "Cifra actualizada del mismo día" },
-  { dia: 0, hora: "17:30", file: "Vibo Ad 23 EN - Saturday Ritual.mp4" },
-  // S-6 domingo — así fue la partida (datos reales; lo fabrica el robot
-  // el domingo por la mañana con scripts/social/resumen-partida.ts). Si
-  // no hay partida reciente, el MP4 no existe y el publicador lo salta.
-  { dia: -6, hora: "12:00", file: "Vibo Resumen - Asi Fue La Partida.mp4", nota: "Datos reales de la partida del sábado" },
-  { dia: -6, hora: "16:00", file: "Vibo Resumen EN - How It Went.mp4", nota: "Datos reales de la partida del sábado" },
-  // S-6 domingo — la repetición entera, pregunta a pregunta (24 sep 2026, la
-  // fabrica scripts/social/repeticion-partida.ts detrás del resumen).
-  { dia: -6, hora: "19:00", file: "Vibo Repeticion - La Partida Pregunta A Pregunta.mp4", nota: "Repetición real del sábado" },
-  { dia: -6, hora: "20:00", file: "Vibo Repeticion EN - The Whole Game.mp4", nota: "Repetición real del sábado" },
-];
+// 29 sep 2026 (fundador: "igual nos estamos pasando"): 1 vídeo al día, solo
+// en español, de los de grabación real (los animados están prohibidos). Antes
+// eran 5-6 al día mezclando inglés en el mismo canal de YouTube.
+export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => ({ dia: i - 9, hora: "20:00", pool: "pregunta" as const, lang: "es" as const }));
 
 /**
  * Pie de cada publicación. Desde el 21 sep 2026 abre con el DINERO (la
@@ -152,7 +85,10 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
   const cp = cuandoPartida(empiezaEn, v.lang);
   const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM CET · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
-  const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
+  // 29 sep 2026: sin el total de la temporada. En octubre (temporada 0) las ligas
+  // no tienen premio: "65 € esta temporada" no era verdad. Solo el premio del sábado.
+  void mesCents;
+  const mes = "";
   // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
   // sábado" (daba a entender 65 € el día 17). Premio del sábado + ligas aparte.
   // 29 sep 2026 (fundador: "le daría importancia a los premios porque no es lo
@@ -224,8 +160,8 @@ export function planCalentamiento(desdeDia: number, hastaDia = -10): Hueco[] {
   // misma cuenta (es la ráfaga, no el volumen, lo que hace que te tapen).
   // En Instagram el tope de 2 al día recorta el tercero solo.
   // 22 sep 2026 (fundador): las 21:30 era tarde. Mañana, sobremesa y tarde.
-  const HORAS_ES = ["11:00", "14:30", "19:00"];
-  const HORAS_EN = ["15:00", "19:30", "23:00"];
+  const HORAS_ES = ["20:00"]; // 29 sep 2026: 1 al día, solo en español
+  const HORAS_EN: string[] = [];
   for (let d = desdeDia; d <= hastaDia; d++) {
     for (const h of HORAS_ES) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "es" });
     for (const h of HORAS_EN) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "en" });
