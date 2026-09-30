@@ -74,7 +74,7 @@ async function canalInstagram(): Promise<string> {
     const assets = fotos.map((f) => `{ image: { url: ${esc(`${RAW}/${slug}/${f}`)} } }`).join(", ");
     const d = await buffer(`mutation { createPost(input: {
       text: ${esc(pie)}, channelId: ${esc(canal)}, schedulingType: automatic, mode: customScheduled, dueAt: ${esc(h.cuando.toISOString())},
-      assets: [${assets}], metadata: { instagram: { type: carousel, firstComment: ${esc(COMENTARIO)} } }
+      assets: [${assets}], metadata: { instagram: { type: carousel, shouldShareToFeed: true, firstComment: ${esc(COMENTARIO)} } }
     }) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }`);
     if (d.createPost?.message) throw new Error("buffer: " + d.createPost.message);
     reg.publicados.push({ slug, hueco: h.clave, id: d.createPost.post.id, fecha: new Date().toISOString() });
