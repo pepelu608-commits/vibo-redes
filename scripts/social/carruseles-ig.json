@@ -1,5 +1,12 @@
 {
-  "publicados": [],
+  "publicados": [
+    {
+      "slug": "49-balon-de-oro",
+      "hueco": "2026-09-30T14:00",
+      "id": "6abca2aaa1ba5ce146eaedeb",
+      "fecha": "2026-09-30T05:48:27.130Z"
+    }
+  ],
   "orden": [
     "49-balon-de-oro",
     "13-a-quien-llamas",

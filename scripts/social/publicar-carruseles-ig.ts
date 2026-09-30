@@ -2,8 +2,8 @@
  * Carruseles «¿cuál eliges?» en Instagram, solos (30 sep 2026, fundador: "automatiza
  * Instagram también; yo solamente me ocupo de TikTok España"). Dos al día, 14:00 y 20:00
  * (Madrid), en el orden de scripts/social/carruseles-ig.json, por Buffer: carrusel de fotos
- * 4:5 (social/carruseles-ig, hechas con carruseles-ig.py) + el pie + primer comentario con
- * la llamada a VIBO. Las fotos las descarga Buffer del repositorio público vibo-redes.
+ * 4:5 (social/carruseles-ig, hechas con carruseles-ig.py) + el pie con la llamada a VIBO al final
+ * (el primer comentario automático es de pago en Buffer; tipo "post": con varias fotos, carrusel). Las fotos las descarga Buffer del repositorio público vibo-redes.
  *
  * Cada hora (robot de GitHub) deja programados en Buffer los huecos de las próximas 8 h que
  * aún no lo estén; el registro (publicados) evita repetir hueco y carrusel.
@@ -73,8 +73,8 @@ async function canalInstagram(): Promise<string> {
     const esc = (t: string) => JSON.stringify(t);
     const assets = fotos.map((f) => `{ image: { url: ${esc(`${RAW}/${slug}/${f}`)} } }`).join(", ");
     const d = await buffer(`mutation { createPost(input: {
-      text: ${esc(pie)}, channelId: ${esc(canal)}, schedulingType: automatic, mode: customScheduled, dueAt: ${esc(h.cuando.toISOString())},
-      assets: [${assets}], metadata: { instagram: { type: carousel, shouldShareToFeed: true, firstComment: ${esc(COMENTARIO)} } }
+      text: ${esc(`${pie}\n\n${COMENTARIO}`)}, channelId: ${esc(canal)}, schedulingType: automatic, mode: customScheduled, dueAt: ${esc(h.cuando.toISOString())},
+      assets: [${assets}], metadata: { instagram: { type: post, shouldShareToFeed: true } }
     }) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }`);
     if (d.createPost?.message) throw new Error("buffer: " + d.createPost.message);
     reg.publicados.push({ slug, hueco: h.clave, id: d.createPost.post.id, fecha: new Date().toISOString() });
