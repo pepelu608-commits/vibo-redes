@@ -391,6 +391,31 @@ function tieneSecrets(red: Red, en = false) {
 }
 
 // ───────────── Principal ─────────────
+// Comentario con el enlace en cada Short publicado (30 sep 2026, fundador: en Shorts la
+// descripción no se pulsa; el comentario sí). La API no deja fijarlo, pero como es el único
+// comentario sale el primero. Cada hora mira los últimos vídeos públicos y comenta los que no lo tengan.
+async function comentarEnlaceYoutube(en: boolean) {
+  if (!process.env.YT_CLIENT_ID || !(en ? process.env.YT_REFRESH_TOKEN_EN : process.env.YT_REFRESH_TOKEN)) return;
+  const token = await tokenGoogle(en);
+  const H = { Authorization: `Bearer ${token}`, "content-type": "application/json" };
+  const texto = en
+    ? `👉 Play free: https://${URL_APP}?o=yt-en\n\nEvery Saturday at 6 PM (Spain time): 10 live questions and cash prizes in euros. Questions that pay 💶`
+    : `👉 Juega gratis: https://${URL_APP}?o=yt-es\n\nCada sábado a las 18:00, 10 preguntas en directo y premios en euros. Preguntas que pagan 💶`;
+  const canal = await json("https://www.googleapis.com/youtube/v3/channels?part=contentDetails&mine=true", { headers: H });
+  const subidas = canal.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+  if (!subidas) return;
+  const lista = await json(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,status&playlistId=${subidas}&maxResults=8`, { headers: H });
+  for (const it of lista.items ?? []) {
+    if (it.status?.privacyStatus !== "public") continue;
+    const videoId = it.snippet.resourceId.videoId;
+    const hilos = await json(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&maxResults=20`, { headers: H }).catch(() => ({ items: [] }));
+    if ((hilos.items ?? []).some((h: any) => /Juega gratis|Play free/.test(h.snippet?.topLevelComment?.snippet?.textOriginal ?? ""))) continue;
+    await json("https://www.googleapis.com/youtube/v3/commentThreads?part=snippet", { method: "POST", headers: H,
+      body: JSON.stringify({ snippet: { videoId, topLevelComment: { snippet: { textOriginal: texto } } } }) }).catch((e) => console.log(`  ⚠ comentario no puesto en ${videoId}: ${String(e).slice(0, 120)}`));
+    console.log(`  ✓ comentario con enlace en ${videoId}`);
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const apply = args.includes("--apply");
@@ -403,6 +428,7 @@ async function main() {
   const estado: Estado = fs.existsSync(ESTADO_PATH) ? JSON.parse(fs.readFileSync(ESTADO_PATH, "utf8")) : { publicados: [] };
 
   const planes = planificar(filas, estado, ahora, { cuentasCalientes: process.env.SOCIAL_CUENTAS_CALIENTES === "true" });
+  if (apply) for (const en of [false, true]) await comentarEnlaceYoutube(en).catch((e) => console.log(`⚠ comentarios YouTube ${en ? "EN" : "ES"}: ${String(e).slice(0, 160)}`));
   if (verPlan) {
     console.log(`PLAN con ritmo humano (${planes.length} publicaciones):`);
     for (const p of planes) console.log(`  ${fmt(p.cuando)}  ${p.red.padEnd(9)} ${p.fila.video.replace(/^videos\//, "")}${p.motivo ? `   ✗ ${p.motivo}` : ""}`);
