@@ -1,7 +1,7 @@
 /**
  * Carruseles «¿cuál eliges?» en Instagram, solos (30 sep 2026, fundador: "automatiza
  * Instagram también; yo solamente me ocupo de TikTok España"). Dos al día, 14:00 y 20:00
- * (Madrid), en el orden de scripts/social/carruseles-ig.json, por Buffer: carrusel de fotos
+ * (Madrid) — desde el 30 sep solo a las 14:00; a las 20:00 va un reel —, en el orden de scripts/social/carruseles-ig.json, por Buffer: carrusel de fotos
  * 4:5 (social/carruseles-ig, hechas con carruseles-ig.py) + el pie con la llamada a VIBO al final
  * (el primer comentario automático es de pago en Buffer; tipo "post": con varias fotos, carrusel). Las fotos las descarga Buffer del repositorio público vibo-redes.
  *
@@ -15,7 +15,7 @@ import path from "node:path";
 const REG = path.join(__dirname, "carruseles-ig.json");
 const FOTOS = path.join(__dirname, "../../social/carruseles-ig");
 const RAW = "https://raw.githubusercontent.com/pepelu608-commits/vibo-redes/main/social/carruseles-ig";
-const HORAS = ["14:00", "20:00"];
+const HORAS = ["14:00"]; // 30 sep: a las 20:00 va un reel (publicar-directo.ts), "hay que mezclar"
 const ADELANTO_H = 8;
 const COMENTARIO = "¿quieres jugar por premios de verdad? busca «vibo» en la app store · sábados 18:00 💶";
 const apply = process.argv.includes("--apply");

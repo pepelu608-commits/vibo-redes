@@ -23,9 +23,9 @@ export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linke
 // Facebook, LinkedIn, Threads y Bluesky perdían el 100 % de las publicaciones.
 // 29 sep 2026 (fundador: "me voy a centrar en TikTok, lo subo yo; el resto automático"):
 // TikTok a mano; X parado; el robot solo YouTube e Instagram, 1 al día en español.
-// 30 sep 2026 (fundador): TikTok ES e Instagram los lleva él a mano y SOLO con carruseles;
-// el robot sube los vídeos a YouTube (ES y EN) y a TikTok EN (@vibo.app2, por Buffer).
-export const REDES_PARADAS: Red[] = ["instagram", "x", "facebook", "linkedin", "threads", "bluesky"];
+// 30 sep 2026 (fundador): TikTok ES lo lleva él a mano (carruseles). Instagram: carrusel 14:00
+// (publicar-carruseles-ig.ts) + reel 20:00 (este robot). YouTube ES/EN y TikTok EN (@vibo.app2), robot.
+export const REDES_PARADAS: Red[] = ["x", "facebook", "linkedin", "threads", "bluesky"];
 export const REDES: Red[] = (["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"] as Red[]).filter((r) => !REDES_PARADAS.includes(r));
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
 export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky", "x"];
@@ -256,8 +256,9 @@ export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado,
     return {
       date: fechaMas(sabado, p.dia),
       time: p.hora,
-      // 30 sep 2026: ES → YouTube (TikTok ES e Instagram, a mano con carruseles); EN → YouTube y TikTok EN.
-      networks: v.lang === "es" ? ["youtube", "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok"],
+      // 30 sep 2026: ES → YouTube, y el de las 20:00 también reel en Instagram (fundador: "hay que mezclar":
+      // carrusel a las 14:00 con publicar-carruseles-ig.ts + reel a las 20:00). TikTok ES, a mano. EN → YouTube y TikTok EN.
+      networks: v.lang === "es" ? ["youtube", ...(p.hora === "20:00" ? ["instagram"] : []), "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok"],
       video: `videos/${v.file}`,
       caption: caption(v, boteCents, mesCents, empiezaEn),
       hashtags: hashtagsDe(v),
