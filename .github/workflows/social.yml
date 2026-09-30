@@ -77,10 +77,16 @@ jobs:
         # el 24 sep) y lo que pasaba de hora se perdía. Cada pasada deja
         # programado lo de las próximas 8 h en Buffer y en YouTube (publishAt).
         run: npx tsx scripts/social/publicar-directo.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }} --adelantar=8
+      - name: Carruseles en Instagram (14:00 y 20:00)
+        if: ${{ !cancelled() }}
+        env:
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+        run: npx tsx scripts/social/publicar-carruseles-ig.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }}
+        continue-on-error: true
       - name: Guardar el registro de lo publicado
         if: ${{ vars.SOCIAL_APPLY == 'true' }}
         run: |
           git config user.name "vibo-social"
           git config user.email "social@vibo.invalid"
-          git add -A scripts/social/publicados.json scripts/social/schedule.csv
+          git add -A scripts/social/publicados.json scripts/social/schedule.csv scripts/social/carruseles-ig.json
           git diff --cached --quiet || (git commit -m "social: registro de publicaciones" && git push)
