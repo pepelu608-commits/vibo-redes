@@ -58,7 +58,13 @@ export type Hueco = { dia: number; hora: string; file?: string; pool?: "pregunta
 // en español, de los de grabación real (los animados están prohibidos). Antes
 // eran 5-6 al día mezclando inglés en el mismo canal de YouTube.
 // 29 sep 2026, noche (fundador: "yo subiría con el robot por lo menos 2 vídeos al día"): 14:00 y 20:00.
-export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap((dia) => ["14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })));
+// 30 sep 2026 (fundador: "hay que poner en marcha el canal de YouTube en inglés"):
+// además, 2 al día en inglés a las 17:00 y 23:00 (tarde de Reino Unido, mediodía
+// y tarde de EE. UU.); solo van a YouTube EN (ver `networks` más abajo).
+export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap((dia) => [
+  ...["14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })),
+  ...["17:00", "23:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "en" as const })),
+]);
 
 /**
  * Pie de cada publicación. Desde el 21 sep 2026 abre con el DINERO (la
@@ -158,8 +164,10 @@ export function planCalentamiento(desdeDia: number, hastaDia = -10): Hueco[] {
   // misma cuenta (es la ráfaga, no el volumen, lo que hace que te tapen).
   // En Instagram el tope de 2 al día recorta el tercero solo.
   // 22 sep 2026 (fundador): las 21:30 era tarde. Mañana, sobremesa y tarde.
-  const HORAS_ES = ["14:00", "20:00"]; // 29 sep 2026: 2 al día, solo en español
-  const HORAS_EN: string[] = [];
+  const HORAS_ES = ["14:00", "20:00"]; // 29 sep 2026: 2 al día en español
+  // 30 sep 2026 (fundador: "hay que poner en marcha el canal de YouTube en
+  // inglés"): 2 al día en inglés, a horas de Reino Unido / EE. UU.
+  const HORAS_EN = ["17:00", "23:00"];
   for (let d = desdeDia; d <= hastaDia; d++) {
     for (const h of HORAS_ES) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "es" });
     for (const h of HORAS_EN) huecos.push({ dia: d, hora: h, pool: "pregunta", lang: "en" });
@@ -246,7 +254,8 @@ export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado,
     return {
       date: fechaMas(sabado, p.dia),
       time: p.hora,
-      networks: v.lang === "es" ? ["tiktok", "instagram", "youtube", "x", "facebook", "threads", "bluesky", "linkedin"] : ["tiktok", "instagram", "youtube", "x", "threads", "bluesky"],
+      // 30 sep 2026: en inglés solo YouTube (no hay cuentas EN de Instagram/TikTok; el robot no debe mezclar idiomas en las españolas).
+      networks: v.lang === "es" ? ["tiktok", "instagram", "youtube", "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube"],
       video: `videos/${v.file}`,
       caption: caption(v, boteCents, mesCents, empiezaEn),
       hashtags: hashtagsDe(v),
