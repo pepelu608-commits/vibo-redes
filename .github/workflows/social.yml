@@ -84,7 +84,7 @@ jobs:
         run: npx tsx scripts/social/publicar-carruseles-ig.ts ${{ vars.SOCIAL_APPLY == 'true' && '--apply' || '' }}
         continue-on-error: true
       - name: Guardar el registro de lo publicado
-        if: ${{ vars.SOCIAL_APPLY == 'true' }}
+        if: ${{ !cancelled() && vars.SOCIAL_APPLY == 'true' }}
         run: |
           git config user.name "vibo-social"
           git config user.email "social@vibo.invalid"
