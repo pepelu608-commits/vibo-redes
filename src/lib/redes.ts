@@ -298,7 +298,8 @@ export const RITMO = {
   ESCALON_MIN: [0, 25, 50, 80, 105, 130, 155, 180],
   JITTER_MIN: 8,
   GAP_MISMA_RED_MIN: 180,
-  TOPE_DIA: { tiktok: 3, instagram: 2, youtube: 3, x: 4, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
+  // 1 oct 2026 (fundador: "dijimos 2 cada día"): YouTube y TikTok, 2 al día por cuenta.
+  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 2, x: 4, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
   CALENTAMIENTO_DIAS: 2,
   NO_REPETIR_DIAS: 30,
   SILENCIO: { desde: 1, hasta: 7 },
@@ -314,6 +315,10 @@ export type Plan = { clave: string; red: Red; fila: Fila; cuando: Date; motivo?:
 export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones: { cuentasCalientes?: boolean } = {}): Plan[] {
   const R = RITMO;
   const hechos = new Map(estado.publicados.map((p) => [p.clave, p]));
+  // HUECO YA USADO (1 oct 2026, bug: «hemos subido demasiados»): build-schedule rehace el calendario cada hora y,
+  // si cambia el catálogo, el mismo hueco (día|hora|red) recibe OTRO vídeo → clave nueva → se publicaba otra vez.
+  // Un hueco publicado (o perdido) cuenta como hecho, sea cual sea el vídeo.
+  const huecosHechos = new Set(estado.publicados.map((p) => p.clave.split("|").slice(0, 3).join("|")));
   // Cuenta = red + idioma (18 sep 2026): TikTok español y TikTok inglés son
   // cuentas distintas; antes el tope diario y el calentamiento las sumaban y
   // la segunda se quedaba sin publicar.
@@ -349,7 +354,7 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
     orden.forEach((red, i) => {
       const clave = `${f.date}|${f.time}|${red}|${f.video}`;
       const c = cuentaDe(red, lang);
-      if (hechos.has(clave)) return;
+      if (hechos.has(clave) || huecosHechos.has(`${f.date}|${f.time}|${red}`)) return;
       const j = (hashEstable(clave) % (R.JITTER_MIN * 2 + 1)) - R.JITTER_MIN;
       let cuando = new Date(madridADate(f.date, f.time).getTime() + (R.ESCALON_MIN[i] + j) * 60000);
       const pm = partesMadrid(cuando);
