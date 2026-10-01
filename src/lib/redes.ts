@@ -213,7 +213,9 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // "escalera"… Así cada formato sale los mismos días que los demás y la
     // comparación es justa (antes salían en bloques de 20 del mismo tipo).
     // 25 sep 2026: cada formato nuevo (formato-rapidas, formato-banderas…) tiene su propio turno.
-    const familia = (g: string) => { const m = grupos.get(g)![0].mecanica; return m === "fabrica-tres" || m === "fabrica-escalera" || m.startsWith("formato-") ? m : "pregunta"; };
+    // 1 oct 2026 (fundador, tras ver que en YouTube lo que más funciona son las preguntas de curiosidad):
+    // los «¿cuál eliges?» y las listas (ids ceNN) son su propia familia → se alternan 1 y 1 con las preguntas.
+    const familia = (g: string) => { if (/^ce\d/.test(g)) return "cualeliges"; const m = grupos.get(g)![0].mecanica; return m === "fabrica-tres" || m === "fabrica-escalera" || m.startsWith("formato-") ? m : "pregunta"; };
     const porTurnos = (gs: string[]) => {
       const colas = new Map<string, string[]>();
       for (const g of gs) colas.set(familia(g), [...(colas.get(familia(g)) ?? []), g]);
@@ -223,7 +225,7 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
       return out;
     };
     const cola = [
-      ...orden.filter((g) => conTexto(g) && fresca(g) && !recientes.has(g)),
+      ...porTurnos(orden.filter((g) => conTexto(g) && fresca(g) && !recientes.has(g))),
       ...porTurnos(orden.filter((g) => conTexto(g) && !fresca(g) && !recientes.has(g))),
       ...orden.filter((g) => conTexto(g) && recientes.has(g)),
       ...orden.filter((g) => !conTexto(g)),
