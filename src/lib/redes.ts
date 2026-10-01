@@ -197,7 +197,10 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     const huecos = [...todos.filter((h) => fechaMas(sabado, h.dia) >= hoy), ...todos.filter((h) => fechaMas(sabado, h.dia) < hoy)];
     if (!huecos.length) continue;
     const grupos = new Map<string, Video[]>();
-    for (const v of catalogo) if (v.tipo === "pregunta" && v.lang === lang && v.activo !== false) grupos.set(grupo(v), [...(grupos.get(grupo(v)) ?? []), v]);
+    // 1 oct 2026 (fundador): las listas de planes (ce69 en adelante) no van en vídeo. En YouTube casi no tienen
+    // visitas (análisis de 918 Shorts en español); en Instagram ya salen como carrusel (publicar-carruseles-ig.ts).
+    const esLista = (v: Video) => /^ce(69|[7-9]\d)/.test(v.id ?? "");
+    for (const v of catalogo) if (v.tipo === "pregunta" && v.lang === lang && v.activo !== false && !esLista(v)) grupos.set(grupo(v), [...(grupos.get(grupo(v)) ?? []), v]);
     const orden = [...grupos.keys()].sort((a, b) => hashEstable(semana + a) - hashEstable(semana + b));
     // Primero los que no han salido en 30 días; si no llegan, se repiten los más antiguos (mejor repetir que callar).
     // Y antes que nada, los que TIENEN pregunta escrita (18 sep 2026): un
