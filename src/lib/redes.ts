@@ -25,7 +25,9 @@ export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linke
 // TikTok a mano; X parado; el robot solo YouTube e Instagram, 1 al día en español.
 // 30 sep 2026 (fundador): TikTok ES lo lleva él a mano (carruseles). Instagram: carrusel 14:00
 // (publicar-carruseles-ig.ts) + reel 20:00 (este robot). YouTube ES/EN y TikTok EN (@vibo.app2), robot.
-export const REDES_PARADAS: Red[] = ["x", "facebook", "linkedin", "threads", "bluesky"];
+// 1 oct 2026 (fundador, «actívalo en los dos»): X vuelve, en español e inglés. Del 15 al 29 sep trajo 44 visitas
+// a la web, más que TikTok (31), YouTube (18) o Instagram (15) (tabla visita_origen).
+export const REDES_PARADAS: Red[] = ["facebook", "linkedin", "threads", "bluesky"];
 export const REDES: Red[] = (["tiktok", "instagram", "youtube", "x", "facebook", "linkedin", "threads", "bluesky"] as Red[]).filter((r) => !REDES_PARADAS.includes(r));
 /** Redes que salen por Buffer (22 sep 2026): basta con conectar el canal en Buffer; si no está conectado, se salta sin error. */
 export const REDES_BUFFER: Red[] = ["tiktok", "instagram", "facebook", "linkedin", "threads", "bluesky", "x"];
@@ -263,7 +265,7 @@ export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado,
       time: p.hora,
       // 30 sep 2026: ES → YouTube, y el de las 20:00 también reel en Instagram (fundador: "hay que mezclar":
       // carrusel a las 14:00 con publicar-carruseles-ig.ts + reel a las 20:00). TikTok ES, a mano. EN → YouTube y TikTok EN.
-      networks: v.lang === "es" ? ["youtube", ...(p.hora === "20:00" ? ["instagram"] : []), "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok"],
+      networks: v.lang === "es" ? ["youtube", ...(p.hora === "20:00" ? ["instagram"] : []), "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok", "x"],
       video: `videos/${v.file}`,
       caption: caption(v, boteCents, mesCents, empiezaEn),
       hashtags: hashtagsDe(v),
@@ -304,7 +306,7 @@ export const RITMO = {
   JITTER_MIN: 8,
   GAP_MISMA_RED_MIN: 180,
   // 1 oct 2026 (fundador: "dijimos 2 cada día"): YouTube y TikTok, 2 al día por cuenta.
-  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 2, x: 4, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
+  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 2, x: 2, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
   CALENTAMIENTO_DIAS: 2,
   NO_REPETIR_DIAS: 30,
   SILENCIO: { desde: 1, hasta: 7 },
