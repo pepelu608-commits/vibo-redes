@@ -6390,7 +6390,8 @@
       "pregunta": "Who did Spain beat in the 2026 World Cup final?",
       "tags": "#trivia",
       "id": "e20",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false
     },
     {
       "file": "Real r24 - Cuantos Mundiales ha ganado.mp4",
@@ -6410,7 +6411,8 @@
       "pregunta": "How many World Cups has Spain won?",
       "tags": "#trivia",
       "id": "e21",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false
     },
     {
       "file": "Real r25 - Cual es la montana.mp4",
@@ -6654,7 +6656,8 @@
       "pregunta": "¿Cuántos años tenía messi en la final del mundial 2026?",
       "tags": "#messi #mundial2026",
       "id": "v07",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false
     },
     {
       "file": "Real v08 - Antes del de agosto de.mp4",
@@ -7600,7 +7603,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce43en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce44 - Cual de resacon te gusta.mp4",
@@ -7776,7 +7780,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce51en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce52 - Que tortilla te comes.mp4",
@@ -7798,7 +7803,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce52en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce53 - Que disfraz te pones este.mp4",
@@ -7908,7 +7914,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce57en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce58 - En que estadio verias una.mp4",
@@ -7930,7 +7937,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce58en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real p01 - Cual es la capital de.mp4",
@@ -7999,7 +8007,8 @@
       "tags": "#curiosidades #quiz",
       "id": "q01",
       "actualidad": "2026-09-30",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false
     },
     {
       "file": "Real q02 - Como duerme un delfin sin.mp4",
@@ -8142,7 +8151,8 @@
       "tags": "#curiosidades #quiz",
       "id": "q14",
       "actualidad": "2026-09-30",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false
     },
     {
       "file": "Real q15 - Hay mas arboles en la.mp4",
@@ -8233,7 +8243,8 @@
       "tags": "#trivia #quiz",
       "id": "q01en",
       "actualidad": "2026-09-30",
-      "cta": "What did you say? Comment 👇"
+      "cta": "What did you say? Comment 👇",
+      "activo": false
     },
     {
       "file": "Real q02en EN - How does a dolphin sleep.mp4",
@@ -8376,7 +8387,8 @@
       "tags": "#trivia #quiz",
       "id": "q14en",
       "actualidad": "2026-09-30",
-      "cta": "What did you say? Comment 👇"
+      "cta": "What did you say? Comment 👇",
+      "activo": false
     },
     {
       "file": "Real q15en EN - Are there more trees on.mp4",
@@ -8420,7 +8432,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce59en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce60 - Que plato de tu abuela.mp4",
@@ -8442,7 +8455,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce60en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce61 - Que trabajo de verano cogerias.mp4",
@@ -8486,7 +8500,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce62en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce63 - Que red flag perdonas.mp4",
@@ -8530,7 +8545,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce64en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce65 - Que bocadillo eliges.mp4",
@@ -8552,7 +8568,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce65en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce66 - Que verano de tu infancia.mp4",
@@ -8596,7 +8613,8 @@
       "tags": "#whichonewouldyouchoose #wouldyourather #thisorthat",
       "id": "ce67en",
       "actualidad": "2026-09-30",
-      "cta": "1, 2, 3 or 4? Comment your number 👇"
+      "cta": "1, 2, 3 or 4? Comment your number 👇",
+      "activo": false
     },
     {
       "file": "Real ce68 - Que excusa pones para no.mp4",
