@@ -8923,6 +8923,406 @@
       "id": "ce99",
       "actualidad": "2026-09-30",
       "cta": "Guárdalo para el finde 📌"
+    },
+    {
+      "file": "Real k01 - Que animal tiene tres.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué animal tiene tres corazones?",
+      "tags": "#datoscuriosos",
+      "id": "k01",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k01en EN - Which animal has three.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which animal has three hearts?",
+      "tags": "#funfacts #trivia",
+      "id": "k01en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k02 - Cual es el unico.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál es el único mamífero que puede volar?",
+      "tags": "#datoscuriosos",
+      "id": "k02",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k02en EN - Which is the only.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the only mammal that can truly fly?",
+      "tags": "#funfacts #trivia",
+      "id": "k02en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k03 - En que planeta un.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿en qué planeta un día dura más que un año?",
+      "tags": "#datoscuriosos",
+      "id": "k03",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k03en EN - On which planet is.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "On which planet is a day longer than a year?",
+      "tags": "#funfacts #trivia",
+      "id": "k03en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k04 - Que organo puede volver.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué órgano puede volver a crecer casi entero?",
+      "tags": "#datoscuriosos",
+      "id": "k04",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k04en EN - Which organ can grow.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which organ can grow back almost completely?",
+      "tags": "#funfacts #trivia",
+      "id": "k04en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k05 - Que animal mata a.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué animal mata a más personas cada año?",
+      "tags": "#datoscuriosos",
+      "id": "k05",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k05en EN - Which animal kills the.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which animal kills the most people every year?",
+      "tags": "#funfacts #trivia",
+      "id": "k05en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k06 - Donde esta el punto.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿dónde está el punto más profundo del océano?",
+      "tags": "#datoscuriosos",
+      "id": "k06",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k06en EN - Where is the deepest.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Where is the deepest point in the ocean?",
+      "tags": "#funfacts #trivia",
+      "id": "k06en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k07 - Cual es el animal.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál es el animal más grande que ha existido nunca?",
+      "tags": "#datoscuriosos",
+      "id": "k07",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k07en EN - What is the largest.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the largest animal that has ever lived?",
+      "tags": "#funfacts #trivia",
+      "id": "k07en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k08 - Cual de estas frutas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál de estas frutas es una baya?",
+      "tags": "#datoscuriosos",
+      "id": "k08",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k08en EN - Which of these fruits.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which of these fruits is a berry?",
+      "tags": "#funfacts #trivia",
+      "id": "k08en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k09 - Que marca fabrica mas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué marca fabrica más ruedas en el mundo?",
+      "tags": "#datoscuriosos",
+      "id": "k09",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k09en EN - Which brand makes the.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which brand makes the most tyres in the world?",
+      "tags": "#funfacts #trivia",
+      "id": "k09en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k10 - Cual es la montana.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál es la montaña más alta del sistema solar?",
+      "tags": "#datoscuriosos",
+      "id": "k10",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k10en EN - What is the tallest.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the tallest mountain in the solar system?",
+      "tags": "#funfacts #trivia",
+      "id": "k10en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k11 - Que es mas antiguo.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué es más antiguo?",
+      "tags": "#datoscuriosos",
+      "id": "k11",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k11en EN - Which is older.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is older?",
+      "tags": "#funfacts #trivia",
+      "id": "k11en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k12 - Cual es el videojuego.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuál es el videojuego más vendido de la historia?",
+      "tags": "#datoscuriosos",
+      "id": "k12",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k12en EN - What is the bestselling.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the best-selling video game of all time?",
+      "tags": "#funfacts #trivia",
+      "id": "k12en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k13 - Cleopatra vivio mas cerca.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "Cleopatra vivió más cerca de…",
+      "tags": "#datoscuriosos",
+      "id": "k13",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k13en EN - Cleopatra lived closer in.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Cleopatra lived closer in time to…",
+      "tags": "#funfacts #trivia",
+      "id": "k13en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k14 - Que animal tiene huellas.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué animal tiene huellas dactilares casi iguales a las nuestras?",
+      "tags": "#datoscuriosos",
+      "id": "k14",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k14en EN - Which animal has fingerprints.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which animal has fingerprints almost identical to ours?",
+      "tags": "#funfacts #trivia",
+      "id": "k14en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k15 - Cuantas eurocopas ha ganado.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuántas eurocopas ha ganado españa?",
+      "tags": "#datoscuriosos",
+      "id": "k15",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k15en EN - How many euros has.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many euros has spain won?",
+      "tags": "#funfacts #trivia",
+      "id": "k15en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k16 - Quien es el maximo.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿quién es el máximo goleador de la historia de la selección española?",
+      "tags": "#datoscuriosos",
+      "id": "k16",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k16en EN - Who is spain's alltime.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Who is spain's all-time top scorer?",
+      "tags": "#funfacts #trivia",
+      "id": "k16en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k17 - Quien tiene mas balones.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿quién tiene más balones de oro de la historia?",
+      "tags": "#datoscuriosos",
+      "id": "k17",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k17en EN - Who has won the.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Who has won the most ballon d'or awards?",
+      "tags": "#funfacts #trivia",
+      "id": "k17en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k18 - Cuanto tarda la luz.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿cuánto tarda la luz del sol en llegar a la tierra?",
+      "tags": "#datoscuriosos",
+      "id": "k18",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k18en EN - How long does sunlight.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How long does sunlight take to reach earth?",
+      "tags": "#funfacts #trivia",
+      "id": "k18en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k19 - Que animal puede volver.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué animal puede volver a ser joven una y otra vez?",
+      "tags": "#datoscuriosos",
+      "id": "k19",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k19en EN - Which animal can turn.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which animal can turn young again and again?",
+      "tags": "#funfacts #trivia",
+      "id": "k19en",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k20 - Que significa wifi.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿qué significa «wi-fi»?",
+      "tags": "#datoscuriosos",
+      "id": "k20",
+      "actualidad": "2026-10-01"
+    },
+    {
+      "file": "Real k20en EN - What does wifi stand.mp4",
+      "mecanica": "real",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What does «wi-fi» stand for?",
+      "tags": "#funfacts #trivia",
+      "id": "k20en",
+      "actualidad": "2026-10-01"
     }
   ]
 }
