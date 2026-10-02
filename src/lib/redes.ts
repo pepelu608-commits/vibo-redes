@@ -94,7 +94,8 @@ export function cuandoPartida(empiezaEn: string | Date | undefined, lang: "es" |
 export function caption(v: Video, boteCents?: number, mesCents?: number, empiezaEn?: string | Date): string {
   const es = v.lang === "es";
   const cp = cuandoPartida(empiezaEn, v.lang);
-  const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM CET · free · ${URL_APP}`;
+  // 1 oct 2026: «Spain time» (en octubre España está en CEST, no CET).
+  const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM Spain time · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
@@ -313,7 +314,8 @@ export const RITMO = {
   VENTANA_TARDE_MIN: 130, // el cron corre cada 2 h; con menos, se perderían posts
   ERRORES_PARA_PARAR: 2,
 };
-export const PROHIBIDO = [/sorteo/i, /gana dinero/i, /dinero gratis/i];
+// 1 oct 2026: también las otras líneas rojas de marketing (CLAUDE.md): «bote», «un fallo y fuera», «cobran en euros».
+export const PROHIBIDO = [/sorteo/i, /gana dinero/i, /dinero gratis/i, /\bbotes?\b/i, /un fallo y fuera/i, /cobran en euros/i];
 
 export type Publicado = { clave: string; red: Red; video: string; fecha: string; estado: "ok" | "error" | "perdido" | "borrador"; id?: string; error?: string; lang?: Lang };
 export type Estado = { publicados: Publicado[] };
