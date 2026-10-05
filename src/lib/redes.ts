@@ -437,7 +437,9 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     // se juega desde el navegador del móvil. Con dominio propio, URL_WEB.
     case "tiktok": return { titulo: pregunta.slice(0, 90), texto: `${corto}\n${en ? "Free. Those who last longest get paid." : "Gratis. Los que más aguantan, cobran."} ${cuandoCorto}\n${en ? `iPhone: search “VIBO” on the App Store. Android: ${URL_WEB}` : `iPhone: busca «VIBO» en la App Store. Android: ${URL_WEB}`}\n${rotados.slice(0, 4).join(" ")}`.trim() };
     case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Those who last longest get paid." : "Gratis. Los que más aguantan, cobran."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
-    case "youtube": return { titulo: (pregunta || "VIBO").slice(0, 100), texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
+    // 5 oct 2026: en Shorts solo se ve el título; sin «VIBO» en él nadie sabe qué buscar en la App Store
+    // (6.675 vistas → 20 visitas → 0 altas). El nombre va al final para no comerse la pregunta.
+    case "youtube": return { titulo: pregunta ? `${pregunta.slice(0, 92)} | VIBO` : "VIBO", texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "x": {
       // X cuenta distinto (24 sep 2026: tres rechazos por "más de 280"): el €
       // y los emojis pesan 2 y cada enlace pesa 23. Se quitan primero los
