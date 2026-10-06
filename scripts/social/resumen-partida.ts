@@ -33,8 +33,8 @@ type Datos = {
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const euros = (c: number, lang: Lang) => (lang === "es" ? `${Math.round(c / 100)} €` : `€${Math.round(c / 100)}`);
 const T = {
-  es: { gancho: "ASÍ FUE LA PARTIDA", jugaron: "JUGARON", tumbo: "LA PREGUNTA QUE TUMBÓ A MÁS GENTE", fallo: (p: number) => `EL ${p} % FALLÓ`, final: (n: number) => `LLEGARON AL FINAL: ${n}`, reparto: (e: string) => `SE REPARTIERON ${e}`, sinReparto: "SIN BOTE REPARTIDO", c1: "PRÓXIMA: SÁBADO · 18:00", c2: "GRATIS · CON PREMIO" },
-  en: { gancho: "HOW THE GAME WENT", jugaron: "PLAYED", tumbo: "THE QUESTION THAT KNOCKED OUT THE MOST", fallo: (p: number) => `${p}% GOT IT WRONG`, final: (n: number) => `MADE IT TO THE END: ${n}`, reparto: (e: string) => `${e} SPLIT BETWEEN THEM`, sinReparto: "NO POT PAID OUT", c1: "NEXT: SATURDAY · 6 PM CET", c2: "FREE · REAL PRIZE" },
+  es: { gancho: "ASÍ FUE LA PARTIDA", jugaron: "JUGARON", tumbo: "LA PREGUNTA QUE TUMBÓ A MÁS GENTE", fallo: (p: number) => `EL ${p} % FALLÓ`, final: (n: number) => `LLEGARON AL FINAL: ${n}`, reparto: (e: string) => `SE REPARTIERON ${e}`, sinReparto: "SIN BOTE REPARTIDO", c1: "PRÓXIMA: DOMINGO · 20:00", c2: "GRATIS · CON PREMIO" },
+  en: { gancho: "HOW THE GAME WENT", jugaron: "PLAYED", tumbo: "THE QUESTION THAT KNOCKED OUT THE MOST", fallo: (p: number) => `${p}% GOT IT WRONG`, final: (n: number) => `MADE IT TO THE END: ${n}`, reparto: (e: string) => `${e} SPLIT BETWEEN THEM`, sinReparto: "NO POT PAID OUT", c1: "NEXT: SUNDAY · 8 PM CET", c2: "FREE · REAL PRIZE" },
 };
 
 function html(d: Datos, lang: Lang): string {

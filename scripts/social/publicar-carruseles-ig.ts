@@ -17,7 +17,7 @@ const FOTOS = path.join(__dirname, "../../social/carruseles-ig");
 const RAW = "https://raw.githubusercontent.com/pepelu608-commits/vibo-redes/main/social/carruseles-ig";
 const HORAS = ["14:00"]; // 30 sep: a las 20:00 va un reel (publicar-directo.ts), "hay que mezclar"
 const ADELANTO_H = 8;
-const COMENTARIO = "¿quieres jugar por premios de verdad? busca «vibo» en la app store · sábados 18:00 💶";
+const COMENTARIO = "¿quieres jugar por premios de verdad? busca «vibo» en la app store · domingos 20:00 💶";
 const apply = process.argv.includes("--apply");
 
 type Registro = { orden: string[]; publicados: { slug: string; hueco: string; id: string; fecha: string }[] };

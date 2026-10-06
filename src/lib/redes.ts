@@ -8,6 +8,7 @@
  */
 
 import { formatoEuros } from "./premio";
+import { diaYHoraMadrid } from "./cuando-sabado";
 
 export const URL_WEB = "vibo-azure.vercel.app";
 /** El enlace de descarga (src/app/app/route.ts): App Store en iPhone, portada en el resto; apunta el origen. */
@@ -81,21 +82,24 @@ export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap
  * 2026: la partida es el 17 oct y los pies decían "este sábado" desde
  * septiembre: quien viniera el 26 no encontraría nada.)
  */
-export function cuandoPartida(empiezaEn: string | Date | undefined, lang: "es" | "en"): { frase: string; corta: string } {
+export function cuandoPartida(empiezaEn: string | Date | undefined, lang: "es" | "en"): { frase: string; corta: string; hora: string } {
   const es = lang === "es";
-  if (!empiezaEn) return { frase: es ? "este sábado" : "this Saturday", corta: es ? "Sábado" : "Saturday" };
+  // 6 oct 2026: día y hora de la fecha REAL (domingos a las 20:00 desde la 002; la 001, sábado a las 18:00).
+  if (!empiezaEn) return { frase: es ? "este domingo" : "this Sunday", corta: es ? "Domingo" : "Sunday", hora: es ? "20:00" : "8 PM" };
   const d = new Date(empiezaEn);
-  if ((d.getTime() - Date.now()) / 86400000 <= 7) return { frase: es ? "este sábado" : "this Saturday", corta: es ? "Sábado" : "Saturday" };
+  const { dia, hora } = diaYHoraMadrid(d, es ? "es" : "en");
+  const Dia = dia.charAt(0).toUpperCase() + dia.slice(1);
+  if ((d.getTime() - Date.now()) / 86400000 <= 7) return { frase: es ? `este ${dia}` : `this ${dia}`, corta: Dia, hora };
   const larga = d.toLocaleDateString(es ? "es-ES" : "en-GB", { day: "numeric", month: "long", timeZone: "Europe/Madrid" });
   const cortaF = d.toLocaleDateString(es ? "es-ES" : "en-GB", { day: "numeric", month: "short", timeZone: "Europe/Madrid" }).replace(".", "");
-  return { frase: es ? `el sábado ${larga}` : `on Saturday ${larga}`, corta: es ? `Sábado ${cortaF}` : `Saturday ${cortaF}` };
+  return { frase: es ? `el ${dia} ${larga}` : `on ${dia} ${larga}`, corta: `${Dia} ${cortaF}`, hora };
 }
 
 export function caption(v: Video, boteCents?: number, mesCents?: number, empiezaEn?: string | Date): string {
   const es = v.lang === "es";
   const cp = cuandoPartida(empiezaEn, v.lang);
   // 1 oct 2026: «Spain time» (en octubre España está en CEST, no CET).
-  const cita = es ? `${cp.corta} 18:00 · gratis · ${URL_APP}` : `${cp.corta} 6 PM Spain time · free · ${URL_APP}`;
+  const cita = es ? `${cp.corta} ${cp.hora} · gratis · ${URL_APP}` : `${cp.corta} ${cp.hora} Spain time · free · ${URL_APP}`;
   const bote = boteCents ? formatoEuros(boteCents, es ? "es" : "en") : "";
   const mes = mesCents && mesCents > (boteCents ?? 0) ? formatoEuros(mesCents, es ? "es" : "en") : "";
   // 26 sep 2026: el total de la temporada NO se anuncia como "en juego este
@@ -131,15 +135,17 @@ export function caption(v: Video, boteCents?: number, mesCents?: number, empieza
     const pregunta = v.pregunta.replace(/^(¿?)(\p{L})/u, (_m, a: string, b: string) => a + b.toUpperCase());
     return `${dinero} ${pregunta} ${cta}${quien} ${cita}`.replace(/\s+/g, " ").trim();
   }
-  if (v.tipo === "resumen") return es ? `Así fue la partida del sábado. Datos reales. ${cita}` : `How Saturday's game went. Real numbers. ${cita}`;
-  if (v.tipo === "repeticion") return es ? `La partida del sábado, pregunta a pregunta. ¿Hasta dónde habrías llegado tú? ${cita}` : `Saturday's game, question by question. How far would you have got? ${cita}`;
+  if (v.tipo === "resumen") return es ? `Así fue la última partida. Datos reales. ${cita}` : `How the last game went. Real numbers. ${cita}`;
+  if (v.tipo === "repeticion") return es ? `La última partida, pregunta a pregunta. ¿Hasta dónde habrías llegado tú? ${cita}` : `The last game, question by question. How far would you have got? ${cita}`;
   if (v.tipo === "bote") return es ? `El premio sube con cada registro. ${cita}` : `The prize grows with every sign-up. ${cita}`;
   return `${dinero} ${cita}`.trim();
 }
 
+/** Próximo día de partida. 6 oct 2026: domingos (antes sábados); el nombre se queda por compatibilidad. */
+export const DIA_PARTIDA = 0; // 0 = domingo
 export function proximoSabado(desde: Date): Date {
   const d = new Date(desde);
-  d.setDate(d.getDate() + ((6 - d.getDay() + 7) % 7 || 7));
+  d.setDate(d.getDate() + ((DIA_PARTIDA - d.getDay() + 7) % 7 || 7));
   return d;
 }
 
@@ -412,17 +418,19 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
   const base = f.caption.replace(/·\s*vibo-azure\.vercel\.app(\/app)?/i, "").replace(/vibo-azure\.vercel\.app(\/app)?/i, "").trim();
   // Título = la pregunta (la primera frase acabada en "?"); antes se cortaba
   // en "Saturday" y en inglés el título de YouTube salía sin pregunta.
-  const pregunta = (base.match(/[^.?!]*\?/)?.[0] ?? base.split("Sábado")[0].split("Saturday")[0]).replace(/^[\s(]*\)?\s*/, "").trim();
-  const en = /Saturday/i.test(f.caption);
+  // 6 oct 2026: cualquier día (domingos desde la 002), no solo «Sábado».
+  const DIA_RE = /(?:Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/;
+  const pregunta = (base.match(/[^.?!]*\?/)?.[0] ?? base.split(DIA_RE)[0]).replace(/^[\s(]*\)?\s*/, "").trim();
+  const en = /(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)|Spain time|free/i.test(f.caption) && !/gratis/i.test(f.caption);
   // Versión corta para TikTok/IG: sin el paréntesis del desglose, sin "¿La
   // sabías?", sin la línea de premiados y sin la cita final (van en sus líneas).
-  const citaFinal = base.match(/(?:Sábado|Saturday)[^.?!]*$/)?.[0] ?? "";
-  const cuandoCorto = citaFinal ? citaFinal.replace(/\s*·\s*(gratis|free)\s*$/i, "").trim().replace(/\s+(18:00|6 PM CET)$/, ", $1") + "." : "";
+  const citaFinal = base.match(new RegExp(`${DIA_RE.source}[^.?!]*$`))?.[0] ?? "";
+  const cuandoCorto = citaFinal ? citaFinal.replace(/\s*·\s*(gratis|free)\s*$/i, "").trim().replace(/\s+(\d{1,2}:\d{2}|\d{1,2}(?::\d{2})? [AP]M(?: CET| Spain time)?)$/, ", $1") + "." : "";
   const corto = base
     .replace(/\s*\([^)]*\)/, "")
     .replace(/¿La sabías\?\s*|Did you know it\?\s*/g, "")
     .replace(/\s*(Para los 5 mejores\.|Top 5 split it\.|Cuantos más jugáis, más premiados\.|More players, more winners\.|Los que más aguantan, cobran\.|Those who last longest get paid\.)/g, "")
-    .replace(/\s*(Sábado|Saturday)[^.?!]*$/, "")
+    .replace(new RegExp(`\\s*${DIA_RE.source}[^.?!]*$`), "")
     .trim();
   // Cada red lleva su ?o= (§ migración 047): así /redes sabe qué red trae gente.
   const web = `https://${URL_APP}?o=${red === "youtube" ? "yt" : red}-${en ? "en" : "es"}`;
@@ -453,7 +461,7 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     }
     case "bluesky": return { titulo: "", texto: `${base}\n${web}`.slice(0, 300) };
     case "threads": return { titulo: "", texto: `${base}\n${web} ${rotados.slice(0, 3).join(" ")}`.slice(0, 500) };
-    case "linkedin": return { titulo: "", texto: `${base}\n\n${en ? "Free to play. Live every Saturday." : "Gratis. En directo cada sábado."}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
+    case "linkedin": return { titulo: "", texto: `${base}\n\n${en ? "Free to play. Live every Sunday at 8 PM (Spain)." : "Gratis. En directo cada domingo a las 20:00."}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
     case "facebook": return { titulo: "", texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
   }
 }

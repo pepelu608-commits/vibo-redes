@@ -21,6 +21,8 @@ name: Centinela VIBO
 on:
   schedule:
     - cron: "20,50 15-17 * * 6"
+    # 6 oct 2026: domingos a las 20:00 Madrid (18:00 UTC en verano, 19:00 en invierno) desde la 002.
+    - cron: "20,50 17-19 * * 0"
   workflow_dispatch: {}
 
 concurrency:
@@ -54,11 +56,11 @@ jobs:
           curl -s -X POST "${{ secrets.APP_URL }}/api/admin/alerta"
           -H "authorization: Bearer ${{ secrets.CRON_SECRET }}"
           -H "content-type: application/json"
-          -d '{"robot":"centinela","nivel":"verde","mensaje":"Guardia del sábado cumplida sin incidencias"}'
+          -d '{"robot":"centinela","nivel":"verde","mensaje":"Guardia del día de partida cumplida sin incidencias"}'
       - name: Parte rojo
         if: failure()
         run: >
           curl -s -X POST "${{ secrets.APP_URL }}/api/admin/alerta"
           -H "authorization: Bearer ${{ secrets.CRON_SECRET }}"
           -H "content-type: application/json"
-          -d '{"robot":"centinela","nivel":"rojo","mensaje":"CENTINELA EN ROJO: motor sin responder, sábado sin partida, o la hora llegó y no arranca — encender reloj manual YA"}'
+          -d '{"robot":"centinela","nivel":"rojo","mensaje":"CENTINELA EN ROJO: motor sin responder, día de partida sin partida, o la hora llegó y no arranca — encender reloj manual YA"}'

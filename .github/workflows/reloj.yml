@@ -14,10 +14,10 @@ name: Reloj VIBO
 #     basta para mover estados que no tienen prisa (siembra, cierres) y
 #     mantener el despertador. La cuota se agotó el 16 sep con el reloj
 #     horario + el robot social cada 2 h.
-# ≈ 540 min/mes. Si la partida deja de ser en sábado, cambiar el "6".
+# ≈ 540 min/mes. 6 oct 2026: la 001 es sábado y desde la 002 son domingos a las 20:00 → "0,6".
 on:
   schedule:
-    - cron: "*/5 15-20 * * 6"
+    - cron: "*/5 15-20 * * 0,6"
     - cron: "23 */3 * * *"
   workflow_dispatch: {}
 

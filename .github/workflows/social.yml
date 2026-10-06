@@ -34,20 +34,22 @@ jobs:
       # repo para que los encuentren las publicaciones de las 12, 16, 19 y 20 h.
       # Sin partida en las últimas 36 h (o con menos de 20 inscritos) no se
       # fabrica nada y esas publicaciones se saltan solas.
-      - name: Fabricar resumen y repetición del sábado (domingos 08 UTC)
+      # 6 oct 2026: partidas en domingo desde la 002 → también los lunes a las 08 UTC (el script
+      # solo fabrica si hubo partida en las últimas 36 h, así que el día que no toca no hace nada).
+      - name: Fabricar resumen y repetición de la partida (domingos y lunes 08 UTC)
         if: ${{ vars.SOCIAL_APPLY == 'true' }}
         env:
           CHROME_PATH: /usr/bin/google-chrome
         run: |
-          if [ "$(date -u +%u)" = "7" ] && [ "$(date -u +%H)" = "08" ]; then
+          if { [ "$(date -u +%u)" = "7" ] || [ "$(date -u +%u)" = "1" ]; } && [ "$(date -u +%H)" = "08" ]; then
             npx tsx scripts/social/resumen-partida.ts --grabar || echo "resumen: no se pudo"
             npx tsx scripts/social/repeticion-partida.ts --grabar || echo "repetición: no se pudo"
             git config user.name "vibo-social"
             git config user.email "social@vibo.invalid"
             git add -A social/videos
-            git diff --cached --quiet || (git commit -m "social: resumen y repetición del sábado" && git pull --rebase -q origin main && git push)
+            git diff --cached --quiet || (git commit -m "social: resumen y repetición de la partida" && git pull --rebase -q origin main && git push)
           else
-            echo "No toca (solo domingos a las 08 UTC)."
+            echo "No toca (solo domingos y lunes a las 08 UTC)."
           fi
         continue-on-error: true
       - name: Calendario con el bote real

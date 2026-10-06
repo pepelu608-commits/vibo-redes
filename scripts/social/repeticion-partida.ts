@@ -39,13 +39,13 @@ const T = {
     gancho: "LA PARTIDA,<br>PREGUNTA A PREGUNTA", empezaron: (n: number) => `EMPEZARON ${n}`, pregunta: (n: number) => (n > FIJAS ? "MUERTE SÚBITA" : `PREGUNTA ${n} / ${FIJAS}`),
     fallo: (p: number) => `EL ${p} % FALLÓ`, quedan: (n: number) => (n === 1 ? "QUEDA 1" : `QUEDAN ${n}`),
     gano: (a: string | null) => (a ? `GANÓ ${a}` : "HUBO GANADOR"), reparto: (e: string) => `SE REPARTIERON ${e}`,
-    nadie: "NADIE LLEGÓ AL FINAL", acumula: "EL BOTE SE ACUMULA", c1: "EL SÁBADO, TE TOCA", c2: "18:00 · GRATIS · CON PREMIO",
+    nadie: "NADIE LLEGÓ AL FINAL", acumula: "EL BOTE SE ACUMULA", c1: "EL DOMINGO, TE TOCA", c2: "20:00 · GRATIS · CON PREMIO",
   },
   en: {
     gancho: "THE WHOLE GAME,<br>QUESTION BY QUESTION", empezaron: (n: number) => `${n} STARTED`, pregunta: (n: number) => (n > FIJAS ? "SUDDEN DEATH" : `QUESTION ${n} / ${FIJAS}`),
     fallo: (p: number) => `${p}% GOT IT WRONG`, quedan: (n: number) => `${n} LEFT`,
     gano: (a: string | null) => (a ? `${a} WON` : "WE HAD A WINNER"), reparto: (e: string) => `${e} PAID OUT`,
-    nadie: "NOBODY MADE IT", acumula: "THE POT ROLLS OVER", c1: "SATURDAY, IT'S YOUR TURN", c2: "6 PM CET · FREE · REAL PRIZE",
+    nadie: "NOBODY MADE IT", acumula: "THE POT ROLLS OVER", c1: "SUNDAY, IT'S YOUR TURN", c2: "8 PM CET · FREE · REAL PRIZE",
   },
 };
 

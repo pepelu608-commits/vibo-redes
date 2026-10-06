@@ -51,7 +51,8 @@ async function main() {
   // salen el resumen y la repetición sin que nadie cambie la variable.
   if (idx >= 0 && sabado.getTime() < Date.now() - 12 * 3600000) sabado = proximoSabado(new Date());
   if (isNaN(sabado.getTime())) throw new Error("Fecha inválida en --sabado (formato: YYYY-MM-DD)");
-  if (sabado.getDay() !== 6) throw new Error(`${sabado.toISOString().slice(0, 10)} no es sábado`);
+  // 6 oct 2026: la 001 es sábado y desde la 002 son domingos.
+  if (sabado.getDay() !== 6 && sabado.getDay() !== 0) throw new Error(`${sabado.toISOString().slice(0, 10)} no es ni sábado ni domingo`);
 
   // --calentamiento N: N días de siembra ANTES del plan de 10 días, para
   // cuentas nuevas (18 sep 2026). Solo preguntas; el plan de 10 días va
@@ -90,7 +91,7 @@ async function main() {
   fs.writeFileSync(path.join(CARPETA, "schedule.csv"), [cabecera, ...filas.map(linea)].join("\n") + "\n");
 
   const tipos = plan.map((p) => (p.pool ? elegidos.get(p) : porFile.get(p.file!))!.tipo);
-  console.log(`Partida: sábado ${fechaMas(sabado, 0)} 18:00 (Europe/Madrid)`);
+  console.log(`Partida: ${sabado.getDay() === 0 ? "domingo" : "sábado"} ${fechaMas(sabado, 0)} ${botes?.empieza ? new Date(botes.empieza).toLocaleTimeString("es-ES", { timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit" }) : ""} (Europe/Madrid)`);
   console.log(`Posts: ${plan.length} (${diasCal > 0 ? `${diasCal} d de calentamiento + ` : ""}10 días de campaña) (${tipos.filter((t) => t === "pregunta").length} pregunta / ${tipos.filter((t) => t === "bote" || t === "ritual").length} bote-ritual / resto countdown-promo)`);
   for (const f of filas.filter((x) => x.nota)) console.log(`  ⚠ ${f.date} ${f.time} — ${f.nota}`);
 }
