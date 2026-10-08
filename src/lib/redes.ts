@@ -211,7 +211,11 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // 1 oct 2026 (fundador): las listas de planes (ce69 en adelante) no van en vídeo. En YouTube casi no tienen
     // visitas (análisis de 918 Shorts en español); en Instagram ya salen como carrusel (publicar-carruseles-ig.ts).
     const esLista = (v: Video) => /^ce(69|[7-9]\d)/.test(v.id ?? "");
-    for (const v of catalogo) if (v.tipo === "pregunta" && v.lang === lang && v.activo !== false && !esLista(v)) grupos.set(grupo(v), [...(grupos.get(grupo(v)) ?? []), v]);
+    // 8 oct 2026 (fundador: «si es mejor quitarlos, sí»): fuera también los «¿cuál eliges?» (ids ceNN). En YouTube
+    // la gente los deja a la mitad (47-68 % visto) y los de datos curiosos se ven casi enteros (90 % o más).
+    // En TikTok siguen (los sube el fundador a mano).
+    const esCualEliges = (v: Video) => /^ce\d/.test(v.id ?? "");
+    for (const v of catalogo) if (v.tipo === "pregunta" && v.lang === lang && v.activo !== false && !esLista(v) && !esCualEliges(v)) grupos.set(grupo(v), [...(grupos.get(grupo(v)) ?? []), v]);
     const orden = [...grupos.keys()].sort((a, b) => hashEstable(semana + a) - hashEstable(semana + b));
     // Primero los que no han salido en 30 días; si no llegan, se repiten los más antiguos (mejor repetir que callar).
     // Y antes que nada, los que TIENEN pregunta escrita (18 sep 2026): un
@@ -450,7 +454,13 @@ export function textoPara(red: Red, f: Fila): { texto: string; titulo: string } 
     case "instagram": return { titulo: "", texto: `${corto}\n${en ? "Free. Those who last longest get paid." : "Gratis. Los que más aguantan, cobran."} ${cuandoCorto}\n${en ? "Link in bio (iPhone and Android)." : "Enlace en la bio (iPhone y Android)."}\n\n${rotados.slice(0, 5).join(" ")}` };
     // 5 oct 2026: en Shorts solo se ve el título; sin «VIBO» en él nadie sabe qué buscar en la App Store
     // (6.675 vistas → 20 visitas → 0 altas). El nombre va al final para no comerse la pregunta.
-    case "youtube": return { titulo: pregunta ? `${pregunta.slice(0, 92)} | VIBO` : "VIBO", texto: `${base}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
+    // 8 oct 2026 (fundador: misterio y premio, como en TikTok): la pregunta, cuándo, «con premio 💸» y qué buscar.
+    // Fuera «🏆 20 € en premios…» y «los que más aguantan, cobran».
+    case "youtube": {
+      const cuando = cuandoCorto.replace(/\.$/, "");
+      const gancho = en ? `${cuando ? `${cuando}, ` : ""}with a prize 💸. Search «vibo» on the App Store.` : `${cuando ? `${cuando}, ` : ""}con premio 💸. Busca «vibo» en la App Store.`;
+      return { titulo: pregunta ? `${pregunta.slice(0, 92)} | VIBO` : "VIBO", texto: `${pregunta ? `${pregunta} 👀\n` : ""}${gancho}\n${web}\n\n${rotados.slice(0, 3).join(" ")}` };
+    }
     case "x": {
       // X cuenta distinto (24 sep 2026: tres rechazos por "más de 280"): el €
       // y los emojis pesan 2 y cada enlace pesa 23. Se quitan primero los
