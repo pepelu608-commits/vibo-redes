@@ -1,5 +1,6 @@
 /**
- * Carruseles «¿cuál eliges?» en Instagram, solos (30 sep 2026, fundador: "automatiza
+ * Carruseles en Instagram, solos (desde el 8 oct 2026, los de misterio de TikTok ES en 4:5: carrusel-pitch.ts y
+ * carrusel-planes.ts con IG=1; antes, «¿cuál eliges?») (30 sep 2026, fundador: "automatiza
  * Instagram también; yo solamente me ocupo de TikTok España"). Dos al día, 14:00 y 20:00
  * (Madrid) — desde el 30 sep solo a las 14:00; a las 20:00 va un reel —, en el orden de scripts/social/carruseles-ig.json, por Buffer: carrusel de fotos
  * 4:5 (social/carruseles-ig, hechas con carruseles-ig.py) + el pie con la llamada a VIBO al final
@@ -17,7 +18,8 @@ const FOTOS = path.join(__dirname, "../../social/carruseles-ig");
 const RAW = "https://raw.githubusercontent.com/pepelu608-commits/vibo-redes/main/social/carruseles-ig";
 const HORAS = ["14:00"]; // 30 sep: a las 20:00 va un reel (publicar-directo.ts), "hay que mezclar"
 const ADELANTO_H = 8;
-const COMENTARIO = "¿quieres jugar por premios de verdad? busca «vibo» en la app store · domingos 20:00 💶";
+// 8 oct 2026: sin «jugar por premios» (misterio: feedback_hype_misterio); la misma píldora que la última foto.
+const COMENTARIO = "busca «vibo» en la app store 👀 · premio 💸 · domingo 20:00";
 const apply = process.argv.includes("--apply");
 
 type Registro = { orden: string[]; publicados: { slug: string; hueco: string; id: string; fecha: string }[] };
