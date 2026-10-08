@@ -16,7 +16,10 @@ import path from "node:path";
 const REG = path.join(__dirname, "carruseles-ig.json");
 const FOTOS = path.join(__dirname, "../../social/carruseles-ig");
 const RAW = "https://raw.githubusercontent.com/pepelu608-commits/vibo-redes/main/social/carruseles-ig";
-const HORAS = ["14:00"]; // 30 sep: a las 20:00 va un reel (publicar-directo.ts), "hay que mezclar"
+// 8 oct 2026: PARADO. Con 2 seguidores los carruseles tenían 0 visitas (Instagram los enseña casi solo a seguidores);
+// los reels sí tienen visitas, así que a las 14:00 va un reel (redes.ts). Para volver: HORAS = ["14:00"] y quitar el
+// reel de las 14:00 en redes.ts. La cola (v-*, misterio) queda lista para cuando haya seguidores.
+const HORAS: string[] = [];
 const ADELANTO_H = 8;
 // 8 oct 2026: sin «jugar por premios» (misterio: feedback_hype_misterio); la misma píldora que la última foto.
 const COMENTARIO = "busca «vibo» en la app store 👀 · premio 💸 · domingo 20:00";

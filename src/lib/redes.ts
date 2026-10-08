@@ -279,7 +279,9 @@ export function construirFilas(sabado: Date, catalogo: Video[], estado?: Estado,
       // 30 sep 2026: ES → YouTube, y el de las 20:00 también reel en Instagram (fundador: "hay que mezclar":
       // carrusel a las 14:00 con publicar-carruseles-ig.ts + reel a las 20:00). TikTok ES, a mano. EN → YouTube, TikTok EN
       // (@vibo.app2, por Buffer) y X (8 oct 2026, fundador: «activamos TikTok inglés, no cuesta nada»).
-      networks: v.lang === "es" ? ["youtube", ...(p.hora === "20:00" ? ["instagram"] : []), "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok", "x"],
+      // 8 oct 2026: también reel a las 14:00 en vez del carrusel (con 2 seguidores, los carruseles tenían 0 visitas;
+      // los reels sí tienen: Instagram los recomienda a quien no te sigue).
+      networks: v.lang === "es" ? ["youtube", ...(["14:00", "20:00"].includes(p.hora) ? ["instagram"] : []), "x", "facebook", "threads", "bluesky", "linkedin"] : ["youtube", "tiktok", "x"],
       video: `videos/${v.file}`,
       caption: caption(v, boteCents, mesCents, empiezaEn),
       hashtags: hashtagsDe(v),
