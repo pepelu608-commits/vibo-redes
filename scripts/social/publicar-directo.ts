@@ -301,10 +301,12 @@ const REDES_EXTRA: Red[] = ["x", "facebook", "threads", "linkedin", "bluesky"];
  * nueva de TikTok España, @viboapp.es, la lleva él a mano desde el móvil en
  * HD). Variable SOCIAL_SALTAR, p. ej. "tiktok-es"; sin ella, todo igual.
  */
+// 5 oct 2026 (fundador: «paramos las publicaciones en inglés»): premios solo en España. 8 oct 2026: con premio en
+// 27 países (Reino Unido y EE. UU. incluidos) y los vídeos cortos en inglés hechos, el inglés vuelve por defecto
+// (fundador: «¿podemos seguir subiendo los mismos vídeos en inglés también?»). SOCIAL_INGLES=false lo para.
+const INGLES = process.env.SOCIAL_INGLES !== "false";
 function saltada(red: Red, en: boolean): boolean {
-  // 5 oct 2026 (fundador: «paramos las publicaciones en inglés»): premios solo en España, así que
-  // las cuentas en inglés no se tocan. Para volver a publicar en inglés: SOCIAL_INGLES=true.
-  if (en && process.env.SOCIAL_INGLES !== "true") return true;
+  if (en && !INGLES) return true;
   const lista = (process.env.SOCIAL_SALTAR ?? "").split(",").map((r) => r.trim().toLowerCase()).filter(Boolean);
   return lista.includes(`${red}-${en ? "en" : "es"}`);
 }
@@ -430,12 +432,12 @@ async function main() {
 
   const csvPath = path.join(CARPETA, "schedule.csv");
   if (!fs.existsSync(csvPath)) throw new Error("No hay schedule.csv — genera primero con build-schedule.ts");
-  // 5 oct 2026 (fundador): solo España; las filas en inglés ni se planifican (SOCIAL_INGLES=true las vuelve a poner).
-  const filas = parseCsv(fs.readFileSync(csvPath, "utf8")).filter((f) => process.env.SOCIAL_INGLES === "true" || (f.lang ?? langDeVideo(f.video)) !== "en");
+  // Sin inglés (SOCIAL_INGLES=false), las filas en inglés ni se planifican.
+  const filas = parseCsv(fs.readFileSync(csvPath, "utf8")).filter((f) => INGLES || (f.lang ?? langDeVideo(f.video)) !== "en");
   const estado: Estado = fs.existsSync(ESTADO_PATH) ? JSON.parse(fs.readFileSync(ESTADO_PATH, "utf8")) : { publicados: [] };
 
   const planes = planificar(filas, estado, ahora, { cuentasCalientes: process.env.SOCIAL_CUENTAS_CALIENTES === "true" });
-  if (apply) for (const en of process.env.SOCIAL_INGLES === "true" ? [false, true] : [false]) await comentarEnlaceYoutube(en).catch((e) => console.log(`⚠ comentarios YouTube ${en ? "EN" : "ES"}: ${String(e).slice(0, 160)}`));
+  if (apply) for (const en of INGLES ? [false, true] : [false]) await comentarEnlaceYoutube(en).catch((e) => console.log(`⚠ comentarios YouTube ${en ? "EN" : "ES"}: ${String(e).slice(0, 160)}`));
   if (verPlan) {
     console.log(`PLAN con ritmo humano (${planes.length} publicaciones):`);
     for (const p of planes) console.log(`  ${fmt(p.cuando)}  ${p.red.padEnd(9)} ${p.fila.video.replace(/^videos\//, "")}${p.motivo ? `   ✗ ${p.motivo}` : ""}`);
