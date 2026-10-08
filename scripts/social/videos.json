@@ -10125,6 +10125,28 @@
       "id": "n18en",
       "actualidad": "2026-10-08",
       "cta": "Which one did you pick? Comment 👇"
+    },
+    {
+      "file": "Real y03 - Escalera 5 niveles.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "5 niveles de fácil a imposible: ¿hasta cuál llegas?",
+      "tags": "#culturageneral #quiz",
+      "id": "y03",
+      "actualidad": "2026-10-09",
+      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇"
+    },
+    {
+      "file": "Real y04 - Escalera 5 niveles Espana.mp4",
+      "mecanica": "real",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "5 niveles de España: ¿hasta cuál llegas?",
+      "tags": "#españa #culturageneral",
+      "id": "y04",
+      "actualidad": "2026-10-09",
+      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇"
     }
   ]
 }
