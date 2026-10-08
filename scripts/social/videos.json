@@ -10135,7 +10135,8 @@
       "tags": "#culturageneral #quiz",
       "id": "y03",
       "actualidad": "2026-10-09",
-      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇"
+      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇",
+      "prioridad": true
     },
     {
       "file": "Real y04 - Escalera 5 niveles Espana.mp4",
@@ -10146,7 +10147,8 @@
       "tags": "#españa #culturageneral",
       "id": "y04",
       "actualidad": "2026-10-09",
-      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇"
+      "cta": "¿Hasta qué nivel llegaste? Comenta 1, 2, 3, 4 o 5 👇",
+      "prioridad": true
     }
   ]
 }

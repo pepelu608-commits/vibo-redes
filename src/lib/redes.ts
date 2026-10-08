@@ -17,7 +17,7 @@ export const TZ = "Europe/Madrid";
 
 export type Lang = "es" | "en";
 // cta (25 sep 2026): la llamada a comentar propia de cada formato de vídeo (scripts/social/formatos.ts).
-export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string; cta?: string };
+export type Video = { file: string; mecanica: string; lang: Lang; tipo: string; pregunta: string | null; tags?: string; id?: string; variante?: string; gancho?: string; activo?: boolean; actualidad?: string; cta?: string; prioridad?: boolean };
 export type Red = "youtube" | "x" | "instagram" | "tiktok" | "facebook" | "linkedin" | "threads" | "bluesky";
 // 29 sep 2026 (fundador: "paramos las que no están ni activadas"; TikTok lo sube él a mano):
 // el robot solo publica en Instagram, YouTube y X. TikTok daba 0 visitas con lo automático y
@@ -203,9 +203,13 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
   for (const lang of ["es", "en"] as Lang[]) {
     // 26 sep 2026: los huecos que ya pasaron van al final del reparto; si no,
     // lo prioritario (actualidad, vídeos reales) caía en días pasados y se perdía.
-    const hoy = new Date().toISOString().slice(0, 10);
+    // 8 oct 2026: «futuro» = huecos que el robot aún no ha preparado. Sube a YouTube con hasta 8 h de adelanto
+    // (publicar-directo --adelantar=8) y un hueco hecho cuenta como hecho sea cual sea el vídeo: lo fresco y lo
+    // prioritario va a partir de ahí; antes, «hoy» entero contaba como futuro y lo nuevo caía en huecos ya hechos.
+    const corte = Date.now() + 8.5 * 3600000;
     const todos = plan.filter((h) => h.pool === "pregunta" && h.lang === lang);
-    const huecos = [...todos.filter((h) => fechaMas(sabado, h.dia) >= hoy), ...todos.filter((h) => fechaMas(sabado, h.dia) < hoy)];
+    const futuro = (h: Hueco) => madridADate(fechaMas(sabado, h.dia), h.hora).getTime() > corte;
+    const huecos = [...todos.filter(futuro), ...todos.filter((h) => !futuro(h))];
     if (!huecos.length) continue;
     const grupos = new Map<string, Video[]>();
     // 1 oct 2026 (fundador): las listas de planes (ce69 en adelante) no van en vídeo. En YouTube casi no tienen
@@ -242,9 +246,13 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
       for (let i = 0; out.length < gs.length; i++) for (const c of fams) if (c[i]) out.push(c[i]);
       return out;
     };
+    // 8 oct 2026: `prioridad` (formatos en prueba, p. ej. las escaleras y03/y04) va delante de todo lo fresco: si no,
+    // con más vídeos frescos que huecos en la semana, el orden al azar podía dejarlos fuera.
+    const prioritaria = (g: string) => grupos.get(g)!.some((v) => v.prioridad);
     const cola = [
-      ...porTurnos(orden.filter((g) => conTexto(g) && fresca(g) && !recientes.has(g))),
-      ...porTurnos(orden.filter((g) => conTexto(g) && !fresca(g) && !recientes.has(g))),
+      ...orden.filter((g) => conTexto(g) && prioritaria(g) && !recientes.has(g)),
+      ...porTurnos(orden.filter((g) => conTexto(g) && fresca(g) && !prioritaria(g) && !recientes.has(g))),
+      ...porTurnos(orden.filter((g) => conTexto(g) && !fresca(g) && !prioritaria(g) && !recientes.has(g))),
       ...orden.filter((g) => conTexto(g) && recientes.has(g)),
       ...orden.filter((g) => !conTexto(g)),
     ];
