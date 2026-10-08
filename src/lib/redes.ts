@@ -67,7 +67,9 @@ export type Hueco = { dia: number; hora: string; file?: string; pool?: "pregunta
 // además, 2 al día en inglés a las 17:00 y 23:00 (tarde de Reino Unido, mediodía
 // y tarde de EE. UU.); solo van a YouTube EN (ver `networks` más abajo).
 export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap((dia) => [
-  ...["14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })),
+  // 8 oct 2026 (fundador: «3 al día en YouTube»): 10:00, 14:00 y 20:00 en español (el tercero solo cabe en YouTube:
+  // las demás redes siguen con su tope de 2).
+  ...["10:00", "14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })),
   ...["17:00", "23:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "en" as const })),
 ]);
 
@@ -175,7 +177,7 @@ export function planCalentamiento(desdeDia: number, hastaDia = -10): Hueco[] {
   // misma cuenta (es la ráfaga, no el volumen, lo que hace que te tapen).
   // En Instagram el tope de 2 al día recorta el tercero solo.
   // 22 sep 2026 (fundador): las 21:30 era tarde. Mañana, sobremesa y tarde.
-  const HORAS_ES = ["14:00", "20:00"]; // 29 sep 2026: 2 al día en español
+  const HORAS_ES = ["10:00", "14:00", "20:00"]; // 8 oct 2026: 3 al día en español (fundador)
   // 30 sep 2026 (fundador: "hay que poner en marcha el canal de YouTube en
   // inglés"): 2 al día en inglés, a horas de Reino Unido / EE. UU.
   const HORAS_EN = ["17:00", "23:00"];
@@ -313,7 +315,8 @@ export const RITMO = {
   JITTER_MIN: 8,
   GAP_MISMA_RED_MIN: 180,
   // 1 oct 2026 (fundador: "dijimos 2 cada día"): YouTube y TikTok, 2 al día por cuenta.
-  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 2, x: 2, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
+  // 8 oct 2026 (fundador: «3 al día en YouTube»): YouTube sube a 3; el resto, igual.
+  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 3, x: 2, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
   CALENTAMIENTO_DIAS: 2,
   NO_REPETIR_DIAS: 30,
   SILENCIO: { desde: 1, hasta: 7 },
