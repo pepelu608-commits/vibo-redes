@@ -206,10 +206,26 @@ export function elegirPreguntas(sabado: Date, catalogo: Video[], estado?: Estado
     // 8 oct 2026: «futuro» = huecos que el robot aún no ha preparado. Sube a YouTube con hasta 8 h de adelanto
     // (publicar-directo --adelantar=8) y un hueco hecho cuenta como hecho sea cual sea el vídeo: lo fresco y lo
     // prioritario va a partir de ahí; antes, «hoy» entero contaba como futuro y lo nuevo caía en huecos ya hechos.
-    const corte = Date.now() + 8.5 * 3600000;
+    // 9 oct 2026: el corte de 8,5 h dejaba media hora en la que el hueco ya contaba como «pasado» pero YouTube aún no
+    // lo había subido (lo sube con 8 h): recibía un vídeo de los ya publicados y el robot lo descartaba («mismo vídeo
+    // hace <30 días») → el 9 oct se perdieron los Shorts de las 10:00 y las 14:00. Ahora un hueco está HECHO solo si
+    // tiene publicación (en cualquier red, de este idioma), y se queda con el MISMO vídeo que ya salió (así Instagram
+    // y X, que publican a la hora, sacan el mismo que YouTube). Lo demás que aún no ha pasado es futuro.
+    const ahoraMs = Date.now();
+    const yaSalio = new Map<string, string>(); // "AAAA-MM-DD|HH:MM" → vídeo publicado en ese hueco
+    for (const p of estado?.publicados ?? []) {
+      const [dia, hora] = p.clave.split("|");
+      if ((p.lang ?? langDeVideo(p.video)) === lang && !yaSalio.has(`${dia}|${hora}`)) yaSalio.set(`${dia}|${hora}`, p.video);
+    }
     const todos = plan.filter((h) => h.pool === "pregunta" && h.lang === lang);
-    const futuro = (h: Hueco) => madridADate(fechaMas(sabado, h.dia), h.hora).getTime() > corte;
-    const huecos = [...todos.filter(futuro), ...todos.filter((h) => !futuro(h))];
+    const claveHueco = (h: Hueco) => `${fechaMas(sabado, h.dia)}|${h.hora}`;
+    const futuro = (h: Hueco) => !yaSalio.has(claveHueco(h)) && madridADate(fechaMas(sabado, h.dia), h.hora).getTime() > ahoraMs;
+    for (const h of todos) {
+      const salio = yaSalio.get(claveHueco(h));
+      const v = salio ? catalogo.find((x) => `videos/${x.file}` === salio) : undefined;
+      if (v) eleccion.set(h, v);
+    }
+    const huecos = [...todos.filter(futuro), ...todos.filter((h) => !futuro(h) && !eleccion.has(h))];
     if (!huecos.length) continue;
     const grupos = new Map<string, Video[]>();
     // 1 oct 2026 (fundador): las listas de planes (ce69 en adelante) no van en vídeo. En YouTube casi no tienen
