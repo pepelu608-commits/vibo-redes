@@ -6977,6 +6977,23 @@
       "estado": "ok",
       "id": "k1f2oB4Fs5M",
       "lang": "es"
+    },
+    {
+      "clave": "2026-10-15|14:00|instagram|videos/Real k20 - Que significa wifi.mp4",
+      "red": "instagram",
+      "video": "videos/Real k20 - Que significa wifi.mp4",
+      "fecha": "2026-10-15T04:45:57.243Z",
+      "estado": "error",
+      "error": "buffer: Scheduled posts limit reached. You have 10 scheduled posts out of 10 allowed."
+    },
+    {
+      "clave": "2026-10-15|14:00|x|videos/Real k20 - Que significa wifi.mp4",
+      "red": "x",
+      "video": "videos/Real k20 - Que significa wifi.mp4",
+      "fecha": "2026-10-15T12:33:00.000Z",
+      "estado": "ok",
+      "id": "6ad05a8878f377d888b12d02",
+      "lang": "es"
     }
   ]
 }
