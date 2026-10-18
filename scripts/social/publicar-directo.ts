@@ -406,9 +406,13 @@ async function comentarEnlaceYoutube(en: boolean) {
   if (!process.env.YT_CLIENT_ID || !(en ? process.env.YT_REFRESH_TOKEN_EN : process.env.YT_REFRESH_TOKEN)) return;
   const token = await tokenGoogle(en);
   const H = { Authorization: `Bearer ${token}`, "content-type": "application/json" };
+  // 18 oct 2026 (diagnóstico de Shorts): en los Shorts los enlaces NO se pueden pulsar (ni en la descripción ni en los
+  // comentarios), así que el comentario pide BUSCAR «vibo preguntas» (con «vibo» solo sale otra app primero). Y la partida
+  // es los domingos a las 20:00 desde la 002 (antes decía «sábado 18:00»). «Juega gratis»/«Play free» se quedan al
+  // principio: es lo que mira el robot para no comentar dos veces el mismo vídeo.
   const texto = en
-    ? `👉 Play free: https://${URL_APP}?o=yt-en\n\nEvery Saturday at 6 PM (Spain time): 10 live questions and cash prizes in euros. Questions that pay 💶`
-    : `👉 Juega gratis: https://${URL_APP}?o=yt-es\n\nCada sábado a las 18:00, 10 preguntas en directo y premios en euros. Preguntas que pagan 💶`;
+    ? `👉 Play free: search «vibo preguntas» on the App Store\n\nEvery Sunday at 8 PM (Spain time): 10 live questions; the ones who last longest get paid in euros 💶`
+    : `👉 Juega gratis: busca «vibo preguntas» en la App Store\n\nCada domingo a las 20:00 (hora de España), 10 preguntas en directo; los que más lejos llegan cobran en euros 💶`;
   const canal = await json("https://www.googleapis.com/youtube/v3/channels?part=contentDetails&mine=true", { headers: H });
   const subidas = canal.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
   if (!subidas) return;
