@@ -6211,7 +6211,9 @@
       "pregunta": "¿De qué está hecho el esqueleto de un tiburón?",
       "tags": "#datoscuriosos",
       "id": "r14",
-      "actualidad": "2026-09-26"
+      "actualidad": "2026-09-26",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real r15 - Cual es el oceano.mp4",
@@ -6319,7 +6321,9 @@
       "pregunta": "¿Qué animal tiene el corazón más grande?",
       "tags": "#datoscuriosos",
       "id": "r20",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real e17 EN - Which animal has the.mp4",
@@ -9761,7 +9765,9 @@
       "tags": "#curiosidades #datoscuriosos #sabiasque",
       "id": "n03",
       "actualidad": "2026-10-08",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real n04 - Puede saltar un elefante.mp4",
@@ -9783,7 +9789,9 @@
       "tags": "#curiosidades #datoscuriosos #sabiasque",
       "id": "n05",
       "actualidad": "2026-10-08",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real n06 - Por que el mar es.mp4",
@@ -9816,7 +9824,9 @@
       "tags": "#curiosidades #datoscuriosos #sabiasque",
       "id": "n08",
       "actualidad": "2026-10-08",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real n09 - Cual es la ciudad mas.mp4",
@@ -9827,7 +9837,9 @@
       "tags": "#curiosidades #datoscuriosos #sabiasque",
       "id": "n09",
       "actualidad": "2026-10-08",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real n10 - En que ano empezaron la.mp4",
@@ -9904,7 +9916,9 @@
       "tags": "#curiosidades #datoscuriosos #sabiasque",
       "id": "n16",
       "actualidad": "2026-10-08",
-      "cta": "¿Cuál dijiste tú? Comenta 👇"
+      "cta": "¿Cuál dijiste tú? Comenta 👇",
+      "activo": false,
+      "nota_desactivado": "19 oct 2026: hay versión nueva (plantilla short-v2) de esta pregunta; no publicar las dos."
     },
     {
       "file": "Real n17 - En que pais esta el.mp4",
