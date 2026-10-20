@@ -347,15 +347,22 @@ export const RITMO = {
   GAP_MISMA_RED_MIN: 180,
   // 1 oct 2026 (fundador: "dijimos 2 cada día"): YouTube y TikTok, 2 al día por cuenta.
   // 8 oct 2026 (fundador: «3 al día en YouTube»): YouTube sube a 3; el resto, igual.
-  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 3, x: 2, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
+  // 20 oct 2026 (fundador: «volvemos a dos al día en yt»): con 2 al día (30 sep-8 oct) la mediana era 120-220 visitas;
+  // con 4-5 (15-20 oct), 6-30. YouTube vuelve a 2 por canal.
+  TOPE_DIA: { tiktok: 2, instagram: 2, youtube: 2, x: 2, facebook: 2, linkedin: 1, threads: 3, bluesky: 3 } as Record<Red, number>,
+  // Topes por cuenta que mandan sobre TOPE_DIA. YouTube ES: 1 del robot + 1 short v2 que se sube aparte
+  // (scripts/social/subir-shorts-v2.ts, a las 17:00 UTC) = 2 al día.
+  TOPE_CUENTA: { "youtube|es": 1 } as Record<string, number>,
   CALENTAMIENTO_DIAS: 2,
   NO_REPETIR_DIAS: 30,
   SILENCIO: { desde: 1, hasta: 7 },
   VENTANA_TARDE_MIN: 130, // el cron corre cada 2 h; con menos, se perderían posts
   ERRORES_PARA_PARAR: 2,
 };
-// 1 oct 2026: también las otras líneas rojas de marketing (CLAUDE.md): «bote», «un fallo y fuera», «cobran en euros».
-export const PROHIBIDO = [/sorteo/i, /gana dinero/i, /dinero gratis/i, /\bbotes?\b/i, /un fallo y fuera/i, /cobran en euros/i];
+// 1 oct 2026: también las otras líneas rojas de marketing (CLAUDE.md): «bote», «un fallo y fuera».
+// 13 oct 2026 (fundador: «hay que hablar mucho más de dinero… quita esa regla»): fuera los vetos de dinero («gana
+// dinero», «dinero gratis», «cobran en euros»).
+export const PROHIBIDO = [/sorteo/i, /\bbotes?\b/i, /un fallo y fuera/i];
 
 export type Publicado = { clave: string; red: Red; video: string; fecha: string; estado: "ok" | "error" | "perdido" | "borrador"; id?: string; error?: string; lang?: Lang };
 export type Estado = { publicados: Publicado[] };
@@ -430,7 +437,7 @@ export function planificar(filas: Fila[], estado: Estado, ahora: Date, opciones:
       // Instagram, Threads). YouTube y X no penalizan el volumen inicial (22 sep 2026).
       const conCalentamiento = red === "tiktok" || red === "instagram" || red === "threads";
       const calentando = conCalentamiento && !opciones.cuentasCalientes && (!primera[c] || cuando.getTime() - primera[c]!.getTime() < R.CALENTAMIENTO_DIAS * 86400000);
-      const tope = calentando ? 1 : R.TOPE_DIA[red];
+      const tope = calentando ? 1 : (R.TOPE_CUENTA[c] ?? R.TOPE_DIA[red]);
       let motivo: string | undefined;
       if (contador[k] >= tope) motivo = calentando ? "cuenta nueva: 1 al día" : "tope diario";
       else if (erroresDia(c, dia) >= R.ERRORES_PARA_PARAR) motivo = "red parada hoy por errores";
