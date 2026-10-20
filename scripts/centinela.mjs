@@ -166,7 +166,16 @@ async function main() {
   console.log(hora(), data);
 
   if (data.accion === "sin_partida_activa") {
-    console.error("🔴 SÁBADO SIN PARTIDA SEMBRADA. Revisar auto-semanal / sembrar a mano.");
+    // 20 oct 2026: GitHub puede lanzar el run con horas de retraso (el del 18 oct salió con la 002 ya terminada y dio
+    // una alarma roja falsa: «encender el reloj manual YA»). Si la partida de hoy ya se jugó, no hay nada que vigilar.
+    const ultima = await fetch(`${APP_URL}/api/redes/datos`, { signal: AbortSignal.timeout(15_000) })
+      .then((r) => (r.ok ? r.json() : null)).then((d) => d?.ultima ?? null).catch(() => null);
+    const haceH = ultima?.empieza_en ? (Date.now() - new Date(ultima.empieza_en).getTime()) / 3_600_000 : Infinity;
+    if (haceH >= 0 && haceH < 12) {
+      console.log(hora(), `La partida de hoy (${ultima.edicion}) ya se jugó hace ${haceH.toFixed(1)} h. Guardia cumplida.`);
+      return;
+    }
+    console.error("🔴 DÍA DE PARTIDA SIN PARTIDA SEMBRADA. Revisar auto-semanal / sembrar a mano.");
     process.exit(1);
   }
 
