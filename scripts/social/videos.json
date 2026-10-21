@@ -6561,7 +6561,9 @@
       "pregunta": "¿Cuántos planetas del sistema solar tienen anillos?",
       "tags": "#datoscuriosos",
       "id": "hs1",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false,
+      "nota_desactivado": "21 oct 2026: dice «última pregunta del sábado» y la partida es el domingo; además foto de banco «de modelo» (fundador: «muy artificiales, cutres, con fotos muy perfectas»)."
     },
     {
       "file": "Real hs1 EN - How many planets in.mp4",
@@ -6571,7 +6573,9 @@
       "pregunta": "How many planets in the solar system have rings?",
       "tags": "#trivia",
       "id": "hs1-en",
-      "actualidad": "2026-09-29"
+      "actualidad": "2026-09-29",
+      "activo": false,
+      "nota_desactivado": "21 oct 2026: dice «última pregunta del sábado» y la partida es el domingo; además foto de banco «de modelo» (fundador: «muy artificiales, cutres, con fotos muy perfectas»)."
     },
     {
       "file": "Real hg1 - Cual es el pais.mp4",
