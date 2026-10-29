@@ -304,9 +304,18 @@ const REDES_EXTRA: Red[] = ["x", "facebook", "threads", "linkedin", "bluesky"];
 // 5 oct 2026 (fundador: «paramos las publicaciones en inglés»): premios solo en España. 8 oct 2026: con premio en
 // 27 países (Reino Unido y EE. UU. incluidos) y los vídeos cortos en inglés hechos, el inglés vuelve por defecto
 // (fundador: «¿podemos seguir subiendo los mismos vídeos en inglés también?»). SOCIAL_INGLES=false lo para.
+// 29 oct 2026 (fundador: «que siga publicando en inglés, pero que se arregle el problema de las visitas»): sigue.
 const INGLES = process.env.SOCIAL_INGLES !== "false";
+// 29 oct 2026 (fundador: «sí, cámbialo»): el canal de YouTube en español solo lleva los shorts nuevos de 9-11 s
+// («| VIBO preguntas», subir-shorts-v2.ts: 200-1.134 visitas); los «Real» de 16 s con la píldora amarilla se quedaban en
+// 5-33 y el robot ya no los sube ahí (siguen en las demás redes). SOCIAL_YT_ES_ROBOT=true lo vuelve a encender.
+// Lo mismo en el canal en inglés: lleva los shorts nuevos en inglés (subir-shorts-v2.ts --en); los «Real» EN se quedaban en
+// 0-61 visitas. SOCIAL_YT_EN_ROBOT=true lo vuelve a encender. X y TikTok en inglés siguen con el robot.
+const YOUTUBE_ES_ROBOT = process.env.SOCIAL_YT_ES_ROBOT === "true";
+const YOUTUBE_EN_ROBOT = process.env.SOCIAL_YT_EN_ROBOT === "true";
 function saltada(red: Red, en: boolean): boolean {
   if (en && !INGLES) return true;
+  if (red === "youtube" && !(en ? YOUTUBE_EN_ROBOT : YOUTUBE_ES_ROBOT)) return true;
   const lista = (process.env.SOCIAL_SALTAR ?? "").split(",").map((r) => r.trim().toLowerCase()).filter(Boolean);
   return lista.includes(`${red}-${en ? "en" : "es"}`);
 }
@@ -441,6 +450,8 @@ async function main() {
   const estado: Estado = fs.existsSync(ESTADO_PATH) ? JSON.parse(fs.readFileSync(ESTADO_PATH, "utf8")) : { publicados: [] };
 
   const planes = planificar(filas, estado, ahora, { cuentasCalientes: process.env.SOCIAL_CUENTAS_CALIENTES === "true" });
+  // Las redes que se saltan (saltada) salen del plan con su motivo: si no, pasada la hora se apuntaban como «perdidas».
+  for (const p of planes) if (!p.motivo && saltada(p.red, (p.fila.lang ?? langDeVideo(p.fila.video)) === "en")) p.motivo = "se salta (SOCIAL_SALTAR o YouTube: solo shorts nuevos)";
   if (apply) for (const en of INGLES ? [false, true] : [false]) await comentarEnlaceYoutube(en).catch((e) => console.log(`⚠ comentarios YouTube ${en ? "EN" : "ES"}: ${String(e).slice(0, 160)}`));
   if (verPlan) {
     console.log(`PLAN con ritmo humano (${planes.length} publicaciones):`);
@@ -478,7 +489,7 @@ async function main() {
     // SOCIAL_SOLO_EN=true (ensayo, 15 sep 2026): publica solo en las cuentas
     // inglesas (0 seguidores; sirven de banco de pruebas la primera semana).
     if (process.env.SOCIAL_SOLO_EN === "true" && !en) { console.log("  · ensayo solo EN: se salta"); continue; }
-    if (saltada(p.red, en)) { console.log("  · SOCIAL_SALTAR: esta la lleva el fundador a mano; se salta"); continue; }
+    if (saltada(p.red, en)) { console.log("  · se salta (SOCIAL_SALTAR o YouTube: solo shorts nuevos)"); continue; }
     if (!apply) continue;
     if (!tieneSecrets(p.red, en)) { console.log("  · sin secrets de esta red: se salta (no cuenta como error)"); continue; }
     try {
