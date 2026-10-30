@@ -11248,6 +11248,105 @@
       "pregunta": "What is the official language of Brazil?",
       "tags": "#trivia #quiz #generalknowledge",
       "id": "v2-f50-en"
+    },
+    {
+      "file": "V2 v2a-f25 - Cual es el metal.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el metal más abundante en la corteza terrestre?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f25"
+    },
+    {
+      "file": "V2 v2a-f25-en EN - What is the most.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the most abundant metal in the Earth's crust?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f25-en"
+    },
+    {
+      "file": "V2 v2a-f77 - Que pais regalo la.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué país regaló la Estatua de la Libertad a Estados Unidos?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f77"
+    },
+    {
+      "file": "V2 v2a-f21 - Cual es el pais.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el país más grande de África?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f21"
+    },
+    {
+      "file": "V2 v2a-f21-en EN - What is the largest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What is the largest country in Africa?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f21-en"
+    },
+    {
+      "file": "V2 v2a-f66 - Cual es el elemento.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el elemento químico con símbolo Au?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f66"
+    },
+    {
+      "file": "V2 v2a-f66-en EN - Which chemical element has.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which chemical element has the symbol Au?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f66-en"
+    },
+    {
+      "file": "V2 v2a-f23 - En que continente esta.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿En qué continente está Turquía?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f23"
+    },
+    {
+      "file": "V2 v2a-f23-en EN - Which continent is turkey.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which continent is Turkey in?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f23-en"
+    },
+    {
+      "file": "V2 v2a-f95 - Cual es el pais.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el país más grande del mundo?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f95"
+    },
+    {
+      "file": "V2 v2a-f95-en EN - Which is the largest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the largest country in the world?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f95-en"
     }
   ]
 }
