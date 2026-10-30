@@ -11347,6 +11347,186 @@
       "pregunta": "Which is the largest country in the world?",
       "tags": "#trivia #quiz #generalknowledge",
       "id": "v2-f95-en"
+    },
+    {
+      "file": "V2 v2a-f20 - Que animal es el.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué animal es el más rápido del mundo?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f20"
+    },
+    {
+      "file": "V2 v2a-f20-en EN - Which is the fastest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the fastest animal in the world?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f20-en"
+    },
+    {
+      "file": "V2 v2a-f31 - Cual es el planeta.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f31"
+    },
+    {
+      "file": "V2 v2a-f31-en EN - Which is the largest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the largest planet in the solar system?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f31-en"
+    },
+    {
+      "file": "V2 v2a-f81 - Cual es el metal.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el metal más ligero?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f81"
+    },
+    {
+      "file": "V2 v2a-f81-en EN - Which is the lightest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the lightest metal?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f81-en"
+    },
+    {
+      "file": "V2 v2a-f91 - Quien fue el primer.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Quién fue el primer ser humano en el espacio?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f91"
+    },
+    {
+      "file": "V2 v2a-f91-en EN - Who was the first.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Who was the first human in space?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f91-en"
+    },
+    {
+      "file": "V2 v2a-f75 - Que compositor se quedo.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Qué compositor se quedó sordo?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f75"
+    },
+    {
+      "file": "V2 v2a-f75-en EN - Which composer went deaf.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which composer went deaf?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f75-en"
+    },
+    {
+      "file": "V2 v2a-f40 - En que ano cayo.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿En qué año cayó el Muro de Berlín?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f40"
+    },
+    {
+      "file": "V2 v2a-f40-en EN - In what year did.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "In what year did the Berlin Wall fall?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f40-en"
+    },
+    {
+      "file": "V2 v2a-f30 - De que color es.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿De qué color es la caja negra de un avión?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f30"
+    },
+    {
+      "file": "V2 v2a-f30-en EN - What colour is an.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "What colour is an aeroplane's black box?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f30-en"
+    },
+    {
+      "file": "V2 v2a-f57 - Cuantos huesos tiene un.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos huesos tiene un recién nacido, aproximadamente?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f57"
+    },
+    {
+      "file": "V2 v2a-f57-en EN - Roughly how many bones.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Roughly how many bones does a newborn have?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f57-en"
+    },
+    {
+      "file": "V2 v2a-f78 - Cuantos colores tiene el.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuántos colores tiene el arcoíris según la lista clásica?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f78"
+    },
+    {
+      "file": "V2 v2a-f78-en EN - How many colours are.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "How many colours are in the rainbow, by the classic list?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f78-en"
+    },
+    {
+      "file": "V2 v2a-f59 - Cual es el oceano.mp4",
+      "mecanica": "v2",
+      "lang": "es",
+      "tipo": "pregunta",
+      "pregunta": "¿Cuál es el océano más pequeño?",
+      "tags": "#culturageneral #preguntas #quiz",
+      "id": "v2-f59"
+    },
+    {
+      "file": "V2 v2a-f59-en EN - Which is the smallest.mp4",
+      "mecanica": "v2",
+      "lang": "en",
+      "tipo": "pregunta",
+      "pregunta": "Which is the smallest ocean?",
+      "tags": "#trivia #quiz #generalknowledge",
+      "id": "v2-f59-en"
     }
   ]
 }
