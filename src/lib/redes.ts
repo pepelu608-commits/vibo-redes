@@ -69,7 +69,12 @@ export type Hueco = { dia: number; hora: string; file?: string; pool?: "pregunta
 export const PLAN: Hueco[] = Array.from({ length: 10 }, (_, i) => i - 9).flatMap((dia) => [
   // 8 oct 2026 (fundador: «3 al día en YouTube»): 10:00, 14:00 y 20:00 en español (el tercero solo cabe en YouTube:
   // las demás redes siguen con su tope de 2).
-  ...["10:00", "14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })),
+  // 30 oct 2026 (fundador: «ese amarillo queda mal»): las preguntas son ya solo los shorts nuevos sin píldora (social/shorts-v2,
+  // v2-al-catalogo.ts; los «Real» llevan la píldora quemada y 200 de 225 no tienen el clip para rehacerlos). Hay ~27 en
+  // español y ~23 en inglés y el robot no repite un vídeo en 30 días, así que hace falta una tanda nueva cada semana.
+  // DOS al día por idioma (fundador: «¿no dijimos 2 al día?»): Instagram y X en español a las 14:00 y 20:00; TikTok EN y X
+  // en inglés a las 17:00 y 23:00. YouTube los lleva subir-shorts-v2.ts. Antes: 10/14/20 h y 17/23 h.
+  ...["14:00", "20:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "es" as const })),
   ...["17:00", "23:00"].map((hora) => ({ dia, hora, pool: "pregunta" as const, lang: "en" as const })),
 ]);
 
